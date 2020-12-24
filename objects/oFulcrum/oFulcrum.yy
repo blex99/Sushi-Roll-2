@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "sGoal",
-    "path": "sprites/sGoal/sGoal.yy",
+    "name": "sFulcrum",
+    "path": "sprites/sFulcrum/sFulcrum.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -20,7 +20,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oFulcrum","path":"objects/oFulcrum/oFulcrum.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -28,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oGoal",
+  "name": "oFulcrum",
   "tags": [],
   "resourceType": "GMObject",
 }
