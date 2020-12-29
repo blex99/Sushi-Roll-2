@@ -4,13 +4,10 @@ function print(_msg)
 }
 
 // returns the index in which the message is alloted to
-function add_to_debug_messages(_msg)
+function add_to_debug_map(_key, _val)
 {
-	var _index = -1;
 	with (oDebug)
 	{
-		ds_list_add(debug_messages, _msg);
-		_index = ds_list_size(debug_messages) - 1;
+		ds_map_add(debug_messages, _key, _val);
 	}
-	return _index;
 }

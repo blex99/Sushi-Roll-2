@@ -8,4 +8,4 @@ torque = max_torque * ((shift) ? 2 : 1) * xinput;
 physics_joint_set_value(joint, phy_joint_max_motor_torque, abs(torque));
 physics_joint_set_value(joint, phy_joint_motor_speed, torque);
 
-print(string(instance_nearest(x, y, oChopstick).phy_speed));
+add_to_debug_map("phy_speed", "phy_speed: " + string(instance_nearest(x, y, oChopstick).phy_speed));
