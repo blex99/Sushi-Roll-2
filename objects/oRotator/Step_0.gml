@@ -1,11 +1,12 @@
-xinput = keyboard_check(vk_left) - keyboard_check(vk_right);
-shift = keyboard_check(vk_lshift);
+var _space = false;
+if (keyboard_check(vk_space)) _space = true;
 
-// half torque if not holding shift
-pRagdoll.image_blend = (shift) ? c_red : c_white;
-torque = max_torque * ((shift) ? 2 : 1) * xinput;
 
-physics_joint_set_value(joint, phy_joint_max_motor_torque, abs(torque));
-physics_joint_set_value(joint, phy_joint_motor_speed, torque);
+xmouse = clamp(window_mouse_get_x(), w_min, w_max);
 
-add_to_debug_map("phy_speed", "phy_speed: " + string(instance_nearest(x, y, oChopstick).phy_speed));
+if (enabled_deadzone && xmouse > xdeadzone_min && xmouse < xdeadzone_max)
+	reset_ragdoll(2);
+else if (_space)
+	with (oRagdollCore) phy_angular_velocity = 0;
+else
+	rotate_ragdoll(xmouse, w_min, w_max, angular_spd);
