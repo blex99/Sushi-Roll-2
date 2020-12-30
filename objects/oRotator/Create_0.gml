@@ -1,6 +1,8 @@
-enabled_deadzone = false;
-angular_spd = 250;
-angle_limit = 50;
+space = false;
+
+enabled_deadzone = true;
+angular_spd_mult = 5; // angular speed multiplier
+angle_limit = 50; // degrees
 xmouse = 0;
 
 w = display_get_gui_width();
@@ -11,9 +13,9 @@ max_range = w * 0.2;
 w_min = w_half - max_range;
 w_max = w_half + max_range;
 
-deadzone = w * 0.01;
-xdeadzone_min = w_half - deadzone;
-xdeadzone_max = w_half + deadzone;
+xdeadzone = w * 0.005;
+xdeadzone_min = w_half - xdeadzone;
+xdeadzone_max = w_half + xdeadzone;
 
 var _xroomcenter = room_width * 0.5;
 var _yroomcenter = room_height * 0.5;
