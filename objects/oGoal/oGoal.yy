@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sChopstick",
-    "path": "sprites/sChopstick/sChopstick.yy",
+    "name": "sGoal",
+    "path": "sprites/sGoal/sGoal.yy",
   },
   "solid": false,
   "visible": true,
@@ -15,7 +15,7 @@
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
-  "physicsDensity": 0.05,
+  "physicsDensity": 0.005,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.0,
   "physicsAngularDamping": 0.0,
@@ -24,11 +24,13 @@
   "physicsKinematic": false,
   "physicsShapePoints": [
     {"x":0.0,"y":0.0,},
-    {"x":128.0,"y":0.0,},
-    {"x":128.0,"y":8.0,},
-    {"x":0.0,"y":8.0,},
+    {"x":96.0,"y":0.0,},
+    {"x":96.0,"y":96.0,},
+    {"x":0.0,"y":96.0,},
   ],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"pSushi","path":"objects/pSushi/pSushi.yy",},"parent":{"name":"oGoal","path":"objects/oGoal/oGoal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -36,7 +38,7 @@
     "path": "folders/Objects/Ragdoll.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oChopstick",
+  "name": "oGoal",
   "tags": [],
   "resourceType": "GMObject",
 }
