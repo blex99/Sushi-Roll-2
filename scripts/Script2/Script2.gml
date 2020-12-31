@@ -15,14 +15,12 @@ function approach(_current, _target, _delta)
 	return _current;
 }
 
-function rotate_ragdoll(_xmouse, _w_min, _w_max, _angular_spd)
+function rotate_ragdoll(_target_angle, _angular_spd_mult)
 {
 	with (oRagdollCore)
 	{
-		phy_angular_velocity = (_xmouse - _w_min) / (_w_max - _w_min);
-		phy_angular_velocity *= 2;
-		phy_angular_velocity -= 1;
-		phy_angular_velocity *= -_angular_spd; // flip sign
+		var _spd = (_target_angle - phy_rotation) * _angular_spd_mult;
+		phy_angular_velocity = _spd;
 	}
 }
 

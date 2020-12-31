@@ -16,8 +16,8 @@ view_w_half = view_w * 0.5;
 view_h_half = view_h * 0.5;
 camera_set_view_size(cam, view_w, view_h);
 
-x += (xfollow - x) / strength;
-y += (yfollow - y) / strength;
+x += (xfollow - x) / xstrength;
+y += (yfollow - y) / ystrength; 
 
 x = clamp(x, view_w_half, room_width - view_w_half);
 y = clamp(y, view_h_half, room_height - view_h_half);

@@ -23,15 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
-    {"x":0.0,"y":0.0,},
+    {"x":23.0,"y":0.0,},
     {"x":96.0,"y":0.0,},
-    {"x":96.0,"y":96.0,},
-    {"x":0.0,"y":96.0,},
+    {"x":96.0,"y":70.0,},
+    {"x":23.0,"y":70.0,},
   ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"pSushi","path":"objects/pSushi/pSushi.yy",},"parent":{"name":"oGoal","path":"objects/oGoal/oGoal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [],
+  "properties": [
+    {"varType":1,"value":"rLevel1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"target_room","tags":[],"resourceType":"GMObjectProperty",},
+  ],
   "overriddenProperties": [],
   "parent": {
     "name": "Ragdoll",

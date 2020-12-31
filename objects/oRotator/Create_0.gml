@@ -1,9 +1,10 @@
-space = false;
-
-enabled_deadzone = true;
-angular_spd_mult = 5; // angular speed multiplier
-angle_limit = 50; // degrees
+// input vars
 xmouse = 0;
+
+// vars
+enabled_deadzone = false;
+angular_spd_mult = 7; // angular speed multiplier
+angle_limit = 50; // degrees
 
 w = display_get_gui_width();
 h = display_get_gui_height();

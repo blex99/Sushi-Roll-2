@@ -2,7 +2,7 @@ cam = view_camera[0];
 view_enabled = true;
 view_visible[0] = true;
 
-zoom = 1.5;
+zoom = 1;
 view_w = display_get_gui_width() * zoom;
 view_h = display_get_gui_height() * zoom;
 camera_set_view_size(cam, view_w, view_h);
@@ -21,4 +21,5 @@ else
 xfollow = x;
 yfollow = y;
 
-strength = 25;
+xstrength = 1; // follow rigidly in the x
+ystrength = 5;
