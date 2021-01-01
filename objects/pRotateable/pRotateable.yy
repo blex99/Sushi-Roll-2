@@ -20,15 +20,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"pRotateable","path":"objects/pRotateable/pRotateable.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Ragdoll",
-    "path": "folders/Objects/Ragdoll.yy",
+    "name": "Rotatations",
+    "path": "folders/Objects/Rotatations.yy",
   },
   "resourceVersion": "1.0",
-  "name": "pRagdoll",
+  "name": "pRotateable",
   "tags": [],
   "resourceType": "GMObject",
 }

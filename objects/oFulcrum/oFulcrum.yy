@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "pStatic",
+    "path": "objects/pStatic/pStatic.yy",
+  },
   "physicsObject": true,
   "physicsSensor": false,
   "physicsShape": 2,
@@ -31,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Rotatations",
+    "path": "folders/Objects/Rotatations.yy",
   },
   "resourceVersion": "1.0",
   "name": "oFulcrum",

@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "pRagdoll",
-    "path": "objects/pRagdoll/pRagdoll.yy",
+    "name": "pRotateable",
+    "path": "objects/pRotateable/pRotateable.yy",
   },
   "physicsObject": true,
   "physicsSensor": false,
@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Ragdoll",
-    "path": "folders/Objects/Ragdoll.yy",
+    "name": "Rotatations",
+    "path": "folders/Objects/Rotatations.yy",
   },
   "resourceVersion": "1.0",
   "name": "oChopstick",
