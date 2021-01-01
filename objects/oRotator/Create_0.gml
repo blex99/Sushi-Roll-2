@@ -1,7 +1,7 @@
 // input vars
 rot_input = 0;
-xmouse = 0;
-ymouse = 0;
+xrotateable = 0;
+yrotateable = 0;
 
 // vars
 enabled_deadzone = false;

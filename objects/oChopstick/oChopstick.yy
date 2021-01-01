@@ -19,7 +19,7 @@
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.0,
   "physicsAngularDamping": 0.0,
-  "physicsFriction": 2.0,
+  "physicsFriction": 1.0,
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Rotatations",
-    "path": "folders/Objects/Rotatations.yy",
+    "name": "Rotateable",
+    "path": "folders/Objects/Rotateable.yy",
   },
   "resourceVersion": "1.0",
   "name": "oChopstick",

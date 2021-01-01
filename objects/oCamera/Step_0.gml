@@ -1,7 +1,11 @@
+var _sushi_scale = 1;
+
 if (instance_exists(follow))
 {
 	xfollow = follow.x;	
 	yfollow = follow.y;	
+	_sushi_scale = follow.image_xscale * 0.25;
+	if (_sushi_scale < 1) _sushi_scale = 1;
 }
 
 if (keyboard_check_pressed(ord("Z")))
@@ -10,8 +14,8 @@ if (keyboard_check_pressed(ord("Z")))
 if (keyboard_check_pressed(ord("X")))
 	zoom-=0.5;
 
-view_w = display_get_gui_width() * zoom;
-view_h = display_get_gui_height() * zoom;
+view_w = display_get_gui_width() * zoom * _sushi_scale;
+view_h = display_get_gui_height() * zoom * _sushi_scale;
 view_w_half = view_w * 0.5;
 view_h_half = view_h * 0.5;
 camera_set_view_size(cam, view_w, view_h);

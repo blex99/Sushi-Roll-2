@@ -9,14 +9,7 @@ camera_set_view_size(cam, view_w, view_h);
 view_w_half = view_w * 0.5;
 view_h_half = view_h * 0.5;
 
-if (instance_exists(oSushiTriangle))
-	follow = oSushiTriangle;
-else if (instance_exists(oSushiSquare))
-	follow = oSushiSquare;
-else if (instance_exists(oSushiCircle))
-	follow = oSushiCircle;
-else
-	follow = noone;
+follow = sushi_cur();
 
 xfollow = x;
 yfollow = y;

@@ -1,0 +1,1 @@
+time_to_restart = room_speed * 1;

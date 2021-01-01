@@ -1,34 +1,23 @@
 if (mouse_check_button_pressed(mb_left))
 {
-	xmouse = mouse_x;
-	ymouse = mouse_y;
+	xrotateable = mouse_x;
+	yrotateable = mouse_y;
 }
 
 rot_input = clamp(window_mouse_get_x(), w_min, w_max);
+var _rot = instance_nearest(xrotateable, yrotateable, pRotateable);
 
-pRotateable.image_alpha = 0.2;
-
-// need this functionality, but buggy
-with (pRotateable)
-{
-	phy_angular_velocity = 0;
-	// phy_rotation = approach(phy_rotation, 0, 2);
-}
-
-// find nearest pRotateable
-var _rot = instance_nearest(xmouse, ymouse, pRotateable)
 var _target_angle = (2 * (rot_input - w_min) / (w_max - w_min)) - 1;
 _target_angle *= _rot.angle_limit;
 
-_rot.image_alpha = 1;
+with (pRotateable)
+{
+	phy_angular_velocity = 0;
+}
 
 if (enabled_deadzone && rot_input > xdeadzone_min && rot_input < xdeadzone_max)
 {
-	with (_rot)
-	{
-		phy_angular_velocity = 0;
-		phy_rotation = approach(phy_rotation, 0, 2);
-	}	
+	// do nothing
 }
 else
 {
