@@ -1,2 +1,7 @@
 TODO
  - gamepad support
+ 
+done:
+ - fixed deathplane bug
+ - added rice count
+ - set max allowed size of sushis

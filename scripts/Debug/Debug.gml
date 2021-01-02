@@ -1,3 +1,5 @@
+// debug functions
+
 function print(_msg)
 {
 	show_debug_message(_msg);

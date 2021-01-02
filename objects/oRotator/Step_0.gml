@@ -15,15 +15,8 @@ with (pRotateable)
 	phy_angular_velocity = 0;
 }
 
-if (enabled_deadzone && rot_input > xdeadzone_min && rot_input < xdeadzone_max)
+with (_rot)
 {
-	// do nothing
-}
-else
-{
-	with (_rot)
-	{
-		var _spd = (_target_angle - phy_rotation) * 5;
-		phy_angular_velocity = _spd;
-	}	
+	var _spd = (_target_angle - phy_rotation) * rot_strength;
+	phy_angular_velocity = _spd;
 }

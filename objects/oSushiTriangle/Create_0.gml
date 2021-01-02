@@ -1,3 +1,3 @@
 event_inherited();
 
-sushi_init_fixture(false);
+sushi_init_fixture();

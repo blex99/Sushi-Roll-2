@@ -36,8 +36,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Other Placeable",
+    "path": "folders/Objects/Other Placeable.yy",
   },
   "resourceVersion": "1.0",
   "name": "oGoal",
