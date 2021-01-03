@@ -1,7 +1,5 @@
 TODO
+ - test controls:
+    - click WASD to select things in the upper, lower, etc, areas relative to sushi
+    - click to activate things in the area
  - gamepad support
- 
-done:
- - fixed deathplane bug
- - added rice count
- - set max allowed size of sushis

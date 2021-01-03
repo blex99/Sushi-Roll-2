@@ -14,16 +14,27 @@ function sushi_cur()
 		return noone;
 }
 
-function sushi_grow()
+// if _grow is true, grow
+// else, shrink in size
+// recreate fixture
+function sushi_change_size(_grow)
 {
 	with (sushi_cur())
 	{
-		image_xscale *= growth_multiplier;
-		image_yscale *= growth_multiplier;
+		if (_grow)
+		{
+			image_xscale *= growth_multiplier;
+			image_yscale *= growth_multiplier;
+		}
+		else
+		{
+			image_xscale *= shrink_multiplier;
+			image_yscale *= shrink_multiplier;
+		}
 		
-		// don't scale past max
-		image_xscale = min(image_xscale, scale_max);
-		image_yscale = min(image_yscale, scale_max);
+		// don't scale outside of max or original size
+		image_xscale = clamp(image_xscale, 1, scale_max);
+		image_yscale = clamp(image_yscale, 1, scale_max);
 		
 		sushi_init_fixture();
 	}

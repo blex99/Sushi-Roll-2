@@ -2,6 +2,7 @@
 rot_input = 0;
 xrotateable = 0;
 yrotateable = 0;
+click = 0;
 
 rot_strength = 5;
 

@@ -17,9 +17,9 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_D6A0D66","path":"rooms/rLevelParent/rLevelParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_D6A0D66","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oPhysicsWorld","path":"objects/oPhysicsWorld/oPhysicsWorld.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_19F137A6","path":"rooms/rLevelParent/rLevelParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":0.0,"resourceVersion":"1.0","name":"inst_19F137A6","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oRotator","path":"objects/oRotator/oRotator.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_75A1FAC5","path":"rooms/rLevelParent/rLevelParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":0.0,"resourceVersion":"1.0","name":"inst_75A1FAC5","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oLevelManager","path":"objects/oLevelManager/oLevelManager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":400.0,"y":416.0,"resourceVersion":"1.0","name":"inst_66B1C54D","tags":[],"resourceType":"GMRInstance",},
+      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Invisible","tags":[],"resourceType":"GMRInstanceLayer",},
+    {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oSushiCircle","path":"objects/oSushiCircle/oSushiCircle.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_7C31E018","path":"rooms/rLevelParent/rLevelParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":672.0,"resourceVersion":"1.0","name":"inst_7C31E018","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oWallBig","path":"objects/oWallBig/oWallBig.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":1600.0,"resourceVersion":"1.0","name":"inst_4B650D6C","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oWallBig","path":"objects/oWallBig/oWallBig.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":1600.0,"resourceVersion":"1.0","name":"inst_2CCA12DC","tags":[],"resourceType":"GMRInstance",},
@@ -69,9 +69,6 @@
   "creationCodeFile": "",
   "inheritCode": true,
   "instanceCreationOrder": [
-    {"name":"inst_D6A0D66","path":"rooms/rLevel2/rLevel2.yy",},
-    {"name":"inst_19F137A6","path":"rooms/rLevel2/rLevel2.yy",},
-    {"name":"inst_75A1FAC5","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_7C31E018","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_4B650D6C","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_2CCA12DC","path":"rooms/rLevel2/rLevel2.yy",},
@@ -112,6 +109,7 @@
     {"name":"inst_FE83CD5","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_21CC8899","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_1FDA236C","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_66B1C54D","path":"rooms/rLevel2/rLevel2.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,
