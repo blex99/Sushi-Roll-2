@@ -1,4 +1,3 @@
 /// @description assign a path
 
-var _path = paStraight;
-path_start(_path, 1, path_action_reverse, false);
+path_start(path, 100, path_action_reverse, false);

@@ -11,7 +11,7 @@
     "path": "folders/Paths.yy",
   },
   "resourceVersion": "1.0",
-  "name": "paStraight",
+  "name": "paStraightRight",
   "tags": [],
   "resourceType": "GMPath",
 }
