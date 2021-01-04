@@ -1,6 +1,3 @@
-// input vars
-space = 0;
-
 // etc vars
 scale_max = 2;
 growth_multiplier = 1.1;

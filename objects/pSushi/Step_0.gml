@@ -1,8 +1,6 @@
 /// @description jump
 
-space = keyboard_check_pressed(vk_space);
-
-if (jump_buffer < 0 && space && collision_rectangle(bbox_right,
+if (jump_buffer < 0 && input_one() && collision_rectangle(bbox_right,
 		bbox_bottom+1, bbox_left, bbox_bottom-1, pPhysicsEntity, 0, 1))
 {
 	phy_linear_velocity_y += -200;

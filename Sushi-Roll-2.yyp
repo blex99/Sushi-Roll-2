@@ -33,6 +33,8 @@
     {"id":{"name":"oPhysicsWorld","path":"objects/oPhysicsWorld/oPhysicsWorld.yy",},"order":4,},
     {"id":{"name":"oMovingPlatforms","path":"objects/oMovingPlatforms/oMovingPlatforms.yy",},"order":6,},
     {"id":{"name":"pDynamic","path":"objects/pDynamic/pDynamic.yy",},"order":2,},
+    {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},"order":4,},
+    {"id":{"name":"Input","path":"scripts/Input/Input.yy",},"order":3,},
     {"id":{"name":"pRotateable","path":"objects/pRotateable/pRotateable.yy",},"order":0,},
     {"id":{"name":"sFulcrum","path":"sprites/sFulcrum/sFulcrum.yy",},"order":2,},
     {"id":{"name":"oCollectible","path":"objects/oCollectible/oCollectible.yy",},"order":8,},

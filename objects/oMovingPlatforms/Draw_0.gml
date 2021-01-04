@@ -1,2 +1,2 @@
 draw_self();
-draw_path(path, xstart, ystart, false);
+if (debug_mode) draw_path(path, xstart, ystart, false);
