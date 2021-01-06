@@ -70,9 +70,9 @@ function physics_fixture_set_sushi_shape(_fix)
 	if (_sushi == oSushiTriangle)
 	{
 		physics_fixture_set_polygon_shape(_fix);
-		physics_fixture_add_point(_fix, 0, 0);
-		physics_fixture_add_point(_fix, _w, _h);
-		physics_fixture_add_point(_fix, 0, _h);
+		physics_fixture_add_point(_fix, 0		 , _h * -0.5);
+		physics_fixture_add_point(_fix, _w *  0.5, _h *  0.5);
+		physics_fixture_add_point(_fix, _w * -0.5, _h *  0.5);
 	}
 	else if (_sushi == oSushiSquare)
 	{
@@ -82,4 +82,32 @@ function physics_fixture_set_sushi_shape(_fix)
 	{
 		physics_fixture_set_circle_shape(_fix, _w * 0.5);
 	}
+}
+
+function sushi_jump(_velocity)
+{
+	with (sushi_cur())
+	{
+		phy_linear_velocity_y += -_velocity;
+		phy_linear_velocity_y = clamp(phy_linear_velocity_y,
+			-jump_velocity_max, jump_velocity_max);
+		print(phy_linear_velocity_y);
+	}
+	
+	sushi_change_size(false); // shrink
+	oStats.rice_count--;	
+}
+
+function sushi_is_grounded()
+{
+	with (sushi_cur())
+	{
+		var _x = phy_position_x;
+		var _y = phy_position_y;
+		var _w_half = sprite_width * 0.5;
+		var _h_half = sprite_height * 0.5;
+		return collision_rectangle(_x - _w_half, _y, _x + _w_half,
+			_y + _h_half + 1, pPhysicsEntity, 0, 1);
+	}
+
 }

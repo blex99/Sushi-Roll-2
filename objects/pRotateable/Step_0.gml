@@ -1,1 +1,1 @@
-in_range = collision_circle(xcenter, ycenter, radius, sushi_cur(), 0, 1);
+active = collision_circle(xcenter, ycenter, radius, sushi_cur(), 0, 1);

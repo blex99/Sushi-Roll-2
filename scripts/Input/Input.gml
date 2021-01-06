@@ -1,16 +1,12 @@
 // jump
-function input_one(){
+function input_one_pressed(){
 	var _input = mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(DEVICE_NUM, gp_face1);
-	
-	if (_input) print("1");
 	return _input;
 }
 
-// select
+// select.. notice NOT pressed
 function input_two(){
-	var _input = mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(DEVICE_NUM, gp_face2);
-	
-	if (_input) print("2");
+	var _input = mouse_check_button(mb_left) || gamepad_button_check(DEVICE_NUM, gp_face2);
 	return _input;
 }
 

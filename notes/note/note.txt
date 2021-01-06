@@ -1,5 +1,3 @@
 TODO
- - test controls:
-    - click WASD to select things in the upper, lower, etc, areas relative to sushi
-    - click to activate things in the area
- - gamepad support
+ - is_grounded check needs a rework
+ - still brainstorming rotating platform controls
