@@ -1,6 +1,6 @@
 if (place_meeting(x, y, pSushi))
 {
 	sushi_change_size(true);
-	oStats.rice_count++;
+	stats_increment_rice_counter();
 	instance_destroy();
 }

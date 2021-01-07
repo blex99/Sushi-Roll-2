@@ -1,1 +1,1 @@
-room_goto(target_room);
+level_completed();

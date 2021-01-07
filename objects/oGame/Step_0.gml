@@ -1,0 +1,1 @@
+add_to_debug_map("using_controller?: " + string(global.using_controller));

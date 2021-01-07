@@ -1,3 +1,3 @@
-///@desc restarts room
+///@desc resets sushi position
 
-room_restart();
+sushi_reset();

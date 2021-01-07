@@ -2,9 +2,9 @@
 scale_max = 2;
 growth_multiplier = 1.1;
 shrink_multiplier = 0.9;
-jump_buffer_start = 1; // frames till you can try to jump again
-jump_buffer = jump_buffer_start;
 jump_velocity_max = 500;
+invincibility_frames = room_speed * 3;
+alarm[0] = invincibility_frames;
 
 // phys vars
 density			= 0.2;

@@ -1,5 +1,7 @@
 /// @desc inits all needed obj's for a level
 
+level_complete = false;
+
 instance_create_layer(0, 0, "Instances", oCamera);
 instance_create_layer(0, 0, "Instances", oPhysicsWorld);
 instance_create_layer(0, 0, "Instances", oLevelController);

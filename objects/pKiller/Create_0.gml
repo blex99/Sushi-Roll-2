@@ -1,1 +1,1 @@
-time_to_restart = room_speed * 1;
+restart_frames = room_speed * 1;

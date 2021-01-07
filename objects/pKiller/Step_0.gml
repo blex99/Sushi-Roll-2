@@ -1,7 +1,6 @@
 ///@desc activates alarm
 
-
-if (alarm[0] == -1 && place_meeting(x, y, sushi_cur()))
+if (alarm[0] == -1 && place_meeting(x, y, sushi_cur()) && !sushi_invincible())
 {
-	alarm[0] = time_to_restart;
+	alarm[0] = restart_frames;
 }

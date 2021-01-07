@@ -14,6 +14,26 @@ function sushi_cur()
 		return noone;
 }
 
+// called when the sushi is killed
+function sushi_reset()
+{
+	with (sushi_cur())
+	{
+		phy_position_x = xstart;
+		phy_position_y = ystart;
+		phy_linear_velocity_x = 0;
+		phy_linear_velocity_y = 0;
+		phy_rotation = 0;
+		image_alpha = 1;
+		alarm[0] = invincibility_frames;
+	}
+}
+
+function sushi_invincible()
+{
+	return sushi_cur().alarm[0] != -1;
+}
+
 // if _grow is true, grow
 // else, shrink in size
 // recreate fixture
@@ -95,19 +115,4 @@ function sushi_jump(_velocity)
 	}
 	
 	sushi_change_size(false); // shrink
-	oStats.rice_count--;	
-}
-
-function sushi_is_grounded()
-{
-	with (sushi_cur())
-	{
-		var _x = phy_position_x;
-		var _y = phy_position_y;
-		var _w_half = sprite_width * 0.5;
-		var _h_half = sprite_height * 0.5;
-		return collision_rectangle(_x - _w_half, _y, _x + _w_half,
-			_y + _h_half + 1, pPhysicsEntity, 0, 1);
-	}
-
 }

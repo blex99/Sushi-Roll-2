@@ -1,3 +1,4 @@
+physics_pause_enable(false);
 physics_world_create(0.1);
 physics_world_gravity(0, 30);
 physics_world_update_speed(room_speed * 2);

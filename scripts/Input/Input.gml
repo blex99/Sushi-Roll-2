@@ -1,19 +1,18 @@
-// jump
-function input_one_pressed(){
-	var _input = mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(DEVICE_NUM, gp_face1);
+// select.. notice NOT pressed
+function input_one(){
+	var _input = mouse_check_button(mb_left) || gamepad_button_check(global.device_index, gp_face1);
 	return _input;
 }
 
-// select.. notice NOT pressed
-function input_two(){
-	var _input = mouse_check_button(mb_left) || gamepad_button_check(DEVICE_NUM, gp_face2);
+function input_one_pressed(){
+	var _input = mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(global.device_index, gp_face1);
 	return _input;
 }
 
 function input_x_axis(){
 	if (input_controller_active())
 	{
-		return gamepad_axis_value(DEVICE_NUM, gp_axislh);
+		return gamepad_axis_value(global.device_index, gp_axislh);
 	}
 	
 	var _normalized_input = 0;
@@ -35,5 +34,5 @@ function input_x_mouse_clamp(_min, _max)
 
 function input_controller_active()
 {
-	return global.using_controller && gamepad_is_connected(DEVICE_NUM);
+	return global.using_controller && gamepad_is_connected(global.device_index);
 }
