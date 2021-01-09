@@ -12,8 +12,8 @@ window_mouse_set(input_x_mouse_clamp(w_min, w_max), h_half);
 with (pRotateable)
 {
 	var _target_angle;
-	if (active && input_one())	 _target_angle = input_x_axis() * angle_limit;
-	else						 _target_angle = 0;
+	if (input_one())	 _target_angle = input_x_axis() * angle_limit;
+	else				 _target_angle = 0;
 	
 	var _spd = (_target_angle - phy_rotation) * other.rot_strength;
 	if (input_controller_active()) _spd *= 0.75; // reduce spd with controller
@@ -21,4 +21,7 @@ with (pRotateable)
 }
 
 // control the sushi x velocity
-with (sushi_cur()) phy_linear_velocity_x += input_x_axis() * 1.25;
+if (!input_one())
+{
+	with (sushi_cur()) phy_linear_velocity_x += input_x_axis() * 2;
+}

@@ -1,1 +1,0 @@
-active = collision_circle(xcenter, ycenter, radius, sushi_cur(), 0, 1);

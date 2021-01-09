@@ -6,7 +6,7 @@ var _arr =
 [
 	"Level Complete!",
 	"Score: " + string(level_score), 
-	"Time: " + string(ceil(level_timer / room_speed)),
+	"Time: " + string(level_timer / room_speed),
 	"Rice Count: " + string(rice_count) + " / " + string(rice_max), 
 	"Collectibles: " + string(collectible_count) + " / " + string(collectible_max),
 	"Press Left Click or A to Continue"

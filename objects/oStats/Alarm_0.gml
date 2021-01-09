@@ -1,3 +1,4 @@
 /// @description restart room if run out of time
 
-room_restart();
+if (!is_level_complete())
+	room_restart();

@@ -1,1 +1,1 @@
-room_goto(rLevel4);
+room_goto(rLevel1);

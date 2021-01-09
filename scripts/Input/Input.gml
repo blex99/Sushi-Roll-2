@@ -27,6 +27,11 @@ function input_x_axis(){
 	return _normalized_input;
 }
 
+function input_controller_to_mouse_x()
+{
+	return ((input_x_axis() + 1) * (w_max - w_min) / 2) + w_min;	
+}
+
 function input_x_mouse_clamp(_min, _max)
 {
 	return clamp(window_mouse_get_x(), _min, _max);	

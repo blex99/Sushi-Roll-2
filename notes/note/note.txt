@@ -1,3 +1,16 @@
 TODO
- - can get stuck if wedged
- - add restart room and things to controller
+
+do ui designs (for timer)
+timer make its own object
+
+create main menu
+
+create pause menu
+
+cup of water hazard (water physics)
+
+moving knives
+
+PROBLEMS
+
+can get stuck if wedged (add restart_room and things to controller (hotfix))

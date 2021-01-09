@@ -5,6 +5,7 @@
     {"id":{"name":"oWallThin","path":"objects/oWallThin/oWallThin.yy",},"order":4,},
     {"id":{"name":"sMovingPlatforms","path":"sprites/sMovingPlatforms/sMovingPlatforms.yy",},"order":12,},
     {"id":{"name":"oRice","path":"objects/oRice/oRice.yy",},"order":1,},
+    {"id":{"name":"fnFont","path":"fonts/fnFont/fnFont.yy",},"order":0,},
     {"id":{"name":"pSushi","path":"objects/pSushi/pSushi.yy",},"order":3,},
     {"id":{"name":"sWallBig","path":"sprites/sWallBig/sWallBig.yy",},"order":8,},
     {"id":{"name":"sWallThin","path":"sprites/sWallThin/sWallThin.yy",},"order":9,},
