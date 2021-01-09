@@ -31,6 +31,6 @@ function stats_add_time_to_score()
 {
 	with (oStats)
 	{
-		level_score += time_value * ceil(level_timer / room_speed);
+		level_score += timer_calc_time_bonus();
 	}
 }

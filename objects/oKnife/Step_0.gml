@@ -2,7 +2,7 @@
 
 event_inherited();
 
-if (alarm[0] != -1)
+if (alarm[0] != -1 && !sushi_invincible())
 {
 	var xcenter = (bbox_right + bbox_left) * 0.5;
 	var ycenter = (bbox_bottom + bbox_top) * 0.5;	
