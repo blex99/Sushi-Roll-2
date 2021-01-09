@@ -1,4 +1,4 @@
-/// @desc control platforms and sushi's x velocity
+/// @desc control platforms
 
 if (keyboard_check(vk_escape)) game_end();
 if (keyboard_check(ord("R"))) room_restart();
@@ -20,8 +20,4 @@ with (pRotateable)
 	phy_angular_velocity = _spd;
 }
 
-// control the sushi x velocity
-if (!input_one())
-{
-	with (sushi_cur()) phy_linear_velocity_x += input_x_axis() * 2;
-}
+
