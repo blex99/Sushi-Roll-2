@@ -1,5 +1,17 @@
 // helper functions
 
+function oscillate(_start, _amp_in_pix, _period_per_sec)
+{
+	var _sin = sin((2 * pi / _period_per_sec) * cur_second());
+	return _amp_in_pix * _sin + _start;
+}
+
+// # of seconds since game start
+function cur_second()
+{
+	return current_time * 0.001;
+}
+
 function set_draw(_color, _alpha, _font, _valign, _halign)
 {
 	if (0) return argument[0];

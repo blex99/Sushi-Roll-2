@@ -111,7 +111,6 @@ function sushi_jump(_velocity)
 		phy_linear_velocity_y += -_velocity;
 		phy_linear_velocity_y = clamp(phy_linear_velocity_y,
 			-jump_velocity_max, jump_velocity_max);
-		print(phy_linear_velocity_y);
 	}
 	
 	sushi_change_size(false); // shrink

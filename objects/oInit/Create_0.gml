@@ -1,1 +1,1 @@
-room_goto(rLevel01);
+room_goto(rHowToPlay);

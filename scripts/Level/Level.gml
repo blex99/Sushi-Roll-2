@@ -16,3 +16,23 @@ function is_level_complete()
 		return level_complete;
 	}
 }
+
+function level_toggle_pause()
+{
+	with (oLevelManager)
+	{
+		paused = !paused;
+		physics_pause_enable(paused);
+		
+		if (paused) instance_deactivate_all(true);
+		else		instance_activate_all();
+	}
+}
+
+function is_level_paused()
+{
+	with (oLevelManager)
+	{
+		return paused;
+	}
+}

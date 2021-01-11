@@ -1,5 +1,6 @@
 /// @desc inits all needed obj's for a level
 
+paused = false;
 level_complete = false;
 ui_alpha = 2; // also text fade duration in seconds
 

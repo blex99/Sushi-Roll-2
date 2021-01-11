@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Level Managers",
+    "path": "folders/Objects/Level Managers.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPhysicsWorld",

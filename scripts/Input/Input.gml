@@ -1,11 +1,20 @@
 // select.. notice NOT pressed
 function input_one(){
-	var _input = mouse_check_button(mb_left) || gamepad_button_check(global.device_index, gp_face1);
+	var _input = mouse_check_button(mb_left) ||
+		gamepad_button_check(global.device_index, gp_face1);
 	return _input;
 }
 
 function input_one_pressed(){
-	var _input = mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(global.device_index, gp_face1);
+	var _input = mouse_check_button_pressed(mb_left) ||
+		gamepad_button_check_pressed(global.device_index, gp_face1);
+	return _input;
+}
+
+// for pausing
+function input_start_pressed(){
+	var _input = keyboard_check_pressed(ord("P")) ||
+		gamepad_button_check_pressed(global.device_index, gp_start);
 	return _input;
 }
 

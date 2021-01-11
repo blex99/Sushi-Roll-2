@@ -11,15 +11,31 @@ if (is_level_complete())
 {
 	_font = fnUIBig;
 	_buff = font_get_size(_font);
+	
+	var _str = 
+	[
+		string(timer_calc_time_bonus()),
+		string(rice_value * rice_count),
+		string(collectible_value * collectible_count),
+		string(level_score)
+	];
+	
+	// add zeros to points until there are four total digits
+	for (var _i = 0; _i < array_length(_str); _i++)
+	{
+		while (string_length(_str[_i]) < 4)
+			_str[_i] = string_insert("0", _str[_i], 0);
+	}
+
 	_arr =
 	[
 		"Level Complete!\n",
-		"-----------------",
+		"----------------",
 		"Points\n",
-		"Time: " + string(timer_calc_time_bonus()),
-		"Rice: " + string(rice_value * rice_count), 
-		"Collectibles: " + string(collectible_value * collectible_count),
-		"Level Score Total: " + string(level_score), 
+		"Time: "				+ _str[0],
+		"Rice: "				+ _str[1], 
+		"Collectibles: "		+ _str[2],
+		"Level Score Total: "	+ _str[3],
 		"-----------------",
 		"\nPress Left Click or A to Continue"
 	];
@@ -27,6 +43,7 @@ if (is_level_complete())
 	// black shade over screen
 	set_draw(c_black, 0.5);
 	draw_rectangle(0, 0, _w, _h, false);
+	
 	// score text
 	set_draw(c_white, 1, _font, fa_center, fa_center);
 	for (_count = 0; _count < array_length(_arr); _count++)

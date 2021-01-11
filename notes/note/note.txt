@@ -1,11 +1,16 @@
+DONE
+made ui box for timer
+fixed knife path bug
+made collectible a parent object
+made collectible 
+remade 4 levels
+pause menu
+
 TODO
-do ui designs (for timer)
-timer make its own object
 create main menu
 create pause menu
 cup of water hazard (water physics)
-moving knives
+learn shaders
 
 PROBLEMS:
-
-can get stuck if wedged (add restart_room and things to controller)
+you can collide with fulcrum!!!

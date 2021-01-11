@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"528c47e7-b9e4-40cc-99e0-f2aeb5fff5f0","path":"sprites/sSushiCircle/sSushiCircle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"528c47e7-b9e4-40cc-99e0-f2aeb5fff5f0","path":"sprites/sSushiCircle/sSushiCircle.yy",},"LayerId":{"name":"cd5c084e-267c-4056-81af-57f7e7ad0e97","path":"sprites/sSushiCircle/sSushiCircle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSushiCircle","path":"sprites/sSushiCircle/sSushiCircle.yy",},"resourceVersion":"1.0","name":"528c47e7-b9e4-40cc-99e0-f2aeb5fff5f0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3fafec73-4a1b-40dd-8275-f1c4d8645d33","path":"sprites/sSushiCircle/sSushiCircle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3fafec73-4a1b-40dd-8275-f1c4d8645d33","path":"sprites/sSushiCircle/sSushiCircle.yy",},"LayerId":{"name":"cd8a4b8f-b9ca-4e1a-8b0b-9eb29c0405f9","path":"sprites/sSushiCircle/sSushiCircle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sSushiCircle","path":"sprites/sSushiCircle/sSushiCircle.yy",},"resourceVersion":"1.0","name":"3fafec73-4a1b-40dd-8275-f1c4d8645d33","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sSushiCircle","path":"sprites/sSushiCircle/sSushiCircle.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ce2947ee-2c96-4d78-914b-b0d7215ea4fb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"528c47e7-b9e4-40cc-99e0-f2aeb5fff5f0","path":"sprites/sSushiCircle/sSushiCircle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f48f5123-ece0-493c-b79a-a09482610355","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3fafec73-4a1b-40dd-8275-f1c4d8645d33","path":"sprites/sSushiCircle/sSushiCircle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cd5c084e-267c-4056-81af-57f7e7ad0e97","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cd8a4b8f-b9ca-4e1a-8b0b-9eb29c0405f9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",

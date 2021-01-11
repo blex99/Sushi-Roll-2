@@ -31,6 +31,3 @@ if (keyboard_check_pressed(ord("C")))
 		phy_position_y = oGoal.y - oGoal.sprite_height;
 	}
 }
-
-add_to_debug_map("using_controller?: " + string(global.using_controller));
-add_to_debug_map("scale: " + string(sushi_cur().image_xscale));
