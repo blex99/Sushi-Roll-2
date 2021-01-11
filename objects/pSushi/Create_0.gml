@@ -9,8 +9,8 @@ alarm[0] = invincibility_frames;
 // phys vars
 density			= 0.2;
 restitution		= 0.1;
-linear_damp		= 0.2;
-angular_damp	= 0.2;
+linear_damp		= 0.1;
+angular_damp	= 0.1;
 fric			= 0.15;
 
 my_fix			= -1; // assigned in sushi_init_fixture()

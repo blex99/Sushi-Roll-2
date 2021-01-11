@@ -2,21 +2,12 @@
 
 ui_alpha = max(ui_alpha - (1 / room_speed), 0);
 
-if (level_complete && input_one_pressed())
+if (level_complete)
 {
-	game_goto_next_level();
-	level_complete = false;
+	if (input_one_pressed()) game_goto_next_level();
 }
-
-if (!level_complete && input_start_pressed())
+else
 {
-	level_toggle_pause();
-}
-
-if (paused)
-{
-	if (input_one_pressed())
-	{
-		room_restart();	
-	}
+	if (input_start_pressed()) level_toggle_pause();
+	if (paused && input_one_pressed()) room_restart();
 }

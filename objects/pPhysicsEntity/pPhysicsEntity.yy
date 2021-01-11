@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "pNonCollideable",
+    "path": "objects/pNonCollideable/pNonCollideable.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Physics Parents",
+    "path": "folders/Objects/Physics Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "pPhysicsEntity",

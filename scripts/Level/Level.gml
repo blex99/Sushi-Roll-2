@@ -36,3 +36,19 @@ function is_level_paused()
 		return paused;
 	}
 }
+
+function level_start_countdown()
+{
+	with (oLevelManager)
+	{
+		alarm[0] = room_speed * 3;
+	}
+}
+
+function level_counting_down()
+{
+	with (oLevelManager)
+	{
+		return alarm[0] != -1;
+	}
+}	

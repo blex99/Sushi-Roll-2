@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "pStatic",
-    "path": "objects/pStatic/pStatic.yy",
+    "name": "pNonCollideable",
+    "path": "objects/pNonCollideable/pNonCollideable.yy",
   },
   "physicsObject": true,
   "physicsSensor": false,

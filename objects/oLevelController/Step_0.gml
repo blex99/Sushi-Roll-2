@@ -1,10 +1,5 @@
 /// @desc control platforms
 
-if (keyboard_check(vk_escape)) game_end();
-if (keyboard_check(ord("R"))) room_restart();
-if (keyboard_check(ord("O")))
-	global.using_controller =! global.using_controller;
-
 // clamp mouse to w_min and w_max
 window_mouse_set(input_x_mouse_clamp(w_min, w_max), h_half); 
 
