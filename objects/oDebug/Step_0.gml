@@ -8,9 +8,9 @@ if (keyboard_check_pressed(ord("3")))
 	room_goto(rLevel03);
 if (keyboard_check_pressed(ord("4")))
 	room_goto(rLevel04);
-/*
 if (keyboard_check_pressed(ord("5")))
 	room_goto(rLevel05)
+/*
 if (keyboard_check_pressed(ord("6")))
 	room_goto(rLevel06);
 if (keyboard_check_pressed(ord("7")))
@@ -22,7 +22,7 @@ if (keyboard_check_pressed(ord("9")))
 if (keyboard_check_pressed(ord("0")))
 	room_goto(rLevel10)
 */
-
+	
 if (keyboard_check_pressed(ord("R")))
 	room_restart();
 	

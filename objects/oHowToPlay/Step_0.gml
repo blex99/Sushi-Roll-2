@@ -2,5 +2,6 @@
 
 if (input_one_pressed())
 {
-	room_goto(rLevel01);	
+	index++;
+	if (index == array_length(arr)) room_goto(rLevel01);	
 }

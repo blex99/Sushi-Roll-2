@@ -10,22 +10,17 @@ if (instance_exists(follow))
 	// zoom out as sushi gets bigger
 	_sushi_scale = follow.image_xscale * 0.5;
 	if (_sushi_scale < 1) _sushi_scale = 1;
+	
 }
 
 #region debug zoom
 if (debug_mode)
 {
 	if (keyboard_check_pressed(ord("Z")))
-		zoom+=0.5;
+		camera_increment_zoom(0.5);
 	
 	if (keyboard_check_pressed(ord("X")))
-		zoom-=0.5;
-		
-	view_w = display_get_gui_width() * zoom * _sushi_scale;
-	view_h = display_get_gui_height() * zoom * _sushi_scale;
-	view_w_half = view_w * 0.5;
-	view_h_half = view_h * 0.5;
-	camera_set_view_size(cam, view_w, view_h);
+		camera_increment_zoom(-0.5);
 }
 #endregion
 
@@ -47,6 +42,7 @@ if (!reached_sushi_start)
 	if (follow == sushi_cur() && abs(x - _xf) < 1 && abs(y - _yf) < 1)
 	{
 		level_start_countdown();
+		camera_increment_zoom(-0.5);
 		xstrength = 2; // follow more rigid in the x
 		ystrength = 10;
 		reached_sushi_start = true;

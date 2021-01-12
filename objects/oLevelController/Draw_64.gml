@@ -20,7 +20,7 @@ if (!is_level_complete())
 	draw_text(_xpos, h_half - 8, _msg);
 	
 	// draw angle speed text on bottom
-	_msg = string(input_x_axis() * pRotateable.angle_limit) + "°";
+	_msg = string(input_x_axis() * ROT_LIMIT) + "°";
 	set_draw(c_red, 0.7, _font, fa_top, fa_center);
 	draw_text(_xpos, h_half + 8, _msg);
 
