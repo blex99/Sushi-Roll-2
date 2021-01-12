@@ -1,5 +1,6 @@
 /// @desc display horizontal scroll bar
 
+/*
 if (!is_level_complete())
 {
 	var _font = fnUI;
@@ -26,3 +27,4 @@ if (!is_level_complete())
 
 	reset_alpha();
 }
+*/

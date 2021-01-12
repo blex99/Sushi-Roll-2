@@ -3,7 +3,12 @@ scale_max = 2;
 size_increment = 0.2;
 jump_velocity_max = 500;
 invincibility_frames = room_speed * 3;
-move_force = 1.5;
+
+force = 0;
+force_normal = 1.5;
+force_bonus = 6;
+force_max = 6;
+
 alarm[0] = invincibility_frames;
 
 // phys vars

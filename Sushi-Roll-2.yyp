@@ -51,6 +51,7 @@
     {"id":{"name":"sSpring","path":"sprites/sSpring/sSpring.yy",},"order":15,},
     {"id":{"name":"pDynamic","path":"objects/pDynamic/pDynamic.yy",},"order":0,},
     {"id":{"name":"rHowToPlay","path":"rooms/rHowToPlay/rHowToPlay.yy",},"order":6,},
+    {"id":{"name":"sArrow","path":"sprites/sArrow/sArrow.yy",},"order":19,},
     {"id":{"name":"MACROS_GLOBALS","path":"scripts/MACROS_GLOBALS/MACROS_GLOBALS.yy",},"order":4,},
     {"id":{"name":"Input","path":"scripts/Input/Input.yy",},"order":3,},
     {"id":{"name":"pRotateable","path":"objects/pRotateable/pRotateable.yy",},"order":0,},

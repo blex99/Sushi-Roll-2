@@ -14,21 +14,6 @@ function sushi_cur()
 		return noone;
 }
 
-// called when the sushi is killed
-function sushi_reset()
-{
-	with (sushi_cur())
-	{
-		phy_position_x = xstart;
-		phy_position_y = ystart;
-		phy_linear_velocity_x = 0;
-		phy_linear_velocity_y = 0;
-		phy_rotation = 0;
-		image_alpha = 1;
-		alarm[0] = invincibility_frames;
-	}
-}
-
 function sushi_invincible()
 {
 	return sushi_cur().alarm[0] != -1;
