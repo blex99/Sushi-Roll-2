@@ -1,4 +1,4 @@
-/// @description smoke
+/// @description trigger particle effects
 	
 var _x = irandom_range(bbox_left + 64, bbox_right - 128);
 var _y = irandom_range(bbox_top, bbox_top - 32);

@@ -13,6 +13,7 @@ uniform float springCount;
 void main()
 {
 	vec2 p = v_vTexcoord;
+	float amp = 2.0;
 	float py = 1.0 - p.y;
 	float pixelsIn = (p.x / pixelW);
 	int chunk = int(floor(p.x * springCount));

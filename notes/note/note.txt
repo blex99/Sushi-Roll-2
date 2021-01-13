@@ -1,16 +1,11 @@
 DONE
-made ui box for timer
-fixed knife path bug
-made collectible a parent object
-made collectible 
-remade 4 levels
-pause menu
+optimized water body
+updated level 4
+hide sushi ui before lvl start
 
 TODO
+create 5 more levels
 create main menu
 create pause menu
-cup of water hazard (water physics)
-learn shaders
 
 PROBLEMS:
-you can collide with fulcrum!!!

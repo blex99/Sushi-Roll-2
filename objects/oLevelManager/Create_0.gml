@@ -15,7 +15,6 @@ var _inst, _sushi = sushi_cur(), _w_half, _h_half;
 _w_half = _sushi.sprite_width / 2;
 _h_half = _sushi.sprite_height / 2;
 
-
 // top
 _inst = instance_create_layer(_sushi.x, _sushi.y - _h_half - 1, "Instances", oInvisibleSushiHolder);
 // bottom

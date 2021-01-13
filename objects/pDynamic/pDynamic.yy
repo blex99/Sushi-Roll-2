@@ -21,7 +21,6 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"pDynamic","path":"objects/pDynamic/pDynamic.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"pDynamic","path":"objects/pDynamic/pDynamic.yy",},"parent":{"name":"pDynamic","path":"objects/pDynamic/pDynamic.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"pStatic","path":"objects/pStatic/pStatic.yy",},"parent":{"name":"pDynamic","path":"objects/pDynamic/pDynamic.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"pKinematic","path":"objects/pKinematic/pKinematic.yy",},"parent":{"name":"pDynamic","path":"objects/pDynamic/pDynamic.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},

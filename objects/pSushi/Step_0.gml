@@ -16,6 +16,7 @@ phy_linear_velocity_x += force;
 
 if (place_meeting(x, y, oWaterBody))
 {
-	water_cause_wave(instance_place(x, y, oWaterBody), x);
+	var _water = instance_place(x, y, oWaterBody);
+	water_cause_wave(_water, x);
 	phy_linear_damping = 5;
 }
