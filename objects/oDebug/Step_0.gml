@@ -34,3 +34,6 @@ if (keyboard_check_pressed(ord("C")))
 		phy_position_y = oGoal.y - oGoal.sprite_height;
 	}
 }
+
+add_to_debug_map("fps: " + string(fps));
+add_to_debug_map("fps_real: " + string(floor(fps_real)));

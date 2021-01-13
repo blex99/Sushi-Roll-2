@@ -14,5 +14,8 @@ force = approach(force, _target, 0.5);
 force = clamp(force, -force_max, force_max);
 phy_linear_velocity_x += force;
 
-add_to_debug_map("force: " + string(force));
-add_to_debug_map("mass: " + string(phy_mass));
+if (place_meeting(x, y, oWaterBody))
+{
+	water_cause_wave(instance_place(x, y, oWaterBody), x);
+	phy_linear_damping = 5;
+}

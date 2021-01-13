@@ -96,7 +96,21 @@ function sushi_jump(_velocity)
 		phy_linear_velocity_y += -_velocity;
 		phy_linear_velocity_y = clamp(phy_linear_velocity_y,
 			-jump_velocity_max, jump_velocity_max);
-	}
+		
+		if (image_xscale != 1)
+		{
+			draw_set_alpha(0.1);
+			var _num = 1 + irandom(3);
+			for (var _i = 0; _i < _num; _i++)
+			{
+				var _offset = (1 - irandom(2)) * 8;
+				effect_create_below(ef_firework, x + _offset,
+					y + _offset + sprite_height / 2, 0, choose(c_white, c_grey));
+			}
+			reset_alpha();
+		}
+	}	
+	
 	
 	sushi_change_size(false); // shrink
 }

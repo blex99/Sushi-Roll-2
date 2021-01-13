@@ -1,8 +1,5 @@
 /// @desc control platforms
 
-// clamp mouse to w_min and w_max
-window_mouse_set(input_x_mouse_clamp(w_min, w_max), h_half); 
-
 // rotating object idle
 with (pRotateable)
 {
@@ -15,4 +12,5 @@ with (pRotateable)
 	phy_angular_velocity = _spd;
 }
 
-
+// clamp mouse to w_min and w_max
+window_mouse_set(input_x_mouse_clamp(w_min, w_max), h_half);

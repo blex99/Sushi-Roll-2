@@ -1,7 +1,7 @@
 #macro ROT_LIMIT 50
+#macro WATERDIVISION 16 // smaller division -> more lag
 
 gamepad_set_axis_deadzone(0, 0.2);
-
 // finds the slot the device is connected to
 global.device_index = 0;
 
