@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Rotateable",
-    "path": "folders/Objects/Rotateable.yy",
+    "name": "Sushi",
+    "path": "folders/Objects/Sushi.yy",
   },
   "resourceVersion": "1.0",
   "name": "oFulcrum",

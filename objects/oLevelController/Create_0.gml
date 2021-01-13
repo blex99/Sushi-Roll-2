@@ -1,5 +1,5 @@
 // input vars
-rot_strength = 5;
+rot_strength = 4;
 
 w = display_get_gui_width();
 h = display_get_gui_height();

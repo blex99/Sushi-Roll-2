@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 255,
   "bbox_top": 0,
-  "bbox_bottom": 6,
+  "bbox_bottom": 12,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 256,
-  "height": 8,
+  "height": 13,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"96bb02aa-22c3-41c1-8bef-c9d9bcd3dd9b","path":"sprites/sChopstick/sChopstick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"96bb02aa-22c3-41c1-8bef-c9d9bcd3dd9b","path":"sprites/sChopstick/sChopstick.yy",},"LayerId":{"name":"3ca856da-3c27-4a87-9f38-2499162f770a","path":"sprites/sChopstick/sChopstick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sChopstick","path":"sprites/sChopstick/sChopstick.yy",},"resourceVersion":"1.0","name":"96bb02aa-22c3-41c1-8bef-c9d9bcd3dd9b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ca6506f2-3cea-4632-b48c-ce76e21140df","path":"sprites/sChopstick/sChopstick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ca6506f2-3cea-4632-b48c-ce76e21140df","path":"sprites/sChopstick/sChopstick.yy",},"LayerId":{"name":"7e55104f-88a1-4ca5-bb7f-2efa1afb93ce","path":"sprites/sChopstick/sChopstick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChopstick","path":"sprites/sChopstick/sChopstick.yy",},"resourceVersion":"1.0","name":"ca6506f2-3cea-4632-b48c-ce76e21140df","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sChopstick","path":"sprites/sChopstick/sChopstick.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"97f425dc-9f41-419d-9dc3-9df5a1e49b1b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"96bb02aa-22c3-41c1-8bef-c9d9bcd3dd9b","path":"sprites/sChopstick/sChopstick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"19951b17-75e2-42a9-8e80-7a54952f87e2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca6506f2-3cea-4632-b48c-ce76e21140df","path":"sprites/sChopstick/sChopstick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 128,
-    "yorigin": 8,
+    "yorigin": 13,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sChopstick","path":"sprites/sChopstick/sChopstick.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3ca856da-3c27-4a87-9f38-2499162f770a","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7e55104f-88a1-4ca5-bb7f-2efa1afb93ce","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",

@@ -1,27 +1,15 @@
 /// @desc debug commands
 
-if (keyboard_check_pressed(ord("1")))
-	room_goto(rLevel01);
-if (keyboard_check_pressed(ord("2")))
-	room_goto(rLevel02);
-if (keyboard_check_pressed(ord("3")))
-	room_goto(rLevel03);
-if (keyboard_check_pressed(ord("4")))
-	room_goto(rLevel04);
-if (keyboard_check_pressed(ord("5")))
-	room_goto(rLevel05)
-/*
-if (keyboard_check_pressed(ord("6")))
-	room_goto(rLevel06);
-if (keyboard_check_pressed(ord("7")))
-	room_goto(rLevel07);
-if (keyboard_check_pressed(ord("8")))
-	room_goto(rLevel08);
-if (keyboard_check_pressed(ord("9")))
-	room_goto(rLevel09);
+// goto 10th level if pressed 0
 if (keyboard_check_pressed(ord("0")))
-	room_goto(rLevel10)
-*/
+	room_goto(oGame.levels[9]);
+
+// goto i'th level if pressed i
+for (var i = 1; i <= 9; i++)
+{
+	if (keyboard_check_pressed(ord(string(i))))
+		room_goto(oGame.levels[i - 1]);
+}
 	
 if (keyboard_check_pressed(ord("R")))
 	room_restart();

@@ -1,11 +1,16 @@
 DONE
-optimized water body
-updated level 4
-hide sushi ui before lvl start
+more levels (total of 7)
+spring collisions updated
+new chopstick sprite
 
 TODO
-create 5 more levels
+levels 8, 9, 10
+determine each levels difficulty...
 create main menu
 create pause menu
 
 PROBLEMS:
+
+COLORS:
+easy	medium	hard
+$ACD8D3	$FFFFCC	$E5ABA0

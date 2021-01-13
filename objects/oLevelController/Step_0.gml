@@ -8,7 +8,6 @@ with (pRotateable)
 	else				 _target_angle = 0;
 	
 	var _spd = (_target_angle - phy_rotation) * other.rot_strength;
-	if (input_controller_active()) _spd *= 0.75; // reduce spd with controller
 	phy_angular_velocity = _spd;
 }
 
