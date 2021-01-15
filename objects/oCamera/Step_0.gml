@@ -44,7 +44,7 @@ if (!reached_sushi_start)
 		level_start_countdown();
 		camera_increment_zoom(-0.5);
 		xstrength = 2; // follow more rigid in the x
-		ystrength = 10;
+		ystrength = 5;
 		reached_sushi_start = true;
 	}
 	else

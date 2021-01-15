@@ -8,3 +8,5 @@ if (level_timer < room_speed * 10)
 	set_draw(c_red, 0.2);
 	draw_rectangle(0, 0, _w, _h, false)
 }
+
+reset_alpha();

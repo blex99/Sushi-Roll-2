@@ -16,10 +16,10 @@
   "physicsShape": 1,
   "physicsGroup": 1,
   "physicsDensity": 0.0,
-  "physicsRestitution": 0.05,
+  "physicsRestitution": 0.0,
   "physicsLinearDamping": 0.1,
   "physicsAngularDamping": 0.1,
-  "physicsFriction": 0.5,
+  "physicsFriction": 2.0,
   "physicsStartAwake": true,
   "physicsKinematic": true,
   "physicsShapePoints": [
@@ -34,6 +34,7 @@
   ],
   "properties": [
     {"varType":1,"value":"paStraightRight","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"path","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"2","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"move_speed","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

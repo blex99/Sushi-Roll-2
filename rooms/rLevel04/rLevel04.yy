@@ -17,7 +17,7 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"oDeathPlane","path":"objects/oDeathPlane/oDeathPlane.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.25,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":1568.0,"resourceVersion":"1.0","name":"inst_6C0348A2","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oDeathPlane","path":"objects/oDeathPlane/oDeathPlane.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":6.25,"scaleY":1.25,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1120.0,"y":1456.0,"resourceVersion":"1.0","name":"inst_6C0348A2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
             {"propertyId":{"name":"level_name","path":"objects/oLevelManager/oLevelManager.yy",},"objectId":{"name":"oLevelManager","path":"objects/oLevelManager/oLevelManager.yy",},"value":"\"The Boot\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oLevelManager","path":"objects/oLevelManager/oLevelManager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":400.0,"y":352.0,"resourceVersion":"1.0","name":"inst_16101583","tags":[],"resourceType":"GMRInstance",},

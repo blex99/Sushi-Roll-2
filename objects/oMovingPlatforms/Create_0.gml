@@ -1,3 +1,3 @@
 /// @description assign a path
 
-path_start(path, 2, path_action_reverse, false);
+path_start(path, move_speed, path_action_reverse, false);
