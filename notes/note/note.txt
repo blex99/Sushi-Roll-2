@@ -1,7 +1,4 @@
 DONE
-more levels (total of 7)
-spring collisions updated
-new chopstick sprite
 
 TODO
 levels 8, 9, 10
