@@ -23,5 +23,5 @@ if (keyboard_check_pressed(ord("C")))
 	}
 }
 
-add_to_debug_map("fps: " + string(fps));
-add_to_debug_map("fps_real: " + string(floor(fps_real)));
+if (keyboard_check_pressed(ord("D")))
+	show_debug = !show_debug;

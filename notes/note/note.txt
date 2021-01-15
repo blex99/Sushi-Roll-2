@@ -5,6 +5,7 @@ levels 8, 9, 10
 determine each levels difficulty...
 create main menu
 create pause menu
+ui stuff
 
 PROBLEMS:
 

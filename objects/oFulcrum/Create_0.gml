@@ -1,1 +1,0 @@
-if (!debug_mode) image_alpha = 0;

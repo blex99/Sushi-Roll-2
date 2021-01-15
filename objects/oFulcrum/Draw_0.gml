@@ -1,2 +1,5 @@
-if (sprite_index != -1) draw_self();
-if (debug_mode) physics_draw_debug();
+if (can_display_debug())
+{
+	draw_self();
+	physics_draw_debug();
+}
