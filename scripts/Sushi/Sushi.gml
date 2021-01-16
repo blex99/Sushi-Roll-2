@@ -33,8 +33,9 @@ function sushi_change_size(_grow)
 		}
 		else
 		{
-			image_xscale -= size_increment;
-			image_yscale -= size_increment;
+			// shink to original size
+			image_xscale = 1;//-= size_increment;
+			image_yscale = 1;//-= size_increment;
 		}
 		
 		// don't scale outside of max or original size

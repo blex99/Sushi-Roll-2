@@ -477,8 +477,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Levels",
-    "path": "folders/Rooms/Levels.yy",
+    "name": "2 Medium",
+    "path": "folders/Rooms/Levels/2 Medium.yy",
   },
   "resourceVersion": "1.0",
   "name": "rLevel07",

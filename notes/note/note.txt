@@ -1,14 +1,23 @@
-DONE
-
-TODO
-levels 8, 9, 10
-determine each levels difficulty...
+-------------------------------------------------------------------------------
+DONE:
+no more ugly image stretching for wall thin
+level 10
+springs shrinks sushi more
+reworked level 2 and 4
+-------------------------------------------------------------------------------
+TODO:
+rework level 5, 6, and 7
+update ui (use tutorial)
 create main menu
 create pause menu
-ui stuff
-
+reward for collecting everything
+make collecting everything in one run possible for each level
+detect if/when stuck
+-------------------------------------------------------------------------------
 PROBLEMS:
-
+nothing
+-------------------------------------------------------------------------------
 COLORS:
 easy	medium	hard
 $ACD8D3	$FFFFCC	$E5ABA0
+-------------------------------------------------------------------------------
