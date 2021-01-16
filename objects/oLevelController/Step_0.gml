@@ -12,4 +12,5 @@ with (pRotateable)
 }
 
 // clamp mouse to w_min and w_max
-window_mouse_set(input_x_mouse_clamp(w_min, w_max), h_half);
+if (!input_controller_active() && !is_level_complete())
+	window_mouse_set(input_x_mouse_clamp(w_min, w_max), h_half);

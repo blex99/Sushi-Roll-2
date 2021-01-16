@@ -6,6 +6,8 @@ if (keyboard_check(vk_lcontrol) && keyboard_check_pressed(ord("F")))
 	window_set_fullscreen(!_full);
 }
 
-if (keyboard_check(vk_escape)) game_end();
+if (keyboard_check(vk_escape))
+	game_end();
 
-if (keyboard_check(ord("O"))) global.using_controller =! global.using_controller;
+if (keyboard_check(ord("O")))
+	global.using_controller =! global.using_controller;

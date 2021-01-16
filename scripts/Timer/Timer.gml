@@ -4,4 +4,5 @@ function timer_calc_time_bonus()
 	{
 		return time_value * ceil(level_timer / room_speed);
 	}
+	return -1;
 }

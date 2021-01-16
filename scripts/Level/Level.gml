@@ -27,6 +27,13 @@ function level_toggle_pause()
 		if (paused) instance_deactivate_all(true);
 		else		instance_activate_all();
 	}
+	
+	instance_activate_object(oGame);
+	
+	
+	if (!instance_exists(oDebug))
+		instance_create_layer(0, 0, "Instances", oDebug);
+	else instance_activate_object(oDebug);
 }
 
 function is_level_paused()

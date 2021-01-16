@@ -4,7 +4,10 @@ ui_alpha = max(ui_alpha - (1 / room_speed), 0);
 
 if (level_complete)
 {
-	if (input_one_pressed()) game_goto_next_level();
+	if (input_one_pressed())
+	{
+		game_goto_next_level();
+	}
 }
 else
 {

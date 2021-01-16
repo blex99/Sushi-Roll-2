@@ -7,11 +7,8 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "pStatic",
-    "path": "objects/pStatic/pStatic.yy",
-  },
-  "physicsObject": true,
+  "parentObjectId": null,
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 2,
   "physicsGroup": 1,
@@ -29,8 +26,7 @@
     {"x":0.0,"y":84.0,},
   ],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"pSushi","path":"objects/pSushi/pSushi.yy",},"parent":{"name":"oGoal","path":"objects/oGoal/oGoal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oGoal","path":"objects/oGoal/oGoal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oGoal","path":"objects/oGoal/oGoal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
