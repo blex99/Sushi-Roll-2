@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sWallBig",
-    "path": "sprites/sWallBig/sWallBig.yy",
+    "name": "sBambooWallBig",
+    "path": "sprites/sBambooWallBig/sBambooWallBig.yy",
   },
   "solid": false,
   "visible": true,

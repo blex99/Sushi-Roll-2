@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sChopstick",
-    "path": "sprites/sChopstick/sChopstick.yy",
+    "name": "sBambooRotateable",
+    "path": "sprites/sBambooRotateable/sBambooRotateable.yy",
   },
   "solid": false,
   "visible": true,

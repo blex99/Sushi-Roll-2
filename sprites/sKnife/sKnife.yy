@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2ff10447-a1b6-4799-894a-d53f3c8fea54","path":"sprites/sKnife/sKnife.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2ff10447-a1b6-4799-894a-d53f3c8fea54","path":"sprites/sKnife/sKnife.yy",},"LayerId":{"name":"8576f38d-1dd0-4774-aae5-daf3e7bf9ae6","path":"sprites/sKnife/sKnife.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sKnife","path":"sprites/sKnife/sKnife.yy",},"resourceVersion":"1.0","name":"2ff10447-a1b6-4799-894a-d53f3c8fea54","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"43300a1f-94f6-47ce-8065-e0087d9cf472","path":"sprites/sKnife/sKnife.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"43300a1f-94f6-47ce-8065-e0087d9cf472","path":"sprites/sKnife/sKnife.yy",},"LayerId":{"name":"0f1d5f61-8ec1-4b96-b3a4-54b1c57a3358","path":"sprites/sKnife/sKnife.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sKnife","path":"sprites/sKnife/sKnife.yy",},"resourceVersion":"1.0","name":"43300a1f-94f6-47ce-8065-e0087d9cf472","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sKnife","path":"sprites/sKnife/sKnife.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a2d948c3-a99e-44b3-ba4b-742d74507e95","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ff10447-a1b6-4799-894a-d53f3c8fea54","path":"sprites/sKnife/sKnife.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d965dd4c-7afc-4f37-ae65-2db6102a3701","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"43300a1f-94f6-47ce-8065-e0087d9cf472","path":"sprites/sKnife/sKnife.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8576f38d-1dd0-4774-aae5-daf3e7bf9ae6","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0f1d5f61-8ec1-4b96-b3a4-54b1c57a3358","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",

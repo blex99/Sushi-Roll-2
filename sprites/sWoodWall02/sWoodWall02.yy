@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 319,
+  "bbox_right": 63,
   "bbox_top": 0,
-  "bbox_bottom": 319,
+  "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 320,
-  "height": 320,
+  "width": 64,
+  "height": 64,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d4c90a47-3b53-4aa6-99ef-70e5013fe9c4","path":"sprites/sWallBig/sWallBig.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d4c90a47-3b53-4aa6-99ef-70e5013fe9c4","path":"sprites/sWallBig/sWallBig.yy",},"LayerId":{"name":"37dd69e0-f7bf-49a2-abc1-71a03311838c","path":"sprites/sWallBig/sWallBig.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sWallBig","path":"sprites/sWallBig/sWallBig.yy",},"resourceVersion":"1.0","name":"d4c90a47-3b53-4aa6-99ef-70e5013fe9c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall02/sWoodWall02.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall02/sWoodWall02.yy",},"LayerId":{"name":"4cb1e8b7-6f59-41bb-b6b8-693e33725b73","path":"sprites/sWoodWall02/sWoodWall02.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sWoodWall02","path":"sprites/sWoodWall02/sWoodWall02.yy",},"resourceVersion":"1.0","name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sWallBig","path":"sprites/sWallBig/sWallBig.yy",},
+    "spriteId": {"name":"sWoodWall02","path":"sprites/sWoodWall02/sWoodWall02.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"07d31793-acdc-43c2-bf99-d55372d70901","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d4c90a47-3b53-4aa6-99ef-70e5013fe9c4","path":"sprites/sWallBig/sWallBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bf373115-4690-4f9d-b64c-17c0a39b0e73","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall02/sWoodWall02.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sWallBig","path":"sprites/sWallBig/sWallBig.yy",},
+    "parent": {"name":"sWoodWall02","path":"sprites/sWoodWall02/sWoodWall02.yy",},
     "resourceVersion": "1.3",
-    "name": "sWallBig",
+    "name": "sWoodWall02",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"37dd69e0-f7bf-49a2-abc1-71a03311838c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4cb1e8b7-6f59-41bb-b6b8-693e33725b73","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Wood",
+    "path": "folders/Sprites/Wood.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sWallBig",
+  "name": "sWoodWall02",
   "tags": [],
   "resourceType": "GMSprite",
 }
