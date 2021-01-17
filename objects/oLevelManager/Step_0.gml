@@ -15,7 +15,7 @@ else
 	if (paused && input_one_pressed())	room_restart();
 }
 
-if (debug_mode && level_counting_down() && input_one_pressed())
+if (/*debug_mode && */level_counting_down() && input_one_pressed())
 {
 	// speed up countdown...
 	alarm[0] = 1;

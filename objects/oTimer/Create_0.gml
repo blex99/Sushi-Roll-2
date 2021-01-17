@@ -1,4 +1,4 @@
 /// @description Insert description here
 
-level_timer = room_speed * 60; // in frames
+level_timer = room_speed * 120; // in frames
 time_value = 10; // each second worth

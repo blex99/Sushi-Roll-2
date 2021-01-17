@@ -64,6 +64,10 @@ function sushi_init_fixture()
 		physics_fixture_set_friction(_fix, fric);
 		my_fix = physics_fixture_bind(_fix, id);
 		physics_fixture_delete(_fix);
+		
+		// force mass to be a set amount no matter what
+		// size the sushi ball is
+		physics_mass_properties(mass, 0, 0, phy_inertia);
 	}
 }
 

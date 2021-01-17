@@ -45,6 +45,7 @@
     {"id":{"name":"rLevel05","path":"rooms/rLevel05/rLevel05.yy",},"order":0,},
     {"id":{"name":"pStatic","path":"objects/pStatic/pStatic.yy",},"order":4,},
     {"id":{"name":"fnUI","path":"fonts/fnUI/fnUI.yy",},"order":1,},
+    {"id":{"name":"paSquare","path":"paths/paSquare/paSquare.yy",},"order":4,},
     {"id":{"name":"oSushiCircle","path":"objects/oSushiCircle/oSushiCircle.yy",},"order":0,},
     {"id":{"name":"rLevel07","path":"rooms/rLevel07/rLevel07.yy",},"order":2,},
     {"id":{"name":"sWoodWall01","path":"sprites/sWoodWall01/sWoodWall01.yy",},"order":0,},

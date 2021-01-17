@@ -1,3 +1,8 @@
 /// @description assign a path
 
-path_start(path, move_speed, path_action_reverse, false);
+var _path = path_duplicate(path);
+
+path_start(_path, move_speed, path_action, false);
+path_position = normalized_start;
+
+if (flip) path_flip(_path);
