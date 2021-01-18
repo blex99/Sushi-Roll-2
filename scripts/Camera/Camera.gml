@@ -1,5 +1,5 @@
 // larger zoom, more to see
-function camera_update_zoom(_zoom)
+function camera_zoom(_zoom)
 {
 	with (oCamera)
 	{
@@ -17,6 +17,6 @@ function camera_increment_zoom(_amount)
 	with (oCamera)
 	{
 		zoom += _amount;
-		camera_update_zoom(zoom);
+		camera_zoom(zoom);
 	}
 }

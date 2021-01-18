@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description update level index
 
 for (var i = 0; i < array_length(levels); i++)
 {

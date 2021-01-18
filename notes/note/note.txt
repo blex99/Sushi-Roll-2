@@ -1,9 +1,5 @@
 -------------------------------------------------------------------------------
 DONE:
-no more ugly image stretching for wall thin
-level 10
-springs shrinks sushi more
-reworked level 2 and 4
 -------------------------------------------------------------------------------
 TODO:
 rework level 5, 6, and 7
@@ -13,6 +9,7 @@ create pause menu
 reward for collecting everything
 make collecting everything in one run possible for each level
 detect if/when stuck
+music
 -------------------------------------------------------------------------------
 PROBLEMS:
 nothing

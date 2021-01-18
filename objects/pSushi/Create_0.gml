@@ -12,7 +12,7 @@ force_max = 6;
 alarm[0] = invincibility_frames;
 
 // phys vars
-mass = 2.5;
+mass = 2.2;
 density			= 0.2;
 restitution		= 0.1;
 linear_damp		= 0.1;

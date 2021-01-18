@@ -1,3 +1,5 @@
+#macro RES_W 960
+#macro RES_H 540
 #macro ROT_LIMIT 50
 #macro WATERDIVISION 16 // smaller division -> more lag
 

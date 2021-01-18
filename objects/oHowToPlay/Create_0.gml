@@ -1,4 +1,8 @@
-/// @description Insert description here
+/// @description
+
+w = display_get_gui_width();
+h = display_get_gui_height();
+font = fnUIBig;
 
 arr =
 [
@@ -9,7 +13,6 @@ arr =
 	"Your objective is to reach the goal before time runs out.",
 	"Good luck."
 ];
-
 
 index = 0;
 

@@ -3,7 +3,7 @@ view_enabled = true;
 view_visible[0] = true;
 
 zoom = 1.5;
-camera_update_zoom(zoom);
+camera_zoom(zoom);
 
 // follow and strength will change once game starts
 follow = oGoal;
