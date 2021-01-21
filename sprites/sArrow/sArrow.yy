@@ -17,8 +17,8 @@
   "width": 32,
   "height": 16,
   "textureGroupId": {
-    "name": "tgUI",
-    "path": "texturegroups/tgUI",
+    "name": "tgLevel",
+    "path": "texturegroups/tgLevel",
   },
   "swatchColours": null,
   "gridX": 8,
