@@ -17,8 +17,8 @@
   "width": 256,
   "height": 64,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgDebug",
+    "path": "texturegroups/tgDebug",
   },
   "swatchColours": null,
   "gridX": 0,

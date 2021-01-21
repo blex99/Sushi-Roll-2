@@ -17,19 +17,19 @@
   "width": 64,
   "height": 64,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgLevel",
+    "path": "texturegroups/tgLevel",
   },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall02/sWoodWall02.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall02/sWoodWall02.yy",},"LayerId":{"name":"4cb1e8b7-6f59-41bb-b6b8-693e33725b73","path":"sprites/sWoodWall02/sWoodWall02.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sWoodWall02","path":"sprites/sWoodWall02/sWoodWall02.yy",},"resourceVersion":"1.0","name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall/sWoodWall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall/sWoodWall.yy",},"LayerId":{"name":"4cb1e8b7-6f59-41bb-b6b8-693e33725b73","path":"sprites/sWoodWall/sWoodWall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sWoodWall","path":"sprites/sWoodWall/sWoodWall.yy",},"resourceVersion":"1.0","name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sWoodWall02","path":"sprites/sWoodWall02/sWoodWall02.yy",},
+    "spriteId": {"name":"sWoodWall","path":"sprites/sWoodWall/sWoodWall.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"bf373115-4690-4f9d-b64c-17c0a39b0e73","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall02/sWoodWall02.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bf373115-4690-4f9d-b64c-17c0a39b0e73","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34a4595f-59ca-4e3e-94fb-a50ab6220770","path":"sprites/sWoodWall/sWoodWall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sWoodWall02","path":"sprites/sWoodWall02/sWoodWall02.yy",},
+    "parent": {"name":"sWoodWall","path":"sprites/sWoodWall/sWoodWall.yy",},
     "resourceVersion": "1.3",
-    "name": "sWoodWall02",
+    "name": "sWoodWall",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -72,7 +72,7 @@
     "path": "folders/Sprites/Wood.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sWoodWall02",
+  "name": "sWoodWall",
   "tags": [],
   "resourceType": "GMSprite",
 }

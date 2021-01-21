@@ -19,7 +19,7 @@
     {"id":{"name":"sWoodWallBig","path":"sprites/sWoodWallBig/sWoodWallBig.yy",},"order":1,},
     {"id":{"name":"sWoodWallThin","path":"sprites/sWoodWallThin/sWoodWallThin.yy",},"order":2,},
     {"id":{"name":"sSushiSquare","path":"sprites/sSushiSquare/sSushiSquare.yy",},"order":6,},
-    {"id":{"name":"sWoodWall02","path":"sprites/sWoodWall02/sWoodWall02.yy",},"order":3,},
+    {"id":{"name":"sWoodWall","path":"sprites/sWoodWall/sWoodWall.yy",},"order":3,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":2,},
     {"id":{"name":"sRagdoll","path":"sprites/sRagdoll/sRagdoll.yy",},"order":3,},
     {"id":{"name":"rLevel01","path":"rooms/rLevel01/rLevel01.yy",},"order":0,},
@@ -48,7 +48,6 @@
     {"id":{"name":"paSquare","path":"paths/paSquare/paSquare.yy",},"order":4,},
     {"id":{"name":"oSushiCircle","path":"objects/oSushiCircle/oSushiCircle.yy",},"order":0,},
     {"id":{"name":"rLevel07","path":"rooms/rLevel07/rLevel07.yy",},"order":2,},
-    {"id":{"name":"sWoodWall01","path":"sprites/sWoodWall01/sWoodWall01.yy",},"order":0,},
     {"id":{"name":"Level","path":"scripts/Level/Level.yy",},"order":6,},
     {"id":{"name":"oWallBig","path":"objects/oWallBig/oWallBig.yy",},"order":3,},
     {"id":{"name":"sRice","path":"sprites/sRice/sRice.yy",},"order":10,},
@@ -159,6 +158,9 @@
   ],
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"tgDebug","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"tgLevel","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"tgUI","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {

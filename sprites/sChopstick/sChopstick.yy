@@ -17,8 +17,8 @@
   "width": 256,
   "height": 13,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "tgLevel",
+    "path": "texturegroups/tgLevel",
   },
   "swatchColours": null,
   "gridX": 0,

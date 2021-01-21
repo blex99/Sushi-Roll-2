@@ -7,10 +7,10 @@ camera_zoom(zoom);
 
 // follow and strength will change once game starts
 follow = oGoal;
-xstrength = 25;
-ystrength = 25;
+xstrength = 30;
+ystrength = 30;
 alarm[0] = room_speed;
-reached_sushi_start = false;
+reached_sushi_start = false; // if camera reached the sushi
 
 // slow pan (will change once camera reaches sushi)
 if (instance_exists(follow))

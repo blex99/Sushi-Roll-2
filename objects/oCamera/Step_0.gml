@@ -1,6 +1,7 @@
 // start of level pan from goal to sushi
 
-var _sushi_scale = 1;
+var _zoom_target = zoom;
+var _sushi = sushi_cur();
 
 if (instance_exists(follow))
 {
@@ -8,19 +9,20 @@ if (instance_exists(follow))
 	yfollow = follow.y;
 	
 	// zoom out as sushi gets bigger
-	_sushi_scale = follow.image_xscale * 0.5;
-	if (_sushi_scale < 1) _sushi_scale = 1;
-	
+	if (reached_sushi_start)
+	{
+		_zoom_target = _sushi.image_xscale;
+	}
 }
 
 #region debug zoom
 if (debug_mode)
 {
 	if (keyboard_check_pressed(ord("Z")))
-		camera_increment_zoom(0.5);
+		_zoom_target += 0.5;
 	
 	if (keyboard_check_pressed(ord("X")))
-		camera_increment_zoom(-0.5);
+		_zoom_target -= 0.5;
 }
 #endregion
 
@@ -39,10 +41,10 @@ if (!reached_sushi_start)
 	var _xf = clamp(follow.x, view_w_half, room_width - view_w_half);
 	var _yf = clamp(follow.y, view_h_half, room_height - view_h_half);
 	
-	if (follow == sushi_cur() && abs(x - _xf) < 1 && abs(y - _yf) < 1)
+	if (follow == _sushi && abs(x - _xf) < 1 && abs(y - _yf) < 1)
 	{
 		level_start_countdown();
-		camera_increment_zoom(-0.5);
+		_zoom_target -= 0.5;
 		xstrength = 2; // follow more rigid in the x
 		ystrength = 5;
 		reached_sushi_start = true;
@@ -59,6 +61,5 @@ if (!reached_sushi_start)
 	}
 }
 
-add_to_debug_map("camera: " + string(x) + ", " + string(y));
-add_to_debug_map("follow: " + string(xfollow) + ", " + string(yfollow));
-add_to_debug_map("strength: " + string(xstrength) + ", " + string(ystrength));
+zoom = approach(zoom, _zoom_target, 0.01);
+camera_zoom(zoom);
