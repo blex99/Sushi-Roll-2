@@ -3,5 +3,5 @@
 if (input_one_pressed())
 {
 	index++;
-	if (index == array_length(arr)) room_goto(rLevel01);	
+	if (index == array_length(arr)) transition_start(rLevel01);	
 }

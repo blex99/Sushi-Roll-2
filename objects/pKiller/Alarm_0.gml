@@ -1,3 +1,3 @@
 ///@desc resets room
 
-room_restart();
+transition_start(room);
