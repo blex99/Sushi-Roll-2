@@ -5,7 +5,7 @@ jump_velocity_max = 500;
 invincibility_frames = room_speed * 3;
 
 force = 0;
-force_normal = 1.5;
+force_normal = 2;
 force_bonus = 6;
 force_max = 6;
 

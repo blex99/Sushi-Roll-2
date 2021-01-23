@@ -4,7 +4,7 @@
     "path": "sprites/sGreen/sGreen.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -28,9 +28,7 @@
     {"x":32.0,"y":1.0,},
     {"x":0.0,"y":1.0,},
   ],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oInvisibleSushiHolder","path":"objects/oInvisibleSushiHolder/oInvisibleSushiHolder.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

@@ -1,6 +1,8 @@
 /// @description control the sushi x velocity
 
 var _target = 0;
+var _delta = 0.5;
+
 if (!input_one())
 {	
 	// more force if against the velocity
@@ -10,7 +12,7 @@ if (!input_one())
 		_target = force_normal * input_x_axis();
 }
 
-force = approach(force, _target, 0.5);
+force = approach(force, _target, _delta);
 force = clamp(force, -force_max, force_max);
 phy_linear_velocity_x += force;
 

@@ -12,7 +12,7 @@ if (instance_exists(follow))
 	// zoom out as sushi gets bigger
 	if (reached_sushi_start)
 	{
-		_zoom_target = _sushi.image_xscale; // starts as 1...
+		_zoom_target = 0.5 + _sushi.image_xscale / _sushi.scale_max; // starts as 1
 	}
 	else // camera is panning from goal to sushi
 	{
@@ -23,32 +23,19 @@ if (instance_exists(follow))
 		if (follow == _sushi && abs(x - _xf) < 1 && abs(y - _yf) < 1)
 		{
 			level_start_countdown();
-			xstrength = 2; // follow more rigid in the x
-			ystrength = 5;
+			strength = 1 / 3;
 			reached_sushi_start = true;
 		}
 		else if (input_one_pressed()) // skip panning
 		{
 			alarm[0] = 1;
-			xstrength = 1;
-			ystrength = 1;
+			strength = 1;
 		}
 	}
 }
 
-#region debug zoom
-if (debug_mode)
-{
-	if (keyboard_check_pressed(ord("Z")))
-		_zoom_target += 0.5;
-	
-	if (keyboard_check_pressed(ord("X")))
-		_zoom_target -= 0.5;
-}
-#endregion
-
-x += (xfollow - x) / xstrength;
-y += (yfollow - y) / ystrength; 
+x += (xfollow - x) * strength;
+y += (yfollow - y) * strength; 
 
 x = clamp(x, view_w_half, room_width - view_w_half);
 y = clamp(y, view_h_half, room_height - view_h_half);
@@ -57,5 +44,3 @@ zoom = approach(zoom, _zoom_target, 0.005);
 camera_zoom(zoom);
 
 camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
-
-add_to_debug_map("zoom: " + string(zoom));
