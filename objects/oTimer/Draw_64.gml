@@ -11,7 +11,7 @@ _y1 = 0;
 _x2 = _w_half + _buff;
 _y2 = _buff;
 
-ui_nine_slice_box(sNineSliceBox, _x1, _y1, _x2, _y2);
+ui_nine_slice_box(sNineSliceBoxInGameUI, _x1, _y1, _x2, _y2);
 set_draw(c_black, 1, _font, fa_center, fa_center);
 draw_text(_w_half, _buff / 2, _time_string);
 

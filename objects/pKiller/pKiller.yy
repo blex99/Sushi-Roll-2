@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Other Placeable",
-    "path": "folders/Objects/Other Placeable.yy",
+    "name": "Killer",
+    "path": "folders/Objects/Placeable/Killer.yy",
   },
   "resourceVersion": "1.0",
   "name": "pKiller",

@@ -42,8 +42,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Other Placeable",
-    "path": "folders/Objects/Other Placeable.yy",
+    "name": "Placeable",
+    "path": "folders/Objects/Placeable.yy",
   },
   "resourceVersion": "1.0",
   "name": "oMovingPlatforms",

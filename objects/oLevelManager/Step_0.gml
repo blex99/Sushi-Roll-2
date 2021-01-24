@@ -9,4 +9,4 @@ if (input_one_pressed())
 	else if (level_counting_down())	alarm[0] = 1;
 }
 
-if (input_start_pressed()) level_toggle_pause();
+if (input_start_pressed() || os_is_paused()) level_toggle_pause();

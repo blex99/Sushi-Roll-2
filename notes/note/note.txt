@@ -1,15 +1,20 @@
 -------------------------------------------------------------------------------
 DONE:
--------------------------------------------------------------------------------
+start and main menu
+button/menu framework
+how_to_play screen now has "Next" button
+rescaleable window in non-fullscreen mode
+rescaleable gui
+------------------------------------------------------------------------------
 TODO:
-rework level 5, 6, and 7
-update ui (use tutorial)
+make how to play screen with "next" button
+options menu
 create main menu
 create pause menu
 reward for collecting everything
-make collecting everything in one run possible for each level
 detect if/when stuck
 music
+redo particle effects
 -------------------------------------------------------------------------------
 PROBLEMS:
 nothing

@@ -17,8 +17,8 @@
   "width": 32,
   "height": 16,
   "textureGroupId": {
-    "name": "tgLevel",
-    "path": "texturegroups/tgLevel",
+    "name": "Default",
+    "path": "texturegroups/Default",
   },
   "swatchColours": null,
   "gridX": 8,
@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"abe04e8d-ced8-4d99-8ee4-18323bb31e63","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "UI",
+    "path": "folders/Sprites/UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "sArrow",

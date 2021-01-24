@@ -46,6 +46,21 @@ function sushi_change_size(_grow)
 	}
 }
 
+// returns size of normalized (0...1) of sushi
+function sushi_get_size_normalized()
+{
+	var _max_rice_consume = 1;
+	var _cur_rice_consume = 1;
+	
+	with (sushi_cur())
+	{
+		_max_rice_consume = (scale_max - 1) /  size_increment;
+		_cur_rice_consume = (image_xscale - 1) /  size_increment;
+	}
+	
+	return _cur_rice_consume / _max_rice_consume;
+}
+
 function sushi_init_fixture()
 {
 	with (sushi_cur())

@@ -1,5 +1,32 @@
 // helper functions
 
+function toggle_fullscreen()
+{
+	window_set_fullscreen(!window_get_fullscreen());	
+}
+
+// input range between 0 and 1 ONLY
+function easeOutElastic(_num) {
+	var c4 = (2 * pi) / 3;
+
+	if (_num <= 0) return 0;
+	if (_num >= 1) return 1;
+	
+	return power(2, -10 * _num) * sin((_num * 10 - 0.75) * c4) + 1;
+}
+
+function script_execute_args(_script, _args)
+{
+	var _len = array_length(_args);
+	
+	switch (_len)
+	{
+		case 0: script_execute(_script); break;
+		case 1: script_execute(_script, _args[0]); break;
+		case 2: script_execute(_script, _args[0], _args[1]); break;
+	}
+}
+
 function oscillate(_start, _amp_in_pix, _period_per_sec)
 {
 	var _sin = sin((2 * pi / _period_per_sec) * cur_second());

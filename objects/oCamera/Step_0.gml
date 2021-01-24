@@ -4,7 +4,7 @@ var _zoom_target = zoom;
 var _sushi = sushi_cur();
 
 // if you're in a level room, pretty much
-if (instance_exists(follow))
+if (instance_exists(follow) && instance_exists(_sushi))
 {
 	xfollow = follow.x;	
 	yfollow = follow.y;
@@ -12,7 +12,8 @@ if (instance_exists(follow))
 	// zoom out as sushi gets bigger
 	if (reached_sushi_start)
 	{
-		_zoom_target = 0.5 + _sushi.image_xscale / _sushi.scale_max; // starts as 1
+		_zoom_target = lerp(zoom_in_game_min, zoom_in_game_max,
+			sushi_get_size_normalized());
 	}
 	else // camera is panning from goal to sushi
 	{
@@ -40,6 +41,7 @@ y += (yfollow - y) * strength;
 x = clamp(x, view_w_half, room_width - view_w_half);
 y = clamp(y, view_h_half, room_height - view_h_half);
 
+add_to_debug_map("_zoom_target: " + string(_zoom_target));
 zoom = approach(zoom, _zoom_target, 0.005);
 camera_zoom(zoom);
 

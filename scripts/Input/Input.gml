@@ -18,6 +18,7 @@ function input_start_pressed(){
 	return _input;
 }
 
+// return "normalized" x axis between -1 and 1
 function input_x_axis(){
 	if (input_controller_active())
 	{

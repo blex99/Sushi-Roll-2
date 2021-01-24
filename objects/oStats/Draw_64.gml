@@ -59,12 +59,15 @@ else // level is NOT complete...
 		"Collectibles: " + string(collectible_count) + " / " + string(collectible_max),
 		"Level Score Total: " + string(level_score)
 	];
+	var _len = array_length(_arr);
+	
+	ui_nine_slice_box(sNineSliceBoxInGameUI, 0, 0, _w / 4, (2 + _len) * _buff);
 	
 	// score text (large)
 	// starting count at one to skip the "level complete message"
 	set_draw(c_black, 1, _font, fa_top, fa_left);
-	for (_count = 0; _count < array_length(_arr); _count++)
-		draw_text(0, _buff * _count, _arr[_count]);
+	for (_count = 0; _count < _len; _count++)
+		draw_text(_buff, _buff * _count + _buff - 1, _arr[_count]);
 }
 
 reset_alpha();

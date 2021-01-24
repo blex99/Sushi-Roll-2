@@ -1,18 +1,31 @@
-/// @description init resolution level array
+/// @description init resolution, level array
 
+var _display_w = display_get_width();
+var _display_h = display_get_height();
+
+window_scale = 1;
+gui_scale = 1;
+
+// dynamically determine width to fit screen
 ideal_width = 0;
-ideal_height = RES_H;
+ideal_height = BASE_H;
 
-aspect_ratio = display_get_width() / display_get_height();
+aspect_ratio = _display_w / _display_h;
 ideal_width = round(ideal_height * aspect_ratio);
 
 // check for odd numbers...
 if (ideal_width & 1) ideal_width++;
 
-surface_resize(application_surface, ideal_width, ideal_height);
-window_set_size(ideal_width, ideal_height);
-display_set_gui_size(ideal_width, ideal_height);
-alarm[0] = 1;
+// find the largest scale possible that will fit on the monitor dimensions
+window_scale_max = 1;
+while (_display_w >= BASE_W * window_scale_max &&
+	   _display_h >= BASE_H * window_scale_max)
+{
+	window_scale_max++;
+}
+window_scale_max--;
+
+game_resize_window();
 
 draw_set_font(fnUI);
 level_index = 0;
@@ -22,4 +35,4 @@ levels =
 	rLevel06, rLevel07, rLevel08, rLevel09, rLevel10,
 ];
 
-room_goto(rHowToPlay);
+room_goto(rStartScreen);

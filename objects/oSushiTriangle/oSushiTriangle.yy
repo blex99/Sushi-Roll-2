@@ -34,7 +34,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Sushi",
-    "path": "folders/Objects/Sushi.yy",
+    "path": "folders/Objects/Placeable/Sushi.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSushiTriangle",

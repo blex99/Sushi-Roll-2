@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sFulcrum",
-    "path": "sprites/sFulcrum/sFulcrum.yy",
+    "name": "sPixel",
+    "path": "sprites/sPixel/sPixel.yy",
   },
   "solid": false,
   "visible": false,
@@ -13,7 +13,7 @@
   },
   "physicsObject": true,
   "physicsSensor": false,
-  "physicsShape": 2,
+  "physicsShape": 0,
   "physicsGroup": -1,
   "physicsDensity": 0.0,
   "physicsRestitution": 0.1,
@@ -23,16 +23,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
-    {"x":16.0,"y":0.0,},
-    {"x":32.0,"y":32.0,},
-    {"x":0.0,"y":32.0,},
+    {"x":0.0,"y":0.0,},
+    {"x":32.0,"y":0.0,},
   ],
   "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Rotateable",
-    "path": "folders/Objects/Rotateable.yy",
+    "path": "folders/Objects/Placeable/Rotateable.yy",
   },
   "resourceVersion": "1.0",
   "name": "oFulcrum",
