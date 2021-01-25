@@ -3,6 +3,8 @@ var _h_half = display_get_gui_height() / 2;
 var _stats = stats_get_array();
 var _max_width_pix = 0;
 var _box_height_half, _box_width_half;
+var _color = stats_collected_everything() ? c_maroon : c_black;
+var _alpha = stats_collected_everything() ? oscillate(0.9, 0.1, 0.5) : 1;
 var _arr =
 [
 	"Level Complete!\n",
@@ -41,7 +43,7 @@ _ycenter = average([_y1, _y2]);
 
 ui_nine_slice_box(global.in_game_border_ui, _x1, _y1, _x2, _y2);
 
-set_draw(c_black, 1, font, fa_center, fa_center);
+set_draw(_color, _alpha, font, fa_center, fa_center);
 for (var i = 0; i < _len; i++)
 {
 	var _offset = vertical_buffer * (i - _len / 2);

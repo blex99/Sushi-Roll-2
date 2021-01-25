@@ -24,15 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bdc0a4eb-55f6-4478-88ff-31de141e6fa7","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bdc0a4eb-55f6-4478-88ff-31de141e6fa7","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":{"name":"6fc8476e-52fc-4ead-9eb2-623aa9e6c2ec","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sNineSliceBoxButton","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"bdc0a4eb-55f6-4478-88ff-31de141e6fa7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"65bcb24d-8612-4ea6-9de4-9855ba81f0fa","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"65bcb24d-8612-4ea6-9de4-9855ba81f0fa","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":{"name":"6fc8476e-52fc-4ead-9eb2-623aa9e6c2ec","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sNineSliceBoxButton","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"65bcb24d-8612-4ea6-9de4-9855ba81f0fa","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"05f9c389-cfcb-4441-9788-9937b4f380e3","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"05f9c389-cfcb-4441-9788-9937b4f380e3","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":{"name":"6fc8476e-52fc-4ead-9eb2-623aa9e6c2ec","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sNineSliceBoxButton","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"05f9c389-cfcb-4441-9788-9937b4f380e3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f1af45a2-759d-4efa-bae1-ffb0fb604c4b","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f1af45a2-759d-4efa-bae1-ffb0fb604c4b","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":{"name":"c53cf647-a1f1-4a7b-80fc-6a5edd31860f","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sNineSliceBoxButton","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"f1af45a2-759d-4efa-bae1-ffb0fb604c4b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"06aed123-1d73-4e46-b76d-019211dfbe21","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"06aed123-1d73-4e46-b76d-019211dfbe21","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":{"name":"c53cf647-a1f1-4a7b-80fc-6a5edd31860f","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sNineSliceBoxButton","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"06aed123-1d73-4e46-b76d-019211dfbe21","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0d9ab647-0fa6-4862-91ef-5fa810e2db6b","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0d9ab647-0fa6-4862-91ef-5fa810e2db6b","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"LayerId":{"name":"c53cf647-a1f1-4a7b-80fc-6a5edd31860f","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sNineSliceBoxButton","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","name":"0d9ab647-0fa6-4862-91ef-5fa810e2db6b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sNineSliceBoxButton","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},
@@ -47,9 +47,9 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8fae5f6a-6be7-433b-86a2-22541059a97d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bdc0a4eb-55f6-4478-88ff-31de141e6fa7","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"f442a321-2ab8-49b8-a716-05d7183e882f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"65bcb24d-8612-4ea6-9de4-9855ba81f0fa","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"108ebd27-944b-43df-9b89-6dc354793d56","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"05f9c389-cfcb-4441-9788-9937b4f380e3","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7b6a9be0-4f97-4042-8a68-c3dfef6487fd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f1af45a2-759d-4efa-bae1-ffb0fb604c4b","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cf4cdc99-c495-4eb7-a2d5-3a94544408db","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"06aed123-1d73-4e46-b76d-019211dfbe21","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8c9cd1ed-cc6d-40ca-9bd1-4a954149944f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0d9ab647-0fa6-4862-91ef-5fa810e2db6b","path":"sprites/sNineSliceBoxButton/sNineSliceBoxButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -73,7 +73,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6fc8476e-52fc-4ead-9eb2-623aa9e6c2ec","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c53cf647-a1f1-4a7b-80fc-6a5edd31860f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "UI",

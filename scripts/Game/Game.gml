@@ -7,9 +7,15 @@ function game_goto_next_level(){
 	{
 		level_index = (level_index + 1) % array_length(levels);
 		transition_start(levels[level_index]);
+		level_first_try = true;
 	}
 }
 
+function game_goto_first_level()
+{
+	with (oGame) level_index = -1;
+	game_goto_next_level();
+}
 
 function game_get_ideal_width()
 {

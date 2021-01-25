@@ -29,3 +29,6 @@ if (keyboard_check_pressed(ord("X")))
 {
 	game_set_window_scale(window_scale - 1);
 }
+
+add_to_debug_map("level_index: " + string(level_index));
+add_to_debug_map("level_first_try: " + ((level_first_try) ? "true" : "false"));

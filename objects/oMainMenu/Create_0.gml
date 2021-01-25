@@ -7,7 +7,7 @@ var buff = 48;
 var _h = display_get_gui_height() * 0.75;
 var _arr = 
 [
-	["Start"		, 0, _h, 0, buff, transition_start	, [rLevel01]	],
+	["Start"		, 0, _h, 0, buff, game_goto_first_level				],
 	["How to Play"	, 0, _h, 0, buff, transition_start	, [rHowToPlay]	],
 	["Fullscreen"	, 0, _h, 0, buff, toggle_fullscreen					],
 	["Quit"			, 0, _h, 0, buff, game_end							]

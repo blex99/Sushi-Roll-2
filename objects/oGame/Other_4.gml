@@ -1,18 +1,16 @@
 /// @description update level index
 
-if (level_index != -1 && levels[level_index] == room)
-{
-	// player must have died or reset the room
-	level_first_try = false;
-	exit;
-}
+var _len = array_length(levels);
 
-for (var i = 0; i < array_length(levels); i++)
+for (var i = 0; i < _len; i++)
 {
 	if (levels[i] == room)
 	{
+		// you've entered a level room
 		level_index = i;
-		level_first_try = true;
-		break;
+		exit;
 	}
 }
+
+// if you've made it here, you should NOT in a level room
+window_set_cursor(cr_default);

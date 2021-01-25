@@ -26,6 +26,7 @@ function level_toggle_pause()
 		
 		if (paused)
 		{
+			// pausing
 			instance_deactivate_all(true);
 			instance_activate_object(oPauseMenu);
 			instance_activate_object(oButton);
@@ -35,17 +36,16 @@ function level_toggle_pause()
 			if (!input_controller_active())
 			{
 				window_mouse_set(window_get_width() / 2, window_get_height() / 2);
-				window_set_cursor(cr_default);
 			}
+			window_set_cursor(cr_default);
 		}
 		else
 		{
+			// unpausing
 			instance_activate_all();
 			instance_deactivate_object(oPauseMenu);
 			instance_deactivate_object(oButton);
-			
-			if (!input_controller_active())
-				window_set_cursor(cr_none);
+			window_set_cursor(cr_none);
 		}
 	}
 	
@@ -64,15 +64,6 @@ function level_out_of_time()
 	{
 		state = LEVEL.TIME_OUT;
 		alarm[0] = room_speed * 1;
-	}
-}
-
-// if the level is about to restart
-function level_resetting_soon()
-{
-	with (oLevelManager)
-	{
-		return alarm[0] != -1;
 	}
 }
 
