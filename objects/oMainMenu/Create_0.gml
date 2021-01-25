@@ -20,9 +20,9 @@ for (var j = 0; j < _len; j++)
 	var _button;
 	
 	if (array_length(a) == 7)
-		_button = ui_create_button(a[0], a[1], a[2], a[3], a[4] * i, a[5], a[6]);
+		_button = button_create(a[0], a[1], a[2], a[3], a[4] * i, a[5], a[6]);
 	else
-		_button = ui_create_button(a[0], a[1], a[2], a[3], a[4] * i, a[5]);
+		_button = button_create(a[0], a[1], a[2], a[3], a[4] * i, a[5]);
 	
 	ds_list_add(buttons, _button);
 	

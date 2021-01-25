@@ -22,15 +22,50 @@ function stats_update_score()
 {
 	with (oStats)
 	{
-		level_score = rice_value * rice_count;
-		level_score += collectible_value * collectible_count;
+		level_score = VALUE_RICE * rice_count;
+		level_score += VALUE_COLLECTIBLE * collectible_count;
 	}
 }
 
-function stats_add_time_to_score()
+function stats_collected_everything()
 {
 	with (oStats)
 	{
+		return collectible_count == collectible_max &&
+			   rice_count == rice_max;
+	}
+}
+
+// add time and collectors bonus (used by level_completed())
+function stats_calc_final_score()
+{
+	with (oStats)
+	{
+		if (stats_collected_everything()) level_score += VALUE_COLLECT_EVERYTHING;
 		level_score += timer_calc_time_bonus();
+	}
+}
+
+// returns an array of stats as a formatted strings
+function stats_get_array()
+{
+	with (oStats)
+	{
+		var _arr = 
+		[
+			string(timer_calc_time_bonus()),
+			string(VALUE_RICE * rice_count),
+			string(VALUE_COLLECTIBLE * collectible_count),
+			string(level_score)
+		];
+		var _len = array_length(_arr);
+
+		// add zeros to points until there are four total digits
+		for (var i = 0; i < _len; i++)
+			string_right_pad_zeros(_arr[i], 4)
+		
+		
+		
+		return _arr;
 	}
 }

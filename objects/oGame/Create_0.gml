@@ -28,11 +28,12 @@ window_scale_max--;
 game_resize_window();
 
 draw_set_font(fnUI);
-level_index = 0;
+level_index = -1;
 levels =
 [
 	rLevel01, rLevel02, rLevel03, rLevel04, rLevel05,
 	rLevel06, rLevel07, rLevel08, rLevel09, rLevel10,
 ];
+level_first_try = true; // player hasn't died yet?
 
 room_goto(rStartScreen);

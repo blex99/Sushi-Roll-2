@@ -13,20 +13,7 @@ var _room_num = string_char_at(_room_name, 7) +
 var _msg = "";
 set_draw(c_black, 1, fnUIBig, fa_center, fa_center);
 
-if (paused)
-{
-	set_draw(c_black, 0.8);
-	draw_rectangle(0, 0, _w, _h, false);
-	_msg = "~ Paused ~\n" + 
-		"Press Left Mouse or A to restart level.\n" + 
-		"Press P or Start again to unpause.";
-	set_draw(c_white, 1);
-}
-else if (level_counting_down())
-{
-	_msg = "Ready? " + string_format(alarm[0] / room_speed, 4, 2);
-}
-else
+if (state == LEVEL.PANNING_TO_SUSHI)
 {
 	_msg = "~ Level " + _room_num;
 	if (level_name != "") _msg += " - " + level_name;
@@ -34,6 +21,20 @@ else
 	
 	draw_set_alpha(ui_alpha);
 }
+else if (state == LEVEL.COUNTING_DOWN)
+{
+	_msg = "Ready?";
+}
+else if (state == LEVEL.PLAYING)
+{
+	_msg = "Go!";
+	draw_set_alpha(ui_alpha);
+}
+else if (state == LEVEL.TIME_OUT)
+{
+	_msg = "Out of time!"
+}
+
 draw_text(_w / 2, _h / 4, _msg);
 
 reset_alpha();

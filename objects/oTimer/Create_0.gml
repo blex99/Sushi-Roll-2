@@ -1,4 +1,13 @@
-/// @description Insert description here
+/// @description vars
 
-level_timer = room_speed * 120; // in frames
-time_value = 10; // each second worth
+timer_frozen = false;
+border_sprite = global.in_game_border_ui;
+offset = 16;
+font = fnUIBig;
+buffer = font_get_size(font) * 2.5
+
+
+// the following values (possibly among others) are set in timer_create()
+//my_script = noone;
+//timer = room_speed * 120; // in frames
+//my_script_args

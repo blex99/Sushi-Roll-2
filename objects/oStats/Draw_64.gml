@@ -1,73 +1,35 @@
 /// @desc display score, time, counters, victory screen
 
-var _font;
-var _buff; // calculated by getting font height
-var _count = 0;
-var _w = display_get_gui_width();
-var _h = display_get_gui_height();
-var _arr;
+if (is_level_complete()) exit;
 
-if (is_level_complete())
-{
-	_font = fnUIBig;
-	_buff = font_get_size(_font);
-	
-	var _str = 
-	[
-		string(timer_calc_time_bonus()),
-		string(rice_value * rice_count),
-		string(collectible_value * collectible_count),
-		string(level_score)
-	];
-	
-	// add zeros to points until there are four total digits
-	for (var _i = 0; _i < array_length(_str); _i++)
-	{
-		while (string_length(_str[_i]) < 4)
-			_str[_i] = string_insert("0", _str[_i], 0);
-	}
+var _arr =
+[
+	"Rice: " + string(rice_count) + " / " + string(rice_max), 
+	"Collectibles: " + string(collectible_count) + " / " + string(collectible_max),
+	"Level Score Total: " + string(level_score)
+];
+var _len = array_length(_arr);
+var _color = stats_collected_everything() ? c_maroon : c_black;
+var _alpha = stats_collected_everything() ? oscillate(0.9, 0.1, 0.5) : 1;
 
-	_arr =
-	[
-		"Level Complete!\n",
-		"----------------",
-		"Points\n",
-		"Time: "				+ _str[0],
-		"Rice: "				+ _str[1], 
-		"Collectibles: "		+ _str[2],
-		"Level Score Total: "	+ _str[3],
-		"-----------------",
-		"\nPress Left Click or A to Continue"
-	];
+// coordinates of box
+var _x1, _y1, _x2, _y2, _xcenter, _ycenter;
+_x1 = offset;
+_y1 = offset;
+_x2 = offset + rect_width;
+_y2 = offset + (2 + _len) * font_height;
+_xcenter = average([_x1, _x2]);
+_ycenter = average([_y1, _y2]);
+
+// draw the box for stats
+ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2);
 	
-	// black shade over screen
-	set_draw(c_black, 0.5);
-	draw_rectangle(0, 0, _w, _h, false);
-	
-	// score text
-	set_draw(c_white, 1, _font, fa_center, fa_center);
-	for (_count = 0; _count < array_length(_arr); _count++)
-		draw_text(_w / 2, (_h / 4) + (_buff * _count), _arr[_count]);
-}
-else // level is NOT complete...
+// score text
+set_draw(_color, _alpha, font, fa_center, fa_center);
+for (var _count = 0; _count < _len; _count++)
 {
-	_font = fnUI;
-	_buff = font_get_size(_font);
-	_arr =
-	[
-		"Rice: " + string(rice_count) + " / " + string(rice_max), 
-		"Collectibles: " + string(collectible_count) + " / " + string(collectible_max),
-		"Level Score Total: " + string(level_score)
-	];
-	var _len = array_length(_arr);
-	
-	ui_nine_slice_box(sNineSliceBoxInGameUI, 0, 0, _w / 4, (2 + _len) * _buff);
-	
-	// score text (large)
-	// starting count at one to skip the "level complete message"
-	set_draw(c_black, 1, _font, fa_top, fa_left);
-	for (_count = 0; _count < _len; _count++)
-		draw_text(_buff, _buff * _count + _buff - 1, _arr[_count]);
+	var _offset = font_height * (_count - 1);
+	draw_text(_xcenter, _ycenter + _offset, _arr[_count]);
 }
 
 reset_alpha();

@@ -41,7 +41,7 @@ function game_resize_window()
 {
 	with (oGame)
 	{
-		surface_resize(application_surface, ideal_width * window_scale, ideal_height * window_scale);
+		surface_resize(application_surface, ideal_width, ideal_height);
 		
 		display_set_gui_size(ideal_width * gui_scale, ideal_height * gui_scale);
 		

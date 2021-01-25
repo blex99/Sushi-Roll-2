@@ -27,7 +27,7 @@ if (instance_exists(follow) && instance_exists(_sushi))
 			strength = 1 / 3;
 			reached_sushi_start = true;
 		}
-		else if (input_one_pressed()) // skip panning
+		else if (input_one_pressed() && (debug_mode || !oGame.level_first_try)) // skip panning
 		{
 			alarm[0] = 1;
 			strength = 1;

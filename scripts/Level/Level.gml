@@ -1,11 +1,11 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function level_completed(){
 	with (oLevelManager)
 	{
-		level_complete = true;
+		state = LEVEL.COMPLETE;
 		physics_pause_enable(true);
-		stats_add_time_to_score();
+		timer_freeze();
+		stats_calc_final_score();
+		instance_create_depth(0, 0, -9999, oVictoryScreen);
 	}
 }
 
@@ -13,19 +13,40 @@ function is_level_complete()
 {
 	with (oLevelManager)
 	{
-		return level_complete;
+		return state == LEVEL.COMPLETE;
 	}
 }
 
 function level_toggle_pause()
-{
+{	
 	with (oLevelManager)
 	{
 		paused = !paused;
 		physics_pause_enable(paused);
 		
-		if (paused) instance_deactivate_all(true);
-		else		instance_activate_all();
+		if (paused)
+		{
+			instance_deactivate_all(true);
+			instance_activate_object(oPauseMenu);
+			instance_activate_object(oButton);
+			button_reset_positions();
+			
+			// show mouse and center its position, if you're not using a controller
+			if (!input_controller_active())
+			{
+				window_mouse_set(window_get_width() / 2, window_get_height() / 2);
+				window_set_cursor(cr_default);
+			}
+		}
+		else
+		{
+			instance_activate_all();
+			instance_deactivate_object(oPauseMenu);
+			instance_deactivate_object(oButton);
+			
+			if (!input_controller_active())
+				window_set_cursor(cr_none);
+		}
 	}
 	
 	instance_activate_object(oGame);
@@ -36,11 +57,22 @@ function level_toggle_pause()
 	else instance_activate_object(oDebug);
 }
 
-function is_level_paused()
+// prepares to reset room
+function level_out_of_time()
 {
 	with (oLevelManager)
 	{
-		return paused;
+		state = LEVEL.TIME_OUT;
+		alarm[0] = room_speed * 1;
+	}
+}
+
+// if the level is about to restart
+function level_resetting_soon()
+{
+	with (oLevelManager)
+	{
+		return alarm[0] != -1;
 	}
 }
 
@@ -48,14 +80,20 @@ function level_start_countdown()
 {
 	with (oLevelManager)
 	{
-		alarm[0] = room_speed * 3;
+		state = LEVEL.COUNTING_DOWN;
+		timer_create(3, level_begin);
 	}
 }
 
-function level_counting_down()
+// creates timer remove invisible thing
+function level_begin()
 {
 	with (oLevelManager)
 	{
-		return alarm[0] != -1;
+		state = LEVEL.PLAYING;
+		ui_alpha = ui_alpha_start;
+		timer_create(time_limit, level_out_of_time);
 	}
-}	
+	
+	instance_destroy(oInvisibleSushiHolder);
+}

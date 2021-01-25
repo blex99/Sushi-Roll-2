@@ -1,7 +1,7 @@
 /// @desc inits all needed obj's for a level
 
+state = LEVEL.PANNING_TO_SUSHI;
 paused = false;
-level_complete = false;
 ui_alpha_start = 3;
 ui_alpha = ui_alpha_start; // also text fade duration in seconds
 
@@ -9,6 +9,9 @@ instance_create_layer(0, 0, "Instances", oCamera);
 instance_create_layer(0, 0, "Instances", oPhysicsWorld);
 instance_create_layer(0, 0, "Instances", oStats);
 instance_create_layer(0, 0, "Instances", oLevelController);
+instance_create_layer(0, 0, "Instances", oPauseMenu);
+instance_deactivate_object(oPauseMenu);
+instance_deactivate_object(oButton);
 
 // create box around sushi
 var _inst, _sushi = sushi_cur(), _w_half, _h_half;

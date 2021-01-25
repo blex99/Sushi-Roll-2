@@ -1,11 +1,10 @@
 /// @description decrement timer and check if time is up
 
-if (!is_level_complete())
+if (timer_frozen) exit;
+
+timer = max(0, timer - 1);
+if (timer == 0)
 {
-	level_timer = max(0, level_timer - 1);
-	if (alarm[0] == -1  && level_timer == 0)
-	{
-		level_timer = 0;
-		alarm[0] = room_speed * 1;
-	}
+	script_execute_args(my_script, my_script_args);
+	instance_destroy();
 }

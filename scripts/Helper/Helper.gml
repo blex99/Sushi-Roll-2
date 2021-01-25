@@ -1,5 +1,25 @@
 // helper functions
 
+// returns a string with 0's padded to the right
+// EX: _string = "123", _total_digits = 4
+// output: "0123"
+
+function string_right_pad_zeros(_string, _total_digits)
+{
+	while (string_length(_string) < _total_digits)
+		_string = string_insert("0", _string, 0);
+	return _string
+}
+
+// returns the average given an array of nums
+function average(_arr)
+{
+	var _sum = 0;
+	var _len = array_length(_arr);
+	for (var i = 0; i < _len; i++) _sum += _arr[i];
+	return _sum / _len;
+}
+
 function toggle_fullscreen()
 {
 	window_set_fullscreen(!window_get_fullscreen());	

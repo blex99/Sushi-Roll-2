@@ -1,5 +1,4 @@
-/// @description create rest of objects remove invisible thing
+/// @description restart room
 
-ui_alpha = 0;
-instance_create_layer(0, 0, "Instances", oTimer);
-instance_destroy(oInvisibleSushiHolder);
+if (!is_level_complete())
+	transition_start(room);

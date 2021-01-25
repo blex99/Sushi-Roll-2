@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"97c48769-0be9-4d3e-8775-2bd09e4a3947","path":"sprites/sNineSliceBoxInGameUI/sNineSliceBoxInGameUI.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"97c48769-0be9-4d3e-8775-2bd09e4a3947","path":"sprites/sNineSliceBoxInGameUI/sNineSliceBoxInGameUI.yy",},"LayerId":{"name":"89b7d9a0-e11e-425a-966a-e05473b0704b","path":"sprites/sNineSliceBoxInGameUI/sNineSliceBoxInGameUI.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sNineSliceBoxInGameUI","path":"sprites/sNineSliceBoxInGameUI/sNineSliceBoxInGameUI.yy",},"resourceVersion":"1.0","name":"97c48769-0be9-4d3e-8775-2bd09e4a3947","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cd9ab90a-6966-4a23-b007-921fe36367c4","path":"sprites/sNineSliceBoxChopstick/sNineSliceBoxChopstick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cd9ab90a-6966-4a23-b007-921fe36367c4","path":"sprites/sNineSliceBoxChopstick/sNineSliceBoxChopstick.yy",},"LayerId":{"name":"951abe38-0f67-4c88-b5d5-4d2d713ec750","path":"sprites/sNineSliceBoxChopstick/sNineSliceBoxChopstick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sNineSliceBoxChopstick","path":"sprites/sNineSliceBoxChopstick/sNineSliceBoxChopstick.yy",},"resourceVersion":"1.0","name":"cd9ab90a-6966-4a23-b007-921fe36367c4","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sNineSliceBoxInGameUI","path":"sprites/sNineSliceBoxInGameUI/sNineSliceBoxInGameUI.yy",},
+    "spriteId": {"name":"sNineSliceBoxChopstick","path":"sprites/sNineSliceBoxChopstick/sNineSliceBoxChopstick.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"deabea6f-fc6a-4f2e-a01b-291ec7f200b5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97c48769-0be9-4d3e-8775-2bd09e4a3947","path":"sprites/sNineSliceBoxInGameUI/sNineSliceBoxInGameUI.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8b585ea2-1ca3-4bc3-94ab-5b42f836ab8b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd9ab90a-6966-4a23-b007-921fe36367c4","path":"sprites/sNineSliceBoxChopstick/sNineSliceBoxChopstick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sNineSliceBoxInGameUI","path":"sprites/sNineSliceBoxInGameUI/sNineSliceBoxInGameUI.yy",},
+    "parent": {"name":"sNineSliceBoxChopstick","path":"sprites/sNineSliceBoxChopstick/sNineSliceBoxChopstick.yy",},
     "resourceVersion": "1.3",
-    "name": "sNineSliceBoxInGameUI",
+    "name": "sNineSliceBoxChopstick",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"89b7d9a0-e11e-425a-966a-e05473b0704b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"951abe38-0f67-4c88-b5d5-4d2d713ec750","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "UI",
     "path": "folders/Sprites/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sNineSliceBoxInGameUI",
+  "name": "sNineSliceBoxChopstick",
   "tags": [],
   "resourceType": "GMSprite",
 }

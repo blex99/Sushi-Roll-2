@@ -51,12 +51,12 @@ for (var i = 0; i < _len; i++)
 	{
 		// override cursor and commited vars if needed
 		if (_control &&
-			mouse_gui_x > x1 && mouse_gui_x < x2 &&
-			mouse_gui_y > y1 && mouse_gui_y < y2)
+			MOUSE_GUI_X > x1 && MOUSE_GUI_X < x2 &&
+			MOUSE_GUI_Y > y1 && MOUSE_GUI_Y < y2)
 		{
 			_cursor = i;
 	
-			if (mouse_left && my_script != noone)
+			if (MOUSE_LEFT && my_script != noone)
 			{
 				_committed = i;
 				_control = false;

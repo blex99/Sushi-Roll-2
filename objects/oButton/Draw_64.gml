@@ -1,6 +1,6 @@
 /// @description draw button
 
-ui_nine_slice_box(sNineSliceBoxButton, x1, y1, x2, y2, sub_image);
+ui_nine_slice_box(button_sprite, x1, y1, x2, y2, sub_image);
 
 draw_set_font(button_font);
 draw_set_color(c_black);

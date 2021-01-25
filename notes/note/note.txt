@@ -1,20 +1,19 @@
 -------------------------------------------------------------------------------
 DONE:
-start and main menu
-button/menu framework
-how_to_play screen now has "Next" button
-rescaleable window in non-fullscreen mode
-rescaleable gui
+can't skip level panning if its your first try
+new pause menu
+added ability to skip how to play slides
+bonus if collect everything
+update victory screen
 ------------------------------------------------------------------------------
 TODO:
-make how to play screen with "next" button
 options menu
-create main menu
-create pause menu
-reward for collecting everything
 detect if/when stuck
 music
 redo particle effects
+saving/loading system
+store buttons in a grid (refactor menu)
+sliders
 -------------------------------------------------------------------------------
 PROBLEMS:
 nothing
