@@ -1,5 +1,6 @@
 /// @description init resolution, level array
 
+#region init resolution
 var _display_w = display_get_width();
 var _display_h = display_get_height();
 
@@ -26,14 +27,17 @@ while (_display_w >= BASE_W * window_scale_max &&
 window_scale_max--;
 
 game_resize_window();
+#endregion
 
-draw_set_font(fnUI);
+#region level array
 level_index = -1;
 levels =
 [
 	rLevel01, rLevel02, rLevel03, rLevel04, rLevel05,
-	rLevel06, rLevel07, rLevel08, rLevel09, rLevel10,
+	rLevel06, rLevel07, rLevel08, rLevel09, rLevel10
 ];
 level_first_try = true; // player hasn't died yet?
+#endregion
 
+draw_set_font(fnUI);
 room_goto(rStartScreen);

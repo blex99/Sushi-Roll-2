@@ -13,14 +13,14 @@ function input_one_pressed(){
 
 // for pausing
 function input_start_pressed(){
-	var _input = keyboard_check_pressed(ord("P")) ||
+	var _input = keyboard_check_pressed(vk_escape) ||
 		gamepad_button_check_pressed(global.device_index, gp_start);
 	return _input;
 }
 
 // return "normalized" x axis between -1 and 1
 function input_x_axis(){
-	if (input_controller_active())
+	if (global.using_controller)
 	{
 		return gamepad_axis_value(global.device_index, gp_axislh);
 	}
@@ -31,7 +31,8 @@ function input_x_axis(){
 	with (oLevelController)
 	{
 		_ranged_input = input_x_mouse_clamp(w_min, w_max);
-		_normalized_input = (2 * (_ranged_input - w_min) / (w_max - w_min)) - 1;
+		_normalized_input = 2 * (_ranged_input - w_min) / (w_max - w_min);
+		_normalized_input -= 1;
 	}
 	
 	return _normalized_input;
@@ -45,9 +46,4 @@ function input_controller_to_mouse_x()
 function input_x_mouse_clamp(_min, _max)
 {
 	return clamp(window_mouse_get_x(), _min, _max);	
-}
-
-function input_controller_active()
-{
-	return global.using_controller && gamepad_is_connected(global.device_index);
 }

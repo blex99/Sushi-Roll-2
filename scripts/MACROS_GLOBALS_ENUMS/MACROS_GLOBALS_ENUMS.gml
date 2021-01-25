@@ -13,6 +13,13 @@
 
 global.in_game_border_ui = sNineSliceBoxChopstick;
 
+// for oGame
+enum INPUT
+{
+	KEYBOARD_MOUSE,
+	CONTROLLER
+}
+
 // for oLevel
 enum LEVEL
 {
@@ -53,4 +60,4 @@ for (var _i = 0; _i < gamepad_get_device_count(); _i++;)
 	}
 }
 
-global.using_controller = true;
+global.using_controller = gamepad_is_connected(global.device_index);

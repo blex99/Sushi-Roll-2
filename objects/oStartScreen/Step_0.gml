@@ -1,4 +1,4 @@
-if (input_controller_active())
+if (global.using_controller)
 {
 	if (gamepad_button_check_pressed(global.device_index, gp_face1))
 	{

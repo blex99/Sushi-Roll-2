@@ -1,13 +1,12 @@
-/// @description full screen & etc commands
+/// @description commands and new input detection
 
-if (keyboard_check(vk_lcontrol) && keyboard_check_pressed(ord("F")))
-	toggle_fullscreen();
-
-if (keyboard_check(vk_escape))
-	game_end();
-
-if (keyboard_check(ord("O")))
-	global.using_controller = !global.using_controller;
+if (gamepad_is_connected(global.device_index) != global.using_controller)
+{
+	if (instance_exists(oInfoBox)) instance_destroy(oInfoBox);
+	global.using_controller = gamepad_is_connected(global.device_index)
+	var _msg = (global.using_controller) ? "Controller Detected" : "Using Keyboard";
+	info_box_create(_msg);
+}
 
 var _mouse_wup = mouse_wheel_up();
 var _mouse_wdown = mouse_wheel_down();

@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description fade
 
 if (mode != TRANS_MODE.OFF)
 {
