@@ -21,7 +21,7 @@ _y2 = _h_half + _box_height_half + yoffset;
 _xcenter = average([_x1, _x2]);
 _ycenter = average([_y1, _y2]);
 
-ui_nine_slice_box(global.in_game_border_ui, _x1, _y1, _x2, _y2);
+ui_nine_slice_box(global.border_sprite, _x1, _y1, _x2, _y2);
 
 set_draw(_color, _alpha, font, fa_center, fa_center);
 for (var i = 0; i < len; i++)

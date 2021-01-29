@@ -1,4 +1,6 @@
-/// @description displays room level name and pause menu
+/// @description displays lvl name & other info
+
+if (paused) exit;
 
 // level room names have the format: rLevel##
 //                                   12345678

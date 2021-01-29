@@ -1,19 +1,17 @@
 -------------------------------------------------------------------------------
 DONE:
-can't skip level panning if its your first try
-new pause menu
-added ability to skip how to play slides
-bonus if collect everything
-update victory screen
 ------------------------------------------------------------------------------
 TODO:
-options menu
+rework pause (mem leak)
+redo levels (too hard)
 detect if/when stuck
 music
 redo particle effects
 saving/loading system
 store buttons in a grid (refactor menu)
-sliders
+slider
+D-pad support
+set keybindings
 -------------------------------------------------------------------------------
 PROBLEMS:
 nothing

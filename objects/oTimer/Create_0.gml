@@ -1,7 +1,7 @@
 /// @description vars
 
 timer_frozen = false;
-border_sprite = global.in_game_border_ui;
+border_sprite = global.border_sprite;
 offset = 16;
 font = fnUIBig;
 buffer = font_get_size(font) * 2.5

@@ -11,14 +11,7 @@
 #macro VALUE_COLLECTIBLE 100
 #macro VALUE_COLLECT_EVERYTHING 1000
 
-global.in_game_border_ui = sNineSliceBoxChopstick;
-
-// for oGame
-enum INPUT
-{
-	KEYBOARD_MOUSE,
-	CONTROLLER
-}
+global.border_sprite = sNineSliceBoxBamboo;
 
 // for oLevel
 enum LEVEL
@@ -49,15 +42,6 @@ enum BUTTON
 gamepad_set_axis_deadzone(0, 0.2);
 
 // finds the slot the device is connected to
-global.device_index = 0;
-
-for (var _i = 0; _i < gamepad_get_device_count(); _i++;)
-{
-	if (gamepad_is_connected(_i))
-	{
-		global.device_index = _i;
-		break;
-	}
-}
+global.device_index = input_seek_gamepad();
 
 global.using_controller = gamepad_is_connected(global.device_index);

@@ -47,3 +47,17 @@ function input_x_mouse_clamp(_min, _max)
 {
 	return clamp(window_mouse_get_x(), _min, _max);	
 }
+
+// finds and returns gamepad index from 0->11 potential slots
+function input_seek_gamepad()
+{
+	for (var _i = 0; _i <= 11; _i++;)
+	{
+		if (gamepad_is_connected(_i))
+		{
+			return _i;
+		}
+	}
+	
+	return -1;
+}

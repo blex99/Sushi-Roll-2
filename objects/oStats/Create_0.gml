@@ -2,7 +2,7 @@
 
 font = fnUI;
 font_height = font_get_size(font);
-border_sprite = global.in_game_border_ui;
+border_sprite = global.border_sprite;
 rect_width = 256;
 
 // pixels away from the top left

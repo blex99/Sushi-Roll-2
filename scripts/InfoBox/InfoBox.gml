@@ -1,8 +1,14 @@
 // create an info box to the bottom left of the screen
 function info_box_create(_text)
 {
+	var _gw_half = display_get_gui_width() / 2;
+	var _gh_half = display_get_gui_height() / 2;
+	
 	var _layer_name = "UI";
 	if (!layer_exists(_layer_name)) layer_create(-9999, _layer_name);
+	
+	// there can be only one info box...
+	if (instance_exists(oInfoBox)) instance_destroy(oInfoBox);
 	
 	var _inst = instance_create_layer(0, 0, _layer_name, oInfoBox);
 	
@@ -21,10 +27,6 @@ function info_box_create(_text)
 		
 		bw_half = bw * 0.5;
 		bh_half = bh * 0.5;
-		
-		var _gh = display_get_gui_height();
-		var _gw_half = display_get_gui_width() / 2;
-		var _gh_half = _gh / 2;
 		
 		xoffset_start = - _gw_half - bw_half;
 		yoffset_start = _gh_half - bh_half;

@@ -8,8 +8,8 @@ var _h = display_get_gui_height() * 0.75;
 var _arr = 
 [
 	["Start"		, 0, _h, 0, buff, game_goto_first_level				],
-	["How to Play"	, 0, _h, 0, buff, transition_start	, [rHowToPlay]	],
-	["Fullscreen"	, 0, _h, 0, buff, toggle_fullscreen					],
+	["How to Play"	, 0, _h, 0, buff, transition_start, [rHowToPlay]	],
+	["Options"	, 0, _h, 0, buff, transition_start, [rOptionsMenu]	],
 	["Quit"			, 0, _h, 0, buff, game_end							]
 ]
 var _len = array_length(_arr);

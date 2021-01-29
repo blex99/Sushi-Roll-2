@@ -49,10 +49,7 @@ function level_toggle_pause()
 	
 	instance_activate_object(oGame);
 	instance_activate_object(oTransition);
-	
-	if (!instance_exists(oDebug))
-		instance_create_layer(0, 0, "Instances", oDebug);
-	else instance_activate_object(oDebug);
+	if (debug_mode) instance_activate_object(oDebug);
 }
 
 // prepares to reset room

@@ -2,29 +2,39 @@
 
 event_inherited();
 
-var _h = display_get_gui_height();
-font = fnUIBig;
-
+// message array
 messages =
 [
-	"HOW TO PLAY",
-	"Left joystick controls the Sushi's speed,",
-	"but while holding A, it will rotate platforms.",
-	"Press START to pause.",
-	"Your objective is to reach the goal before time runs out.",
+	"YOUR TASK is serve sushi!",
+	"YOUR MEANS is by controlling sushi...",
+	"...and controlling the platforms.",
+	"Get used to swapping between these two moves...",
+	"...since MOUSE'S X POSITION changes both.",
+	"HOLD LEFT MOUSE to tilt the platforms.",
+	"RELEASE LEFT MOUSE to move the sushi.",
+	"In game, you can pause with ESCAPE.",
 	"Good luck."
 ];
-
 message_index = 0;
+messages_length = array_length(messages);
 
-var _button;
-var _button_width_half = button_get_width() / 2;
+font = fnUIBig;
+box_sprite = global.border_sprite;
+vbuffer = font_get_size(font);
 
-_button = button_create("Next", 0, _h * 0.25, -_button_width_half, _h * 0.25, how_to_play_go_to_next_slide);
+var _max_width_pix = 0;
+draw_set_font(font);
+for (var i = 0; i < messages_length; i++)
+	_max_width_pix = max(_max_width_pix, string_width(messages[i]));
+
+box_width_half  = _max_width_pix * 0.5;
+box_height_half = vbuffer * (messages_length) / 2;
+
+// create button
+var _h = display_get_gui_height();
+var _button = button_create("Next", 0, _h * 0.5, 0, box_height_half, how_to_play_go_to_next_slide);
 ds_list_add(buttons, _button);
-_button = button_create("Go to Main Menu", 0, _h * 0.25, _button_width_half, _h * 0.25, transition_start, [rMainMenu]);
-ds_list_add(buttons, _button);
-
 instance_deactivate_object(oButton);
 
-alarm[2] = room_speed * 2;
+// display button when alarm hits
+alarm[2] = room_speed * 1.5;

@@ -1,8 +1,11 @@
-/// @description update positions
-
-var _norm = abs(1 - alarm[0] / frames_to_approach);
+/// @description update positions and size dynamically
+	
 var _gw_half = display_get_gui_width() / 2;
 var _gh_half = display_get_gui_height() / 2;
+
+// lerpping
+var _norm = abs(1 - alarm[0] / frames_to_approach);
+
 _norm = clamp(_norm, 0, 1);
 
 xoffset = lerp(xoffset_start, xtarget, _norm);
