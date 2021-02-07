@@ -10,8 +10,9 @@ if (paused) exit;
 var _w = display_get_gui_width();
 var _h = display_get_gui_height();
 var _room_name = room_get_name(room);
-var _room_num = string_char_at(_room_name, 7) +
-				string_char_at(_room_name, 8);
+var _room_name_length = string_length(_room_name);
+var _room_num = string_char_at(_room_name, _room_name_length-1) +
+				string_char_at(_room_name, _room_name_length);
 var _msg = "";
 set_draw(c_black, 1, fnUIBig, fa_center, fa_center);
 

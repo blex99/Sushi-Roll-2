@@ -10,6 +10,7 @@
 #macro VALUE_TIME 10 // each second worth
 #macro VALUE_COLLECTIBLE 100
 #macro VALUE_COLLECT_EVERYTHING 1000
+#macro START_ROOM rLevelEasy05
 
 global.border_sprite = sNineSliceBoxBamboo;
 

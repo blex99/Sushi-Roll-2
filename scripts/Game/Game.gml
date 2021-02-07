@@ -11,10 +11,32 @@ function game_goto_next_level(){
 	}
 }
 
-function game_goto_first_level()
+function game_goto_previous_level(){
+	
+	// shouldn't be able to skip levels by mashing A
+	if (oTransition.mode != TRANS_MODE.OFF) return;
+	
+	with (oGame)
+	{
+		level_index = (level_index - 1) % array_length(levels);
+		transition_start(levels[level_index]);
+		level_first_try = true;
+	}
+}
+
+
+// goto specifed level
+function game_goto_level(_level)
 {
-	with (oGame) level_index = -1;
-	game_goto_next_level();
+	// shouldn't be able to skip levels by mashing A
+	if (oTransition.mode != TRANS_MODE.OFF) return;
+	
+	with (oGame)
+	{
+		level_index = (_level) % array_length(levels);
+		transition_start(levels[level_index]);
+		level_first_try = true;
+	}
 }
 
 function game_get_ideal_width()

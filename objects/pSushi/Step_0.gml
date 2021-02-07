@@ -12,7 +12,6 @@ if (!input_one())
 		_target = force_normal * input_x_axis();
 }
 
-
 force = approach(force, _target, _delta);
 force = clamp(force, -force_max, force_max);
 phy_linear_velocity_x += force;

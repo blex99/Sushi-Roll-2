@@ -83,3 +83,9 @@ function level_begin()
 	
 	instance_destroy(oInvisibleSushiHolder);
 }
+
+function level_is_state_playing()
+{
+	with (oLevelManager)
+		return state == LEVEL.PLAYING;
+}

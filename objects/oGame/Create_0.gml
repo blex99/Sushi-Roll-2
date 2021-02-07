@@ -33,11 +33,12 @@ game_resize_window();
 level_index = -1;
 levels =
 [
-	rLevel01, rLevel02, rLevel03, rLevel04, rLevel05,
-	rLevel06, rLevel07, rLevel08, rLevel09, rLevel10
+	rLevelEasy01, rLevelEasy02, rLevelEasy03, rLevelEasy04, rLevelEasy05,
+	rLevelMedium01, rLevelMedium02, rLevelMedium03, rLevelMedium04, rLevelMedium05,
+	rLevelHard01, rLevelHard02, rLevelHard03, rLevelHard04, rLevelHard05
 ];
 level_first_try = true; // player hasn't died yet?
 #endregion
 
 draw_set_font(fnUI);
-room_goto(rStartScreen);
+room_goto(START_ROOM);

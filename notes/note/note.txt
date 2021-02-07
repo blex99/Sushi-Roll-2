@@ -1,9 +1,13 @@
 -------------------------------------------------------------------------------
 DONE:
+new level swap debug
+more levels
+stuck detection
+new level 5
+15 levels setup to make
+spinning knives
 ------------------------------------------------------------------------------
 TODO:
-redo levels (too hard)
-detect if/when stuck
 music
 redo particle effects
 saving/loading system

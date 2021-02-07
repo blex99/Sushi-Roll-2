@@ -6,11 +6,11 @@ if (input_one_pressed())
 {
 	if (state == LEVEL.COMPLETE)
 		game_goto_next_level();
-	else if (state == LEVEL.COUNTING_DOWN && !oGame.level_first_try)
+	else if (state == LEVEL.COUNTING_DOWN && (debug_mode || !oGame.level_first_try))
 		timer_set_zero();
 }
 
-if (input_start_pressed() || (!paused && os_is_paused()))
+if (input_start_pressed() || (!debug_mode && !paused && os_is_paused()))
 	level_toggle_pause();
 	
 /*

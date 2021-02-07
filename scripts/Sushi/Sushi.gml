@@ -131,6 +131,5 @@ function sushi_jump(_velocity)
 		}
 	}	
 	
-	
 	sushi_change_size(false); // shrink
 }

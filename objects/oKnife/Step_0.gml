@@ -2,15 +2,15 @@
 
 event_inherited();
 
-if (alarm[0] != -1 && !sushi_invincible())
+if (killed_sushi && !sushi_invincible())
 {
-	var xcenter = (bbox_right + bbox_left) * 0.5;
-	var ycenter = (bbox_bottom + bbox_top) * 0.5;	
+	var _xcenter = (bbox_right + bbox_left) * 0.5;
+	var _ycenter = (bbox_bottom + bbox_top) * 0.5;	
 	
 	with (sushi_cur())
 	{
-		phy_position_x += (xcenter - phy_position_x) * 0.1;
-		phy_position_y += (ycenter - phy_position_y) * 0.1;
+		phy_position_x = approach(phy_position_x, _xcenter - 7, 7);
+		phy_position_y = approach(phy_position_y, _ycenter, 7);
 		phy_angular_velocity = 0;
 	}
 }
