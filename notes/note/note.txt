@@ -2,7 +2,6 @@
 DONE:
 ------------------------------------------------------------------------------
 TODO:
-rework pause (mem leak)
 redo levels (too hard)
 detect if/when stuck
 music
