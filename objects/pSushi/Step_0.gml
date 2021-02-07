@@ -5,14 +5,18 @@ var _delta = 0.5;
 
 if (!input_one())
 {	
+	var _x_dir = sign(input_x_axis());
+	
 	// more force if against the velocity
-	if (sign(input_x_axis()) != sign(phy_linear_velocity_x))
-		_target = force_bonus * input_x_axis();
-	else
-		_target = force_normal * input_x_axis();
+	_target = _x_dir * 
+		((_x_dir != sign(phy_linear_velocity_x)) ? force_bonus : force_normal);
+		
+	add_to_debug_map("_target: " + string(_target));
+	
 }
 
-force = approach(force, _target, _delta);
+force = _target;
+//force = approach(force, _target, _delta);
 force = clamp(force, -force_max, force_max);
 phy_linear_velocity_x += force;
 

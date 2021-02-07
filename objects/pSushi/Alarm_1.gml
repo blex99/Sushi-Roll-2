@@ -1,9 +1,11 @@
 /// @description detect if the player hasn't moved in the last 5 seconds
 
-if (my_previous_x == x && my_previous_y == y &&
+var _epsilon = 0.5;
+if (abs(my_previous_x - x) < _epsilon &&
+	abs(my_previous_y - y) < _epsilon &&
 	level_is_state_playing())
 {
-	info_box_create("If you're stuck, pause and reset!");
+	info_box_create("Stuck? Pause and reset!");
 }
 else
 {

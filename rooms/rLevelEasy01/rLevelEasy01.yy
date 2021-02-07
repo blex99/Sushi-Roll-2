@@ -112,7 +112,6 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oGoal","path":"objects/oGoal/oGoal.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_4F63F25B","path":"rooms/rLevelParent/rLevelParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2432.0,"y":704.0,"resourceVersion":"1.0","name":"inst_4F63F25B","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oChopstick","path":"objects/oChopstick/oChopstick.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2144.0,"y":896.0,"resourceVersion":"1.0","name":"inst_74A986E7","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oCollectibleOrange","path":"objects/oCollectibleOrange/oCollectibleOrange.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1192.0,"y":959.0,"resourceVersion":"1.0","name":"inst_7E19C742","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oSpinningKnife","path":"objects/oSpinningKnife/oSpinningKnife.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1616.0,"y":754.0,"resourceVersion":"1.0","name":"inst_456E0A37","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oWallThin","path":"objects/oWallThin/oWallThin.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-15.0,"scaleX":0.93359375,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1296.0,"y":816.977539,"resourceVersion":"1.0","name":"inst_31DBB619","tags":[],"resourceType":"GMRInstance",},
@@ -249,7 +248,6 @@
     {"name":"inst_74A986E7","path":"rooms/rLevelEasy01/rLevelEasy01.yy",},
     {"name":"inst_4093BA7E","path":"rooms/rLevelEasy01/rLevelEasy01.yy",},
     {"name":"inst_7E19C742","path":"rooms/rLevelEasy01/rLevelEasy01.yy",},
-    {"name":"inst_456E0A37","path":"rooms/rLevelEasy01/rLevelEasy01.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,

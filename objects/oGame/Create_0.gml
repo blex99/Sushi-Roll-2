@@ -7,16 +7,6 @@ var _display_h = display_get_height();
 window_scale = 1;
 gui_scale = 1;
 
-// dynamically determine width to fit screen
-ideal_width = 0;
-ideal_height = BASE_H;
-
-aspect_ratio = _display_w / _display_h;
-ideal_width = round(ideal_height * aspect_ratio);
-
-// check for odd numbers...
-if (ideal_width & 1) ideal_width++;
-
 // find the largest scale possible that will fit on the monitor dimensions
 window_scale_max = 1;
 while (_display_w >= BASE_W * window_scale_max &&
@@ -41,4 +31,4 @@ level_first_try = true; // player hasn't died yet?
 #endregion
 
 draw_set_font(fnUI);
-room_goto(START_ROOM);
+room_goto((debug_mode) ? DEBUG_START_ROOM : rStartScreen);

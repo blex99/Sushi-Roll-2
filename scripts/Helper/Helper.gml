@@ -20,11 +20,6 @@ function average(_arr)
 	return _sum / _len;
 }
 
-function toggle_fullscreen()
-{
-	window_set_fullscreen(!window_get_fullscreen());	
-}
-
 // input range between 0 and 1 ONLY
 function easeOutElastic(_num) {
 	var c4 = (2 * pi) / 3;

@@ -1,5 +1,6 @@
 // debug functions
 
+// short-hand print
 function print(_msg)
 {
 	show_debug_message(_msg);

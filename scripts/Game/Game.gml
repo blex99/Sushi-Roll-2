@@ -39,30 +39,33 @@ function game_goto_level(_level)
 	}
 }
 
-function game_get_ideal_width()
-{
-	with (oGame) return ideal_width;
-	return BASE_W;
-}
-
-function game_get_ideal_height()
-{
-	with (oGame) return ideal_height;
-	return BASE_H;
-}
-
 function game_resize_window()
 {
 	with (oGame)
 	{
-		surface_resize(application_surface, ideal_width, ideal_height);
-		
-		display_set_gui_size(ideal_width * gui_scale, ideal_height * gui_scale);
+		surface_resize(application_surface, BASE_W, BASE_H);
+		display_set_gui_size(BASE_W * gui_scale, BASE_H * gui_scale);
 		
 		if (!window_get_fullscreen())
 		{
-			window_set_size(ideal_width * window_scale, ideal_height * window_scale);
+			window_set_size(BASE_W * window_scale, BASE_H * window_scale);
 			alarm[0] = 2; // center window
+		}
+	}
+}
+
+function toggle_fullscreen()
+{
+	window_set_fullscreen(!window_get_fullscreen());
+	
+	with (oGame)
+	{
+		if (window_get_fullscreen())
+			window_set_size(BASE_W * window_scale_max, BASE_H * window_scale_max);
+		else
+		{
+			window_set_size(BASE_W * window_scale, BASE_H * window_scale);
+			alarm[0] = 2;
 		}
 	}
 }
@@ -78,7 +81,7 @@ function game_set_gui_scale(_increment)
 		var _max_scale = window_get_fullscreen() ? window_scale_max : window_scale;
 		
 		gui_scale = clamp(gui_scale, 1, _max_scale);
-		display_set_gui_size(ideal_width * gui_scale, ideal_height * gui_scale);
+		display_set_gui_size(BASE_W * gui_scale, BASE_H * gui_scale);
 	}
 }
 

@@ -16,7 +16,7 @@ mass = 2.2;
 density			= 0.2;
 restitution		= 0.1;
 linear_damp		= 0.05;
-angular_damp	= 0.1;
+angular_damp	= 0.5;//0.1;
 fric			= 0.2;
 
 my_fix			= -1; // assigned in sushi_init_fixture()

@@ -1,23 +1,18 @@
 -------------------------------------------------------------------------------
 DONE:
-new level swap debug
-more levels
-stuck detection
-new level 5
-15 levels setup to make
-spinning knives
+
 ------------------------------------------------------------------------------
 TODO:
-music
+music/sfx
 redo particle effects
 saving/loading system
 store buttons in a grid (refactor menu)
 slider
 D-pad support
 set keybindings
+new levels
 -------------------------------------------------------------------------------
 PROBLEMS:
-nothing
 -------------------------------------------------------------------------------
 COLORS:
 easy	medium	hard

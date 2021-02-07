@@ -5,7 +5,7 @@ event_inherited();
 // message array
 messages =
 [
-	"YOUR TASK is serve sushi!",
+	"YOUR TASK is serve to sushi!",
 	"YOUR MEANS is by controlling sushi...",
 	"...and controlling the platforms.",
 	"Get used to swapping between these two moves...",

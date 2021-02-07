@@ -4,36 +4,43 @@
 // Inherit the parent event
 event_inherited();
 
-var i = -5;
 var buff = 48;
 var _h = display_get_gui_height() * 0.75;
-var _arr = 
-[
-	["Level 1"	, 0, _h, 0, buff, game_goto_level, [0] ],
-	["Level 2"	, 0, _h, 0, buff, game_goto_level, [1] ],
-	["Level 3"	, 0, _h, 0, buff, game_goto_level, [2] ],
-	["Level 4"	, 0, _h, 0, buff, game_goto_level, [3] ],
-	["Level 5"	, 0, _h, 0, buff, game_goto_level, [4] ],
-	["Level 6"	, 0, _h, 0, buff, game_goto_level, [5] ],
-	["Level 7"	, 0, _h, 0, buff, game_goto_level, [6] ],
-	["Level 8"	, 0, _h, 0, buff, game_goto_level, [7] ],
-	["Level 9"	, 0, _h, 0, buff, game_goto_level, [8] ],
-	["Level 10"	, 0, _h, 0, buff, game_goto_level, [9] ],
-	["Main Menu", 0, _h, 0, buff, transition_start, [rMainMenu]	]
-]
-var _len = array_length(_arr);
+var _bw = button_get_width();
+var _amount_of_levels = array_length(oGame.levels);
 
-for (var j = 0; j < _len; j++)
+var _difficulty = 0; // 0 easy, 1 medium, 2 hard
+var i_start = -5 / 2;
+var i = i_start;
+
+for (var j = 0; j < _amount_of_levels; j++)
 {
-	var a = _arr[j];
-	var _button;
+	var _level_name = room_get_name(oGame.levels[j]);
 	
-	if (array_length(a) == 7)
-		_button = button_create(a[0], a[1], a[2], a[3], a[4] * i, a[5], a[6]);
-	else
-		_button = button_create(a[0], a[1], a[2], a[3], a[4] * i, a[5]);
+	// display easy levels to the left
+	// medium levels in the middle
+	// and hard levels to the right
+	var _x_offset = 0;
+	switch (_difficulty)
+	{
+		case 0:
+			_x_offset = _bw * -1;
+			break;
+		case 2:
+			_x_offset = _bw;
+			break;
+	}
 	
+	var _button = button_create(_level_name, 0, _h, _x_offset, buff * i, game_goto_level, [j]);
 	ds_list_add(buttons, _button);
 	
-	i++;
+	if (++i >= -1 * i_start)
+	{
+		i = i_start;
+		_difficulty++;
+	}
 }
+
+i = (-1 * i_start) + 1;
+_button = button_create("Main Menu", 0, _h, 0, buff * i, transition_start, [rMainMenu]);
+ds_list_add(buttons, _button);
