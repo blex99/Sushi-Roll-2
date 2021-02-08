@@ -15,6 +15,3 @@ if (keyboard_check_pressed(ord("C")))
 		phy_position_y = oGoal.y - oGoal.sprite_height;
 	}
 }
-
-if (keyboard_check_pressed(ord("D")))
-	show_debug = !show_debug;

@@ -32,3 +32,4 @@ level_first_try = true; // player hasn't died yet?
 
 draw_set_font(fnUI);
 room_goto((debug_mode) ? DEBUG_START_ROOM : rStartScreen);
+

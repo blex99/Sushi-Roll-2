@@ -1,24 +1,24 @@
 /// @description control the sushi x velocity
 
-var _target = 0;
-var _delta = 0.5;
+var _x_dir;
 
-if (!input_one())
-{	
-	var _x_dir = sign(input_x_axis());
-	
-	// more force if against the velocity
-	_target = _x_dir * 
-		((_x_dir != sign(phy_linear_velocity_x)) ? force_bonus : force_normal);
-		
-	add_to_debug_map("_target: " + string(_target));
-	
+if (global.using_controller)
+{
+	_x_dir = gamepad_axis_value(global.device_index, gp_axislh);
+}
+else
+{
+	var _left = keyboard_check(ord("A"));
+	var _right = keyboard_check(ord("D"));
+	_x_dir = _right - _left;
 }
 
-force = _target;
-//force = approach(force, _target, _delta);
+force = _x_dir * 
+	((sign(_x_dir) != sign(phy_linear_velocity_x)) ? force_bonus : force_normal);
+
 force = clamp(force, -force_max, force_max);
 phy_linear_velocity_x += force;
+physics_apply_torque(force * 20);
 
 if (place_meeting(x, y, oWaterBody))
 {

@@ -6,7 +6,7 @@ function level_completed(){
 		timer_freeze();
 		stats_calc_final_score();
 		instance_create_depth(0, 0, -9999, oVictoryScreen);
-		window_set_cursor(cr_default);
+		if (!global.using_controller) window_set_cursor(cr_default);
 	}
 }
 
@@ -35,7 +35,7 @@ function level_toggle_pause()
 			
 			// show mouse and center its position
 			window_mouse_set(window_get_width() / 2, window_get_height() / 4);
-			window_set_cursor(cr_default);
+			if (!global.using_controller) window_set_cursor(cr_default);
 		}
 		else
 		{

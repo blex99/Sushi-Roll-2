@@ -18,3 +18,8 @@ COLORS:
 easy	medium	hard
 $ACD8D3	$FFFFCC	$E5ABA0
 -------------------------------------------------------------------------------
+
+CONTROLS TO TRY
+invert rotation controls
+buttons to rotate the platforms
+

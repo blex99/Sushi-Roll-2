@@ -13,4 +13,4 @@ for (var i = 0; i < _len; i++)
 }
 
 // if you've made it here, you should NOT in a level room
-window_set_cursor(cr_default);
+update_cursor();

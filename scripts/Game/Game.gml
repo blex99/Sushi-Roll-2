@@ -1,3 +1,13 @@
+// show/hide cursor based of if using_controller
+function update_cursor()
+{
+	var _cursor = cr_default;
+	if (global.using_controller) _cursor = cr_none;
+	if (instance_exists(oLevelManager) && !is_level_complete()) _cursor = cr_none;
+	
+	window_set_cursor(_cursor);	
+}
+
 function game_goto_next_level(){
 	
 	// shouldn't be able to skip levels by mashing A

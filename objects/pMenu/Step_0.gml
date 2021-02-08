@@ -32,7 +32,7 @@ if (menu_control)
 		if (menu_cursor >= _len) menu_cursor = 0;
 	}
 	
-	if (keyboard_check_pressed(vk_enter) || input_one_pressed())
+	if (keyboard_check_pressed(vk_enter) || gamepad_button_check(global.device_index, gp_face1))
 	{
 		menu_committed = menu_cursor;
 		menu_control = false;
@@ -50,20 +50,20 @@ for (var i = 0; i < _len; i++)
 	with(buttons[| i])
 	{
 		// override cursor and commited vars if needed
-		if (_control &&
+		if (_control && !global.using_controller &&
 			MOUSE_GUI_X > x1 && MOUSE_GUI_X < x2 &&
 			MOUSE_GUI_Y > y1 && MOUSE_GUI_Y < y2)
 		{
 			_cursor = i;
 	
-			if (MOUSE_LEFT && my_script != noone)
+			if (MOUSE_LEFT && !global.using_controller && my_script != noone)
 			{
 				_committed = i;
 				_control = false;
 				
 			}
 		}
-		
+
 		if (i == _committed)	{ sub_image = BUTTON.PRESSED; _alarm = 10;	}
 		else if (i == _cursor)	{ sub_image = BUTTON.HOVERING;				}
 		else					{ sub_image = BUTTON.IDLE;					}
