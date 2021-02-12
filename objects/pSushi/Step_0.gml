@@ -1,11 +1,9 @@
-/// @description control the sushi x velocity
+/// @description control the sushi x and spin
 
 var _x_dir;
 
 if (global.using_controller)
-{
 	_x_dir = gamepad_axis_value(global.device_index, gp_axislh);
-}
 else
 {
 	var _left = keyboard_check(ord("A"));
@@ -13,12 +11,9 @@ else
 	_x_dir = _right - _left;
 }
 
-force = _x_dir * 
-	((sign(_x_dir) != sign(phy_linear_velocity_x)) ? force_bonus : force_normal);
-
-force = clamp(force, -force_max, force_max);
-phy_linear_velocity_x += force;
-physics_apply_torque(force * 20);
+// control the sushi
+physics_apply_force(x, y, _x_dir * force, 0);
+physics_apply_torque(_x_dir * torque);
 
 if (place_meeting(x, y, oWaterBody))
 {

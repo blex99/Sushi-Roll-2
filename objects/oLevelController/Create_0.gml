@@ -1,5 +1,5 @@
 // input vars
-rot_strength = 4;
+rot_strength = 4.5;
 
 // stats for the WINDOW
 w = window_get_width();
