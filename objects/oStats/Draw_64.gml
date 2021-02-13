@@ -1,6 +1,6 @@
 /// @desc display score, time, counters, victory screen
 
-if (is_level_complete()) exit;
+if (level_is_state(LEVEL.COMPLETE)) exit;
 
 var _arr =
 [

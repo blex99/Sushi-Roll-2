@@ -16,6 +16,8 @@ while (_display_w >= BASE_W * window_scale_max &&
 }
 window_scale_max--;
 
+window_set_fullscreen(START_FULLSCREEN);
+
 game_resize_window();
 #endregion
 

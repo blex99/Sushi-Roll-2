@@ -21,5 +21,3 @@ if (place_meeting(x, y, oWaterBody))
 	water_cause_wave(_water, x);
 	phy_linear_damping = 5;
 }
-
-add_to_debug_map("phy_mass: " + string(phy_mass));

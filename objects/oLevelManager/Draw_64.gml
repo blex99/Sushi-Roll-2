@@ -1,6 +1,6 @@
 /// @description displays lvl name & other info
 
-if (paused) exit;
+if (level_is_state(LEVEL.PAUSED)) exit;
 
 // level room names have the format: rLevel##
 //                                   12345678
@@ -16,7 +16,7 @@ var _room_num = string_char_at(_room_name, _room_name_length-1) +
 var _msg = "";
 set_draw(c_black, 1, fnUIBig, fa_center, fa_center);
 
-if (state == LEVEL.PANNING_TO_SUSHI)
+if (level_is_state(LEVEL.PANNING))
 {
 	_msg = "~ Level " + _room_num;
 	if (level_name != "") _msg += " - " + level_name;
@@ -24,16 +24,16 @@ if (state == LEVEL.PANNING_TO_SUSHI)
 	
 	draw_set_alpha(ui_alpha);
 }
-else if (state == LEVEL.COUNTING_DOWN)
+else if (level_is_state(LEVEL.COUNTING_DOWN))
 {
 	_msg = "Ready?";
 }
-else if (state == LEVEL.PLAYING)
+else if (level_is_state(LEVEL.PLAYING))
 {
 	_msg = "Go!";
 	draw_set_alpha(ui_alpha);
 }
-else if (state == LEVEL.TIME_OUT)
+else if (level_is_state(LEVEL.TIME_OUT))
 {
 	_msg = "Out of time!"
 }

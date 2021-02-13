@@ -1,6 +1,6 @@
 /// @description red shade (when theres 10 seconds remaining)
 
-if (!paused && state == LEVEL.PLAYING)
+if (level_is_state(LEVEL.PLAYING))
 {
 	var _w = display_get_gui_width();
 	var _h = display_get_gui_height();

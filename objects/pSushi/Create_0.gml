@@ -14,7 +14,7 @@ mass_increment = 0.05;
 
 density			= 0.3;
 restitution		= 0.25;
-linear_damp		= 0.05;
+linear_damp		= 0.1; // 0.05
 angular_damp	= 0.5;
 fric			= 2;
 

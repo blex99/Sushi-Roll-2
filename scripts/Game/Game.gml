@@ -3,7 +3,7 @@ function update_cursor()
 {
 	var _cursor = cr_default;
 	if (global.using_controller) _cursor = cr_none;
-	if (instance_exists(oLevelManager) && !is_level_complete()) _cursor = cr_none;
+	if (instance_exists(oLevelManager) && !level_is_state(LEVEL.COMPLETE)) _cursor = cr_none;
 	
 	window_set_cursor(_cursor);	
 }

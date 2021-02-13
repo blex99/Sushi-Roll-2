@@ -1,4 +1,4 @@
 /// @description restart room
 
-if (!is_level_complete())
+if (!level_is_state(LEVEL.COMPLETE))
 	transition_start(room);

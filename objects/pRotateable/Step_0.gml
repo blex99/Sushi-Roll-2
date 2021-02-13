@@ -13,7 +13,7 @@ w_min = w_half - max_range;
 w_max = w_half + max_range;
 
 // clamp mouse to w_min and w_max
-if (!_controller && !is_level_complete())
+if (!_controller && !level_is_state(LEVEL.COMPLETE))
 	window_mouse_set(input_x_mouse_clamp(w_min, w_max), h_half);
 
 // rotate

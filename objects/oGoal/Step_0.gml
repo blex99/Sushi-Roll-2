@@ -1,6 +1,6 @@
 /// @description call level_completed
 
-if (!is_level_complete() &&
+if (!level_is_state(LEVEL.COMPLETE) &&
 	place_meeting(x, y, sushi_cur()))
 {
 	level_completed();

@@ -10,16 +10,18 @@
 #macro VALUE_COLLECTIBLE 100
 #macro VALUE_COLLECT_EVERYTHING 1000
 
-#macro DEBUG_START_ROOM rLevelMedium01
+#macro START_FULLSCREEN false
+#macro DEBUG_START_ROOM rLevelEasy05
 
 global.border_sprite = sNineSliceBoxBamboo;
 
 // for oLevel
 enum LEVEL
 {
-	PANNING_TO_SUSHI,
+	PANNING,
 	COUNTING_DOWN,
 	PLAYING,
+	PAUSED,
 	TIME_OUT,
 	COMPLETE
 }
