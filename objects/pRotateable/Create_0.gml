@@ -1,9 +1,9 @@
 rot_strength = 10;
-rot_limit = 50;
+rot_limit = 40; // in degrees
 
 speed_max = 300;
 
-mass = 2.5;
+mass = 2.0;
 inertia = 100;
 physics_mass_properties(mass, 0, 0, inertia);
 

@@ -1,3 +1,7 @@
 /// @description set target to sushi
 
-follow = sushi_cur();
+if (follow_index < follow_size - 1)
+{
+	follow_index++;
+	alarm[0] = room_speed;
+}

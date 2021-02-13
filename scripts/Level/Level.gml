@@ -10,26 +10,20 @@ function level_completed(){
 	}
 }
 
-function is_level_complete()
-{
-	with (oLevelManager)
-	{
-		return state == LEVEL.COMPLETE;
-	}
-}
-
 function level_toggle_pause()
 {	
 	with (oLevelManager)
 	{
-		paused = !paused;
-		physics_pause_enable(paused);
-		
-		if (paused)
+		if (!level_is_state(LEVEL.PAUSED))
 		{
 			// pausing
+			prev_state = state;
+			state = LEVEL.PAUSED;
+			
+			physics_pause_enable(true);
 			instance_deactivate_all(true);
 			instance_activate_object(oPauseMenu);
+			instance_activate_object(oCamera);
 			instance_activate_object(oButton);
 			button_reset_positions();
 			
@@ -40,6 +34,9 @@ function level_toggle_pause()
 		else
 		{
 			// unpausing
+			state = prev_state;
+			
+			physics_pause_enable(false);
 			instance_activate_all();
 			instance_deactivate_object(oPauseMenu);
 			instance_deactivate_object(oButton);
@@ -84,8 +81,9 @@ function level_begin()
 	instance_destroy(oInvisibleSushiHolder);
 }
 
-function level_is_state_playing()
+
+function level_is_state(_level_state)
 {
 	with (oLevelManager)
-		return state == LEVEL.PLAYING;
+		return state == _level_state;
 }

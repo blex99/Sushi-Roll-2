@@ -19,6 +19,7 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oDeathPlane","path":"objects/oDeathPlane/oDeathPlane.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_51393171","path":"rooms/rLevelParent/rLevelParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":1472.0,"y":3008.0,"resourceVersion":"1.0","name":"inst_51393171","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oLevelManager","path":"objects/oLevelManager/oLevelManager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_478F0AE2","path":"rooms/rLevelParent/rLevelParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":448.0,"y":1184.0,"resourceVersion":"1.0","name":"inst_478F0AE2","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oChopstick","path":"objects/oChopstick/oChopstick.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1408.0,"y":1360.0,"resourceVersion":"1.0","name":"inst_2400D8E6","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Invisible","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Wall","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Water","tags":[],"resourceType":"GMRInstanceLayer",},
@@ -27,7 +28,6 @@
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Sushi","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oGoal","path":"objects/oGoal/oGoal.yy",},"inheritCode":true,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_4F63F25B","path":"rooms/rLevelParent/rLevelParent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":true,"x":800.0,"y":704.0,"resourceVersion":"1.0","name":"inst_4F63F25B","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oBamboo","path":"objects/oBamboo/oBamboo.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1408.0,"y":1312.0,"resourceVersion":"1.0","name":"inst_6B640385","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oBamboo","path":"objects/oBamboo/oBamboo.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1728.0,"y":1312.0,"resourceVersion":"1.0","name":"inst_47EA5662","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oBamboo","path":"objects/oBamboo/oBamboo.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1088.0,"y":1312.0,"resourceVersion":"1.0","name":"inst_2450A39E","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
@@ -42,9 +42,9 @@
     {"name":"inst_478F0AE2","path":"rooms/rLevelMedium01/rLevelMedium01.yy",},
     {"name":"inst_7C31E018","path":"rooms/rLevelMedium01/rLevelMedium01.yy",},
     {"name":"inst_4F63F25B","path":"rooms/rLevelMedium01/rLevelMedium01.yy",},
-    {"name":"inst_6B640385","path":"rooms/rLevelMedium01/rLevelMedium01.yy",},
     {"name":"inst_47EA5662","path":"rooms/rLevelMedium01/rLevelMedium01.yy",},
     {"name":"inst_2450A39E","path":"rooms/rLevelMedium01/rLevelMedium01.yy",},
+    {"name":"inst_2400D8E6","path":"rooms/rLevelMedium01/rLevelMedium01.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,

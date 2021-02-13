@@ -9,8 +9,12 @@ if (killed_sushi && !sushi_invincible())
 	
 	with (sushi_cur())
 	{
-		phy_position_x = approach(phy_position_x, _xcenter - 7, 7);
-		phy_position_y = approach(phy_position_y, _ycenter, 7);
+		phy_position_x = lerp(phy_position_x, _xcenter - 7, 0.1);
+		phy_position_y = lerp(phy_position_y, _ycenter, 0.1);
 		phy_angular_velocity = 0;
+		phy_linear_velocity_x = 0;
+		phy_linear_velocity_y = 0;
 	}
 }
+
+add_to_debug_map("killed_sushi: " + string(killed_sushi));
