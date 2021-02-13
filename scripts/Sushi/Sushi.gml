@@ -30,12 +30,16 @@ function sushi_change_size(_grow)
 		{
 			image_xscale += size_increment;
 			image_yscale += size_increment;
+			
+			mass += mass_increment;
 		}
 		else
 		{
 			// shink to original size
 			image_xscale = 1;//-= size_increment;
 			image_yscale = 1;//-= size_increment;
+			
+			mass = mass_start;
 		}
 		
 		// don't scale outside of max or original size
@@ -109,13 +113,11 @@ function physics_fixture_set_sushi_shape(_fix)
 	}
 }
 
-function sushi_jump(_velocity)
+function sushi_jump(_newtons)
 {
 	with (sushi_cur())
 	{
-		phy_linear_velocity_y += -_velocity;
-		phy_linear_velocity_y = clamp(phy_linear_velocity_y,
-			-jump_velocity_max, jump_velocity_max);
+		physics_apply_impulse(x, y, 0, -_newtons);
 		
 		if (image_xscale != 1)
 		{

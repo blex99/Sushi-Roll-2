@@ -89,7 +89,6 @@
     {"id":{"name":"Debug","path":"scripts/Debug/Debug.yy",},"order":0,},
     {"id":{"name":"oDeathPlane","path":"objects/oDeathPlane/oDeathPlane.yy",},"order":0,},
     {"id":{"name":"sKnife","path":"sprites/sKnife/sKnife.yy",},"order":10,},
-    {"id":{"name":"oLevelController","path":"objects/oLevelController/oLevelController.yy",},"order":1,},
     {"id":{"name":"sBambooWallThin","path":"sprites/sBambooWallThin/sBambooWallThin.yy",},"order":1,},
     {"id":{"name":"sDeathPlane","path":"sprites/sDeathPlane/sDeathPlane.yy",},"order":0,},
     {"id":{"name":"oStartScreen","path":"objects/oStartScreen/oStartScreen.yy",},"order":4,},

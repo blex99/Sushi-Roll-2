@@ -1,6 +1,5 @@
 #macro BASE_W 960
 #macro BASE_H 540
-#macro ROT_LIMIT 50
 #macro WATERDIVISION 16 // smaller division -> more lag
 #macro MOUSE_GUI_X device_mouse_x_to_gui(0)
 #macro MOUSE_GUI_Y device_mouse_y_to_gui(0)

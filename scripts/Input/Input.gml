@@ -22,13 +22,13 @@ function input_start_pressed(){
 function input_x_axis(){
 	if (global.using_controller)
 	{
-		return gamepad_axis_value(global.device_index, gp_axislh);
+		return gamepad_axis_value(global.device_index, gp_axisrh);
 	}
 	
 	var _normalized_input = 0;
 	var _ranged_input = 0;
 	
-	with (oLevelController)
+	with (pRotateable)
 	{
 		_ranged_input = input_x_mouse_clamp(w_min, w_max);
 		_normalized_input = 2 * (_ranged_input - w_min) / (w_max - w_min);
@@ -40,7 +40,7 @@ function input_x_axis(){
 
 function input_controller_to_mouse_x()
 {
-	with (oLevelController)
+	with (pRotateable)
 	{
 		return ((input_x_axis() + 1) * (w_max - w_min) / 2) + w_min;	
 	}
@@ -48,7 +48,7 @@ function input_controller_to_mouse_x()
 
 function input_x_mouse_clamp(_min, _max)
 {
-	with (oLevelController)
+	with (pRotateable)
 	{
 		return clamp(window_mouse_get_x(), _min, _max);	
 	}
