@@ -115,12 +115,17 @@ function physics_fixture_set_sushi_shape(_fix)
 
 function sushi_jump(_newtons)
 {
+	var _sushi_shrunk = sushi_cur().image_xscale != 1;
+	
+	sushi_change_size(false); // shrink
+	
 	with (sushi_cur())
 	{
 		physics_apply_impulse(x, y, 0, -_newtons);
 		
-		if (image_xscale != 1)
+		if (_sushi_shrunk)
 		{
+			// do particle effect
 			draw_set_alpha(0.1);
 			var _num = 1 + irandom(3);
 			for (var _i = 0; _i < _num; _i++)
@@ -132,6 +137,4 @@ function sushi_jump(_newtons)
 			reset_alpha();
 		}
 	}	
-	
-	sushi_change_size(false); // shrink
 }
