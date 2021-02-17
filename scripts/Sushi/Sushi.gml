@@ -14,11 +14,6 @@ function sushi_cur()
 		return noone;
 }
 
-function sushi_invincible()
-{
-	return sushi_cur().alarm[0] != -1;
-}
-
 // if _grow is true, grow
 // else, shrink in size
 // recreate fixture

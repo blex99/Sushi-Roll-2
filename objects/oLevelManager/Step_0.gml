@@ -10,7 +10,7 @@ if (input_one_pressed())
 		timer_set_zero();
 }
 
-if (input_start_pressed() || (!debug_mode && !level_is_state(LEVEL.PAUSED) && os_is_paused()))
+if (!level_is_state(LEVEL.COMPLETE) && input_start_pressed())
 	level_toggle_pause();
 	
 var _state;

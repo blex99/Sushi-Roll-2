@@ -8,5 +8,4 @@ if (!debug_mode)
 
 // setting to true with display debug elements
 // setting to false hides debug elements even when in debug mode
-// can be toggled with D
 show_debug = true;

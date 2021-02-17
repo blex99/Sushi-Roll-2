@@ -2,19 +2,13 @@
 
 event_inherited();
 
-if (killed_sushi && !sushi_invincible())
+if (killed_sushi)
 {
-	var _xcenter = (bbox_right + bbox_left) * 0.5;
-	var _ycenter = (bbox_bottom + bbox_top) * 0.5;	
-	
+	path_speed = 0;
 	with (sushi_cur())
 	{
-		phy_position_x = lerp(phy_position_x, _xcenter - 7, 0.1);
-		phy_position_y = lerp(phy_position_y, _ycenter, 0.1);
-		phy_angular_velocity = 0;
-		phy_linear_velocity_x = 0;
-		phy_linear_velocity_y = 0;
+		phy_linear_velocity_x = lerp(phy_linear_velocity_x, 0, 0.5);
+		phy_linear_velocity_y = lerp(phy_linear_velocity_y, 0, 0.95);
+		phy_angular_velocity = approach(phy_angular_velocity, 0, 40);
 	}
 }
-
-add_to_debug_map("killed_sushi: " + string(killed_sushi));

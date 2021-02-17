@@ -2,9 +2,15 @@
 
 view_enabled = true;
 view_visible[0] = true;
-cam = view_camera[0];
-zoom = 1;
-strength = 1 / 30;	// range: 0 < x <= 1, 1 being strongest
+
+view_w = BASE_W;
+view_h = BASE_H;
+view_w_half = view_w * 0.5;
+view_h_half = view_h * 0.5;
+camera_set_view_size(CAM, view_w, view_h);
+
+strength = strength_panning;
+
 follow_index = 0;	// current index following
 follows = [];		// array of things to follow
 
@@ -22,14 +28,12 @@ if (instance_exists(_sushi)) array_push(follows, _sushi);
 follow_size = array_length(follows);
 if (follow_size > 0)
 {
+	// place camera at first thing to follow
 	var _following = follows[follow_index];
-	alarm[0] = room_speed; // set target next follow
-	zoom = 1.5;
-	
 	x = _following.x;
 	y = _following.y;
-	xfollow = _following.x;
-	yfollow = _following.y;
+	
+	 // set target next follow
+	alarm[0] = room_speed;
 }
 
-camera_zoom(zoom);

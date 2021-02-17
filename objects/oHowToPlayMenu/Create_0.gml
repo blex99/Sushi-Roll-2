@@ -8,10 +8,8 @@ messages =
 	"YOUR TASK is serve to sushi!",
 	"YOUR MEANS is by controlling sushi...",
 	"...and controlling the platforms.",
-	"Get used to swapping between these two moves...",
-	"...since MOUSE'S X POSITION changes both.",
-	"HOLD LEFT MOUSE to tilt the platforms.",
-	"RELEASE LEFT MOUSE to move the sushi.",
+	"MOUSE'S X POSITION tilts the platforms.",
+	"A and D moves the sushi.",
 	"In game, you can pause with ESCAPE.",
 	"Good luck."
 ];

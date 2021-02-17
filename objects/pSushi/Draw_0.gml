@@ -1,4 +1,4 @@
-/// @description draw arrow & invinsibility
+/// @description draw 
 
 
 if (can_display_debug()) 
@@ -14,8 +14,6 @@ if (can_display_debug())
 	draw_sprite_ext(sArrow, 0, x, y, _x_dir, 1, 0, _color, _alpha);
 }
 
-
-if (sushi_invincible()) image_alpha = 0.5;
-else					image_alpha = 1;
-
 draw_self();
+//draw_sprite_ext(sprite, 0, round(phy_position_x), round(phy_position_y),
+//	image_xscale, image_yscale, round(-phy_rotation) , image_blend, image_alpha);

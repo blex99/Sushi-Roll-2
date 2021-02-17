@@ -11,8 +11,8 @@ var buff = 48;
 var _h = display_get_gui_height() * 0.5;
 var _arr = 
 [
-	["Unpause"		, 0, _h, 0, buff, level_toggle_pause				],
-	["Restart Level", 0, _h, 0, buff, transition_start	, [room]		],
+	["Resume"		, 0, _h, 0, buff, level_toggle_pause				],
+	["Restart", 0, _h, 0, buff, transition_start	, [room]		],
 	["Fullscreen"	, 0, _h, 0, buff, toggle_fullscreen					],
 	["Main Menu"	, 0, _h, 0, buff, transition_start	, [rMainMenu]	]
 ]

@@ -1,5 +1,5 @@
 rot_strength = 10;
-rot_limit = 40; // in degrees
+//rot_limit = 40; // in degrees
 
 speed_max = 300;
 

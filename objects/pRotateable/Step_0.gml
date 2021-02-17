@@ -20,18 +20,4 @@ if (!_controller && !level_is_state(LEVEL.COMPLETE))
 _target_angle = input_x_axis() * rot_limit;
 _diff = angle_difference(_target_angle, phy_rotation);
 _spd = _diff * rot_strength;
-_spd = clamp(_spd, -speed_max, speed_max);
-
-phy_angular_velocity = _spd;
-
-
-/*
-_target_angle = input_x_axis() * rot_limit;
-var _diff = angle_difference(_target_angle, phy_rotation);
-
-var _spin =  rot_strength * _diff / rot_limit;
-if (abs(_diff) > 1) physics_apply_angular_impulse(_spin);
-
-add_to_debug_map("_diff: " + string(_diff));
-
-*/
+phy_angular_velocity = clamp(_spd, -speed_max, speed_max);

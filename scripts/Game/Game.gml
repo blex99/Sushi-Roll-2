@@ -51,9 +51,10 @@ function game_goto_level(_level)
 
 function game_resize_window()
 {
+	surface_resize(application_surface, BASE_W, BASE_H);
+	
 	with (oGame)
 	{
-		surface_resize(application_surface, BASE_W, BASE_H);
 		display_set_gui_size(BASE_W * gui_scale, BASE_H * gui_scale);
 		
 		if (!window_get_fullscreen())
@@ -75,9 +76,11 @@ function toggle_fullscreen()
 		else
 		{
 			window_set_size(BASE_W * window_scale, BASE_H * window_scale);
-			alarm[0] = 2;
+			alarm[0] = 2;// center window
 		}
 	}
+	
+	surface_resize(application_surface, BASE_W, BASE_H);
 }
 
 // either increase or decrease the gui's scale

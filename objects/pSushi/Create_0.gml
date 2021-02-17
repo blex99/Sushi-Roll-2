@@ -1,11 +1,10 @@
 // etc vars
+
 scale_max = 2;
 size_increment = 0.2;
-invincibility_frames = room_speed * 3;
 
 torque = 50;
 force = 100;
-alarm[0] = invincibility_frames;
 
 // phys vars
 mass_start = 3;

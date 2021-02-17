@@ -5,17 +5,29 @@ event_inherited();
 // change text based on controller
 if (global.using_controller)
 {
-	messages[4] = "...since LEFT JOYSTICK changes both.";
-	messages[5] = "HOLD A to tilt the platforms.";
-	messages[6] = "RELEASE A to move the sushi.";
-	messages[7] = "In game, you can pause with START.";
+	messages =
+	[
+		"YOUR TASK is serve to sushi!",
+		"YOUR MEANS is by controlling sushi...",
+		"...and controlling the platforms.",
+		"RIGHT JOYSTICK tilts the platforms.",
+		"LEFT JOYSTICK moves the sushi.",
+		"In game, you can pause with START.",
+		"Good luck."
+	];
 }
 else
 {
-	messages[4] = "...since MOUSE'S X POSITION changes both.";
-	messages[5] = "HOLD LEFT MOUSE to tilt the platforms.";
-	messages[6] = "RELEASE LEFT MOUSE to move the sushi.";
-	messages[7] = "In game, you can pause with ESCAPE.";
+	messages =
+	[
+		"YOUR TASK is serve to sushi!",
+		"YOUR MEANS is by controlling sushi...",
+		"...and controlling the platforms.",
+		"MOUSE'S X POSITION tilts the platforms.",
+		"A and D moves the sushi.",
+		"In game, you can pause with ESCAPE.",
+		"Good luck."
+	];
 }
 
 if (input_start_pressed()) transition_start(rMainMenu);

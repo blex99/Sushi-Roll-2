@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Camera",
+  "name": "_MACROS_GLOBALS_ENUMS",
   "tags": [],
   "resourceType": "GMScript",
 }
