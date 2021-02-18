@@ -116,7 +116,7 @@ function sushi_jump(_newtons)
 	
 	with (sushi_cur())
 	{
-		physics_apply_impulse(x, y, 0, -_newtons);
+		physics_apply_impulse(phy_position_x, phy_position_y, 0, -_newtons);
 		
 		if (_sushi_shrunk)
 		{

@@ -60,5 +60,3 @@ surface_reset_target();
 
 draw_surface(springSurface, _left, _top);
 draw_set_alpha(1);
-
-

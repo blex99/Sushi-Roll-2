@@ -1,3 +1,3 @@
 /// @description stretch image
 
-image_xscale = approach(image_xscale, xscale_target, 0.05);
+image_xscale = lerp(image_xscale, xscale_target, 0.1);

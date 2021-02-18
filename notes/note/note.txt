@@ -4,15 +4,42 @@ DONE:
 ------------------------------------------------------------------------------
 TODO:
 music/sfx
-redo particle effects
-saving/loading system
-store buttons in a grid (refactor menu)
-slider
-D-pad support
-set keybindings
-new levels
+
+menu:
+	volume sliders
+	set keybindings
+	store buttons in a grid
+	D-pad support for menu
+	B to go back to previous menu
+
+ideas:
+	sticky walls
+	rice is currency to buy different sushi's
+
+visual:
+	thin platforms look weird (fill in instead of pipes)
+	tile effects
+	redo particle effects
+	theme for each difficulty
+
+game:
+	death counter
+	moving platform path indicator
+	option to restart a level after beating the level
+	no countdown (press button to start)
+	time bonus instead of time limit
+	indicate you've skipped the countdown
+	saving/loading system
+
+levels:
+	rework medlevel02 and hardlevel03
+	fix springs in every level
+
 -------------------------------------------------------------------------------
 PROBLEMS:
+	camera looks weird when moving very slow (shaking?)
+	camera tearing at the top of the screen
+	sushi "anti-aliasing"/rotating effect looks odd
 -------------------------------------------------------------------------------
 COLORS:
 easy	medium	hard
