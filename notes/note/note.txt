@@ -12,10 +12,6 @@ menu:
 	D-pad support for menu
 	B to go back to previous menu
 
-ideas:
-	sticky walls
-	rice is currency to buy different sushi's
-
 visual:
 	thin platforms look weird (fill in instead of pipes)
 	tile effects
@@ -30,6 +26,8 @@ game:
 	time bonus instead of time limit
 	indicate you've skipped the countdown
 	saving/loading system
+	sticky walls
+	rice is currency to buy different sushi's
 
 levels:
 	rework medlevel02 and hardlevel03
