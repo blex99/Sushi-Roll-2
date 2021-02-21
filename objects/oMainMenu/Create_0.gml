@@ -7,7 +7,7 @@ var buff = 48;
 var _h = display_get_gui_height() * 0.75;
 var _arr = 
 [
-	["Start"		, 0, _h, 0, buff, game_goto_level,  [0]				],
+	["Start"		, 0, _h, 0, buff, run_start,						],
 	["Level Select"	, 0, _h, 0, buff, transition_start, [rLevelSelect]	],
 	["How to Play"	, 0, _h, 0, buff, transition_start, [rHowToPlay]	],
 	["Options"		, 0, _h, 0, buff, transition_start, [rOptionsMenu]	],

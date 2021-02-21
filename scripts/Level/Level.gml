@@ -25,6 +25,7 @@ function level_toggle_pause()
 			instance_activate_object(oPauseMenu);
 			instance_activate_object(oCamera);
 			instance_activate_object(oButton);
+			instance_activate_object(oStats);
 			button_reset_positions();
 			
 			// show mouse and center its position

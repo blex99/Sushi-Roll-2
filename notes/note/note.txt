@@ -28,10 +28,7 @@ game:
 	saving/loading system
 	sticky walls
 	rice is currency to buy different sushi's
-
-levels:
-	rework medlevel02 and hardlevel03
-	fix springs in every level
+	seperate runs for each difficulty type
 
 -------------------------------------------------------------------------------
 PROBLEMS:

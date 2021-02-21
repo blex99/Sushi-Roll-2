@@ -6,6 +6,9 @@ size_increment = 0.2;
 torque = 50;
 force = 100;
 
+jump_buffer_start = 15;
+jump_buffer = 0; // frames you cannot apply a jump impulse
+
 // phys vars
 mass_start = 3;
 mass = mass_start;

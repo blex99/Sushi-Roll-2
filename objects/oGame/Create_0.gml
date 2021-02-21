@@ -26,9 +26,9 @@ game_resize_window();
 level_index = -1;
 levels =
 [
-	rLevelEasy01,	rLevelEasy02,	rLevelEasy03,	rLevelEasy04,
+	rLevelEasy01,	rLevelEasy02,	rLevelEasy03,	rLevelEasy04,	rLevelEasy05,
 	rLevelMedium01,	rLevelMedium02,	rLevelMedium03,	rLevelMedium04,	rLevelMedium05,
-	rLevelHard01,	rLevelHard02,	rLevelHard03,	rLevelHard04//,	rLevelHard05
+	rLevelHard01,	rLevelHard02,	rLevelHard03,	rLevelHard04,	rLevelHard05
 ];
 level_first_try = true; // player hasn't died yet?
 #endregion

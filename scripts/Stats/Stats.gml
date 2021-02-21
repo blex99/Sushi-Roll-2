@@ -41,14 +41,21 @@ function stats_calc_final_score()
 {
 	with (oStats)
 	{
-		if (stats_collected_everything()) level_score += VALUE_COLLECT_EVERYTHING;
+		if (stats_collected_everything())
+			level_score += VALUE_COLLECT_EVERYTHING;
+		
+		// this is the final score of the level
 		level_score += timer_calc_time_bonus();
+		
+		run_score += level_score;
 	}
 }
 
 // returns an array of stats as a formatted strings
 function stats_get_array()
 {
+	print(string(instance_exists(oStats)));
+	
 	with (oStats)
 	{
 		var _arr = 
@@ -63,8 +70,6 @@ function stats_get_array()
 		// add zeros to points until there are four total digits
 		for (var i = 0; i < _len; i++)
 			string_right_pad_zeros(_arr[i], 4)
-		
-		
 		
 		return _arr;
 	}

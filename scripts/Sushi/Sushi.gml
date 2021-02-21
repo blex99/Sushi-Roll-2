@@ -110,12 +110,16 @@ function physics_fixture_set_sushi_shape(_fix)
 
 function sushi_jump(_newtons)
 {
-	var _sushi_shrunk = sushi_cur().image_xscale != 1;
+	var _sushi = sushi_cur();
+	if (_sushi.jump_buffer > 0) return; // can only jump when jump buffer == 0
+	
+	var _sushi_shrunk = _sushi.image_xscale != 1;
 	
 	sushi_change_size(false); // shrink
 	
-	with (sushi_cur())
-	{
+	with (_sushi)
+	{ 
+		jump_buffer = jump_buffer_start;
 		physics_apply_impulse(phy_position_x, phy_position_y, 0, -_newtons);
 		
 		if (_sushi_shrunk)

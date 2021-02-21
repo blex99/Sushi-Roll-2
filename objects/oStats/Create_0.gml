@@ -8,3 +8,6 @@ rect_width = 256;
 // pixels away from the top left
 // to display the in-game stats
 offset = 16;
+
+// total score of playing through all of the levels
+run_score = 0;

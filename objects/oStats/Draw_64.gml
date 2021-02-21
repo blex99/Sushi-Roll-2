@@ -1,12 +1,14 @@
 /// @desc display score, time, counters, victory screen
 
-if (level_is_state(LEVEL.COMPLETE)) exit;
+if (!instance_exists(oLevelManager) ||
+	level_is_state(LEVEL.COMPLETE)) exit;
 
 var _arr =
 [
-	"Rice: " + string(rice_count) + " / " + string(rice_max), 
-	"Collectibles: " + string(collectible_count) + " / " + string(collectible_max),
-	"Level Score Total: " + string(level_score)
+	"Rice: "				+ string(rice_count) + " / " + string(rice_max), 
+	"Collectibles: "		+ string(collectible_count) + " / " + string(collectible_max),
+	"Level Score Total: "	+ string(level_score),
+	"Run Score Total: "		+ string(run_score)
 ];
 var _len = array_length(_arr);
 var _color = stats_collected_everything() ? c_maroon : c_black;
@@ -28,7 +30,7 @@ ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2);
 set_draw(_color, _alpha, font, fa_center, fa_center);
 for (var _count = 0; _count < _len; _count++)
 {
-	var _offset = font_height * (_count - 1);
+	var _offset = font_height * (_count - 1.5) + 2;
 	draw_text(_xcenter, _ycenter + _offset, _arr[_count]);
 }
 

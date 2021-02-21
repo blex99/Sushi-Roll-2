@@ -5,7 +5,6 @@ ui_alpha_start = 3;
 ui_alpha = ui_alpha_start; // also text fade duration in seconds
 
 instance_create_layer(0, 0, "Instances", oPhysicsWorld);
-instance_create_layer(0, 0, "Instances", oStats);
 instance_create_layer(0, 0, "Instances", oPauseMenu);
 instance_deactivate_object(oPauseMenu);
 instance_deactivate_object(oButton);

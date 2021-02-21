@@ -26,4 +26,5 @@ else
 	phy_linear_damping = linear_damp;
 }
 
-add_to_debug_map("phy_linear_velocity_x: " + string(phy_linear_velocity_x));
+jump_buffer = max(0, jump_buffer - 1);
+add_to_debug_map("jump_buffer: " + string(jump_buffer));

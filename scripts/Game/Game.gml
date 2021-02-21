@@ -28,7 +28,8 @@ function game_goto_previous_level(){
 	
 	with (oGame)
 	{
-		level_index = (level_index - 1) % array_length(levels);
+		level_index = level_index - 1 % array_length(levels);
+		if (level_index < 0) level_index = array_length(levels) - 1;
 		transition_start(levels[level_index]);
 		level_first_try = true;
 	}
@@ -107,10 +108,7 @@ function game_set_gui_scale(_increment)
 // either increase or decrease the window's scale
 function game_set_window_scale(_increment)
 {
-	if (window_get_fullscreen())
-	{
-		return;
-	}
+	if (window_get_fullscreen()) return;
 	
 	with (oGame)
 	{

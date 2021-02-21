@@ -11,7 +11,7 @@ if (can_display_debug())
 	var _right = keyboard_check(ord("D"));
 	_x_dir = _right - _left;
 	
-	draw_sprite_ext(sArrow, 0, x, y, _x_dir, 1, 0, _color, _alpha);
+	draw_sprite_ext(sArrow, 0, x, y, _x_dir * 2, 1, 0, _color, _alpha);
 }
 
 draw_self();
