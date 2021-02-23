@@ -14,7 +14,7 @@ if (level_is_state(LEVEL.PANNING))
 	// ensure follow clamps too when checking for equality...
 	var _xf = clamp(xfollow, view_w_half, room_width - view_w_half);
 	var _yf = clamp(yfollow, view_h_half, room_height - view_h_half);
-	var _cam_reached_target = abs(x - _xf) < 1 && abs(y - _yf) < 1;
+	var _cam_reached_target = abs(x - _xf) < 5 && abs(y - _yf) < 5;
 	
 	if (_following == _sushi && _cam_reached_target)
 	{
@@ -26,7 +26,8 @@ if (level_is_state(LEVEL.PANNING))
 	{
 		// skip panning
 		follow_index = follow_size - 1;
-		strength = 1;
+		x = xfollow;
+		y = yfollow;
 	}
 }
 

@@ -4,8 +4,7 @@
 if (keyboard_check_pressed(vk_left)) game_goto_previous_level();
 if (keyboard_check_pressed(vk_right)) game_goto_next_level();
 	
-if (keyboard_check_pressed(ord("R")))
-	transition_start(room);
+
 	
 if (keyboard_check_pressed(ord("C")))
 {
@@ -15,3 +14,4 @@ if (keyboard_check_pressed(ord("C")))
 		phy_position_y = oGoal.y - oGoal.sprite_height;
 	}
 }
+

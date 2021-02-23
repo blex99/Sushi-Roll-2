@@ -1,7 +1,7 @@
 /// @description init resolution, level array
 
 #region init resolution
-display_reset(0, true);
+display_reset(0, false);
 
 var _display_w = display_get_width();
 var _display_h = display_get_height();
