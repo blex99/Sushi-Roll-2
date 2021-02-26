@@ -12,7 +12,7 @@
 #macro VALUE_COLLECT_EVERYTHING 1000
 
 #macro START_FULLSCREEN true
-#macro DEBUG_START_ROOM rLevelMedium05//rStartScreen
+#macro DEBUG_START_ROOM rStartScreen//rStartScreen
 
 global.border_sprite = sNineSliceBoxBamboo;
 

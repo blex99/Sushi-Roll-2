@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------
 DONE:
-
+option to restart a level after beating the level
+when panning: display "Skip?". when reached sushi, "Press button to start"
 ------------------------------------------------------------------------------
 TODO:
 music/sfx
@@ -13,15 +14,14 @@ menu:
 	B to go back to previous menu
 
 visual:
-	thin platforms look weird (fill in instead of pipes)
 	tile effects
 	redo particle effects
 	theme for each difficulty
+	manual locations to pan around while introducing level (mario kart)
 
 game:
 	death counter
 	moving platform path indicator
-	option to restart a level after beating the level
 	no countdown (press button to start)
 	time bonus instead of time limit
 	indicate you've skipped the countdown

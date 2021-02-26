@@ -24,18 +24,20 @@ function input_x_axis(){
 	{
 		return gamepad_axis_value(global.device_index, gp_axisrh);
 	}
-	
-	var _normalized_input = 0;
-	var _ranged_input = 0;
-	
-	with (pRotateable)
+	else
 	{
-		_ranged_input = input_x_mouse_clamp(w_min, w_max);
-		_normalized_input = 2 * (_ranged_input - w_min) / (w_max - w_min);
-		_normalized_input -= 1;
-	}
+		var _normalized_input = 0;
+		var _ranged_input = 0;
 	
-	return _normalized_input;
+		with (pRotateable)
+		{
+			_ranged_input = input_x_mouse_clamp(w_min, w_max);
+			_normalized_input = 2 * (_ranged_input - w_min) / (w_max - w_min);
+			_normalized_input -= 1;
+		}
+	
+		return _normalized_input;
+	}
 }
 
 function input_controller_to_mouse_x()
