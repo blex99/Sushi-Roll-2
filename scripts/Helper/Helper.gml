@@ -1,9 +1,20 @@
 // helper functions
 
+// microseconds to seconds
+function mus2sec(_microseconds)
+{
+	return _microseconds / 1000000;
+}
+
+// seconds to microseconds
+function sec2mus(_seconds)
+{
+	return _seconds * 1000000;
+}
+
 // returns a string with 0's padded to the right
 // EX: _string = "123", _total_digits = 4
 // output: "0123"
-
 function string_right_pad_zeros(_string, _total_digits)
 {
 	while (string_length(_string) < _total_digits)

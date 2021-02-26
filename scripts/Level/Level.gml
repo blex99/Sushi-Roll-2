@@ -1,3 +1,18 @@
+// create a level struct
+function level_create(_level_name, _room_name, _difficulty, _best_time_mus, _best_score, _time_sec_req)
+{
+	var _level = 
+	{
+		level_name : _level_name,
+		room_name : _room_name,
+		difficulty : _difficulty,
+		best_time_mus : _best_time_mus,
+		best_score : _best_score,
+		time_sec_req : _time_sec_req, // time second requirement
+	};
+	return _level;
+}
+
 function level_completed(){
 	with (oLevelManager)
 	{
@@ -50,22 +65,12 @@ function level_toggle_pause()
 	if (debug_mode) instance_activate_object(oDebug);
 }
 
-// prepares to reset room
-function level_out_of_time()
-{
-	with (oLevelManager)
-	{
-		state = LEVEL.TIME_OUT;
-		alarm[0] = room_speed * 1;
-	}
-}
-
 function level_start_countdown()
 {
 	with (oLevelManager)
 	{
 		state = LEVEL.COUNTING_DOWN;
-		timer_create(3, level_begin);
+		timer_create(3, true, level_begin);
 	}
 }
 
@@ -76,7 +81,7 @@ function level_begin()
 	{
 		state = LEVEL.PLAYING;
 		ui_alpha = ui_alpha_start;
-		timer_create(time_limit, level_out_of_time);
+		timer_create(0, false);
 	}
 	
 	instance_destroy(oInvisibleSushiHolder);

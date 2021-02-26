@@ -8,6 +8,15 @@ function update_cursor()
 	window_set_cursor(_cursor);	
 }
 
+// returns the struct of the current level
+function level_cur()
+{
+	with (oGame)
+	{
+		return levels[level_index];
+	}
+}
+
 function game_goto_next_level(){
 	
 	// shouldn't be able to skip levels by mashing A
@@ -16,7 +25,7 @@ function game_goto_next_level(){
 	with (oGame)
 	{
 		level_index = (level_index + 1) % array_length(levels);
-		transition_start(levels[level_index]);
+		transition_start(levels[level_index].room_name);
 		level_first_try = true;
 	}
 }
@@ -30,7 +39,7 @@ function game_goto_previous_level(){
 	{
 		level_index = level_index - 1 % array_length(levels);
 		if (level_index < 0) level_index = array_length(levels) - 1;
-		transition_start(levels[level_index]);
+		transition_start(levels[level_index].room_name);
 		level_first_try = true;
 	}
 }
@@ -45,7 +54,7 @@ function game_goto_level(_level)
 	with (oGame)
 	{
 		level_index = (_level) % array_length(levels);
-		transition_start(levels[level_index]);
+		transition_start(levels[level_index].room_name);
 		level_first_try = true;
 	}
 }

@@ -18,17 +18,16 @@ array_push(arr,
 	"Level Complete!\n",
 	"----------------",
 	"Points\n",
-	"Time: "				+ _stats[0],
-	"Rice: "				+ _stats[1], 
-	"Collectibles: "		+ _stats[2] );
+	"Rice: "				+ _stats[0], 
+	"Collectibles: "		+ _stats[1] );
 
 if (stats_collected_everything())
-{
-	array_push(arr, "Collector's Bonus: " + string(VALUE_COLLECT_EVERYTHING));
-}
+	array_push(arr, "Collector Bonus: " + string(VALUE_COLLECTOR_BONUS));
+if (stats_under_time_requirement())
+	array_push(arr, "Speedy Bonus: " + string(VALUE_SPEEDY_BONUS));
 	
 array_push(arr,
-	"Level Score Total: "	+ _stats[3],
+	"Level Score Total: "	+ _stats[2],
 	"-----------------\n");
 
 if (global.using_controller)

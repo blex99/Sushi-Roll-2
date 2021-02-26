@@ -36,18 +36,26 @@ function stats_collected_everything()
 	}
 }
 
+// returns true if you have a chance to get the speedy bonus
+function stats_under_time_requirement()
+{
+	with (oStats)
+	{
+		return sec2mus(level_cur().time_sec_req) > timer_get_time();
+	}
+}
+
 // add time and collectors bonus (used by level_completed())
+// this will be the final score of the level
 function stats_calc_final_score()
 {
 	with (oStats)
 	{
 		if (stats_collected_everything())
-			level_score += VALUE_COLLECT_EVERYTHING;
+			level_score += VALUE_COLLECTOR_BONUS;
 		
-		// this is the final score of the level
-		level_score += timer_calc_time_bonus();
-		
-		run_score += level_score;
+		if (stats_under_time_requirement())
+			level_score += VALUE_SPEEDY_BONUS;
 	}
 }
 
@@ -60,7 +68,6 @@ function stats_get_array()
 	{
 		var _arr = 
 		[
-			string(timer_calc_time_bonus()),
 			string(VALUE_RICE * rice_count),
 			string(VALUE_COLLECTIBLE * collectible_count),
 			string(level_score)

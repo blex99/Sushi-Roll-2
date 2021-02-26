@@ -1,6 +1,7 @@
 /// @desc inits all needed obj's for a level
 
 state = LEVEL.PANNING;
+level_name = level_cur().level_name;
 ui_alpha_start = 3;
 ui_alpha = ui_alpha_start; // also text fade duration in seconds
 

@@ -1,4 +1,4 @@
-/// @description init resolution, level array
+/// @description init resolution, levels array
 
 #region init resolution
 display_reset(0, false);
@@ -24,13 +24,28 @@ game_resize_window();
 
 #region level array
 level_index = -1;
-levels =
-[
-	rLevelEasy01,	rLevelEasy02,	rLevelEasy03,	rLevelEasy04,	rLevelEasy05,
-	rLevelMedium01,	rLevelMedium02,	rLevelMedium03,	rLevelMedium04,	rLevelMedium05,
-	rLevelHard01,	rLevelHard02,	rLevelHard03,	rLevelHard04,	rLevelHard05
-];
 level_first_try = true; // player hasn't died yet?
+levels = 
+[
+	level_create("Starting Out", rLevelBeg01, "Easy", sec2mus(90), 0, 10),
+	level_create("Upping the Pace", rLevelBeg02, "Easy", sec2mus(90), 0, 30),
+	level_create("Counting Calories", rLevelBeg03, "Easy", sec2mus(90), 0, 30),
+	level_create("Jumping Olympics: Bronze", rLevelBeg04, "Easy", sec2mus(90), 0, 30),
+	level_create("Slippery Sliding Sashimi", rLevelBeg05, "Easy", sec2mus(90), 0, 30),
+	
+	level_create("Octopus", rLevelInt01, "Intermediate", sec2mus(90), 0, 30),
+	level_create("Spring Forward", rLevelInt02, "Intermediate", sec2mus(90), 0, 30),
+	level_create("Ramps", rLevelInt03, "Intermediate", sec2mus(90), 0, 30),
+	level_create("Big Knives", rLevelInt04, "Intermediate", sec2mus(90), 0, 30),
+	level_create("Trapdoor Track Lesson", rLevelInt05, "Intermediate", sec2mus(90), 0, 30),
+	
+	level_create("Up and Away", rLevelExp01, "Expert", sec2mus(90), 0, 30),
+	level_create("Down You Go", rLevelExp02, "Expert", sec2mus(90), 0, 30),
+	level_create("Slow and Steady", rLevelExp03, "Expert", sec2mus(90), 0, 30),
+	level_create("A Hard Level", rLevelExp04, "Expert", sec2mus(90), 0, 30),
+	level_create("Jumping Olympics: Silver", rLevelExp05, "Expert", sec2mus(90), 0, 30),
+];
+
 #endregion
 
 draw_set_font(fnUI);

@@ -33,10 +33,6 @@ else if (level_is_state(LEVEL.PLAYING))
 	_msg = "Go!";
 	draw_set_alpha(ui_alpha);
 }
-else if (level_is_state(LEVEL.TIME_OUT))
-{
-	_msg = "Out of time!"
-}
 
 draw_text(_w / 2, _h / 4, _msg);
 

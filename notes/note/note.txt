@@ -1,7 +1,6 @@
 -------------------------------------------------------------------------------
 DONE:
-option to restart a level after beating the level
-when panning: display "Skip?". when reached sushi, "Press button to start"
+
 ------------------------------------------------------------------------------
 TODO:
 music/sfx
@@ -22,16 +21,13 @@ visual:
 game:
 	death counter
 	moving platform path indicator
-	no countdown (press button to start)
-	time bonus instead of time limit
-	indicate you've skipped the countdown
 	saving/loading system
 	sticky walls
 	rice is currency to buy different sushi's
-	seperate runs for each difficulty type
 
 -------------------------------------------------------------------------------
 PROBLEMS:
+	panning and countdown skip need to be separate
 	camera looks weird when moving very slow (shaking?)
 	camera tearing at the top of the screen
 	sushi "anti-aliasing"/rotating effect looks odd

@@ -4,7 +4,7 @@ var _len = array_length(levels);
 
 for (var i = 0; i < _len; i++)
 {
-	if (levels[i] == room)
+	if (levels[i].room_name == room)
 	{
 		// you've entered a level room
 		level_index = i;

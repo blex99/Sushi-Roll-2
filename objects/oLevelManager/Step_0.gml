@@ -7,7 +7,10 @@ if (input_one_pressed())
 	if (level_is_state(LEVEL.COMPLETE))
 		game_goto_next_level();
 	else if (level_is_state(LEVEL.COUNTING_DOWN) && (debug_mode || !oGame.level_first_try))
+	{
+		info_box_create("Skipped Countdown!");
 		timer_set_zero();
+	}
 }
 
 if (!level_is_state(LEVEL.COMPLETE) && input_start_pressed())
@@ -16,11 +19,10 @@ if (!level_is_state(LEVEL.COMPLETE) && input_start_pressed())
 var _state;
 switch (state)
 {
-	case (LEVEL.PANNING):			_state = "PANNING";	break;
+	case (LEVEL.PANNING):			_state = "PANNING";				break;
 	case (LEVEL.COUNTING_DOWN):		_state = "COUNTING_DOWN";		break;
 	case (LEVEL.PLAYING):			_state = "PLAYING";				break;
 	case (LEVEL.PAUSED):			_state = "PAUSED";				break;
-	case (LEVEL.TIME_OUT):			_state = "TIME_OUT";			break;
 	case (LEVEL.COMPLETE):			_state = "COMPLETE";			break;
 }
 add_to_debug_map("level state: " + _state);

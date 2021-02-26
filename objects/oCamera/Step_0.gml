@@ -25,9 +25,12 @@ if (level_is_state(LEVEL.PANNING))
 	else if (input_one_pressed() && (!oGame.level_first_try || debug_mode))
 	{
 		// skip panning
+		info_box_create("Skipped Panning!");
 		follow_index = follow_size - 1;
-		x = xfollow;
-		y = yfollow;
+		x = _sushi.x;
+		y = _sushi.y;
+		
+		return;
 	}
 }
 

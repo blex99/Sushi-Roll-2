@@ -15,7 +15,7 @@ var i = i_start;
 
 for (var j = 0; j < _amount_of_levels; j++)
 {
-	var _level_name = room_get_name(oGame.levels[j]);
+	var _level_name = room_get_name(oGame.levels[j].room_name);
 	
 	// display easy levels to the left
 	// medium levels in the middle

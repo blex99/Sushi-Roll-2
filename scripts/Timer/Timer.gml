@@ -1,4 +1,4 @@
-function timer_create(_start_timer_in_seconds, _script, _args)
+function timer_create(_start_timer_mus, _timer_counts_down, _script, _args)
 {
 	if (0) return argument[0];
 	if (_args == undefined) _args = [];
@@ -10,9 +10,10 @@ function timer_create(_start_timer_in_seconds, _script, _args)
 	
 	with (_inst)
 	{
-		timer = room_speed * _start_timer_in_seconds;
+		timer =  _start_timer_mus;
 		my_script = _script;
 		my_script_args = _args;
+		timer_counts_down = _timer_counts_down;
 	}
 	
 	return _inst;
@@ -30,16 +31,6 @@ function timer_set_zero()
 	if (!instance_exists(oTimer)) return;
 	
 	with (oTimer) timer = 0;
-}
-
-function timer_calc_time_bonus()
-{
-	if (!instance_exists(oTimer)) return 0;
-	
-	with (oTimer)
-	{
-		return VALUE_TIME * ceil(timer / room_speed);
-	}
 }
 
 function timer_freeze()
