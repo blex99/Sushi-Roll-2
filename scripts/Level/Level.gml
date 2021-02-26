@@ -70,7 +70,7 @@ function level_start_countdown()
 	with (oLevelManager)
 	{
 		state = LEVEL.COUNTING_DOWN;
-		timer_create(3, true, level_begin);
+		timer_create(sec2mus(3), true, level_begin);
 	}
 }
 

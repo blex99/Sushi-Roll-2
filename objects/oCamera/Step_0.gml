@@ -4,33 +4,38 @@
 if (follow_size == 0 || level_is_state(LEVEL.PAUSED)) exit;
 
 var _sushi = sushi_cur();
-var _following = follows[follow_index];
 
-xfollow = round(_following.x);
-yfollow = round(_following.y);
+xfollow = round(follows[follow_index].x);
+yfollow = round(follows[follow_index].y);
 
 if (level_is_state(LEVEL.PANNING))
 {
+	// option to skip panning
+	if (input_one_pressed() && (!oGame.level_first_try || debug_mode))
+	{
+		info_box_create("Skipped Panning!");
+		follow_index = follow_size - 1;
+		
+		xfollow = round(follows[follow_index].x);
+		yfollow = round(follows[follow_index].y);
+		
+		x = xfollow;
+		y = yfollow;
+		
+		// we don't want the timer to be created and skipped on the same frame
+		exit;
+	}
+	
 	// ensure follow clamps too when checking for equality...
 	var _xf = clamp(xfollow, view_w_half, room_width - view_w_half);
 	var _yf = clamp(yfollow, view_h_half, room_height - view_h_half);
 	var _cam_reached_target = abs(x - _xf) < 5 && abs(y - _yf) < 5;
 	
-	if (_following == _sushi && _cam_reached_target)
+	if (follows[follow_index] == _sushi && _cam_reached_target)
 	{
 		// finished panning
 		level_start_countdown();
 		strength = strength_playing;
-	}
-	else if (input_one_pressed() && (!oGame.level_first_try || debug_mode))
-	{
-		// skip panning
-		info_box_create("Skipped Panning!");
-		follow_index = follow_size - 1;
-		x = _sushi.x;
-		y = _sushi.y;
-		
-		return;
 	}
 }
 
