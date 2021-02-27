@@ -1,5 +1,22 @@
 // helper functions
 
+// draws text with a white background
+function draw_text_with_outline(_x, _y, _string)
+{
+	// grab originally set color
+	var _color = draw_get_color();
+	
+	draw_set_color(c_white);
+	draw_text(_x + 1, _y, _string);
+	draw_text(_x - 1, _y, _string);
+	draw_text(_x, _y + 1, _string);
+	draw_text(_x, _y - 1, _string);
+	
+	// reapply original color
+	draw_set_color(_color);
+	draw_text(_x, _y, _string);
+}
+
 // microseconds to seconds
 function mus2sec(_microseconds)
 {

@@ -9,10 +9,7 @@ if (level_is_state(LEVEL.PAUSED)) exit;
 
 var _w = display_get_gui_width();
 var _h = display_get_gui_height();
-var _room_name = room_get_name(room);
-var _room_name_length = string_length(_room_name);
-var _room_num = string_char_at(_room_name, _room_name_length-1) +
-				string_char_at(_room_name, _room_name_length);
+var _room_num = level_get_number(level_cur().room_name);
 var _msg = "";
 set_draw(c_black, 1, fnUIBig, fa_center, fa_center);
 
@@ -34,6 +31,6 @@ else if (level_is_state(LEVEL.PLAYING))
 	draw_set_alpha(ui_alpha);
 }
 
-draw_text(_w / 2, _h / 4, _msg);
+draw_text_with_outline(_w / 2, _h / 4, _msg);
 
 reset_alpha();

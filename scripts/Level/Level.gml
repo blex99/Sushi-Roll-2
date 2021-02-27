@@ -13,6 +13,16 @@ function level_create(_level_name, _room_name, _difficulty, _best_time_mus, _bes
 	return _level;
 }
 
+// returns the number STRING of the level based off the room name
+// EX: rLevelBeg01 -> "01"
+function level_get_number(_room_id)
+{
+	var _room_str = room_get_name(_room_id);
+	var _room_str_len = string_length(_room_str);
+	return	string_char_at(_room_str, _room_str_len - 1) +
+			string_char_at(_room_str, _room_str_len);
+}
+
 function level_completed(){
 	with (oLevelManager)
 	{

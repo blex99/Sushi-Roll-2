@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sChopstick",
-    "path": "sprites/sChopstick/sChopstick.yy",
+    "name": "sBambooRotateable",
+    "path": "sprites/sBambooRotateable/sBambooRotateable.yy",
   },
   "solid": false,
   "visible": true,
@@ -36,7 +36,7 @@
     "path": "folders/Objects/Placeable/Rotateable.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oChopstick",
+  "name": "oBamboo",
   "tags": [],
   "resourceType": "GMObject",
 }

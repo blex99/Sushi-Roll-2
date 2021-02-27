@@ -6,14 +6,14 @@
 #macro MOUSE_LEFT mouse_check_button_pressed(mb_left)
 #macro CAM view_camera[0]
 
-#macro VALUE_RICE 10
-#macro VALUE_TIME 10 // each second worth
-#macro VALUE_COLLECTIBLE 100
-#macro VALUE_COLLECTOR_BONUS 1000
-#macro VALUE_SPEEDY_BONUS 1000
+#macro VALUE_RICE				50
+#macro VALUE_COLLECTIBLE		250
+#macro VALUE_COLLECTOR_BONUS	500
+#macro VALUE_SPEEDY_BONUS		500
 
 #macro START_FULLSCREEN true
-#macro DEBUG_START_ROOM rStartScreen//rStartScreen
+#macro DEBUG_START_ROOM rLevelInt05//rStartScreen
+#macro SHOW_DEBUG_DEFAULT false
 
 global.border_sprite = sNineSliceBoxBamboo;
 

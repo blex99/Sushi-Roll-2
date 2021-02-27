@@ -30,7 +30,7 @@ set_draw(_color, _alpha, font, fa_center, fa_center);
 for (var _count = 0; _count < _len; _count++)
 {
 	var _offset = font_height * (_count - 1) + 2;
-	draw_text(_xcenter, _ycenter + _offset, _arr[_count]);
+	draw_text_with_outline(_xcenter, _ycenter + _offset, _arr[_count]);
 }
 
 reset_alpha();

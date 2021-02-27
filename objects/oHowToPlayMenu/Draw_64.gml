@@ -12,7 +12,7 @@ ui_nine_slice_box(box_sprite, _w_half - box_width_half, _h_half - box_height_hal
 
 // draw exit text
 set_draw(c_white, 1, fnDebug, fa_top, fa_right);
-draw_text(_w, 0, (global.using_controller ? "Press Start to Exit" : "Press Esc to Exit"));
+draw_text_with_outline(_w, 0, (global.using_controller ? "Press Start to Exit" : "Press Esc to Exit"));
 
 // draw how to play text
 set_draw(c_black, 1, font, fa_center, fa_center);

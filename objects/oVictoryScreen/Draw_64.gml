@@ -27,5 +27,5 @@ set_draw(_color, _alpha, font, fa_center, fa_center);
 for (var i = 0; i < len; i++)
 {
 	var _offset = vertical_buffer * (i - len / 2);
-	draw_text(_xcenter, _ycenter + _offset, arr[i]);
+	draw_text_with_outline(_xcenter, _ycenter + _offset, arr[i]);
 }

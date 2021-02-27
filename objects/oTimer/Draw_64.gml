@@ -16,6 +16,6 @@ _ycenter = average([_y1, _y2]);
 
 ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2);
 set_draw(_color, _alpha, font, fa_center, fa_center);
-draw_text(_xcenter, _ycenter, _time_string);
+draw_text_with_outline(_xcenter, _ycenter, _time_string);
 
 reset_alpha();

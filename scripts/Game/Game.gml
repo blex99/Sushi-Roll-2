@@ -13,6 +13,8 @@ function level_cur()
 {
 	with (oGame)
 	{
+		if (level_index == -1) event_user(0);
+		
 		return levels[level_index];
 	}
 }
