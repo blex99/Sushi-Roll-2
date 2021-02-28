@@ -1,6 +1,8 @@
-/// @desc create list 
+/// @desc init vars
 
-buttons = ds_list_create();
+// by default, buttons are added in the room editor
+
+
 menu_cursor = 0;
 menu_committed = -1;
 menu_control = true;

@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1713b4f2-343c-4dc0-9e70-5811ebed92fb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "InGame",
+    "path": "folders/Sprites/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "sCollectibleOrange",

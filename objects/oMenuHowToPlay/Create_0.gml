@@ -28,10 +28,7 @@ for (var i = 0; i < messages_length; i++)
 box_width_half  = _max_width_pix * 0.5;
 box_height_half = vbuffer * (messages_length) / 2;
 
-// create button
-var _h = display_get_gui_height();
-var _button = button_create("Next", 0, _h * 0.5, 0, box_height_half, how_to_play_go_to_next_slide);
-ds_list_add(buttons, _button);
+// hide button at start
 instance_deactivate_object(oButton);
 
 // display button when alarm hits

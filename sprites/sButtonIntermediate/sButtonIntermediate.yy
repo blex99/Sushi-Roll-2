@@ -24,9 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2590b89c-4d36-442b-80f3-dfb6ae8ad53b","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2590b89c-4d36-442b-80f3-dfb6ae8ad53b","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"LayerId":{"name":"795ae753-26a5-4997-baac-da59cd977c28","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sButtonIntermediate","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","name":"2590b89c-4d36-442b-80f3-dfb6ae8ad53b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9a7c0c23-6557-4a7c-885d-8a2b85ae2681","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9a7c0c23-6557-4a7c-885d-8a2b85ae2681","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"LayerId":{"name":"559eddd6-542d-4d7b-a841-832e44cb2c8f","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sButtonIntermediate","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","name":"9a7c0c23-6557-4a7c-885d-8a2b85ae2681","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"984cde6f-48cc-4f6b-8ba3-154870676ea3","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"984cde6f-48cc-4f6b-8ba3-154870676ea3","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"LayerId":{"name":"559eddd6-542d-4d7b-a841-832e44cb2c8f","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sButtonIntermediate","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","name":"984cde6f-48cc-4f6b-8ba3-154870676ea3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"edc43e1e-c456-43b0-8751-68492fd6376c","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"edc43e1e-c456-43b0-8751-68492fd6376c","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"LayerId":{"name":"559eddd6-542d-4d7b-a841-832e44cb2c8f","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sButtonIntermediate","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","name":"edc43e1e-c456-43b0-8751-68492fd6376c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sButtonIntermediate","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},
@@ -36,12 +42,14 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a2a4cd58-4128-491c-b7b7-2fe8ff279666","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2590b89c-4d36-442b-80f3-dfb6ae8ad53b","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"01c7984a-f2f1-4a9d-baa5-65855169e927","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a7c0c23-6557-4a7c-885d-8a2b85ae2681","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7aa82910-e7b8-4120-9815-c2eea91ddc1b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"984cde6f-48cc-4f6b-8ba3-154870676ea3","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e92731af-26b3-40ea-ae05-08f1ea097ed0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"edc43e1e-c456-43b0-8751-68492fd6376c","path":"sprites/sButtonIntermediate/sButtonIntermediate.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +73,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"795ae753-26a5-4997-baac-da59cd977c28","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"559eddd6-542d-4d7b-a841-832e44cb2c8f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "UI",

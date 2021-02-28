@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"afdad1f9-9ca1-44d3-aa40-34c46106abc8","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "InGame",
+    "path": "folders/Sprites/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSushiSquare",

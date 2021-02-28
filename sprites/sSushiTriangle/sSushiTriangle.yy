@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e8ca3c8c-e5ec-445d-92f7-ab4aca76d55e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "InGame",
+    "path": "folders/Sprites/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSushiTriangle",

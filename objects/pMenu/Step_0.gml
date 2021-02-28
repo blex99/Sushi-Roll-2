@@ -1,8 +1,8 @@
-/// @description keyboard, controller, mouse detection
+/// @description menu controls
 
-if (!instance_exists(oButton)) exit;
+if (!instance_exists(pButton)) exit;
 
-var _len = ds_list_size(buttons);
+var _len = array_length(buttons);
 
 // keyboard/controller
 if (menu_control)
@@ -19,7 +19,7 @@ if (menu_control)
 	if (keyboard_check_pressed(vk_up) || (alarm[1] == -1 && _vinput == -1))
 	{
 		controller_last_vinput = _vinput;
-		alarm[1] = room_speed / 2; // wait to get controller input
+		alarm[1] = room_speed / 2;
 		menu_cursor -= 1;
 		if (menu_cursor < 0) menu_cursor = _len - 1;
 	}
@@ -37,6 +37,13 @@ if (menu_control)
 		menu_committed = menu_cursor;
 		menu_control = false;
 	}
+	
+	// go to the previous room
+	if (keyboard_check_pressed(vk_escape) || gamepad_button_check(global.device_index, gp_face2))
+	{
+		game_togo_previous_room();
+		exit;
+	}
 }
 
 var _control = menu_control;
@@ -47,7 +54,7 @@ var _alarm = -1;
 // mouse controls
 for (var i = 0; i < _len; i++)
 {
-	with(buttons[| i])
+	with(buttons[i])
 	{
 		// override cursor and commited vars if needed
 		if (_control && !global.using_controller &&
@@ -55,18 +62,26 @@ for (var i = 0; i < _len; i++)
 			MOUSE_GUI_Y > y1 && MOUSE_GUI_Y < y2)
 		{
 			_cursor = i;
-	
-			if (MOUSE_LEFT && !global.using_controller && my_script != noone)
+			if (MOUSE_LEFT && !global.using_controller)
 			{
 				_committed = i;
 				_control = false;
-				
 			}
 		}
 
-		if (i == _committed)	{ sub_image = BUTTON.PRESSED; _alarm = 10;	}
-		else if (i == _cursor)	{ sub_image = BUTTON.HOVERING;				}
-		else					{ sub_image = BUTTON.IDLE;					}
+		if (i == _committed)
+		{
+			sub_image = BUTTON.PRESSED;
+			_alarm = 10;
+		}
+		else if (i == _cursor)
+		{
+			sub_image = BUTTON.HOVERING;
+		}
+		else
+		{
+			sub_image = BUTTON.IDLE;
+		}
 	}
 }
 

@@ -1,4 +1,4 @@
-/// @description 
+/// @description draw selected level info
 
 var _w = display_get_gui_width();
 var _h = display_get_gui_height();

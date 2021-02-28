@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"29dbf106-ac5c-4e6b-9c0b-dcdbd30bfffe","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "InGame",
+    "path": "folders/Sprites/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRice",

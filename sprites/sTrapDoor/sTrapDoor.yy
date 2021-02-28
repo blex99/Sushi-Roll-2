@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a00810b7-760a-4b9e-970f-e4f25e61da55","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "InGame",
+    "path": "folders/Sprites/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTrapDoor",

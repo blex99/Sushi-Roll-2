@@ -1,5 +1,6 @@
-menu_cursor = 0;
-menu_committed = -1;
-menu_control = true;
+/// @description inherit and set btn text
 
-controller_last_vinput = 0;
+// Inherit the parent event
+event_inherited();
+
+alarm[2] = 2;

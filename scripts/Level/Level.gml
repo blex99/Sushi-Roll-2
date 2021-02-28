@@ -50,7 +50,6 @@ function level_toggle_pause()
 			instance_activate_object(oCamera);
 			instance_activate_object(oButton);
 			instance_activate_object(oStats);
-			button_reset_positions();
 			
 			// show mouse and center its position
 			window_mouse_set(window_get_width() / 2, window_get_height() / 4);

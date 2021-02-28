@@ -1,6 +1,6 @@
 /// @description do button's script, reset vars
 
-with (buttons[| menu_committed])
+with (buttons[menu_committed])
 {
 	script_execute_args(my_script, my_script_args);
 }
