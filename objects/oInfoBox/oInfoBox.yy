@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "UI_Element",
+    "path": "folders/Objects/UI_Element.yy",
   },
   "resourceVersion": "1.0",
   "name": "oInfoBox",

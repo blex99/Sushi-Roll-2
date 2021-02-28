@@ -1,13 +1,17 @@
 /// @desc inits all needed obj's for a level
 
+// update the current level struct
+var _l;
+with (oGame) _l = levels[diff_index][level_index];
+level_struct = _l;
+
 state = LEVEL.PANNING;
-level_name = level_cur().level_name;
 ui_alpha_start = 3;
 ui_alpha = ui_alpha_start; // also text fade duration in seconds
 
 instance_create_layer(0, 0, "Instances", oPhysicsWorld);
-instance_create_layer(0, 0, "Instances", oPauseMenu);
-instance_deactivate_object(oPauseMenu);
+instance_create_layer(0, 0, "Instances", oMenuPause);
+instance_deactivate_object(oMenuPause);
 instance_deactivate_object(oButton);
 
 // create box around sushi

@@ -8,55 +8,44 @@ function update_cursor()
 	window_set_cursor(_cursor);	
 }
 
-// returns the struct of the current level
-function level_cur()
+function game_togo_previous_room()
 {
+	if (oTransition.mode != TRANS_MODE.OFF) return;
+	
 	with (oGame)
 	{
-		if (level_index == -1) event_user(0);
+		transition_start(previous_room);
+	}
+}
+
+function game_goto_next_level()
+{
+	// shouldn't be able to skip levels by mashing A
+	if (oTransition.mode != TRANS_MODE.OFF) return;
+	
+	with (oGame)
+	{
+		level_index++;
+		level_first_try = true;
 		
-		return levels[level_index];
+		if (level_index >= array_length(levels[diff_index]))
+			transition_start(rMenuMain);
+		else
+			transition_start(levels[diff_index][level_index].room_name);
 	}
 }
-
-function game_goto_next_level(){
-	
-	// shouldn't be able to skip levels by mashing A
-	if (oTransition.mode != TRANS_MODE.OFF) return;
-	
-	with (oGame)
-	{
-		level_index = (level_index + 1) % array_length(levels);
-		transition_start(levels[level_index].room_name);
-		level_first_try = true;
-	}
-}
-
-function game_goto_previous_level(){
-	
-	// shouldn't be able to skip levels by mashing A
-	if (oTransition.mode != TRANS_MODE.OFF) return;
-	
-	with (oGame)
-	{
-		level_index = level_index - 1 % array_length(levels);
-		if (level_index < 0) level_index = array_length(levels) - 1;
-		transition_start(levels[level_index].room_name);
-		level_first_try = true;
-	}
-}
-
 
 // goto specifed level
-function game_goto_level(_level)
+function game_goto_level(_difficulty, _level)
 {
 	// shouldn't be able to skip levels by mashing A
 	if (oTransition.mode != TRANS_MODE.OFF) return;
 	
 	with (oGame)
 	{
-		level_index = (_level) % array_length(levels);
-		transition_start(levels[level_index].room_name);
+		diff_index = _difficulty;
+		level_index = _level % array_length(levels[diff_index]);
+		transition_start(levels[diff_index][level_index].room_name);
 		level_first_try = true;
 	}
 }
@@ -65,8 +54,6 @@ function game_resize_window()
 {
 	with (oGame)
 	{
-		display_set_gui_size(BASE_W * gui_scale, BASE_H * gui_scale);
-		
 		if (!window_get_fullscreen())
 		{
 			window_set_size(BASE_W * window_scale, BASE_H * window_scale);
@@ -95,21 +82,6 @@ function toggle_fullscreen()
 	}
 	
 	surface_resize(application_surface, BASE_W, BASE_H);
-}
-
-// either increase or decrease the gui's scale
-function game_set_gui_scale(_increment)
-{
-	with (oGame)
-	{
-		if (_increment) gui_scale += 0.5;
-		else			gui_scale -= 0.5;
-	
-		var _max_scale = window_get_fullscreen() ? window_scale_max : window_scale;
-		
-		gui_scale = clamp(gui_scale, 1, _max_scale);
-		display_set_gui_size(BASE_W * gui_scale, BASE_H * gui_scale);
-	}
 }
 
 // either increase or decrease the window's scale

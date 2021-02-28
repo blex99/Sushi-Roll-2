@@ -1,11 +1,10 @@
 // create a level struct
-function level_create(_level_name, _room_name, _difficulty, _best_time_mus, _best_score, _time_sec_req)
+function level_create(_level_name, _room_name, _best_time_mus, _best_score, _time_sec_req)
 {
 	var _level = 
 	{
 		level_name : _level_name,
 		room_name : _room_name,
-		difficulty : _difficulty,
 		best_time_mus : _best_time_mus,
 		best_score : _best_score,
 		time_sec_req : _time_sec_req, // time second requirement
@@ -47,7 +46,7 @@ function level_toggle_pause()
 			
 			physics_pause_enable(true);
 			instance_deactivate_all(true);
-			instance_activate_object(oPauseMenu);
+			instance_activate_object(oMenuPause);
 			instance_activate_object(oCamera);
 			instance_activate_object(oButton);
 			instance_activate_object(oStats);
@@ -64,7 +63,7 @@ function level_toggle_pause()
 			
 			physics_pause_enable(false);
 			instance_activate_all();
-			instance_deactivate_object(oPauseMenu);
+			instance_deactivate_object(oMenuPause);
 			instance_deactivate_object(oButton);
 			window_set_cursor(cr_none);
 		}

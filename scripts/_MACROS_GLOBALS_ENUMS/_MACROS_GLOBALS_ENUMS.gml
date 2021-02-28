@@ -11,11 +11,19 @@
 #macro VALUE_COLLECTOR_BONUS	500
 #macro VALUE_SPEEDY_BONUS		500
 
-#macro START_FULLSCREEN true
-#macro DEBUG_START_ROOM rLevelInt05//rStartScreen
+#macro START_FULLSCREEN false
+#macro DEBUG_START_ROOM rSplashScreen//rSplashScreen
 #macro SHOW_DEBUG_DEFAULT false
 
 global.border_sprite = sNineSliceBoxBamboo;
+
+enum LEVEL_DIFF
+{
+	BEGINNER,
+	INTERMEDIATE,
+	EXPERT,
+	COUNT // = 3, the size of the enum
+}
 
 // for oLevel
 enum LEVEL

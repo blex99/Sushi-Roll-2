@@ -1,8 +1,10 @@
 /// @description init resolution, levels array
 
+// the room you were at previously
+previous_room = room;
+
 #region init resolution
 display_reset(0, false);
-
 var _display_w = display_get_width();
 var _display_h = display_get_height();
 
@@ -20,34 +22,43 @@ window_scale_max--;
 
 if (START_FULLSCREEN) toggle_fullscreen();
 game_resize_window();
+display_set_gui_size(BASE_W , BASE_H);
 #endregion
 
 #region level array
-level_index = -1;
+diff_index = -1; // which difficulty are we currently on
+level_index = -1; // which level in that difficulty are we currently on
 level_first_try = true; // player hasn't died yet?
-levels = 
+levels = [];
+levels[LEVEL_DIFF.BEGINNER] = 
 [
-	level_create("Starting Out", rLevelBeg01, "Easy", sec2mus(90), 0, 10),
-	level_create("Upping the Pace", rLevelBeg02, "Easy", sec2mus(90), 0, 30),
-	level_create("Counting Calories", rLevelBeg03, "Easy", sec2mus(90), 0, 30),
-	level_create("Jumping Olympics: Bronze", rLevelBeg04, "Easy", sec2mus(90), 0, 30),
-	level_create("Slippery Sliding Sashimi", rLevelBeg05, "Easy", sec2mus(90), 0, 30),
-	
-	level_create("Octopus", rLevelInt01, "Intermediate", sec2mus(90), 0, 30),
-	level_create("Spring Forward", rLevelInt02, "Intermediate", sec2mus(90), 0, 30),
-	level_create("Ramps", rLevelInt03, "Intermediate", sec2mus(90), 0, 30),
-	level_create("Big Knives", rLevelInt04, "Intermediate", sec2mus(90), 0, 30),
-	level_create("Trapdoor Track Lesson", rLevelInt05, "Intermediate", sec2mus(90), 0, 30),
-	
-	level_create("Up and Away", rLevelExp01, "Expert", sec2mus(90), 0, 30),
-	level_create("Down You Go", rLevelExp02, "Expert", sec2mus(90), 0, 30),
-	level_create("Slow and Steady", rLevelExp03, "Expert", sec2mus(90), 0, 30),
-	level_create("A Hard Level", rLevelExp04, "Expert", sec2mus(90), 0, 30),
-	level_create("Jumping Olympics: Silver", rLevelExp05, "Expert", sec2mus(90), 0, 30),
+	level_create("Starting Out", rLevelBeg01, sec2mus(90), 0, 10),
+	level_create("Upping the Pace", rLevelBeg02, sec2mus(90), 0, 30),
+	level_create("Counting Calories", rLevelBeg03, sec2mus(90), 0, 30),
+	level_create("Jumping Olympics: Bronze", rLevelBeg04, sec2mus(90), 0, 30),
+	level_create("Slippery Sliding Sashimi", rLevelBeg05, sec2mus(90), 0, 30)
+];
+
+levels[LEVEL_DIFF.INTERMEDIATE] = 
+[
+	level_create("Octopus", rLevelInt01, sec2mus(90), 0, 30),
+	level_create("Spring Forward", rLevelInt02, sec2mus(90), 0, 30),
+	level_create("Ramps", rLevelInt03, sec2mus(90), 0, 30),
+	level_create("Big Knives", rLevelInt04, sec2mus(90), 0, 30),
+	level_create("Trapdoor Track Lesson", rLevelInt05, sec2mus(90), 0, 30)
+];
+
+levels[LEVEL_DIFF.EXPERT] = 
+[
+	level_create("Up and Away", rLevelExp01, sec2mus(90), 0, 30),
+	level_create("Down You Go", rLevelExp02, sec2mus(90), 0, 30),
+	level_create("Slow and Steady", rLevelExp03, sec2mus(90), 0, 30),
+	level_create("A Hard Level", rLevelExp04, sec2mus(90), 0, 30),
+	level_create("Jumping Olympics: Silver", rLevelExp05, sec2mus(90), 0, 30)
 ];
 
 #endregion
 
 draw_set_font(fnUI);
-room_goto((debug_mode) ? DEBUG_START_ROOM : rStartScreen);
+room_goto((debug_mode) ? DEBUG_START_ROOM : rSplashScreen);
 

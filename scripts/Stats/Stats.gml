@@ -39,10 +39,13 @@ function stats_collected_everything()
 // returns true if you have a chance to get the speedy bonus
 function stats_under_time_requirement()
 {
+	// get the time requirement from level manager....
+	var _req;
+	with (oLevelManager)
+		_req = level_struct.time_sec_req;
+	
 	with (oStats)
-	{
-		return sec2mus(level_cur().time_sec_req) > timer_get_time();
-	}
+		return sec2mus(_req) > timer_get_time();
 }
 
 // add time and collectors bonus (used by level_completed())
@@ -62,8 +65,6 @@ function stats_calc_final_score()
 // returns an array of stats as a formatted strings
 function stats_get_array()
 {
-	print(string(instance_exists(oStats)));
-	
 	with (oStats)
 	{
 		var _arr = 

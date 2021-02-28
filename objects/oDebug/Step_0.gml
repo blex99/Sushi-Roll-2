@@ -1,8 +1,5 @@
 /// @desc debug commands
 
-if (keyboard_check_pressed(vk_left)) game_goto_previous_level();
-if (keyboard_check_pressed(vk_right)) game_goto_next_level();
-
 if (keyboard_check_pressed(ord("V")))
 	show_debug = !show_debug;
 

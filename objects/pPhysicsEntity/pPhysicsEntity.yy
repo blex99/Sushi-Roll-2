@@ -22,7 +22,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Physics Parents",
-    "path": "folders/Objects/Physics Parents.yy",
+    "path": "folders/Objects/Placeable/Physics Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "pPhysicsEntity",

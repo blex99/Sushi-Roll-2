@@ -9,14 +9,14 @@ if (level_is_state(LEVEL.PAUSED)) exit;
 
 var _w = display_get_gui_width();
 var _h = display_get_gui_height();
-var _room_num = level_get_number(level_cur().room_name);
+var _room_num = level_get_number(level_struct.room_name);
 var _msg = "";
 set_draw(c_black, 1, fnUIBig, fa_center, fa_center);
 
 if (level_is_state(LEVEL.PANNING))
 {
 	_msg = "~ Level " + _room_num;
-	if (level_name != "") _msg += " - " + level_name;
+	if (level_struct.level_name != "") _msg += " - " + level_struct.level_name;
 	_msg +=  " ~";
 	
 	draw_set_alpha(ui_alpha);

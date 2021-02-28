@@ -2,7 +2,6 @@
 
 if (alarm[0] == -1)
 {
-	print("jump");
 	sushi_jump(130);
 	alarm[0] = room_speed / 2;
 	image_xscale = 1.1;
