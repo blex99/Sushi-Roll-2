@@ -4,6 +4,9 @@ var _w = display_get_gui_width();
 var _h = display_get_gui_height();
 
 // print currently selected level's info
+if (buttons[menu_cursor].object_index == oButtonBack)
+	exit;
+
 var _str = "";
 with (oGame)
 {

@@ -8,16 +8,6 @@ function update_cursor()
 	window_set_cursor(_cursor);	
 }
 
-function game_togo_previous_room()
-{
-	if (oTransition.mode != TRANS_MODE.OFF) return;
-	
-	with (oGame)
-	{
-		transition_start(previous_room);
-	}
-}
-
 function game_goto_next_level()
 {
 	// shouldn't be able to skip levels by mashing A

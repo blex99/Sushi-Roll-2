@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 DONE:
 
-------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------
 TODO:
 music/sfx
 
@@ -28,7 +28,6 @@ game:
 
 -------------------------------------------------------------------------------
 PROBLEMS:
-	previous_room system must be a queue, or something
 	button highlighted when not hovering over
 	camera looks weird when moving very slow (shaking?)
 	camera tearing at the top of the screen
@@ -40,6 +39,10 @@ $ACD8D3	$FFFFCC	$E5ABA0
 -------------------------------------------------------------------------------
 
 // IMPORTANT
+make give buttons identifier so i dont have to add instances in room editor?
+will also possibly fix moving up down left right in menu?
+
+
 fix ui code its bad...
 ui needs to handle grids
 up down left right with controller and keyboard

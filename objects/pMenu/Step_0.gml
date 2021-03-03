@@ -41,7 +41,7 @@ if (menu_control)
 	// go to the previous room
 	if (keyboard_check_pressed(vk_escape) || gamepad_button_check(global.device_index, gp_face2))
 	{
-		game_togo_previous_room();
+		transition_start(my_previous_room);
 		exit;
 	}
 }

@@ -29,7 +29,9 @@
   "properties": [
     {"varType":0,"value":"LEVEL_DIFF.BEGINNER","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"difficulty","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"my_previous_room","path":"objects/pMenu/pMenu.yy",},"objectId":{"name":"pMenu","path":"objects/pMenu/pMenu.yy",},"value":"rMenuDifficultySelect","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Menus",
     "path": "folders/Objects/Menus.yy",

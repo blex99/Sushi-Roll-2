@@ -2,6 +2,7 @@
 
 // by default, buttons are added in the room editor
 
+// 
 
 menu_cursor = 0;
 menu_committed = -1;

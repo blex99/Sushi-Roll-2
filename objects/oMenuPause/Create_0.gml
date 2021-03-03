@@ -2,6 +2,10 @@
 
 event_inherited();
 
+// override my_previous_room to prevent possibly doing to main menu after 
+// pressing escape
+my_previous_room = -1;
+
 msg = "~ Paused ~";
 
 var _w = display_get_gui_width();

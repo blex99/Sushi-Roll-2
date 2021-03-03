@@ -1,8 +1,5 @@
 /// @description init resolution, levels array
 
-// the room you were at previously
-previous_room = room;
-
 #region init resolution
 display_reset(0, false);
 var _display_w = display_get_width();
