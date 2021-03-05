@@ -1,11 +1,13 @@
 /// @desc init vars
 
-// by default, buttons are added in the room editor
+// buttons are ordered by their ptag
+var _len = instance_number(pButton);
+buttons = array_create(_len);
 
-// 
+alarm[1] = 1;
 
-menu_cursor = 0;
-menu_committed = -1;
+key_previous = "";
+
+menu_cursor = noone;
+menu_committed = noone;
 menu_control = true;
-
-controller_last_vinput = 0;

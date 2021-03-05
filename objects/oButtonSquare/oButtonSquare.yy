@@ -25,7 +25,9 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"btag","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"0","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "UI_Element",
     "path": "folders/Objects/UI_Element.yy",

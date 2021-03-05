@@ -1,16 +1,16 @@
 /// @description do button's script, reset vars
 
-if (buttons[menu_committed].object_index == oButtonBack)
+if (menu_committed.object_index == oButtonBack)
 {
-	with (buttons[menu_committed])
+	with (menu_committed)
 	{
 		script_execute_args(my_script, my_script_args);
 	}
 }
 else
 {
-	game_goto_level(difficulty, menu_committed);
+	game_goto_level(difficulty, menu_committed.btag);
 }
 
-menu_committed = -1;
+menu_committed = noone;
 menu_control = true;

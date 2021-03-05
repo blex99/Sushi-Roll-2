@@ -12,3 +12,4 @@ xcenter = (bbox_right + bbox_left) / 2;
 ycenter = (bbox_bottom + bbox_top) / 2;
 
 sub_image = 0;
+image_speed = 0;

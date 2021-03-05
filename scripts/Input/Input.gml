@@ -11,6 +11,38 @@ function input_one_pressed(){
 	return _input;
 }
 
+function input_up()
+{
+	if (global.using_controller)
+		return gamepad_axis_value(global.device_index, gp_axislv) < -0.8;
+	
+	return keyboard_check(vk_up);
+}
+
+function input_down()
+{
+	if (global.using_controller)
+		return gamepad_axis_value(global.device_index, gp_axislv) > 0.8;
+	
+	return keyboard_check(vk_down);
+}
+
+function input_left()
+{
+	if (global.using_controller)
+		return gamepad_axis_value(global.device_index, gp_axislh) < -0.8;
+	
+	return keyboard_check(vk_left);
+}
+
+function input_right()
+{
+	if (global.using_controller)
+		return gamepad_axis_value(global.device_index, gp_axislh) > 0.8;
+	
+	return keyboard_check(vk_right);
+}
+
 // for pausing
 function input_start_pressed(){
 	var _input = keyboard_check_pressed(vk_escape) ||
@@ -40,14 +72,6 @@ function input_x_axis(){
 	}
 }
 
-function input_controller_to_mouse_x()
-{
-	with (pRotateable)
-	{
-		return ((input_x_axis() + 1) * (w_max - w_min) / 2) + w_min;	
-	}
-}
-
 function input_x_mouse_clamp(_min, _max)
 {
 	with (pRotateable)
@@ -59,12 +83,9 @@ function input_x_mouse_clamp(_min, _max)
 // finds and returns gamepad index from 0->11 potential slots
 function input_seek_gamepad()
 {
-	for (var _i = 0; _i <= 11; _i++;)
+	for (var _i = 0; _i <= 11; _i++)
 	{
-		if (gamepad_is_connected(_i))
-		{
-			return _i;
-		}
+		if (gamepad_is_connected(_i)) return _i;
 	}
 	
 	return -1;
