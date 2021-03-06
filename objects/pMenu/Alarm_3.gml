@@ -1,2 +1,3 @@
-/// @description reset key_previous
-key_previous = "";
+/// @description reset dir_locked
+
+dir_locked = DIR.NA;

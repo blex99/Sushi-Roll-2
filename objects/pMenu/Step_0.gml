@@ -1,8 +1,6 @@
 /// @description menu controls
 
-if (!instance_exists(pButton)) exit;
-if (!menu_control) exit;
-if (alarm[1] != -1) exit;
+if (!instance_exists(pButton) || !menu_control || alarm[1] != -1) exit;
 
 var _len = array_length(buttons);
 
@@ -11,34 +9,39 @@ var _horizontal = input_right() - input_left();
 var _vertical = input_down() - input_up();
 if (_horizontal != 0) _vertical = 0;
 
-add_to_debug_map("controller: " + string(gamepad_axis_value(global.device_index, gp_axislh)));
+add_to_debug_map("c: " + string(gamepad_axis_value(global.device_index, gp_axislv)));
 
-if (_horizontal != 0 || _vertical != 0)
+// reset dir_locked immediately
+if ((!(_vertical < 0)	&& dir_locked == DIR.U) ||
+	(!(_vertical > 0)	&& dir_locked == DIR.D) ||
+	(!(_horizontal < 0)	&& dir_locked == DIR.L) ||
+	(!(_horizontal > 0)	&& dir_locked == DIR.R) )
 {
-	// reset key_previous
-	if (alarm[3] == -1) alarm[3] = room_speed * 0.5;
+	dir_locked = DIR.NA;
+	alarm[3] = -1;
 }
+
+// reset dir_locked eventually (if holding one direction)
+if ((_horizontal != 0 || _vertical != 0) && alarm[3] == -1)
+	alarm[3] = room_speed * key_lock_time;
 
 // move the cursor
-if (_vertical < 0 && menu_cursor.up >= 0 && key_previous != "up")
+for (var i = 0; i < 4; i++)
 {
-	key_previous = "up";
-	menu_cursor = buttons[menu_cursor.up];
-}
-else if (_vertical > 0 && menu_cursor.down >= 0 && key_previous != "down")
-{
-	key_previous = "down";
-	menu_cursor = buttons[menu_cursor.down];
-}
-else if (_horizontal > 0 && menu_cursor.left >= 0 && key_previous != "left")
-{
-	key_previous = "left";
-	menu_cursor = buttons[menu_cursor.left];
-}
-else if (_horizontal < 0 && menu_cursor.right >= 0 && key_previous != "right")
-{
-	key_previous = "right";
-	menu_cursor = buttons[menu_cursor.right];
+	var _input_condition = 0;
+	switch (i)
+	{
+		case DIR.U: _input_condition = _vertical < 0; break;
+		case DIR.D: _input_condition = _vertical > 0; break;
+		case DIR.L: _input_condition = _horizontal < 0; break;
+		case DIR.R: _input_condition = _horizontal > 0; break;
+	}
+	
+	if (_input_condition && menu_cursor.dir[i] >= 0 && dir_locked != i)
+	{
+		dir_locked = i;
+		menu_cursor = buttons[menu_cursor.dir[i]];
+	}
 }
 	
 // select currently hovered button

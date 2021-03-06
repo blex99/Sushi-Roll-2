@@ -7,6 +7,7 @@ var _h = display_get_gui_height();
 if ( alarm[1] != -1 || 
 	(menu_cursor != noone && menu_cursor.object_index == oButtonBack) )
 	exit;
+exit;
 
 var _str = "";
 with (oGame)

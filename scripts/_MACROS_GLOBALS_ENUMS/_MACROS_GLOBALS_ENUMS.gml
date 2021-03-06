@@ -13,9 +13,18 @@
 
 #macro START_FULLSCREEN false
 #macro DEBUG_START_ROOM rMenuLevelsBeginner//rSplashScreen
-#macro SHOW_DEBUG_DEFAULT false
+#macro SHOW_DEBUG_DEFAULT true
 
 global.border_sprite = sNineSliceBoxBamboo;
+
+enum DIR
+{
+	U, // up
+	D, // down
+	L, // left
+	R, // right
+	NA // none
+}
 
 enum LEVEL_DIFF
 {

@@ -1,5 +1,7 @@
 /// @description set width and height vars
 
+// NOTE: for variable dir, its [up, down, left, right]
+
 button_font = fnUI;
 
 var _w_half = sprite_width / 2;

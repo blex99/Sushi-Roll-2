@@ -1,11 +1,13 @@
 // select.. notice NOT pressed
-function input_one(){
+function input_one()
+{
 	var _input = mouse_check_button(mb_left) ||
 		gamepad_button_check(global.device_index, gp_face1);
 	return _input;
 }
 
-function input_one_pressed(){
+function input_one_pressed()
+{
 	var _input = mouse_check_button_pressed(mb_left) ||
 		gamepad_button_check_pressed(global.device_index, gp_face1);
 	return _input;
@@ -14,15 +16,19 @@ function input_one_pressed(){
 function input_up()
 {
 	if (global.using_controller)
-		return gamepad_axis_value(global.device_index, gp_axislv) < -0.8;
-	
+	{
+		return gamepad_axis_value(global.device_index, gp_axislv) < -0.8 ||
+			   gamepad_button_check(global.device_index, gp_padu);
+	}
+
 	return keyboard_check(vk_up);
 }
 
 function input_down()
 {
 	if (global.using_controller)
-		return gamepad_axis_value(global.device_index, gp_axislv) > 0.8;
+		return gamepad_axis_value(global.device_index, gp_axislv) > 0.8 ||
+			   gamepad_button_check(global.device_index, gp_padd);
 	
 	return keyboard_check(vk_down);
 }
@@ -30,7 +36,8 @@ function input_down()
 function input_left()
 {
 	if (global.using_controller)
-		return gamepad_axis_value(global.device_index, gp_axislh) < -0.8;
+		return gamepad_axis_value(global.device_index, gp_axislh) < -0.8 ||
+			   gamepad_button_check(global.device_index, gp_padl);
 	
 	return keyboard_check(vk_left);
 }
@@ -38,13 +45,15 @@ function input_left()
 function input_right()
 {
 	if (global.using_controller)
-		return gamepad_axis_value(global.device_index, gp_axislh) > 0.8;
+		return gamepad_axis_value(global.device_index, gp_axislh) > 0.8 ||
+			   gamepad_button_check(global.device_index, gp_padr);
 	
 	return keyboard_check(vk_right);
 }
 
 // for pausing
-function input_start_pressed(){
+function input_start_pressed()
+{
 	var _input = keyboard_check_pressed(vk_escape) ||
 		gamepad_button_check_pressed(global.device_index, gp_start);
 	return _input;
