@@ -2,6 +2,17 @@
 
 event_inherited();
 
+if (level_is_state(LEVEL.PAUSED))
+{
+	path_speed = 0;
+	exit;
+}
+else
+{
+	path_speed = my_path_speed;
+}
+
+
 if (killed_sushi)
 {
 	path_speed = 0;

@@ -17,7 +17,8 @@ if (input_one_pressed())
 
 if (!level_is_state(LEVEL.COMPLETE) && input_pause_pressed())
 	level_toggle_pause();
-	
+
+/*
 var _state;
 switch (state)
 {
@@ -28,3 +29,4 @@ switch (state)
 	case (LEVEL.COMPLETE):			_state = "COMPLETE";			break;
 }
 add_to_debug_map("level state: " + _state);
+*/

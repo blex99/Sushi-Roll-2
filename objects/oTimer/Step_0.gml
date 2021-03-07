@@ -1,6 +1,6 @@
 /// @description decrement timer and check if time is up
 
-if (timer_frozen) exit;
+if (timer_frozen || level_is_state(LEVEL.PAUSED)) exit;
 
 if (timer_counts_down)
 {

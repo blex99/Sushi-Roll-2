@@ -1,5 +1,7 @@
 /// @description turn the trap door
 
+if (level_is_state(LEVEL.PAUSED)) exit;
+
 angle_diff = angle_difference(phy_rotation, rot_target);
 phy_angular_velocity = angle_diff * -rot_strength;
 

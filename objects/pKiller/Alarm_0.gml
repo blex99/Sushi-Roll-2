@@ -1,3 +1,3 @@
 ///@desc resets room
 
-transition_start(room);
+game_level_room_reset();

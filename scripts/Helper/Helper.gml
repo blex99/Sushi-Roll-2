@@ -1,5 +1,16 @@
 // helper functions
 
+// converts the difficulty enum to string
+function diff2str(_diff)
+{
+	switch(_diff)
+	{
+		case LEVEL_DIFF.BEGINNER:		return "Beginner";
+		case LEVEL_DIFF.INTERMEDIATE:	return "Intermediate";
+		case LEVEL_DIFF.EXPERT:			return "Expert";
+	}
+}
+
 // draws text with a white background
 function draw_text_with_outline(_x, _y, _string)
 {

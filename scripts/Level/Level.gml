@@ -1,14 +1,22 @@
 // create a level struct
-function level_create(_level_name, _room_name, _best_time_mus, _best_score, _time_sec_req, _has_beaten)
+function level_create(_level_name, _room_name, _time_sec_req, _best_time_mus,
+	_best_score, _has_beaten, _death_counter)
 {
+	if (0) return argument[0];
+	if (_has_beaten == undefined)		_has_beaten = false;
+	if (_death_counter == undefined)	_death_counter = 0;
+	if (_best_time_mus == undefined)	_best_time_mus = sec2mus(90);
+	if (_best_score == undefined)		_best_score = 0;
+	
 	var _level = 
 	{
 		level_name : _level_name,
 		room_name : _room_name,
+		time_sec_req : _time_sec_req, // time second requirement
 		best_time_mus : _best_time_mus,
 		best_score : _best_score,
-		time_sec_req : _time_sec_req, // time second requirement
 		has_beaten : _has_beaten,
+		death_counter : _death_counter, // total number of times player died
 	};
 	return _level;
 }
@@ -47,11 +55,9 @@ function level_toggle_pause()
 			state = LEVEL.PAUSED;
 			
 			physics_pause_enable(true);
-			instance_deactivate_all(true);
-			instance_activate_object(oMenuPause);
-			instance_activate_object(oCamera);
-			instance_activate_object(oButton);
-			instance_activate_object(oStats);
+			
+			// create menu
+			instance_create_layer(0, 0, "Instances", oMenuPause);
 			
 			// show mouse and center its position
 			window_mouse_set(window_get_width() / 2, window_get_height() / 4);
@@ -63,16 +69,12 @@ function level_toggle_pause()
 			state = prev_state;
 			
 			physics_pause_enable(false);
-			instance_activate_all();
-			instance_deactivate_object(oMenuPause);
-			instance_deactivate_object(oButton);
+			
+			instance_destroy(oMenuPause);
+			
 			window_set_cursor(cr_none);
 		}
 	}
-	
-	instance_activate_object(oGame);
-	instance_activate_object(oTransition);
-	if (debug_mode) instance_activate_object(oDebug);
 }
 
 function level_start_countdown()

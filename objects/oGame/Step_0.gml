@@ -12,7 +12,9 @@ if (gamepad_is_connected(global.device_index) != global.using_controller)
 
 // restart room
 if (instance_exists(oLevelManager) && keyboard_check_pressed(ord("R")))
-	transition_start(room);
+{
+	game_level_room_reset();
+}
 	
 // manual full screen switching
 if (keyboard_check(vk_alt) && keyboard_check_pressed(vk_enter))

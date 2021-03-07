@@ -1,5 +1,15 @@
 /// @description 
 
+if (level_is_state(LEVEL.PAUSED))
+{
+	path_speed = 0;
+	exit;
+}
+else
+{
+	path_speed = move_speed;
+}
+
 var _cardinal_dir = round(direction/90);
 image_index = _cardinal_dir;
 

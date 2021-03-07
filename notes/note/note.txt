@@ -4,6 +4,7 @@ DONE:
  ------------------------------------------------------------------------------
 TODO:
 music/sfx
+C:\Users\alex\AppData\Local\Sushi_Roll_2
 
 menu:
 	volume sliders
@@ -13,15 +14,10 @@ visual:
 	tile effects
 	redo particle effects
 	theme for each difficulty
-	manual locations to pan around while introducing level (mario kart)
 
 game:
-	death counter
-	moving platform path indicator
-	saving/loading system
 	sticky walls
-	rice is currency to buy different sushi's
-	instead of difficulty types, color/theme
+	make it so user cannot easily change game data
 
 -------------------------------------------------------------------------------
 PROBLEMS:
@@ -35,11 +31,7 @@ easy	medium	hard
 $ACD8D3	$FFFFCC	$E5ABA0
 -------------------------------------------------------------------------------
 
-the new menus look bad
-...and saved/loaded upon game reset
-
-medium/ hard levels need to be "blocked" until previous difficulties completion
- - level select buttons need to indicate they're unavailble
- - once you beat the last beginner level, unlock intermediate (flag stored in oGame)
- - same with last intermediate unlocking hard levels
- - inform the player that they have unlocked new levels. (info box)
+option to clear save data (in options menu)
+moving platform path indicator
+manual locations to pan around while introducing level (mario kart)
+rice is currency to buy different sushi's

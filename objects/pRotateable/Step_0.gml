@@ -1,5 +1,7 @@
 /// @desc control platforms and mouse
 
+if (level_is_state(LEVEL.PAUSED)) exit;
+
 var _controller = global.using_controller;
 var _target_angle, _spd, _diff;
 

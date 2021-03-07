@@ -9,6 +9,8 @@ function update_cursor()
 	window_set_cursor(_cursor);	
 }
 
+// (upon beating a level,) move back to either the previous menu or the main
+// menu. also save the game
 function game_goto_menu_level()
 {
 	// shouldn't be able to skip levels by mashing A
@@ -37,16 +39,8 @@ function game_goto_menu_level()
 		{
 			transition_start(menu_level_rooms[diff_index]);
 		}
-	}
-}
-
-function diff2str(_diff)
-{
-	switch(_diff)
-	{
-		case LEVEL_DIFF.BEGINNER: return "Beginner";
-		case LEVEL_DIFF.INTERMEDIATE: return "Intermediate";
-		case LEVEL_DIFF.EXPERT: return "Expert";
+		
+		my_game_save();
 	}
 }
 
@@ -62,29 +56,6 @@ function has_beaten_all_levels_in(_diff)
 				return false;
 		}
 		return true;
-	}
-}
-
-function game_goto_next_level()
-{
-	// shouldn't be able to skip levels by mashing A
-	if (oTransition.mode != TRANS_MODE.OFF) return;
-	
-	with (oGame)
-	{
-		level_index++;
-		level_first_try = true;
-		
-		// TODO check if you've unlocked a new difficulty
-		
-		if (level_index >= array_length(levels[diff_index]))
-		{			
-			transition_start(rMenuMain);
-		}
-		else
-		{
-			transition_start(levels[diff_index][level_index].room_name);
-		}
 	}
 }
 
@@ -173,7 +144,82 @@ function game_update_cur_level_struct()
 		
 		// indicate you've beaten it
 		levels[diff_index][level_index].has_beaten = true;
-		
-		// TODO SAVE??
 	}
 }
+
+// assuming you're in a level, reset the room
+function game_level_room_reset()
+{
+	with (oGame)
+	{
+		levels[diff_index][level_index].death_counter++;
+	}
+	
+	my_game_save();
+	transition_start();
+}
+
+// save the game data
+// NOTE: cannot call it game_save();
+function my_game_save()
+{
+	var _saveData = [];
+	
+	with (oGame)
+	{
+		// level data, which difficulties you've unlocked and completed
+		array_push(_saveData, levels, diff_unlocked, diff_completed);
+	}
+	
+	var _string = json_stringify(_saveData);
+	var _buffer = buffer_create(string_byte_length(_string) + 1, buffer_fixed, 1);
+	buffer_write(_buffer, buffer_string, _string);
+	buffer_save(_buffer, "save.sav");
+	buffer_delete(_buffer);
+
+	info_box_create("Saved Data");
+}
+
+// load the game data
+function my_game_load()
+{
+	if (file_exists("save.sav"))
+	{
+		var _buffer = buffer_load("save.sav");
+		var _string = buffer_read(_buffer, buffer_string);
+		buffer_delete(_buffer);
+		
+		var _loadData = json_parse(_string);
+		
+		levels = _loadData[0];
+		diff_unlocked = _loadData[1];
+		diff_completed = _loadData[2];
+		
+		info_box_create("Loaded Data");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

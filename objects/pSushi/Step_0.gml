@@ -1,5 +1,7 @@
 /// @description control the sushi x and spin
 
+if (level_is_state(LEVEL.PAUSED)) exit;
+
 var _x_dir;
 
 if (global.using_controller)

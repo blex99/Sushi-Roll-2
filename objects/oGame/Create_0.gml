@@ -29,38 +29,31 @@ level_first_try = true; // player hasn't died yet?
 levels = [];
 levels[LEVEL_DIFF.BEGINNER] = 
 [
-	level_create("Starting Out", rLevelBeg01, sec2mus(90), 0, 10, false),
-	level_create("Upping the Pace", rLevelBeg02, sec2mus(90), 0, 15, false),
-	level_create("Counting Calories", rLevelBeg03, sec2mus(90), 0, 20, false),
-	level_create("Jumping Olympics: Bronze", rLevelBeg04, sec2mus(90), 0, 5, false),
-	level_create("Slippery Sliding Sashimi", rLevelBeg05, sec2mus(90), 0, 20, false)
+	level_create("Starting Out", rLevelBeg01, 10),
+	level_create("Upping the Pace", rLevelBeg02, 15),
+	level_create("Counting Calories", rLevelBeg03, 20),
+	level_create("Jumping Olympics: Bronze", rLevelBeg04, 5),
+	level_create("Slippery Sliding Sashimi", rLevelBeg05, 20)
 ];
 
 levels[LEVEL_DIFF.INTERMEDIATE] = 
 [
-	level_create("Octopus", rLevelInt01, sec2mus(90), 0, 10, false),
-	level_create("Spring Forward", rLevelInt02, sec2mus(90), 0, 20, false),
-	level_create("Ramps", rLevelInt03, sec2mus(90), 0, 20, false),
-	level_create("Big Knives", rLevelInt04, sec2mus(90), 0, 15, false),
-	level_create("Trapdoor Track Lesson", rLevelInt05, sec2mus(90), 0, 12, false)
+	level_create("Octopus", rLevelInt01, 10),
+	level_create("Spring Forward", rLevelInt02, 20),
+	level_create("Ramps", rLevelInt03, 20),
+	level_create("Big Knives", rLevelInt04, 15),
+	level_create("Trapdoor Track Lesson", rLevelInt05, 12)
 ];
 
 levels[LEVEL_DIFF.EXPERT] = 
 [
-	level_create("Up and Away", rLevelExp01, sec2mus(90), 0, 35, false),
-	level_create("Down You Go", rLevelExp02, sec2mus(90), 0, 5, false),
-	level_create("Slow and Steady", rLevelExp03, sec2mus(90), 0, 45, false),
-	level_create("A Hard Level", rLevelExp04, sec2mus(90), 0, 20, false),
-	level_create("Jumping Olympics: Silver", rLevelExp05, sec2mus(90), 0, 12, false)
+	level_create("Up and Away", rLevelExp01, 35),
+	level_create("Down You Go", rLevelExp02, 5),
+	level_create("Slow and Steady", rLevelExp03, 45),
+	level_create("A Hard Level", rLevelExp04, 20),
+	level_create("Jumping Olympics: Silver", rLevelExp05, 12)
 ];
-
 #endregion
-
-// an array of rooms for difficulty select
-menu_level_rooms = array_create(LEVEL_DIFF.COUNT);
-menu_level_rooms[0] = rMenuLevelsBeginner;
-menu_level_rooms[1] = rMenuLevelsIntermediate;
-menu_level_rooms[2] = rMenuLevelsExpert;
 
 // by default, only beginner is availible
 diff_unlocked = array_create(LEVEL_DIFF.COUNT);
@@ -72,6 +65,15 @@ diff_unlocked[LEVEL_DIFF.BEGINNER] = true;
 diff_completed = array_create(LEVEL_DIFF.COUNT);
 for (var i = 1; i < LEVEL_DIFF.COUNT; i++)
 	diff_completed[i] = false;
+	
+// in the case that the player has save data, load it
+if (!debug_mode || DEBUG_LOAD_DATA) my_game_load();
+
+// an array of rooms for difficulty select
+menu_level_rooms = array_create(LEVEL_DIFF.COUNT);
+menu_level_rooms[0] = rMenuLevelsBeginner;
+menu_level_rooms[1] = rMenuLevelsIntermediate;
+menu_level_rooms[2] = rMenuLevelsExpert;
 
 draw_set_font(fnUI);
 room_goto((debug_mode) ? DEBUG_START_ROOM : rSplashScreen);

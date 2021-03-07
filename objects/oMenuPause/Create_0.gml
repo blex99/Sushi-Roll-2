@@ -6,8 +6,6 @@ event_inherited();
 // pressing escape
 my_previous_room = -1;
 
-msg = "~ Paused ~";
-
 var _w = display_get_gui_width();
 var _h = display_get_gui_height();
 
@@ -25,7 +23,7 @@ array_push(buttons, _button);
 _button = instance_create_depth(_w / 2, (i++ * buff) + (_h / 2), -9999, oButton);
 _button.btag = 1;
 _button.dir = [0, 2, -1, -1];
-_button.my_script = transition_start;
+_button.my_script = game_level_room_reset;
 _button.text = "Restart";
 array_push(buttons, _button);
 
