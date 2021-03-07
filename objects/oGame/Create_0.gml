@@ -30,28 +30,28 @@ levels = [];
 levels[LEVEL_DIFF.BEGINNER] = 
 [
 	level_create("Starting Out", rLevelBeg01, sec2mus(90), 0, 10),
-	level_create("Upping the Pace", rLevelBeg02, sec2mus(90), 0, 30),
-	level_create("Counting Calories", rLevelBeg03, sec2mus(90), 0, 30),
-	level_create("Jumping Olympics: Bronze", rLevelBeg04, sec2mus(90), 0, 30),
-	level_create("Slippery Sliding Sashimi", rLevelBeg05, sec2mus(90), 0, 30)
+	level_create("Upping the Pace", rLevelBeg02, sec2mus(90), 0, 15),
+	level_create("Counting Calories", rLevelBeg03, sec2mus(90), 0, 20),
+	level_create("Jumping Olympics: Bronze", rLevelBeg04, sec2mus(90), 0, 5),
+	level_create("Slippery Sliding Sashimi", rLevelBeg05, sec2mus(90), 0, 20)
 ];
 
 levels[LEVEL_DIFF.INTERMEDIATE] = 
 [
-	level_create("Octopus", rLevelInt01, sec2mus(90), 0, 30),
-	level_create("Spring Forward", rLevelInt02, sec2mus(90), 0, 30),
-	level_create("Ramps", rLevelInt03, sec2mus(90), 0, 30),
-	level_create("Big Knives", rLevelInt04, sec2mus(90), 0, 30),
-	level_create("Trapdoor Track Lesson", rLevelInt05, sec2mus(90), 0, 30)
+	level_create("Octopus", rLevelInt01, sec2mus(90), 0, 10),
+	level_create("Spring Forward", rLevelInt02, sec2mus(90), 0, 20),
+	level_create("Ramps", rLevelInt03, sec2mus(90), 0, 20),
+	level_create("Big Knives", rLevelInt04, sec2mus(90), 0, 15),
+	level_create("Trapdoor Track Lesson", rLevelInt05, sec2mus(90), 0, 12)
 ];
 
 levels[LEVEL_DIFF.EXPERT] = 
 [
-	level_create("Up and Away", rLevelExp01, sec2mus(90), 0, 30),
-	level_create("Down You Go", rLevelExp02, sec2mus(90), 0, 30),
-	level_create("Slow and Steady", rLevelExp03, sec2mus(90), 0, 30),
-	level_create("A Hard Level", rLevelExp04, sec2mus(90), 0, 30),
-	level_create("Jumping Olympics: Silver", rLevelExp05, sec2mus(90), 0, 30)
+	level_create("Up and Away", rLevelExp01, sec2mus(90), 0, 35),
+	level_create("Down You Go", rLevelExp02, sec2mus(90), 0, 5),
+	level_create("Slow and Steady", rLevelExp03, sec2mus(90), 0, 45),
+	level_create("A Hard Level", rLevelExp04, sec2mus(90), 0, 20),
+	level_create("Jumping Olympics: Silver", rLevelExp05, sec2mus(90), 0, 12)
 ];
 
 #endregion

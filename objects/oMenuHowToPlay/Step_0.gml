@@ -30,4 +30,4 @@ else
 	];
 }
 
-if (input_start_pressed()) transition_start(rMenuMain);
+if (input_back_pressed()) transition_start(rMenuMain);

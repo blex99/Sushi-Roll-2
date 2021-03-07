@@ -8,14 +8,16 @@ var _len = array_length(buttons);
 var _horizontal = input_right() - input_left();
 var _vertical = input_down() - input_up();
 if (_horizontal != 0) _vertical = 0;
-
-add_to_debug_map("c: " + string(gamepad_axis_value(global.device_index, gp_axislv)));
+var _up = _vertical < 0;
+var _down = _vertical > 0;
+var _left = _horizontal < 0;
+var _right = _horizontal > 0;
 
 // reset dir_locked immediately
-if ((!(_vertical < 0)	&& dir_locked == DIR.U) ||
-	(!(_vertical > 0)	&& dir_locked == DIR.D) ||
-	(!(_horizontal < 0)	&& dir_locked == DIR.L) ||
-	(!(_horizontal > 0)	&& dir_locked == DIR.R) )
+if ((!_up		&& dir_locked == DIR.U) ||
+	(!_down		&& dir_locked == DIR.D) ||
+	(!_left		&& dir_locked == DIR.L) ||
+	(!_right	&& dir_locked == DIR.R) )
 {
 	dir_locked = DIR.NA;
 	alarm[3] = -1;
@@ -31,10 +33,10 @@ for (var i = 0; i < 4; i++)
 	var _input_condition = 0;
 	switch (i)
 	{
-		case DIR.U: _input_condition = _vertical < 0; break;
-		case DIR.D: _input_condition = _vertical > 0; break;
-		case DIR.L: _input_condition = _horizontal < 0; break;
-		case DIR.R: _input_condition = _horizontal > 0; break;
+		case DIR.U:	_input_condition = _up;		break;
+		case DIR.D:	_input_condition = _down;	break;
+		case DIR.L:	_input_condition = _left;	break;
+		case DIR.R:	_input_condition = _right;	break;
 	}
 	
 	if (_input_condition && menu_cursor.dir[i] >= 0 && dir_locked != i)
@@ -45,14 +47,14 @@ for (var i = 0; i < 4; i++)
 }
 	
 // select currently hovered button
-if (keyboard_check_pressed(ord("X")) || gamepad_button_check(global.device_index, gp_face1))
+if (input_one_pressed())
 {
 	menu_committed = menu_cursor;
 	menu_control = false;
 }
 	
 // exit room, go to the previous room
-if (keyboard_check_pressed(vk_escape) || gamepad_button_check(global.device_index, gp_face2))
+if (input_back_pressed())
 {
 	transition_start(my_previous_room);
 	exit;

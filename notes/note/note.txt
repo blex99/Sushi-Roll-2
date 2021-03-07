@@ -38,11 +38,6 @@ easy	medium	hard
 $ACD8D3	$FFFFCC	$E5ABA0
 -------------------------------------------------------------------------------
 
-
-d-pad
-back button in menus
 the new menus look bad
-
-the best score and time for each level needs to be updated
 ...and saved/loaded upon game reset
 medium/ hard levels need to be "blocked" until previous difficulties completion

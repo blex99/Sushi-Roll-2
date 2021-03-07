@@ -29,6 +29,7 @@ function level_completed(){
 		physics_pause_enable(true);
 		timer_freeze();
 		stats_calc_final_score();
+		game_update_cur_stats();
 		instance_create_depth(0, 0, -9999, oVictoryScreen);
 		if (!global.using_controller) window_set_cursor(cr_default);
 	}

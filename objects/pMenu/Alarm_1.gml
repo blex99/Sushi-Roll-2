@@ -1,4 +1,4 @@
-///@ init button array
+///@desc init button array
 
 var _len = instance_number(pButton);
 var _btag = 0;
@@ -15,4 +15,5 @@ for (var i = 0; i < _len; i++)
 		}
 	}
 }
+
 menu_cursor = buttons[0];

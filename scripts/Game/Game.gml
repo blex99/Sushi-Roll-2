@@ -90,3 +90,24 @@ function game_set_window_scale(_increment)
 	
 	game_resize_window();
 }
+
+function game_update_cur_stats()
+{
+	with (oGame)
+	{
+		var _score = stats_get_score();
+		var _time = timer_get_time();
+		var _best_score = levels[diff_index][level_index].best_score;
+		var _best_time = levels[diff_index][level_index].best_time_mus;
+				
+		// if you've beaten your highest score
+		if (_best_score < _score)
+			levels[diff_index][level_index].best_score = _score;
+			
+		// if you've beaten your best time
+		if (_best_time > _time)
+			levels[diff_index][level_index].best_time_mus = _time;
+		
+		// TODO SAVE??
+	}
+}

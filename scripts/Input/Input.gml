@@ -1,16 +1,12 @@
-// select.. notice NOT pressed
-function input_one()
-{
-	var _input = mouse_check_button(mb_left) ||
-		gamepad_button_check(global.device_index, gp_face1);
-	return _input;
-}
-
 function input_one_pressed()
 {
-	var _input = mouse_check_button_pressed(mb_left) ||
-		gamepad_button_check_pressed(global.device_index, gp_face1);
-	return _input;
+	if (global.using_controller)
+	{
+		return gamepad_button_check_pressed(global.device_index, gp_face1);
+	}
+	
+	return mouse_check_button_pressed(mb_left) ||
+		   keyboard_check_pressed(ord("X"));
 }
 
 function input_up()
@@ -51,12 +47,26 @@ function input_right()
 	return keyboard_check(vk_right);
 }
 
-// for pausing
-function input_start_pressed()
+// for going back in menu
+function input_back_pressed()
 {
-	var _input = keyboard_check_pressed(vk_escape) ||
-		gamepad_button_check_pressed(global.device_index, gp_start);
-	return _input;
+	if (global.using_controller)
+	{
+		return gamepad_button_check_pressed(global.device_index, gp_face2);
+	}
+	
+	return keyboard_check_pressed(vk_escape);
+}
+
+// for pausing
+function input_pause_pressed()
+{
+	if (global.using_controller)
+	{
+		return gamepad_button_check_pressed(global.device_index, gp_start);
+	}
+	
+	return keyboard_check_pressed(vk_escape);
 }
 
 // return "normalized" x axis between -1 and 1

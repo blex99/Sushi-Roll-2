@@ -10,7 +10,7 @@ function timer_create(_start_timer_mus, _timer_counts_down, _script, _args)
 	
 	with (_inst)
 	{
-		timer =  _start_timer_mus;
+		timer = _start_timer_mus;
 		my_script = _script;
 		my_script_args = _args;
 		timer_counts_down = _timer_counts_down;
@@ -19,6 +19,7 @@ function timer_create(_start_timer_mus, _timer_counts_down, _script, _args)
 	return _inst;
 }
 
+// in microseconds
 function timer_get_time()
 {
 	if (!instance_exists(oTimer)) return 0;

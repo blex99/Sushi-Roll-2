@@ -82,3 +82,11 @@ function stats_get_array()
 		return _arr;
 	}
 }
+
+function stats_get_score()
+{
+	with (oStats)
+	{
+		return level_score;
+	}
+}

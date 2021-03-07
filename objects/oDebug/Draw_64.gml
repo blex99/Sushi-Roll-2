@@ -19,8 +19,8 @@ if (can_display_debug())
 	}
 	
 	//show fps
-	set_draw(c_lime, 1, fnDebug, fa_bottom, fa_right);
-	draw_text_with_outline(_w, _h, "fps: " + string(fps));
+	//set_draw(c_lime, 1, fnDebug, fa_bottom, fa_right);
+	//draw_text_with_outline(_w, _h, "fps: " + string(fps));
 
 	reset_alpha();
 }

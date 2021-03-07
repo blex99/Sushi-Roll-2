@@ -29,7 +29,7 @@ box_width_half  = _max_width_pix * 0.5;
 box_height_half = vbuffer * (messages_length) / 2;
 
 // hide button at start
-instance_deactivate_object(oButton);
+instance_deactivate_object(pButton);
 
 // display button when alarm hits
 alarm[2] = room_speed * 1.5;
