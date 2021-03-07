@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "pButton",
-    "path": "objects/pButton/pButton.yy",
+    "name": "oButtonLevelSelect",
+    "path": "objects/oButtonLevelSelect/oButtonLevelSelect.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -29,6 +29,7 @@
     {"propertyId":{"name":"my_script","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"transition_start","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"my_script_args","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"[rMenuLevelsExpert]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"text","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"\"Expert\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"difficulty","path":"objects/oButtonLevelSelect/oButtonLevelSelect.yy",},"objectId":{"name":"oButtonLevelSelect","path":"objects/oButtonLevelSelect/oButtonLevelSelect.yy",},"value":"LEVEL_DIFF.EXPERT","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "UI_Element",

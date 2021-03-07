@@ -1,5 +1,6 @@
 /// @description menu controls
 
+if (!menu_control && alarm[0] == -1) menu_control = true;
 if (!instance_exists(pButton) || !menu_control || alarm[1] != -1) exit;
 
 var _len = array_length(buttons);

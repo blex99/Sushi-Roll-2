@@ -76,6 +76,7 @@
     {"id":{"name":"oTrapDoor","path":"objects/oTrapDoor/oTrapDoor.yy",},"order":12,},
     {"id":{"name":"oLevelManager","path":"objects/oLevelManager/oLevelManager.yy",},"order":2,},
     {"id":{"name":"Sushi","path":"scripts/Sushi/Sushi.yy",},"order":2,},
+    {"id":{"name":"oButtonLevelSelect","path":"objects/oButtonLevelSelect/oButtonLevelSelect.yy",},"order":14,},
     {"id":{"name":"oKnife","path":"objects/oKnife/oKnife.yy",},"order":1,},
     {"id":{"name":"rLevelInt02","path":"rooms/rLevelInt02/rLevelInt02.yy",},"order":1,},
     {"id":{"name":"rLevelInt05","path":"rooms/rLevelInt05/rLevelInt05.yy",},"order":4,},

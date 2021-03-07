@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "pButton",
-    "path": "objects/pButton/pButton.yy",
+    "name": "oButtonLevelSelect",
+    "path": "objects/oButtonLevelSelect/oButtonLevelSelect.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

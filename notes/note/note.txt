@@ -8,9 +8,6 @@ music/sfx
 menu:
 	volume sliders
 	set keybindings
-	store buttons in a grid
-	D-pad support for menu
-	B to go back to previous menu
 
 visual:
 	tile effects
@@ -40,4 +37,9 @@ $ACD8D3	$FFFFCC	$E5ABA0
 
 the new menus look bad
 ...and saved/loaded upon game reset
+
 medium/ hard levels need to be "blocked" until previous difficulties completion
+ - level select buttons need to indicate they're unavailble
+ - once you beat the last beginner level, unlock intermediate (flag stored in oGame)
+ - same with last intermediate unlocking hard levels
+ - inform the player that they have unlocked new levels. (info box)

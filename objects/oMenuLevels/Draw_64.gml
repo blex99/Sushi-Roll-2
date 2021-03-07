@@ -13,6 +13,9 @@ with (oGame)
 {
 	// the level you're hovering over
 	var _level = levels[other.difficulty][other.menu_cursor.btag];
+	
+	// show if you've beaten the level before
+	if (_level.has_beaten) _str += "*";
 	_str += string(_level.level_name) + "\n";
 	_str += "Best Time: " + string(mus2sec(_level.best_time_mus)) + " seconds\n";
 	_str += "High Score: " + string(_level.best_score) + "\n";

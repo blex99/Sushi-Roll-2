@@ -1,5 +1,5 @@
 // create a level struct
-function level_create(_level_name, _room_name, _best_time_mus, _best_score, _time_sec_req)
+function level_create(_level_name, _room_name, _best_time_mus, _best_score, _time_sec_req, _has_beaten)
 {
 	var _level = 
 	{
@@ -8,6 +8,7 @@ function level_create(_level_name, _room_name, _best_time_mus, _best_score, _tim
 		best_time_mus : _best_time_mus,
 		best_score : _best_score,
 		time_sec_req : _time_sec_req, // time second requirement
+		has_beaten : _has_beaten,
 	};
 	return _level;
 }
@@ -29,7 +30,7 @@ function level_completed(){
 		physics_pause_enable(true);
 		timer_freeze();
 		stats_calc_final_score();
-		game_update_cur_stats();
+		game_update_cur_level_struct();
 		instance_create_depth(0, 0, -9999, oVictoryScreen);
 		if (!global.using_controller) window_set_cursor(cr_default);
 	}

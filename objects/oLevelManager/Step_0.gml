@@ -5,7 +5,9 @@ ui_alpha = max(ui_alpha - (1 / room_speed), 0);
 if (input_one_pressed())
 {
 	if (level_is_state(LEVEL.COMPLETE))
-		game_goto_next_level();
+	{
+		game_goto_menu_level();
+	}
 	else if (level_is_state(LEVEL.COUNTING_DOWN) && (debug_mode || !oGame.level_first_try))
 	{
 		info_box_create("Skipped Countdown!");

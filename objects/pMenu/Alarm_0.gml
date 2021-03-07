@@ -2,7 +2,10 @@
 
 with (menu_committed)
 {
-	script_execute_args(my_script, my_script_args);
+	if (my_script != noone)
+	{
+		script_execute_args(my_script, my_script_args);
+	}
 }
 
 menu_committed = noone;
