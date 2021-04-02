@@ -1,9 +1,18 @@
 /// @desc inits all needed obj's for a level
 
 // update the current level struct
-var _l;
-with (oGame) _l = levels[diff_index][level_index];
-level_struct = _l;
+level_struct = -1;
+with (oGame)
+{
+	if (diff_index == -1 || level_index == -1)
+	{
+		// set default vals in case unset level
+		diff_index = 0;
+		level_index = 0;
+	}
+	
+	other.level_struct = levels[diff_index][level_index];
+}
 
 state = LEVEL.PANNING;
 ui_alpha_start = 3;

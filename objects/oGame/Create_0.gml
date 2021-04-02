@@ -55,19 +55,30 @@ levels[LEVEL_DIFF.EXPERT] =
 ];
 #endregion
 
-// by default, only beginner is availible
+diff_completed = array_create(LEVEL_DIFF.COUNT);
 diff_unlocked = array_create(LEVEL_DIFF.COUNT);
+
+// by default, only beginner is availible
 for (var i = 1; i < LEVEL_DIFF.COUNT; i++)
 	diff_unlocked[i] = false;
 diff_unlocked[LEVEL_DIFF.BEGINNER] = true;
 
 // by default, no difficilies have been completed
-diff_completed = array_create(LEVEL_DIFF.COUNT);
 for (var i = 1; i < LEVEL_DIFF.COUNT; i++)
 	diff_completed[i] = false;
-	
+
 // in the case that the player has save data, load it
 if (!debug_mode || DEBUG_LOAD_DATA) my_game_load();
+
+// unlock all levels, if desired
+if (DEBUG_UNLOCK_ALL)
+{
+	for (var i = 0; i < LEVEL_DIFF.COUNT; i++)
+	{
+		diff_unlocked[i] = true;
+		diff_completed[i] = true;
+	}
+}
 
 // an array of rooms for difficulty select
 menu_level_rooms = array_create(LEVEL_DIFF.COUNT);

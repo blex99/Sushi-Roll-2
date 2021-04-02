@@ -11,10 +11,12 @@
 #macro VALUE_COLLECTOR_BONUS	500
 #macro VALUE_SPEEDY_BONUS		500
 
-#macro DEBUG_LOAD_DATA true
-#macro START_FULLSCREEN false
-#macro DEBUG_START_ROOM rSplashScreen//rSplashScreen
-#macro SHOW_DEBUG_DEFAULT true
+#macro START_FULLSCREEN		false
+
+#macro DEBUG_START_ROOM		rLevelUnset01//rSplashScreen
+#macro DEBUG_SHOW_VISUALS	false
+#macro DEBUG_LOAD_DATA		false
+#macro DEBUG_UNLOCK_ALL		true
 
 global.border_sprite = sNineSliceBoxBamboo;
 

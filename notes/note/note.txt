@@ -1,10 +1,7 @@
 -------------------------------------------------------------------------------
-DONE:
-
- ------------------------------------------------------------------------------
 TODO:
-music/sfx
-C:\Users\alex\AppData\Local\Sushi_Roll_2
+	trailer video
+	itch.io page
 
 menu:
 	volume sliders
@@ -14,8 +11,13 @@ visual:
 	tile effects
 	redo particle effects
 	theme for each difficulty
+	manual locations to pan around while introducing level (mario kart)
 
 game:
+	music/sfx
+	option to clear save data (in options menu)
+	moving platform path indicator
+	rice is currency to buy different sushi's
 	sticky walls
 	make it so user cannot easily change game data
 
@@ -26,12 +28,11 @@ PROBLEMS:
 	camera tearing at the top of the screen
 	sushi "anti-aliasing"/rotating effect looks odd
 -------------------------------------------------------------------------------
-COLORS:
+REFERENCE:
 easy	medium	hard
 $ACD8D3	$FFFFCC	$E5ABA0
+
+save location: C:\Users\alex\AppData\Local\Sushi_Roll_2
 -------------------------------------------------------------------------------
 
-option to clear save data (in options menu)
-moving platform path indicator
-manual locations to pan around while introducing level (mario kart)
-rice is currency to buy different sushi's
+
