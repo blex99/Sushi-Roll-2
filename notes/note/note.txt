@@ -23,10 +23,12 @@ game:
 
 -------------------------------------------------------------------------------
 PROBLEMS:
+	rotating platforms with rotated camera
+	make trap door state machine
 	button highlighted when not hovering over
 	camera looks weird when moving very slow (shaking?)
 	camera tearing at the top of the screen
-	sushi "anti-aliasing"/rotating effect looks odd
+	sushi "anti-aliasing"/rotating effect looks odd 
 -------------------------------------------------------------------------------
 REFERENCE:
 easy	medium	hard

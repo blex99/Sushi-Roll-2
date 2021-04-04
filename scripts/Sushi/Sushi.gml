@@ -120,7 +120,21 @@ function sushi_jump(_newtons)
 	with (_sushi)
 	{ 
 		jump_buffer = jump_buffer_start;
-		physics_apply_impulse(phy_position_x, phy_position_y, 0, -_newtons);
+		
+		var _g_dir = phys_world_get_gravity();
+		
+		// resetting the velocity of the same direction
+		// we're applying a force
+		if (_g_dir == DIR.U || _g_dir == DIR.D)
+			phy_linear_velocity_y = 0;
+		else
+			phy_linear_velocity_x = 0;
+		
+		// get x, y, components of gravity dir...
+		var _imp_x = lengthdir_x(_newtons, _g_dir * 90);
+		var _imp_y = lengthdir_y(_newtons, _g_dir * 90);
+		
+		physics_apply_impulse(phy_position_x, phy_position_y, -_imp_x, -_imp_y);
 		
 		if (_sushi_shrunk)
 		{

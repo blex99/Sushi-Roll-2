@@ -13,19 +13,20 @@
 
 #macro START_FULLSCREEN		false
 
-#macro DEBUG_START_ROOM		rLevelUnset01//rSplashScreen
-#macro DEBUG_SHOW_VISUALS	false
+#macro DEBUG_START_ROOM		rLevelUnset02//rSplashScreen
+#macro DEBUG_SHOW_VISUALS	true
 #macro DEBUG_LOAD_DATA		false
 #macro DEBUG_UNLOCK_ALL		true
 
 global.border_sprite = sNineSliceBoxBamboo;
 
+// in quadrant order
 enum DIR
 {
-	U, // up
-	D, // down
-	L, // left
 	R, // right
+	U, // up
+	L, // left
+	D, // down
 	NA // none
 }
 

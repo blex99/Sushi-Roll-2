@@ -1,4 +1,5 @@
 phys_world_gravity = 60;
+gravity_dir = DIR.D;
 physics_pause_enable(false);
 physics_world_create(0.1);
 physics_world_gravity(0, phys_world_gravity);

@@ -1,5 +1,5 @@
 rot_strength = 10;
-//rot_limit = 40; // in degrees
+rot_limit = rot_limit_start; // in degrees
 
 speed_max = 300;
 
@@ -18,5 +18,7 @@ w_max = w_half + max_range;
 
 // establish joint
 var _ful = instance_create_layer(x, y, "Instances", oFulcrum);
-physics_joint_revolute_create(_ful, id, x, y, -rot_limit, rot_limit,
+joint = physics_joint_revolute_create(_ful, id, x, y, -rot_limit, rot_limit,
 	true, 0, 0, 0, 0);
+	
+

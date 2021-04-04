@@ -1,5 +1,8 @@
 /// @desc inits all needed obj's for a level
 
+// hide DebugSprite asset layer
+layer_set_visible(layer_get_id("DebugSprites"), false);
+
 // update the current level struct
 level_struct = -1;
 with (oGame)

@@ -20,6 +20,7 @@ if (!_controller && !level_is_state(LEVEL.COMPLETE))
 
 // rotate
 _target_angle = input_x_axis() * rot_limit;
+add_to_debug_map("_target_angle: " + string(_target_angle));
 _diff = angle_difference(_target_angle, phy_rotation);
 _spd = _diff * rot_strength;
 phy_angular_velocity = clamp(_spd, -speed_max, speed_max);

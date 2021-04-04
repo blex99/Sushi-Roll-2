@@ -3,6 +3,8 @@
 view_enabled = true;
 view_visible[0] = true;
 
+target_angle = 0;
+
 view_w = BASE_W;
 view_h = BASE_H;
 view_w_half = view_w * 0.5;

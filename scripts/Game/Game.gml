@@ -6,7 +6,7 @@ function update_cursor()
 	if (instance_exists(oLevelManager) && !level_is_state(LEVEL.COMPLETE))
 		_cursor = cr_none;
 	
-	window_set_cursor(_cursor);	
+	window_set_cursor(_cursor);
 }
 
 // (upon beating a level,) move back to either the previous menu or the main
