@@ -21,6 +21,3 @@ if (path_action != path_action_restart)
 	else
 		path_speed = move_speed * _dir;
 }
-
-
-add_to_debug_map("path_position: " + string(path_position));

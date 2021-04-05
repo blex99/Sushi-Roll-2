@@ -2,6 +2,7 @@
 
 if (level_is_state(LEVEL.PAUSED)) exit;
 
+
 // level room names have the format: rLevel##
 //                                   12345678
 //                                         ^^

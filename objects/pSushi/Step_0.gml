@@ -2,46 +2,32 @@
 
 if (level_is_state(LEVEL.PAUSED)) exit;
 
-var _x_dir;
-var _g_dir = phys_world_get_gravity();
+#region control the sushi
+
+var _cam_deg = camera_get_deg();
+var _sushi_dir, _force_x, _force_y;
 
 if (global.using_controller)
-	_x_dir = gamepad_axis_value(global.device_index, gp_axislh);
+{
+	_sushi_dir = gamepad_axis_value(global.device_index, gp_axislh);
+}
 else
 {
-	var _left;	
-	var _right;	
+	var _left_key	= keyboard_check(ord("A"));
+	var _right_key	= keyboard_check(ord("D"));
 	
-	// "A" will be at the left if the gravity is down or right???
-	switch (_g_dir)
-	{
-		case DIR.D: case DIR.R:
-			_left = keyboard_check(ord("A"));
-			_right = keyboard_check(ord("D"));
-			break;
-		case DIR.U: case DIR.L:
-			_left = keyboard_check(ord("D"));
-			_right = keyboard_check(ord("A"));
-			break;
-	}
-	_x_dir = _right - _left;
-}
-
-// control the sushi
-switch (_g_dir)
-{
-	case DIR.L: case DIR.R:
-		physics_apply_force(x, y, 0, -_x_dir * force);
-		break;
-	case DIR.U: case DIR.D:
-		physics_apply_force(x, y, _x_dir * force, 0);
-		break;
+	_sushi_dir = _right_key - _left_key;
 }
 
 
-// up direction applies counter clockwise torque
-//physics_apply_torque(_x_dir * torque);
+_force_x = lengthdir_x(force, _cam_deg) * _sushi_dir;
+_force_y = -1 * lengthdir_y(force, _cam_deg) * _sushi_dir;
+physics_apply_force(x, y, _force_x, _force_y);
+physics_apply_torque(_sushi_dir * torque);
 
+#endregion
+
+#region water interaction
 if (place_meeting(x, y, oWaterBody))
 {
 	var _water = instance_place(x, y, oWaterBody);
@@ -52,6 +38,6 @@ else
 {
 	phy_linear_damping = linear_damp;
 }
+#endregion
 
 jump_buffer = max(0, jump_buffer - 1);
-add_to_debug_map("jump_buffer: " + string(jump_buffer));

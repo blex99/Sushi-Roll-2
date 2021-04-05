@@ -1,10 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description update stats for the window
 
-k_up = ord("W");
-k_down = ord("S");
-k_left = ord("A");
-k_right = ord("D");
-k_select = vk_enter;
-k_cancel = vk_backspace;
-k_pause = vk_escape;
+// oInput is mostly just for keyboard+mouse controls
+
+width_range_ratio = 0.2; // how wide must you move the mouse to rotate?
+input_update_window_stats();

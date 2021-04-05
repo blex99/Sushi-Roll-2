@@ -1,8 +1,12 @@
 // change angle of cam based on gravity direction
-function camera_change_dir(_dir)
+function camera_set_deg(_dir)
 {
-	with (oCamera)
-	{
-		target_angle = (DIR.D - _dir) * 90;
-	}
+	with (oCamera) target_angle = card2deg(DIR.D - _dir);
+}
+
+// get TARGET degrees of camera
+// by default, its 0
+function camera_get_deg()
+{
+	with (oCamera) return target_angle;
 }

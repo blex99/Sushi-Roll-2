@@ -1,3 +1,5 @@
+
+
 // show/hide cursor based of if using_controller
 function update_cursor()
 {
@@ -84,6 +86,7 @@ function game_resize_window()
 			alarm[0] = 2; // center window
 		}
 		
+		input_update_window_stats();
 		surface_resize(application_surface, BASE_W, BASE_H);
 	}
 }

@@ -1,5 +1,19 @@
 // helper functions
 
+// degrees to cardinal directions
+// EX: 180 degrees -> 2
+function deg2card(_deg)
+{
+	return round(_deg / 90);
+}
+
+// cardinal directions to degrees
+// EX: 3 -> 270 degrees
+function card2deg(_card)
+{
+	return _card * 90;
+}
+
 // converts the difficulty enum to string
 function diff2str(_diff)
 {

@@ -47,7 +47,8 @@ y = clamp(y, view_h_half, room_height - view_h_half);
 
 // rotate the camera (in the advent of gravity mod)
 var _angle = camera_get_view_angle(CAM);
-_angle = lerp(_angle, target_angle, 0.1);
+var _angle_diff = angle_difference(_angle, target_angle);
+_angle -= min(abs(_angle_diff), 5) * sign(_angle_diff);
 camera_set_view_angle(CAM, _angle);
 
 camera_set_view_pos(CAM, x - view_w_half, y - view_h_half);

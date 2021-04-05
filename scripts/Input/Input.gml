@@ -77,25 +77,45 @@ function input_x_axis(){
 	}
 	else
 	{
-		var _normalized_input = 0;
-		var _ranged_input = 0;
-	
-		with (pRotateable)
+		with (oInput)
 		{
-			_ranged_input = input_x_mouse_clamp(w_min, w_max);
+			var _normalized_input = 0;
+			var _ranged_input = 0;
+
+			_ranged_input = clamp(window_mouse_get_x(), w_min, w_max);
 			_normalized_input = 2 * (_ranged_input - w_min) / (w_max - w_min);
 			_normalized_input -= 1;
-		}
 	
-		return _normalized_input;
+			return _normalized_input;
+		}
 	}
 }
 
-function input_x_mouse_clamp(_min, _max)
+// clamp the mousey to be fixed in the y-direction
+// clamp the mousex between a certain width based on the window
+function input_clamp_mouse()
 {
-	with (pRotateable)
+	with (oInput)
 	{
-		return clamp(window_mouse_get_x(), _min, _max);	
+		// clamp mouse to w_min and w_max
+		var _mouse_x = clamp(window_mouse_get_x(), w_min, w_max);
+		var _mouse_y = h_half;
+		window_mouse_set(_mouse_x, _mouse_y);
+	}
+}
+
+function input_update_window_stats()
+{
+	if (!instance_exists(oInput)) return;
+	
+	with (oInput)
+	{
+		// stats for the WINDOW
+		w_half = window_get_width() * 0.5;
+		h_half = window_get_height() * 0.5;
+		max_range = w_half * width_range_ratio;
+		w_min = w_half - max_range;
+		w_max = w_half + max_range;
 	}
 }
 
