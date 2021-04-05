@@ -5,6 +5,9 @@ var _colliding = place_meeting(x, y, sushi_cur());
 // if you're in range and you haven't set gravity yet
 if (_colliding && sushi_released)
 {
+	sushi_cur().phy_linear_velocity_x /= 2;
+	sushi_cur().phy_linear_velocity_y /= 2;
+	
 	phys_world_set_gravity(dir);
 	sushi_released = false;
 }

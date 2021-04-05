@@ -23,6 +23,7 @@ game:
 
 -------------------------------------------------------------------------------
 PROBLEMS:
+	moving platforms are broken!
 	make trap door state machine
 	button highlighted when not hovering over
 	camera looks weird when moving very slow (shaking?) (maybe pixeltometrescale to be 1/32)

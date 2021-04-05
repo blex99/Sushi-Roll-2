@@ -1,3 +1,8 @@
+print(image_angle);
+print(phy_rotation);
+
+phy_rotation = 0;
+
 mass	= 2.0;
 inertia	= 100;
 physics_mass_properties(mass, 0, 0, inertia);
