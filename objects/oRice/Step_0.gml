@@ -1,6 +1,7 @@
 if (level_is_state(LEVEL.PAUSED)) exit;
 
-y = oscillate(ystart, 2, 0.5);
+y = oscillate(ystart, 4, 0.5);
+x = oscillate(xstart, 2, 2);
 
 if (place_meeting(x, y, pSushi))
 {

@@ -1,28 +1,31 @@
 -------------------------------------------------------------------------------
 TODO:
-	trailer video
-	itch.io page
+	sushi line trail (as it gets bigger)
+	think of ways to make rice more useful
+		- knife doesn't kill if big? (only shrinks)
+		- you can jump if you're big (but you'll shrink) (only problem is detecting if grounded)
 
-menu:
-	volume sliders
-	set keybindings
+	menu:
+		volume sliders
+		set keybindings
 
-visual:
-	tile effects
-	redo particle effects
-	theme for each difficulty
-	manual locations to pan around while introducing level (mario kart)
+	visual:
+		tile effects
+		redo particle effects
+		theme for each difficulty (instead of difficulties)
+		manual locations to pan around while introducing level (mario kart)
 
-game:
-	music/sfx
-	option to clear save data (in options menu)
-	moving platform path indicator
-	rice is currency to buy different sushi's
-	sticky walls
-	make it so user cannot easily change game data
+	game:
+		music/sfx
+		option to clear save data (in options menu)
+		moving platform path indicator
+		rice is currency to buy different sushi's
+		sticky walls
+		make it so user cannot easily change game data
 
 -------------------------------------------------------------------------------
 PROBLEMS:
+	sushi jolts when increases in size sometimes
 	moving platforms are broken!
 	make trap door state machine
 	button highlighted when not hovering over

@@ -23,23 +23,23 @@ function sushi_change_size(_grow)
 	{
 		if (_grow)
 		{
-			image_xscale += size_increment;
-			image_yscale += size_increment;
+			target_scale += size_increment;
+			target_scale += size_increment;
 			
 			mass += mass_increment;
 		}
 		else
 		{
 			// shink to original size
-			image_xscale = 1;//-= size_increment;
-			image_yscale = 1;//-= size_increment;
+			target_scale = 1;//-= size_increment;
+			target_scale = 1;//-= size_increment;
 			
 			mass = mass_start;
 		}
 		
 		// don't scale outside of max or original size
-		image_xscale = clamp(image_xscale, 1, scale_max);
-		image_yscale = clamp(image_yscale, 1, scale_max);
+		target_scale = clamp(target_scale, 1, scale_max);
+		target_scale = clamp(target_scale, 1, scale_max);
 		
 		sushi_init_fixture();
 	}
@@ -54,7 +54,7 @@ function sushi_get_size_normalized()
 	with (sushi_cur())
 	{
 		_max_rice_consume = (scale_max - 1) /  size_increment;
-		_cur_rice_consume = (image_xscale - 1) /  size_increment;
+		_cur_rice_consume = (target_scale - 1) /  size_increment;
 	}
 	
 	return _cur_rice_consume / _max_rice_consume;
@@ -79,8 +79,8 @@ function sushi_init_fixture()
 		my_fix = physics_fixture_bind(_fix, id);
 		physics_fixture_delete(_fix);
 		
-		// force mass to be a set amount no matter what
-		// size the sushi ball is
+		// force mass to increase differently than default
+		// (to prevent being super slow)
 		physics_mass_properties(mass, 0, 0, phy_inertia);
 	}
 }
@@ -108,26 +108,41 @@ function physics_fixture_set_sushi_shape(_fix)
 	}
 }
 
-function sushi_jump(_newtons)
+// returns true if the sushi is touching the ground
+function sushi_is_grounded()
+{
+	// for detecting if grounded
+	var _buf = original_width_half * target_scale + 4;
+	var _down_angle = camera_get_deg() - 90;
+	
+	var _x1 = phy_position_x;
+	var _y1 = phy_position_y;
+	var _x2 = _x1 - lengthdir_x(_buf, _down_angle);
+	var _y2 = _y1 + lengthdir_y(_buf, _down_angle);
+	
+	return collision_line(_x1, _y1, _x2, _y2, pPhysicsEntity, 0, 1);
+}
+
+function sushi_jump(_newtons, _angle)
 {
 	var _sushi = sushi_cur();
 	if (_sushi.jump_buffer > 0) return; // can only jump when jump buffer == 0
 	
-	var _sushi_shrunk = _sushi.image_xscale != 1;
-	var _spring_angle = image_angle;
+	var _sushi_shrunk = _sushi.target_scale != 1;
 	
 	sushi_change_size(false); // shrink
 	
 	with (_sushi)
 	{ 
+		image_yscale *= 1.1; // contort the sushi a bit
 		jump_buffer = jump_buffer_start;
 	
 		// the direction of the impluse of the spring is 
 		// relative to its image angle
 		
 		// by default is 0 (if you haven't rotated the spring
-		var _impluse_card_dir	= (1 + deg2card(_spring_angle)) % DIR.NA;
-		var _impluse_deg		= _spring_angle + 90; 
+		var _impluse_card_dir	= deg2card(_angle);
+		var _impluse_deg		= _angle;
 		
 		// resetting the velocity of the same direction
 		// we're applying a force to ensure percise jump heights

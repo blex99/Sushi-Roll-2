@@ -1,7 +1,9 @@
 // etc vars
 
-scale_max = 2;
-size_increment = 0.2;
+original_width_half = sprite_width / 2;
+scale_max = 2.5;
+size_increment = 0.5;
+target_scale = 1;
 
 torque = 50;
 force = 100;

@@ -46,7 +46,7 @@
     "path": "folders/Objects/Placeable.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMovingPlatforms",
+  "name": "oMovingPlatform",
   "tags": [],
   "resourceType": "GMObject",
 }
