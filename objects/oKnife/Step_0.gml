@@ -12,7 +12,6 @@ else
 	path_speed = my_path_speed;
 }
 
-
 if (killed_sushi)
 {
 	path_speed = 0;

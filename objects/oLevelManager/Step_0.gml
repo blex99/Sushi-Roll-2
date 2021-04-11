@@ -15,18 +15,15 @@ if (input_one_pressed())
 	}
 }
 
-if (!level_is_state(LEVEL.COMPLETE))
+if (!level_is_state(LEVEL.COMPLETE) && input_pause_pressed())
 {
-	if (input_pause_pressed())
-	{
-		level_toggle_pause();
-	}
-	
-	if (!global.using_controller)
-	{
-		input_clamp_mouse();
-	}
-} 
+	level_toggle_pause();
+}
+
+if (level_is_state(LEVEL.PLAYING) && !global.using_controller)
+{
+	input_clamp_mouse();
+}
 
 /*
 var _state;

@@ -5,7 +5,7 @@ x = oscillate(xstart, 2, 2);
 
 if (place_meeting(x, y, pSushi))
 {
-	sushi_change_size(true);
+	//sushi_change_size(true);
 	stats_increment_rice_counter();
 	instance_destroy();
 }

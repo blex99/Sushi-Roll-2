@@ -5,7 +5,7 @@ scale_max = 2.5;
 size_increment = 0.5;
 target_scale = 1;
 
-torque = 50;
+torque = 100;
 force = 100;
 
 jump_buffer_start = 15;

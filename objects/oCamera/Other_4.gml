@@ -24,6 +24,14 @@ if (_num_goals > 0)
 		array_push(follows, instance_find(oGoal, i));
 }
 
+// add panning targets to the list of things to follow
+var _num_panning_targets = instance_number(oPanningTarget);
+if (_num_panning_targets > 0)
+{
+	for (var i = 0; i < _num_panning_targets; i++)
+		array_push(follows, instance_find(oPanningTarget, i));
+}
+
 var _sushi = sushi_cur();
 if (instance_exists(_sushi)) array_push(follows, _sushi);
 
@@ -35,7 +43,9 @@ if (follow_size > 0)
 	x = _following.x;
 	y = _following.y;
 	
-	 // set target next follow
+	// set target next follow
 	alarm[0] = room_speed;
+	zoom_target = 1.5;
+	zoom = zoom_target;
 }
 

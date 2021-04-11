@@ -13,7 +13,7 @@
 
 #macro START_FULLSCREEN		false
 
-#macro DEBUG_START_ROOM		rLevelUnset03//rSplashScreen
+#macro DEBUG_START_ROOM		rLevelUnset04//rSplashScreen
 #macro DEBUG_SHOW_VISUALS	true
 #macro DEBUG_LOAD_DATA		false
 #macro DEBUG_UNLOCK_ALL		true

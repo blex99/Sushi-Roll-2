@@ -1,6 +1,3 @@
-print(image_angle);
-print(phy_rotation);
-
 phy_rotation = 0;
 
 mass	= 2.0;

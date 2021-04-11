@@ -14,7 +14,7 @@ if (level_is_state(LEVEL.PANNING))
 	if (input_one_pressed() && (!oGame.level_first_try || debug_mode))
 	{
 		info_box_create("Skipped Panning!");
-		follow_index = follow_size - 1;
+		follow_index = follow_size - 1; // set index to be index of sushi
 		
 		xfollow = round(follows[follow_index].x);
 		yfollow = round(follows[follow_index].y);
@@ -31,19 +31,27 @@ if (level_is_state(LEVEL.PANNING))
 	var _yf = clamp(yfollow, view_h_half, room_height - view_h_half);
 	var _cam_reached_target = abs(x - _xf) < 5 && abs(y - _yf) < 5;
 	
-	if (follows[follow_index] == _sushi && _cam_reached_target)
+	if (_cam_reached_target)
 	{
-		// finished panning
-		level_start_countdown();
-		strength = strength_playing;
+		if (alarm[0] == -1) alarm[0] = room_speed / 2;
+		
+		if (follows[follow_index] == _sushi)
+		{
+			// finished panning
+			level_start_countdown();
+			strength = strength_playing;
+			zoom_target = 1;
+		}
 	}
 }
 
-x = lerp(x, xfollow, strength);
-y = lerp(y, yfollow, strength);
-
-x = clamp(x, view_w_half, room_width - view_w_half);
-y = clamp(y, view_h_half, room_height - view_h_half);
+// change size of the camera zoom
+zoom = lerp(zoom, zoom_target, 0.1);
+view_w = BASE_W * zoom;
+view_h = BASE_H * zoom;
+view_w_half = view_w * 0.5;
+view_h_half = view_h * 0.5;
+camera_set_view_size(CAM, view_w, view_h);
 
 // rotate the camera (in the advent of gravity mod)
 var _angle = camera_get_view_angle(CAM);
@@ -51,5 +59,14 @@ var _angle_diff = angle_difference(_angle, target_angle);
 _angle -= min(abs(_angle_diff), 5) * sign(_angle_diff);
 camera_set_view_angle(CAM, _angle);
 
+// change the position of the camera
+x = lerp(x, xfollow, strength);
+y = lerp(y, yfollow, strength);
+
+x = clamp(x, view_w_half, room_width - view_w_half);
+y = clamp(y, view_h_half, room_height - view_h_half);
+
 camera_set_view_pos(CAM, x - view_w_half, y - view_h_half);
+
+add_to_debug_map("alarm[0]: " + string(alarm[0]));
 

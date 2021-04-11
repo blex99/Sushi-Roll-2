@@ -2,8 +2,6 @@
 TODO:
 	sushi line trail (as it gets bigger)
 	think of ways to make rice more useful
-		- knife doesn't kill if big? (only shrinks)
-		- you can jump if you're big (but you'll shrink) (only problem is detecting if grounded)
 
 	menu:
 		volume sliders
@@ -22,6 +20,8 @@ TODO:
 		rice is currency to buy different sushi's
 		sticky walls
 		make it so user cannot easily change game data
+
+pinball
 
 -------------------------------------------------------------------------------
 PROBLEMS:

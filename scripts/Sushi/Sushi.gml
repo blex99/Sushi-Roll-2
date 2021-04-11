@@ -31,8 +31,8 @@ function sushi_change_size(_grow)
 		else
 		{
 			// shink to original size
-			target_scale = 1;//-= size_increment;
-			target_scale = 1;//-= size_increment;
+			target_scale -= size_increment;
+			target_scale -= size_increment;
 			
 			mass = mass_start;
 		}
@@ -133,8 +133,7 @@ function sushi_jump(_newtons, _angle)
 	sushi_change_size(false); // shrink
 	
 	with (_sushi)
-	{ 
-		image_yscale *= 1.1; // contort the sushi a bit
+	{
 		jump_buffer = jump_buffer_start;
 	
 		// the direction of the impluse of the spring is 
