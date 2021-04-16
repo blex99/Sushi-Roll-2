@@ -28,7 +28,7 @@ function game_goto_menu_level()
 		{
 			diff_completed[diff_index] = true;
 			var _str = diff2str(diff_index) + " levels complete!";
-			if (diff_index + 1 < LEVEL_DIFF.COUNT)
+			if (diff_index + 1 < LEVEL_TYPE.COUNT)
 			{
 				diff_unlocked[diff_index + 1] = true;
 				_str += " " + diff2str(diff_index + 1) + " levels are unlocked.";

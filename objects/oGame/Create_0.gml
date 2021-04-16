@@ -27,7 +27,7 @@ diff_index = -1; // which difficulty are we currently on
 level_index = -1; // which level in that difficulty are we currently on
 level_first_try = true; // player hasn't died yet?
 levels = [];
-levels[LEVEL_DIFF.BEGINNER] = 
+levels[LEVEL_TYPE.BEGINNER] = 
 [
 	level_create("Starting Out", rLevelBeg01, 10),
 	level_create("Upping the Pace", rLevelBeg02, 15),
@@ -36,7 +36,7 @@ levels[LEVEL_DIFF.BEGINNER] =
 	level_create("Slippery Sliding Sashimi", rLevelBeg05, 20)
 ];
 
-levels[LEVEL_DIFF.INTERMEDIATE] = 
+levels[LEVEL_TYPE.INTERMEDIATE] = 
 [
 	level_create("Octopus", rLevelInt01, 10),
 	level_create("Spring Forward", rLevelInt02, 20),
@@ -45,7 +45,7 @@ levels[LEVEL_DIFF.INTERMEDIATE] =
 	level_create("Trapdoor Track Lesson", rLevelInt05, 12)
 ];
 
-levels[LEVEL_DIFF.EXPERT] = 
+levels[LEVEL_TYPE.EXPERT] = 
 [
 	level_create("Up and Away", rLevelExp01, 35),
 	level_create("Down You Go", rLevelExp02, 5),
@@ -55,16 +55,16 @@ levels[LEVEL_DIFF.EXPERT] =
 ];
 #endregion
 
-diff_completed = array_create(LEVEL_DIFF.COUNT);
-diff_unlocked = array_create(LEVEL_DIFF.COUNT);
+diff_completed = array_create(LEVEL_TYPE.COUNT);
+diff_unlocked = array_create(LEVEL_TYPE.COUNT);
 
 // by default, only beginner is availible
-for (var i = 1; i < LEVEL_DIFF.COUNT; i++)
+for (var i = 1; i < LEVEL_TYPE.COUNT; i++)
 	diff_unlocked[i] = false;
-diff_unlocked[LEVEL_DIFF.BEGINNER] = true;
+diff_unlocked[LEVEL_TYPE.BEGINNER] = true;
 
 // by default, no difficilies have been completed
-for (var i = 1; i < LEVEL_DIFF.COUNT; i++)
+for (var i = 1; i < LEVEL_TYPE.COUNT; i++)
 	diff_completed[i] = false;
 
 // in the case that the player has save data, load it
@@ -73,7 +73,7 @@ if (!debug_mode || DEBUG_LOAD_DATA) my_game_load();
 // unlock all levels, if desired
 if (DEBUG_UNLOCK_ALL)
 {
-	for (var i = 0; i < LEVEL_DIFF.COUNT; i++)
+	for (var i = 0; i < LEVEL_TYPE.COUNT; i++)
 	{
 		diff_unlocked[i] = true;
 		diff_completed[i] = true;
@@ -81,7 +81,7 @@ if (DEBUG_UNLOCK_ALL)
 }
 
 // an array of rooms for difficulty select
-menu_level_rooms = array_create(LEVEL_DIFF.COUNT);
+menu_level_rooms = array_create(LEVEL_TYPE.COUNT);
 menu_level_rooms[0] = rMenuLevelsBeginner;
 menu_level_rooms[1] = rMenuLevelsIntermediate;
 menu_level_rooms[2] = rMenuLevelsExpert;
