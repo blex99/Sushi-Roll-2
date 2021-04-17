@@ -70,7 +70,7 @@ for (var i = 1; i < LEVEL_TYPE.COUNT; i++)
 	diff_unlocked[i] = false;
 diff_unlocked[LEVEL_TYPE.BEGINNER] = true;
 
-// by default, no difficilies have been completed
+// by default, no level types have been completed
 for (var i = 1; i < LEVEL_TYPE.COUNT; i++)
 	diff_completed[i] = false;
 
@@ -95,5 +95,5 @@ menu_level_rooms[2] = rMenuArea03;
 menu_level_rooms[3] = rMenuArea04;
 
 draw_set_font(fnUI);
-room_goto((debug_mode) ? DEBUG_START_ROOM : rSplashScreen);
+room_goto((debug_mode) ? DEBUG_START_ROOM : rMenuMain);
 

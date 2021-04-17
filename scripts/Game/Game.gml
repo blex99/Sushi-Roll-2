@@ -180,7 +180,6 @@ function my_game_save()
 	buffer_save(_buffer, "save.sav");
 	buffer_delete(_buffer);
 
-	info_box_create("Saved Data");
 }
 
 // load the game data
@@ -197,12 +196,20 @@ function my_game_load()
 		levels = _loadData[0];
 		diff_unlocked = _loadData[1];
 		diff_completed = _loadData[2];
-		
-		info_box_create("Loaded Data");
 	}
 }
 
-
+// delete save file and call oGame's create event
+function game_clear_save()
+{
+	if (file_exists("save.sav"))
+	{
+		file_delete("save.sav");
+		with (oGame) event_perform(ev_create, 0);
+		
+		info_box_create("Cleared ALL save data.");
+	}
+}
 
 
 

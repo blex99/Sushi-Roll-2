@@ -15,8 +15,8 @@
 
 #macro DEBUG_START_ROOM		rMenuMain//rMenuMain
 #macro DEBUG_SHOW_VISUALS	false//false
-#macro DEBUG_LOAD_DATA		false//false
-#macro DEBUG_UNLOCK_ALL		true//false
+#macro DEBUG_LOAD_DATA		true//false
+#macro DEBUG_UNLOCK_ALL		false//false
 
 global.border_sprite = sNineSliceBoxBamboo;
 

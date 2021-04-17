@@ -53,11 +53,11 @@ if (input_one_pressed())
 	menu_committed = menu_cursor;
 	menu_control = false;
 }
-	
+
 // exit room, go to the previous room
 if (input_back_pressed())
 {
-	transition_start(my_previous_room);
+	menu_goto_previous_room();
 	exit;
 }
 
