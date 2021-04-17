@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 47,
+  "bbox_right": 63,
   "bbox_top": 0,
-  "bbox_bottom": 47,
+  "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 48,
-  "height": 48,
+  "width": 64,
+  "height": 64,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,15 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f3f4df1d-f72a-40bb-a37b-170f8415b26e","path":"sprites/sUILevelButton/sUILevelButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f3f4df1d-f72a-40bb-a37b-170f8415b26e","path":"sprites/sUILevelButton/sUILevelButton.yy",},"LayerId":{"name":"8b65fc1a-a6b6-4753-9567-1f7e9fd0a97e","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sUILevelButton","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","name":"f3f4df1d-f72a-40bb-a37b-170f8415b26e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"80fd8adb-62a2-4a72-abda-97a256cf77bc","path":"sprites/sUILevelButton/sUILevelButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"80fd8adb-62a2-4a72-abda-97a256cf77bc","path":"sprites/sUILevelButton/sUILevelButton.yy",},"LayerId":{"name":"8b65fc1a-a6b6-4753-9567-1f7e9fd0a97e","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sUILevelButton","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","name":"80fd8adb-62a2-4a72-abda-97a256cf77bc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4dc7941e-20f7-4b1f-aa68-c82fd1998396","path":"sprites/sUILevelButton/sUILevelButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4dc7941e-20f7-4b1f-aa68-c82fd1998396","path":"sprites/sUILevelButton/sUILevelButton.yy",},"LayerId":{"name":"8b65fc1a-a6b6-4753-9567-1f7e9fd0a97e","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sUILevelButton","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","name":"4dc7941e-20f7-4b1f-aa68-c82fd1998396","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"24f8dcb8-27d6-49e9-9c2a-40a5d06a6868","path":"sprites/sUILevelButton/sUILevelButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"24f8dcb8-27d6-49e9-9c2a-40a5d06a6868","path":"sprites/sUILevelButton/sUILevelButton.yy",},"LayerId":{"name":"86b1da7a-70b9-48e6-bd88-d3198c486fa9","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sUILevelButton","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","name":"24f8dcb8-27d6-49e9-9c2a-40a5d06a6868","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sUILevelButton","path":"sprites/sUILevelButton/sUILevelButton.yy",},
@@ -42,14 +36,12 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 3.0,
+    "length": 1.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c35ddf0f-b56b-46f0-9706-aebf8165bf6c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f3f4df1d-f72a-40bb-a37b-170f8415b26e","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"1ca31179-02ba-4c27-b583-6c8019a04615","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"80fd8adb-62a2-4a72-abda-97a256cf77bc","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"da9ae2f7-d982-432d-a11a-f63f2a885f9c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4dc7941e-20f7-4b1f-aa68-c82fd1998396","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a0ed1382-4430-46f1-91fc-9bff6bd23fe3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"24f8dcb8-27d6-49e9-9c2a-40a5d06a6868","path":"sprites/sUILevelButton/sUILevelButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -62,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 24,
-    "yorigin": 24,
+    "xorigin": 32,
+    "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sUILevelButton","path":"sprites/sUILevelButton/sUILevelButton.yy",},
@@ -73,8 +65,9 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8b65fc1a-a6b6-4753-9567-1f7e9fd0a97e","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"86b1da7a-70b9-48e6-bd88-d3198c486fa9","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "UI",
     "path": "folders/Sprites/UI.yy",

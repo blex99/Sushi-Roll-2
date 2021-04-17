@@ -1,7 +1,5 @@
 /// @desc inits all needed obj's for a level
 
-// hide DebugSprite asset layer
-layer_set_visible(layer_get_id("DebugSprites"), false);
 instance_create_layer(0, 0, "Instances", oPhysicsWorld);
 instance_create_layer(0, 0, "Instances", oInput);
 window_set_cursor(cr_none);

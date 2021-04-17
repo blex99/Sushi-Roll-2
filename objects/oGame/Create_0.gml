@@ -57,8 +57,8 @@ levels[LEVEL_TYPE.EXPERT] =
 levels[LEVEL_TYPE.MASTER] = 
 [
 	level_create("Intro to Gravity", rLevelMas01, 35),
-	level_create("Gravity 2", rLevelMas03, 5),
-	level_create("Gravity 3", rLevelMas03, 45),
+	level_create("Gravity 2", rLevelMas02, 25),
+	level_create("Gravity 3", rLevelMas03, 25),
 ];
 #endregion
 

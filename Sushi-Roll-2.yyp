@@ -80,7 +80,6 @@
     {"id":{"name":"sSpringStronger","path":"sprites/sSpringStronger/sSpringStronger.yy",},"order":13,},
     {"id":{"name":"oDebug","path":"objects/oDebug/oDebug.yy",},"order":1,},
     {"id":{"name":"pKinematic","path":"objects/pKinematic/pKinematic.yy",},"order":1,},
-    {"id":{"name":"sButtonLevel","path":"sprites/sButtonLevel/sButtonLevel.yy",},"order":3,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
     {"id":{"name":"pUI","path":"objects/pUI/pUI.yy",},"order":2,},
     {"id":{"name":"oButtonArea04","path":"objects/oButtonArea04/oButtonArea04.yy",},"order":16,},
