@@ -6,6 +6,9 @@ instance_create_layer(0, 0, "Instances", oPhysicsWorld);
 instance_create_layer(0, 0, "Instances", oInput);
 window_set_cursor(cr_none);
 
+// set default value for mouse position
+prev_mouse = Vector2(window_get_width() * 0.5, window_get_height() * 0.25);
+
 // update the current level struct
 level_struct = -1;
 with (oGame)
@@ -40,4 +43,3 @@ _inst.phy_rotation = 90;
 _inst = instance_create_layer(_sushi.x +_w_half + 1, _sushi.y, "Instances", oInvisibleSushiHolder);
 _inst.phy_rotation = 90;
 #endregion
-

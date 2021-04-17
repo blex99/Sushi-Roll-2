@@ -53,6 +53,13 @@ levels[LEVEL_TYPE.EXPERT] =
 	level_create("A Hard Level", rLevelExp04, 20),
 	level_create("Jumping Olympics: Silver", rLevelExp05, 12)
 ];
+
+levels[LEVEL_TYPE.MASTER] = 
+[
+	level_create("Intro to Gravity", rLevelMas01, 35),
+	level_create("Gravity 2", rLevelMas03, 5),
+	level_create("Gravity 3", rLevelMas03, 45),
+];
 #endregion
 
 diff_completed = array_create(LEVEL_TYPE.COUNT);
@@ -82,9 +89,10 @@ if (DEBUG_UNLOCK_ALL)
 
 // an array of rooms for difficulty select
 menu_level_rooms = array_create(LEVEL_TYPE.COUNT);
-menu_level_rooms[0] = rMenuLevelsBeginner;
-menu_level_rooms[1] = rMenuLevelsIntermediate;
-menu_level_rooms[2] = rMenuLevelsExpert;
+menu_level_rooms[0] = rMenuArea01;
+menu_level_rooms[1] = rMenuArea02;
+menu_level_rooms[2] = rMenuArea03;
+menu_level_rooms[3] = rMenuArea04;
 
 draw_set_font(fnUI);
 room_goto((debug_mode) ? DEBUG_START_ROOM : rSplashScreen);

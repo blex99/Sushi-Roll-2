@@ -53,26 +53,28 @@ function level_toggle_pause()
 			// pausing
 			prev_state = state;
 			state = LEVEL.PAUSED;
-			
 			physics_pause_enable(true);
-			
-			// create menu
 			instance_create_layer(0, 0, "Instances", oMenuPause);
 			
-			// show mouse and center its position
-			window_mouse_set(window_get_width() / 2, window_get_height() / 4);
-			if (!global.using_controller) window_set_cursor(cr_default);
+			// display mouse, if using keyboard/mouse
+			if (!global.using_controller)
+				window_set_cursor(cr_default);
+			
+			// show mouse and revert its position to last known pos
+			window_mouse_set(prev_mouse.x, prev_mouse.y);
 		}
 		else
 		{
 			// unpausing
 			state = prev_state;
-			
 			physics_pause_enable(false);
-			
 			instance_destroy(oMenuPause);
-			
 			window_set_cursor(cr_none);
+			
+			// remember mouse position
+			var _mx = window_mouse_get_x();
+			var _my = window_mouse_get_y();
+			prev_mouse = Vector2(_mx, _my);
 		}
 	}
 }

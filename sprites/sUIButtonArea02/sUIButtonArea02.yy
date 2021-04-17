@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 95,
+  "bbox_right": 159,
   "bbox_top": 0,
-  "bbox_bottom": 95,
+  "bbox_bottom": 159,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 96,
-  "height": 96,
+  "width": 160,
+  "height": 160,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"95d702e7-3cf4-4a56-8236-c1862ff0f2e0","path":"sprites/sButtonBack/sButtonBack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"95d702e7-3cf4-4a56-8236-c1862ff0f2e0","path":"sprites/sButtonBack/sButtonBack.yy",},"LayerId":{"name":"ffc03a5d-faa1-4781-9999-0e00bd820074","path":"sprites/sButtonBack/sButtonBack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sButtonBack","path":"sprites/sButtonBack/sButtonBack.yy",},"resourceVersion":"1.0","name":"95d702e7-3cf4-4a56-8236-c1862ff0f2e0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4cba67b4-e3e0-40ef-aaf8-b2c419fdf836","path":"sprites/sUIButtonArea02/sUIButtonArea02.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4cba67b4-e3e0-40ef-aaf8-b2c419fdf836","path":"sprites/sUIButtonArea02/sUIButtonArea02.yy",},"LayerId":{"name":"310b108f-94ac-4f5f-b04b-fff34f3ba052","path":"sprites/sUIButtonArea02/sUIButtonArea02.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sUIButtonArea02","path":"sprites/sUIButtonArea02/sUIButtonArea02.yy",},"resourceVersion":"1.0","name":"4cba67b4-e3e0-40ef-aaf8-b2c419fdf836","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sButtonBack","path":"sprites/sButtonBack/sButtonBack.yy",},
+    "spriteId": {"name":"sUIButtonArea02","path":"sprites/sUIButtonArea02/sUIButtonArea02.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c21155e6-260d-4eb5-a117-f2a15b6f55fe","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95d702e7-3cf4-4a56-8236-c1862ff0f2e0","path":"sprites/sButtonBack/sButtonBack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c1203028-b232-497a-a447-df744b34aebd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4cba67b4-e3e0-40ef-aaf8-b2c419fdf836","path":"sprites/sUIButtonArea02/sUIButtonArea02.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,18 +54,18 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 48,
-    "yorigin": 48,
+    "xorigin": 80,
+    "yorigin": 80,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sButtonBack","path":"sprites/sButtonBack/sButtonBack.yy",},
+    "parent": {"name":"sUIButtonArea02","path":"sprites/sUIButtonArea02/sUIButtonArea02.yy",},
     "resourceVersion": "1.3",
-    "name": "sButtonBack",
+    "name": "sUIButtonArea02",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ffc03a5d-faa1-4781-9999-0e00bd820074","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"310b108f-94ac-4f5f-b04b-fff34f3ba052","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sButtonBack",
+  "name": "sUIButtonArea02",
   "tags": [],
   "resourceType": "GMSprite",
 }

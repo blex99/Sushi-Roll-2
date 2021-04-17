@@ -13,7 +13,7 @@
 
 #macro START_FULLSCREEN		false
 
-#macro DEBUG_START_ROOM		rLevelUnset03//rMenuMain
+#macro DEBUG_START_ROOM		rMenuMain//rMenuMain
 #macro DEBUG_SHOW_VISUALS	false//false
 #macro DEBUG_LOAD_DATA		false//false
 #macro DEBUG_UNLOCK_ALL		true//false
@@ -35,7 +35,8 @@ enum LEVEL_TYPE
 	BEGINNER,
 	INTERMEDIATE,
 	EXPERT,
-	COUNT // = 3, the size of the enum
+	MASTER,
+	COUNT // = 4, the size of the enum
 }
 
 // for oLevel
