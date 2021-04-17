@@ -171,3 +171,14 @@ function sushi_jump(_newtons, _angle)
 		}
 	}	
 }
+
+// return the resultant speed (divided by 10)
+function sushi_get_speed()
+{
+	with (sushi_cur())
+	{
+		var _asqrd = sqr(phy_linear_velocity_x);
+		var _bsqrd = sqr(phy_linear_velocity_y);
+		return round(sqrt(_asqrd + _bsqrd) / 10);
+	}
+}
