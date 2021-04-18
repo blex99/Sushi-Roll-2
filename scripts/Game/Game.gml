@@ -202,9 +202,10 @@ function my_game_load()
 // delete save file and call oGame's create event
 function game_clear_save()
 {
-	if (file_exists("save.sav"))
+	if (show_question("Are you sure?"))
 	{
-		file_delete("save.sav");
+		if (file_exists("save.sav")) file_delete("save.sav");
+		
 		with (oGame) event_perform(ev_create, 0);
 		
 		info_box_create("Cleared ALL save data.");
