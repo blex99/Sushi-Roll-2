@@ -42,13 +42,6 @@ else
 }
 #endregion
 
-/* jump if large and you're grounded 
-if (image_xscale > 1 && sushi_is_grounded() &&
-	keyboard_check_pressed(vk_space))
-{
-	sushi_jump(100, 90);
-}
-*/
 jump_buffer = max(0, jump_buffer - 1);
 
 // shrink and grow animation

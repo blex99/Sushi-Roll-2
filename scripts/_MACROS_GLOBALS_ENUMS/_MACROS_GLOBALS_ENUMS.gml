@@ -13,10 +13,10 @@
 
 #macro START_FULLSCREEN		false
 
-#macro DEBUG_START_ROOM		rMenuMain//rMenuMain
+#macro DEBUG_START_ROOM		rLevel_A03_L03//rMenuMain
 #macro DEBUG_SHOW_VISUALS	false//false
-#macro DEBUG_LOAD_DATA		true//false
-#macro DEBUG_UNLOCK_ALL		false//false
+#macro DEBUG_LOAD_DATA		true//true
+#macro DEBUG_UNLOCK_ALL		true//false
 
 global.border_sprite = sNineSliceBoxBamboo;
 

@@ -23,8 +23,3 @@ angular_damp	= 0.5;
 fric			= 2;
 
 my_fix			= -1; // assigned in sushi_init_fixture()
-
-my_previous_x = x;
-my_previous_y = y;
-time_to_detect = 2;
-alarm[1] = room_speed * time_to_detect;

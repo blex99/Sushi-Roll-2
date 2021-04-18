@@ -44,7 +44,7 @@ if (follow_size > 0)
 	y = _following.y;
 	
 	// set target next follow
-	alarm[0] = room_speed;
+	alarm[0] = room_speed * 2; // how many frames to stare at goal
 	zoom_target = 1.5;
 	zoom = zoom_target;
 }

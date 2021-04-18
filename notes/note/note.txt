@@ -11,14 +11,13 @@ TODO:
 	gameplay:
 		volume sliders
 		set keybindings
-		option to clear save data (in options menu)
 		moving platform path indicator
 		rice is currency to buy different sushi's
 		sticky walls
-		make it so user cannot easily change game data
 -------------------------------------------------------------------------------
 IDEAS:
 	pinball-type levels
+	zoom out upon pause
 -------------------------------------------------------------------------------
 PROBLEMS:
 	moving knives are broken!
