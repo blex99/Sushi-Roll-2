@@ -1,6 +1,6 @@
 /// @description update level_index
 
-var _difficulties = LEVEL_TYPE.COUNT;
+var _difficulties = LEVEL_AREA.COUNT;
 for (var i = 0; i < _difficulties; i++)
 {
 	var _len = array_length(levels[i]);

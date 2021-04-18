@@ -23,15 +23,15 @@ function game_goto_menu_level()
 		level_first_try = true;
 		
 		// check if you've unlocked a new difficulty
-		if (has_beaten_all_levels_in(area_index) &&
-			diff_completed[area_index] == false)
+		if (num_beaten_levels_in(area_index) >= AREA_UNLOCK_REQ &&
+			area_completed[area_index] == false)
 		{
-			diff_completed[area_index] = true;
-			var _str = diff2str(area_index) + " levels complete!";
-			if (area_index + 1 < LEVEL_TYPE.COUNT)
+			area_completed[area_index] = true;
+			var _str = "";
+			if (area_index + 1 < LEVEL_AREA.COUNT)
 			{
-				diff_unlocked[area_index + 1] = true;
-				_str += " " + diff2str(area_index + 1) + " levels are unlocked.";
+				area_unlocked[area_index + 1] = true;
+				_str += diff2str(area_index + 1) + " levels are unlocked.";
 			}
 			
 			info_box_create(_str);
@@ -46,18 +46,18 @@ function game_goto_menu_level()
 	}
 }
 
-// if you've beaten all the levels in a specified difficulty
-function has_beaten_all_levels_in(_diff)
+// number of beaten levels in a specific area
+function num_beaten_levels_in(_area)
 {
 	with (oGame)
 	{
-		var _len = array_length(levels[_diff]);
+		var _len = array_length(levels[_area]);
+		var _num = 0;
 		for (var i = 0; i < _len; i++)
 		{
-			if (levels[_diff][i].has_beaten == false)
-				return false;
+			if (levels[_area][i].has_beaten) _num++;
 		}
-		return true;
+		return _num;
 	}
 }
 
@@ -171,7 +171,7 @@ function my_game_save()
 	with (oGame)
 	{
 		// level data, which difficulties you've unlocked and completed
-		array_push(_saveData, levels, diff_unlocked, diff_completed);
+		array_push(_saveData, levels, area_unlocked, area_completed);
 	}
 	
 	var _string = json_stringify(_saveData);
@@ -194,8 +194,8 @@ function my_game_load()
 		var _loadData = json_parse(_string);
 		
 		levels = _loadData[0];
-		diff_unlocked = _loadData[1];
-		diff_completed = _loadData[2];
+		area_unlocked = _loadData[1];
+		area_completed = _loadData[2];
 	}
 }
 

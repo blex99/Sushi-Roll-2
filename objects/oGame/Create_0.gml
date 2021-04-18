@@ -27,7 +27,7 @@ area_index = -1; // which difficulty are we currently on
 level_index = -1; // which level in that difficulty are we currently on
 level_first_try = true; // player hasn't died yet?
 levels = [];
-levels[LEVEL_TYPE.BEGINNER] = 
+levels[LEVEL_AREA.BEGINNER] = 
 [
 	level_create("Starting Out", rLevel_StartingOut, 10),
 	level_create("360", rLevel_360, 20),
@@ -36,7 +36,7 @@ levels[LEVEL_TYPE.BEGINNER] =
 	level_create("Watch Out for Knives", rLevel_WatchOutForKnives, 15),
 ];
 
-levels[LEVEL_TYPE.INTERMEDIATE] = 
+levels[LEVEL_AREA.INTERMEDIATE] = 
 [
 	level_create("Octopus", rLevel_Octopus, 10),
 	level_create("Spring Forward", rLevel_SpringForward, 20),
@@ -45,7 +45,7 @@ levels[LEVEL_TYPE.INTERMEDIATE] =
 	level_create("Trapdoor Track Lesson", rLevel_TrapdoorTrackLesson, 12),
 ];
 
-levels[LEVEL_TYPE.EXPERT] = 
+levels[LEVEL_AREA.EXPERT] = 
 [
 	level_create("Up and Away", rLevel_UpAndAway, 35),
 	level_create("Down You Go", rLevel_DownYouGo, 5),
@@ -54,7 +54,7 @@ levels[LEVEL_TYPE.EXPERT] =
 	level_create("Sushi Olympics: Silver", rLevel_SushiOlympicsSilver, 12),
 ];
 
-levels[LEVEL_TYPE.MASTER] = 
+levels[LEVEL_AREA.MASTER] = 
 [
 	level_create("Intro to Gravity", rLevel_IntroToGravity, 35),
 	level_create("Orientation", rLevel_Orientation, 25),
@@ -62,17 +62,17 @@ levels[LEVEL_TYPE.MASTER] =
 ];
 #endregion
 
-diff_completed = array_create(LEVEL_TYPE.COUNT);
-diff_unlocked = array_create(LEVEL_TYPE.COUNT);
+area_completed = array_create(LEVEL_AREA.COUNT);
+area_unlocked = array_create(LEVEL_AREA.COUNT);
 
 // by default, only beginner is availible
-for (var i = 1; i < LEVEL_TYPE.COUNT; i++)
-	diff_unlocked[i] = false;
-diff_unlocked[LEVEL_TYPE.BEGINNER] = true;
+for (var i = 1; i < LEVEL_AREA.COUNT; i++)
+	area_unlocked[i] = false;
+area_unlocked[LEVEL_AREA.BEGINNER] = true;
 
 // by default, no level types have been completed
-for (var i = 1; i < LEVEL_TYPE.COUNT; i++)
-	diff_completed[i] = false;
+for (var i = 1; i < LEVEL_AREA.COUNT; i++)
+	area_completed[i] = false;
 
 // in the case that the player has save data, load it
 if (!debug_mode || DEBUG_LOAD_DATA) my_game_load();
@@ -80,15 +80,15 @@ if (!debug_mode || DEBUG_LOAD_DATA) my_game_load();
 // unlock all levels, if desired
 if (DEBUG_UNLOCK_ALL)
 {
-	for (var i = 0; i < LEVEL_TYPE.COUNT; i++)
+	for (var i = 0; i < LEVEL_AREA.COUNT; i++)
 	{
-		diff_unlocked[i] = true;
-		diff_completed[i] = true;
+		area_unlocked[i] = true;
+		area_completed[i] = true;
 	}
 }
 
 // an array of rooms for difficulty select
-menu_level_rooms = array_create(LEVEL_TYPE.COUNT);
+menu_level_rooms = array_create(LEVEL_AREA.COUNT);
 menu_level_rooms[0] = rMenuArea01;
 menu_level_rooms[1] = rMenuArea02;
 menu_level_rooms[2] = rMenuArea03;

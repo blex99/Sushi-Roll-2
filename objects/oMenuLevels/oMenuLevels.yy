@@ -28,7 +28,7 @@
     {"isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
-    {"varType":0,"value":"LEVEL_TYPE.BEGINNER","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"difficulty","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"LEVEL_AREA.BEGINNER","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"area","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"my_previous_room","path":"objects/pMenu/pMenu.yy",},"objectId":{"name":"pMenu","path":"objects/pMenu/pMenu.yy",},"value":"rMenuAreaSelect","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

@@ -12,7 +12,7 @@ var _str = "";
 with (oGame)
 {
 	// the level you're hovering over
-	var _level = levels[other.difficulty][other.menu_cursor.btag];
+	var _level = levels[other.area][other.menu_cursor.btag];
 	
 	// show if you've beaten the level before
 	if (_level.has_beaten) _str += "*";

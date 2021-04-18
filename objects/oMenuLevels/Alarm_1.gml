@@ -9,7 +9,7 @@ for (var i = 0; i < _len; i++)
 {
 	if (buttons[i].object_index == oButtonBack) continue;
 	
-	var _level = oGame.levels[difficulty][buttons[i].btag];
+	var _level = oGame.levels[area][buttons[i].btag];
 	if (!_level.has_beaten)
 	{
 		menu_cursor = buttons[i];

@@ -81,15 +81,15 @@ for (var i = 0; i < _len; i++)
 
 	if (b == menu_committed)
 	{
-		b.sub_image = BUTTON.PRESSED;
+		b.button_state = BUTTON.PRESSED;
 		if (alarm[0] == -1) alarm[0] = 10;
 	}
 	else if (b == menu_cursor)
 	{
-		b.sub_image = BUTTON.HOVERING;
+		b.button_state = BUTTON.HOVERING;
 	}
 	else
 	{
-		b.sub_image = BUTTON.IDLE;
+		b.button_state = BUTTON.IDLE;
 	}
 }

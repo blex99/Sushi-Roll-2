@@ -9,7 +9,7 @@ if (menu_committed.object_index == oButtonBack)
 }
 else
 {
-	game_goto_level(difficulty, menu_committed.btag);
+	game_goto_level(area, menu_committed.btag);
 }
 
 menu_committed = noone;

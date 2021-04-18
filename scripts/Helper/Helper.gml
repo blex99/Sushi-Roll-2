@@ -19,9 +19,10 @@ function diff2str(_diff)
 {
 	switch(_diff)
 	{
-		case LEVEL_TYPE.BEGINNER:		return "Beginner";
-		case LEVEL_TYPE.INTERMEDIATE:	return "Intermediate";
-		case LEVEL_TYPE.EXPERT:			return "Expert";
+		case LEVEL_AREA.BEGINNER:		return "Beginner";
+		case LEVEL_AREA.INTERMEDIATE:	return "Intermediate";
+		case LEVEL_AREA.EXPERT:			return "Expert";
+		case LEVEL_AREA.MASTER:			return "Master";
 	}
 }
 

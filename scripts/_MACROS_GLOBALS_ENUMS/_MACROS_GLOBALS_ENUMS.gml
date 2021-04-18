@@ -5,6 +5,7 @@
 #macro MOUSE_GUI_Y device_mouse_y_to_gui(0)
 #macro MOUSE_LEFT mouse_check_button_pressed(mb_left)
 #macro CAM view_camera[0]
+#macro AREA_UNLOCK_REQ 3 // ...levels to complete
 
 #macro VALUE_RICE				50
 #macro VALUE_COLLECTIBLE		250
@@ -16,7 +17,7 @@
 #macro DEBUG_START_ROOM		rMenuMain//rMenuMain
 #macro DEBUG_SHOW_VISUALS	false//false
 #macro DEBUG_LOAD_DATA		true//true
-#macro DEBUG_UNLOCK_ALL		true//false
+#macro DEBUG_UNLOCK_ALL		false//false
 
 global.border_sprite = sNineSliceBoxBamboo;
 
@@ -30,7 +31,7 @@ enum DIR
 	NA // none
 }
 
-enum LEVEL_TYPE
+enum LEVEL_AREA
 {
 	BEGINNER,
 	INTERMEDIATE,
