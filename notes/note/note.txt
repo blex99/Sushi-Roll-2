@@ -32,6 +32,9 @@ easy	medium	hard
 $ACD8D3	$FFFFCC	$E5ABA0
 
 save location: C:\Users\alex\AppData\Local\Sushi_Roll_2
+
+Thin Chopsticks: sushi can jump ~320 pix
+Regular Chopsticks: sushi can jump ~256 pix
 -------------------------------------------------------------------------------
 GOAL:
 	Deliver sushi to goal.

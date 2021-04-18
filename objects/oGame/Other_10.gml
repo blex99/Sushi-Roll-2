@@ -9,7 +9,7 @@ for (var i = 0; i < _difficulties; i++)
 		if (levels[i][j].room_name == room)
 		{
 			// you've entered a level room
-			diff_index = i;
+			area_index = i;
 			level_index = j;
 			exit;
 		}

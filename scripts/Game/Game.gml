@@ -23,15 +23,15 @@ function game_goto_menu_level()
 		level_first_try = true;
 		
 		// check if you've unlocked a new difficulty
-		if (has_beaten_all_levels_in(diff_index) &&
-			diff_completed[diff_index] == false)
+		if (has_beaten_all_levels_in(area_index) &&
+			diff_completed[area_index] == false)
 		{
-			diff_completed[diff_index] = true;
-			var _str = diff2str(diff_index) + " levels complete!";
-			if (diff_index + 1 < LEVEL_TYPE.COUNT)
+			diff_completed[area_index] = true;
+			var _str = diff2str(area_index) + " levels complete!";
+			if (area_index + 1 < LEVEL_TYPE.COUNT)
 			{
-				diff_unlocked[diff_index + 1] = true;
-				_str += " " + diff2str(diff_index + 1) + " levels are unlocked.";
+				diff_unlocked[area_index + 1] = true;
+				_str += " " + diff2str(area_index + 1) + " levels are unlocked.";
 			}
 			
 			info_box_create(_str);
@@ -39,7 +39,7 @@ function game_goto_menu_level()
 		}
 		else
 		{
-			transition_start(menu_level_rooms[diff_index]);
+			transition_start(menu_level_rooms[area_index]);
 		}
 		
 		my_game_save();
@@ -69,9 +69,9 @@ function game_goto_level(_difficulty, _level)
 	
 	with (oGame)
 	{
-		diff_index = _difficulty;
-		level_index = _level % array_length(levels[diff_index]);
-		transition_start(levels[diff_index][level_index].room_name);
+		area_index = _difficulty;
+		level_index = _level % array_length(levels[area_index]);
+		transition_start(levels[area_index][level_index].room_name);
 		level_first_try = true;
 	}
 }
@@ -134,19 +134,19 @@ function game_update_cur_level_struct()
 	{
 		var _score = stats_get_score();
 		var _time = timer_get_time();
-		var _best_score = levels[diff_index][level_index].best_score;
-		var _best_time = levels[diff_index][level_index].best_time_mus;
+		var _best_score = levels[area_index][level_index].best_score;
+		var _best_time = levels[area_index][level_index].best_time_mus;
 				
 		// if you've beaten your highest score
 		if (_best_score < _score)
-			levels[diff_index][level_index].best_score = _score;
+			levels[area_index][level_index].best_score = _score;
 			
 		// if you've beaten your best time
 		if (_best_time > _time)
-			levels[diff_index][level_index].best_time_mus = _time;
+			levels[area_index][level_index].best_time_mus = _time;
 		
 		// indicate you've beaten it
-		levels[diff_index][level_index].has_beaten = true;
+		levels[area_index][level_index].has_beaten = true;
 	}
 }
 
@@ -155,7 +155,7 @@ function game_level_room_reset()
 {
 	with (oGame)
 	{
-		levels[diff_index][level_index].death_counter++;
+		levels[area_index][level_index].death_counter++;
 	}
 	
 	my_game_save();

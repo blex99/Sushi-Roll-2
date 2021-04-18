@@ -10,16 +10,15 @@ if (level_is_state(LEVEL.PAUSED)) exit;
 
 var _w = display_get_gui_width();
 var _h = display_get_gui_height();
-var _room_num = level_get_number(level_struct.room_name);
 var _msg = "";
 set_draw(c_black, 1, fnUIBig, fa_center, fa_center);
 
 if (level_is_state(LEVEL.PANNING))
 {
-	_msg = "~ Level " + _room_num;
-	if (level_struct.level_name != "") _msg += " - " + level_struct.level_name;
-	_msg +=  " ~";
-	
+	_msg = "~ Area " + string(area_number) + " ~\n";
+	_msg += "~ Level " + string(level_number) + ": ";
+	_msg += level_struct.level_name + " ~";
+
 	draw_set_alpha(ui_alpha);
 }
 else if (level_is_state(LEVEL.COUNTING_DOWN))

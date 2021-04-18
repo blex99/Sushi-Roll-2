@@ -9,20 +9,24 @@ prev_mouse = Vector2(window_get_width() * 0.5, window_get_height() * 0.25);
 
 // update the current level struct
 level_struct = -1;
+area_number = -1;
+level_number = -1;
 with (oGame)
 {
-	if (diff_index == -1 || level_index == -1)
+	if (area_index == -1 || level_index == -1)
 	{
 		// set default vals in case unset level
-		diff_index = 0;
+		area_index = 0;
 		level_index = 0;
 	}
 	
-	other.level_struct = levels[diff_index][level_index];
+	other.area_number = area_index + 1;
+	other.level_number = level_index + 1;
+	other.level_struct = levels[area_index][level_index];
 }
 
 state = LEVEL.PANNING;
-ui_alpha_start = 3;
+ui_alpha_start = 5;
 ui_alpha = ui_alpha_start; // also text fade duration in seconds
 
 #region create box around sushi

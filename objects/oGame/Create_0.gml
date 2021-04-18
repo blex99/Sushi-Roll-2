@@ -23,42 +23,42 @@ display_set_gui_size(BASE_W , BASE_H);
 #endregion
 
 #region level array
-diff_index = -1; // which difficulty are we currently on
+area_index = -1; // which difficulty are we currently on
 level_index = -1; // which level in that difficulty are we currently on
 level_first_try = true; // player hasn't died yet?
 levels = [];
 levels[LEVEL_TYPE.BEGINNER] = 
 [
-	level_create("Starting Out", rLevel_A01_L01, 10),
-	level_create("Big Knives", rLevel_A01_L02, 15),
-	level_create("Counting Calories", rLevel_A01_L03, 20),
-	level_create("Jumping Olympics: Bronze", rLevel_A01_L04, 5),
-	level_create("Slippery Sliding Sashimi", rLevel_A01_L05, 20)
+	level_create("Starting Out", rLevel_StartingOut, 10),
+	level_create("360", rLevel_360, 20),
+	level_create("Sushi Olympics: Bronze", rLevel_SushiOlympicsBronze, 5),
+	level_create("Slippery Sliding Sashimi", rLevel_SlipperySlidingSashimi, 20),
+	level_create("Watch Out for Knives", rLevel_WatchOutForKnives, 15),
 ];
 
 levels[LEVEL_TYPE.INTERMEDIATE] = 
 [
-	level_create("Octopus", rLevel_A02_L01, 10),
-	level_create("Spring Forward", rLevel_A02_L02, 20),
-	level_create("Ramps", rLevel_A02_L03, 20),
-	level_create("Upping the Pace", rLevel_A02_L04, 15),
-	level_create("Trapdoor Track Lesson", rLevel_A02_L05, 12)
+	level_create("Octopus", rLevel_Octopus, 10),
+	level_create("Spring Forward", rLevel_SpringForward, 20),
+	level_create("Rampin' Up", rLevel_RampinUp, 20),
+	level_create("Right or Left?", rLevel_RightOrLeft, 15),
+	level_create("Trapdoor Track Lesson", rLevel_TrapdoorTrackLesson, 12),
 ];
 
 levels[LEVEL_TYPE.EXPERT] = 
 [
-	level_create("Up and Away", rLevel_A03_L01, 35),
-	level_create("Down You Go", rLevel_A03_L02, 5),
-	level_create("Slow and Steady", rLevel_A03_L03, 45),
-	level_create("A Hard Level", rLevel_A03_L04, 20),
-	level_create("Jumping Olympics: Silver", rLevel_A03_L05, 12)
+	level_create("Up and Away", rLevel_UpAndAway, 35),
+	level_create("Down You Go", rLevel_DownYouGo, 5),
+	level_create("Slow and Steady", rLevel_SlowAndSteady, 45),
+	level_create("Knife Dance", rLevel_KnifeDance, 20),
+	level_create("Sushi Olympics: Silver", rLevel_SushiOlympicsSilver, 12),
 ];
 
 levels[LEVEL_TYPE.MASTER] = 
 [
-	level_create("Intro to Gravity", rLevel_A04_L01, 35),
-	level_create("Gravity 2", rLevel_A04_L02, 25),
-	level_create("Gravity 3", rLevel_A04_L03, 25),
+	level_create("Intro to Gravity", rLevel_IntroToGravity, 35),
+	level_create("Orientation", rLevel_Orientation, 25),
+	level_create("Gravitational Maze", rLevel_GravitationalMaze, 25),
 ];
 #endregion
 
