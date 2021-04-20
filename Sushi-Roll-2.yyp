@@ -95,6 +95,7 @@
     {"id":{"name":"oCurve","path":"objects/oCurve/oCurve.yy",},"order":21,},
     {"id":{"name":"pStatic","path":"objects/pStatic/pStatic.yy",},"order":4,},
     {"id":{"name":"oTriangle","path":"objects/oTriangle/oTriangle.yy",},"order":20,},
+    {"id":{"name":"oTutorialText","path":"objects/oTutorialText/oTutorialText.yy",},"order":8,},
     {"id":{"name":"fnUI","path":"fonts/fnUI/fnUI.yy",},"order":1,},
     {"id":{"name":"oButtonSquare","path":"objects/oButtonSquare/oButtonSquare.yy",},"order":12,},
     {"id":{"name":"paSquare256","path":"paths/paSquare256/paSquare256.yy",},"order":4,},
