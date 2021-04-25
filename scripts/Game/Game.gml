@@ -11,7 +11,7 @@ function update_cursor()
 	window_set_cursor(_cursor);
 }
 
-// (upon beating a level,) move back to either the previous menu or the main
+// (upon beating a level,) move back to the main
 // menu. also save the game
 function game_goto_menu_level()
 {

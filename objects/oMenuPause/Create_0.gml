@@ -10,7 +10,7 @@ var _w = display_get_gui_width();
 var _h = display_get_gui_height();
 
 var _button;
-var i = 0;
+var i = -2;
 var buff = 64;
 
 _button = instance_create_depth(_w / 2, (i++ * buff) + (_h / 2), -9999, oButton);
@@ -36,7 +36,14 @@ array_push(buttons, _button);
 
 _button = instance_create_depth(_w / 2, (i++ * buff) + (_h / 2), -9999, oButton);
 _button.btag = 3;
-_button.dir = [-1, 2, -1, 0];
+_button.dir = [-1, 2, -1, 4];
+_button.my_script = game_goto_menu_level;
+_button.text = "Level Select";
+array_push(buttons, _button);
+
+_button = instance_create_depth(_w / 2, (i++ * buff) + (_h / 2), -9999, oButton);
+_button.btag = 4;
+_button.dir = [-1, 3, -1, 0];
 _button.my_script = transition_start;
 _button.my_script_args = [rMenuMain];
 _button.text = "Main Menu";

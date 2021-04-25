@@ -1,7 +1,8 @@
 // start of level pan from goal to sushi
 
 // skip if you're not in a level room or paused
-if (!instance_exists(oLevelManager) || level_is_state(LEVEL.PAUSED)) exit;
+if (!instance_exists(oLevelManager)) exit;
+if (level_is_state(LEVEL.PAUSED)) { path_speed = 0; exit; }
 
 if (level_is_state(LEVEL.PANNING) && alarm[0] == -1)
 {
