@@ -1,0 +1,25 @@
+{
+  "kind": 1,
+  "closed": false,
+  "precision": 4,
+  "points": [
+    {"speed":100.0,"x":5360.0,"y":3104.0,},
+    {"speed":100.0,"x":4288.0,"y":3264.0,},
+    {"speed":100.0,"x":3712.0,"y":3008.0,},
+    {"speed":100.0,"x":3376.0,"y":2656.0,},
+    {"speed":100.0,"x":3056.0,"y":2656.0,},
+    {"speed":100.0,"x":2864.0,"y":3392.0,},
+    {"speed":100.0,"x":2480.0,"y":2976.0,},
+    {"speed":100.0,"x":1584.0,"y":2752.0,},
+    {"speed":100.0,"x":1328.0,"y":2624.0,},
+    {"speed":100.0,"x":1152.0,"y":2336.0,},
+  ],
+  "parent": {
+    "name": "02",
+    "path": "folders/Paths/LevelPaths/02.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "paRampinUp",
+  "tags": [],
+  "resourceType": "GMPath",
+}

@@ -35,12 +35,9 @@ function game_goto_menu_level()
 			}
 			
 			info_box_create(_str);
-			transition_start(rMenuMain);
 		}
-		else
-		{
-			transition_start(menu_level_rooms[area_index]);
-		}
+		
+		transition_start(menu_level_rooms[area_index]);
 		
 		my_game_save();
 	}

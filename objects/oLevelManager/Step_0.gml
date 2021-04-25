@@ -1,21 +1,23 @@
 /// @description checks if level complete and paused
 
 ui_alpha = max(ui_alpha - (1 / room_speed), 0);
+var _can_skip = (debug_mode || !oGame.level_first_try);
+var _input_one = input_one_pressed();
+var _input_pause = input_pause_pressed();
 
-if (input_one_pressed())
+if (_input_one && level_is_state(LEVEL.COMPLETE))
 {
-	if (level_is_state(LEVEL.COMPLETE))
-	{
-		game_goto_menu_level();
-	}
-	else if (level_is_state(LEVEL.COUNTING_DOWN) && (debug_mode || !oGame.level_first_try))
-	{
-		info_box_create("Skipped Countdown!");
-		timer_set_zero();
-	}
+	game_goto_menu_level();
 }
 
-if (!level_is_state(LEVEL.COMPLETE) && input_pause_pressed())
+if (_input_one && level_is_state(LEVEL.COUNTING_DOWN) && _can_skip)
+{
+	// skip the timer to play the level
+	info_box_create("Skipped Countdown!");
+	timer_set_zero();
+}
+
+if (_input_pause && !level_is_state(LEVEL.COMPLETE))
 {
 	level_toggle_pause();
 }

@@ -7,8 +7,8 @@ if (keyboard_check_pressed(ord("C")))
 {
 	with (sushi_cur())
 	{
-		phy_position_x = oGoal.x + oGoal.sprite_width / 2;
-		phy_position_y = oGoal.y - oGoal.sprite_height;
+		phy_position_x = oGoal.x - oGoal.sprite_width / 2;
+		phy_position_y = oGoal.y + oGoal.sprite_height;
 	}
 }
 

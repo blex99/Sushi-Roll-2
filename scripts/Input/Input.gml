@@ -9,6 +9,16 @@ function input_one_pressed()
 		   keyboard_check_pressed(ord("X"));
 }
 
+function input_one()
+{
+	if (global.using_controller)
+	{
+		return gamepad_button_check(global.device_index, gp_face1);
+	}
+	
+	return mouse_check_button(mb_left) || keyboard_check(ord("X"));
+}
+
 function input_up()
 {
 	if (global.using_controller)
@@ -69,8 +79,23 @@ function input_pause_pressed()
 	return keyboard_check_pressed(vk_escape);
 }
 
+function input_move_sushi()
+{
+	if (global.using_controller)
+	{
+		return gamepad_axis_value(global.device_index, gp_axislh);
+	}
+	else
+	{
+		var _left_key	= keyboard_check(ord("A"));
+		var _right_key	= keyboard_check(ord("D"));
+	
+		return _right_key - _left_key;
+	}
+} 
+
 // return "normalized" x axis between -1 and 1
-function input_x_axis(){
+function input_rotate(){
 	if (global.using_controller)
 	{
 		return gamepad_axis_value(global.device_index, gp_axisrh);

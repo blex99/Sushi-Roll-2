@@ -1,0 +1,25 @@
+{
+  "kind": 1,
+  "closed": false,
+  "precision": 4,
+  "points": [
+    {"speed":100.0,"x":3728.0,"y":2672.0,},
+    {"speed":100.0,"x":4912.0,"y":2608.0,},
+    {"speed":100.0,"x":4912.0,"y":2400.0,},
+    {"speed":100.0,"x":3600.0,"y":2384.0,},
+    {"speed":100.0,"x":3264.0,"y":2576.0,},
+    {"speed":100.0,"x":2832.0,"y":2400.0,},
+    {"speed":100.0,"x":2464.0,"y":2560.0,},
+    {"speed":100.0,"x":2208.0,"y":2368.0,},
+    {"speed":100.0,"x":1792.0,"y":2560.0,},
+    {"speed":100.0,"x":1536.0,"y":2368.0,},
+  ],
+  "parent": {
+    "name": "03",
+    "path": "folders/Paths/LevelPaths/03.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "paKnifeDance",
+  "tags": [],
+  "resourceType": "GMPath",
+}

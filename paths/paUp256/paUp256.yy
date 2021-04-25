@@ -7,8 +7,8 @@
     {"speed":100.0,"x":1408.0,"y":2816.0,},
   ],
   "parent": {
-    "name": "Paths",
-    "path": "folders/Paths.yy",
+    "name": "MovingGameObjects",
+    "path": "folders/Paths/MovingGameObjects.yy",
   },
   "resourceVersion": "1.0",
   "name": "paUp256",

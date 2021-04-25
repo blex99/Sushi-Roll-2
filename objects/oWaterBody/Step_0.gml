@@ -1,10 +1,5 @@
 /// @description wobble during sushi impact
 
-if (alarm[0] == -1)
-{
-	alarm[0] = room_speed / choose(3, 4, 5);
-}
-
 // calc spring, only if there has been a collision recently...
 if (alarm[1] != -1)
 {

@@ -69,13 +69,21 @@ function level_toggle_pause()
 	}
 }
 
+
 function level_start_countdown()
 {
 	with (oLevelManager)
 	{
 		state = LEVEL.COUNTING_DOWN;
-		timer_create(sec2mus(3), true, level_begin);
 	}
+
+	with (oCamera)
+	{
+		path_position = 1;
+		zoom_target = 1;
+	}
+
+	timer_create(sec2mus(3), true, level_begin);
 }
 
 // creates timer remove invisible thing
@@ -85,9 +93,9 @@ function level_begin()
 	{
 		state = LEVEL.PLAYING;
 		ui_alpha = ui_alpha_start;
-		timer_create(0, false);
 	}
 	
+	timer_create(0, false);
 	instance_destroy(oInvisibleSushiHolder);
 }
 

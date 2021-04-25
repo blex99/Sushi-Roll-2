@@ -1,6 +1,3 @@
-/// @description set target to next target
+/// @description start the path
 
-if (follow_index < follow_size - 1)
-{
-	follow_index++;
-}
+path_speed = my_path_speed;

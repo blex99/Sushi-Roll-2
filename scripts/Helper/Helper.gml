@@ -1,5 +1,22 @@
 // helper functions
 
+function easeInSine(_source, _target, _num)
+{
+	var _t = 1 - cos((_num * pi) / 2)
+	return _source + _t * (_target - _source);
+}
+
+function easeInCirc(_source, _target, _num)
+{
+	var _t = 1 - sqrt(1 - power(_num, 2));
+	return _source + _t * (_target - _source);
+}
+
+function my_lerp(_v0, _v1, _t)
+{
+	return _v0 + _t * (_v1 - _v0);
+}
+
 // degrees to cardinal directions
 // EX: 180 degrees -> 2
 function deg2card(_deg)
