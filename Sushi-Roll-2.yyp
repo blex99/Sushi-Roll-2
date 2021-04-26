@@ -54,6 +54,7 @@
     {"id":{"name":"sWoodWall","path":"sprites/sWoodWall/sWoodWall.yy",},"order":2,},
     {"id":{"name":"sUIButton","path":"sprites/sUIButton/sUIButton.yy",},"order":4,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":13,},
+    {"id":{"name":"sfxRoll","path":"sounds/sfxRoll/sfxRoll.yy",},"order":0,},
     {"id":{"name":"rLevel_StartingOut","path":"rooms/rLevel_StartingOut/rLevel_StartingOut.yy",},"order":0,},
     {"id":{"name":"Stats","path":"scripts/Stats/Stats.yy",},"order":5,},
     {"id":{"name":"Helper","path":"scripts/Helper/Helper.yy",},"order":1,},

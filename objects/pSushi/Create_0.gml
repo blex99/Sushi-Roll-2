@@ -23,3 +23,9 @@ angular_damp	= 0.5;
 fric			= 2;
 
 my_fix			= -1; // assigned in sushi_init_fixture()
+
+/*
+sfx_roll = sfxRoll;
+audio_play_sound(sfx_roll, 0, true);
+audio_sound_gain(sfx_roll, 0, 0);
+*/

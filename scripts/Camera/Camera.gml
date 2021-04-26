@@ -41,7 +41,7 @@ function camera_init()
 			{
 				my_path = path_duplicate(oLevelManager.camera_path);
 				path_start(my_path, 0, path_action_stop, true);
-				alarm[0] = room_speed * 2; // how many frames to stare at goal
+				alarm[0] = room_speed; // how many frames to stare at goal
 			}
 			else
 			{

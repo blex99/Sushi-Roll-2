@@ -106,6 +106,8 @@ function toggle_fullscreen()
 	}
 	
 	surface_resize(application_surface, BASE_W, BASE_H);
+	
+	input_update_window_stats();
 }
 
 // either increase or decrease the window's scale
