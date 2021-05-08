@@ -152,6 +152,7 @@
     {"id":{"name":"oBamboo","path":"objects/oBamboo/oBamboo.yy",},"order":1,},
     {"id":{"name":"sBambooRotateable","path":"sprites/sBambooRotateable/sBambooRotateable.yy",},"order":0,},
     {"id":{"name":"oButton","path":"objects/oButton/oButton.yy",},"order":0,},
+    {"id":{"name":"TrapDoor","path":"scripts/TrapDoor/TrapDoor.yy",},"order":20,},
     {"id":{"name":"sBambooWallBig","path":"sprites/sBambooWallBig/sBambooWallBig.yy",},"order":2,},
     {"id":{"name":"paRightOrLeft","path":"paths/paRightOrLeft/paRightOrLeft.yy",},"order":3,},
     {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},"order":7,},

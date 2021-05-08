@@ -1,7 +1,9 @@
 /// @description open trap soon
 
-if (angle_diff < 1 && rot_target == 0 &&
-	alarm[0] == -1 && alarm[1] == -1)
+// start timer
+if (state == trap_door_state_idle)
 {
-	alarm[0] = frames_to_release_trap;
+	state = trap_door_state_move_soon;
+	move_timer = move_timer_start;
+	rot_target = 90;
 }

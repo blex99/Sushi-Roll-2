@@ -8,7 +8,8 @@ function easeInSine(_source, _target, _num)
 
 function easeInCirc(_source, _target, _num)
 {
-	var _t = 1 - sqrt(1 - power(_num, 2));
+	var _a = max(1 - power(_num, 2), 0);
+	var _t = 1 - sqrt(_a);
 	return _source + _t * (_target - _source);
 }
 
