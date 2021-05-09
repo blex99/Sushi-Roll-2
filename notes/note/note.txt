@@ -18,7 +18,6 @@ IDEAS:
 	zoom out upon pause
 -------------------------------------------------------------------------------
 PROBLEMS:
-	make trap door state machine
 	button highlighted when not hovering over
 	camera looks weird when moving very slow (shaking?) (maybe pixeltometrescale to be 1/32)
 	camera tearing at the top of the screen

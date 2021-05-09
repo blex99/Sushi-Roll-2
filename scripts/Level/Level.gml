@@ -46,6 +46,15 @@ function level_toggle_pause()
 			physics_pause_enable(true);
 			instance_create_layer(0, 0, "Instances", oMenuPause);
 			
+			// preform moving platform pause event
+			with (oMovingPlatform) event_user(0);
+			
+			with (oCamera)
+			{
+				zoom_target_prev = zoom_target;
+				zoom_target = 1.5;
+			}
+			
 			// display mouse, if using keyboard/mouse
 			if (!global.using_controller)
 				window_set_cursor(cr_default);
@@ -60,6 +69,14 @@ function level_toggle_pause()
 			physics_pause_enable(false);
 			instance_destroy(oMenuPause);
 			window_set_cursor(cr_none);
+			
+			// preform moving platform unpause event
+			with (oMovingPlatform) event_user(0);
+			
+			with (oCamera)
+			{
+				zoom_target = zoom_target_prev;
+			}
 			
 			// remember mouse position
 			var _mx = window_mouse_get_x();

@@ -1,19 +1,24 @@
 /// @description 
 
 if (level_is_state(LEVEL.PAUSED))
-{
-	path_speed = 0;
 	exit;
-}
 
-var _move_dir = sign(path_speed);
 var _cardinal_dir = deg2card(direction);
 image_index = _cardinal_dir;
 
-if (path_action != path_action_restart)
+if (path_action == path_action_reverse)
 {
-	if (path_position < 0.05 || path_position > 0.95)
-		path_speed = lerp(_move_dir * 0.25, path_speed, 0.1);
-	else
-		path_speed = move_speed * _move_dir;
+	// if you've reached the end of the path for the first time
+	// pause for a bit before moving to the next path
+	if (alarm[0] == -1 && (path_position == 0 || path_position == 1) &&
+		reverse_buffer == 0)
+	{
+		path_speed_reverse = path_speed;
+		alarm[0] = room_speed;
+		path_speed = 0;
+	}
+	
+	// to prevent infinite loop, allow the platform
+	// a couple frames to move to a new path_position
+	reverse_buffer = max(0, reverse_buffer - 1);
 }

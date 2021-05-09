@@ -14,7 +14,7 @@
 
 #macro START_FULLSCREEN		false
 
-#macro DEBUG_START_ROOM		rLevel_TrapdoorTrackLesson//rMenuMain
+#macro DEBUG_START_ROOM		rLevel_SlowAndSteady//rMenuMain
 #macro DEBUG_SHOW_VISUALS	false//false
 #macro DEBUG_LOAD_DATA		true//true
 #macro DEBUG_UNLOCK_ALL		false//false
