@@ -21,8 +21,8 @@
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 16,
+  "gridY": 16,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"3ce3b29c-f207-43d6-911b-27736a3393e0","path":"sprites/sBambooWallBig/sBambooWallBig.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"3ce3b29c-f207-43d6-911b-27736a3393e0","path":"sprites/sBambooWallBig/sBambooWallBig.yy",},"LayerId":{"name":"24210b7a-2b7d-4025-b366-d4e6eb0002c4","path":"sprites/sBambooWallBig/sBambooWallBig.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"24210b7a-2b7d-4025-b366-d4e6eb0002c4","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Bamboo",
     "path": "folders/Sprites/Bamboo.yy",

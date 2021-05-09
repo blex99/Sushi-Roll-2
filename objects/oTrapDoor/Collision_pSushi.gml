@@ -1,9 +1,8 @@
 /// @description open trap soon
 
 // start timer
-if (state == trap_door_state_idle)
+if (state == s_trap_idle)
 {
-	state = trap_door_state_move_soon;
+	state = s_trap_down_soon;
 	move_timer = move_timer_start;
-	rot_target = 90;
 }

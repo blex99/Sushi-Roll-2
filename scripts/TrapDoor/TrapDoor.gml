@@ -1,58 +1,85 @@
-// TODO make not move when about to move upwards
+// trap door state machine
 
-
-function trap_door_state_idle()
+// s -> state
+// idle state
+function s_trap_idle()
 {
 	physics_joint_set_value(joint, phy_joint_angle_limits, true);
-	
 	image_alpha = 1;
-	
-	add_to_debug_map("state: " + string("1"));
 }
 
-function trap_door_state_move_soon()
+function s_trap_down_soon()
 {
 	image_alpha = oscillate(0.5, 1, 0.25);
-	
-	move_timer--;
+
 	if (move_timer <= 0)
 	{
-		state = trap_door_state_moving;
+		state = s_trap_moving_down;
 		move_timer = move_timer_start;
 	}
-	
-	add_to_debug_map("state: " + string("2"));
 }
 
-function trap_door_state_moving()
+function s_trap_moving_down()
 {
 	physics_joint_set_value(joint, phy_joint_angle_limits, false);
 	image_alpha = 1;
-	
-	// move towards target angle
-	angle_diff = angle_difference(phy_rotation, rot_target);
-	phy_angular_velocity = -angle_diff * rot_strength;
-	
-	// if you've reached your target
-	move_timer--;
-	if (move_timer <= 0 || abs(angle_diff) < 1)
-	{
-		phy_angular_velocity = 0;
 
-		// if your target was 0
-		if (rot_target == 0)
-		{
-			state = trap_door_state_idle;
-			is_down = false;
-		}
-		else
-		{
-			state = trap_door_state_move_soon;
-			is_down = true;
-			rot_target = 0;
-			move_timer = move_timer_start;
-		}
+	rotate_towards(90);
+
+	// you've reached your target at this point
+	if (move_timer <= 0)
+	{
+		state = s_trap_up_soon;
+		move_timer = move_timer_start;
 	}
-	
-	add_to_debug_map("state: " + string("3"));
 }
+
+function s_trap_up_soon()
+{
+	image_alpha = oscillate(0.5, 1, 0.25);
+
+	rotate_towards(90);
+
+	if (move_timer <= 0)
+	{
+		state = s_trap_moving_up;
+		move_timer = move_timer_start;
+	}
+}
+
+function s_trap_moving_up()
+{
+	image_alpha = 1;
+
+	var _diff = rotate_towards(0);
+
+	// if you've reached your target
+	// or after a certain amt of time...
+	if (move_timer <= 0 || abs(_diff) < 1)
+	{
+		state = s_trap_idle;
+		move_timer = -1; // set timer to be inactive
+	}
+}
+
+// move towards target angle
+// returns difference between target angle and current angle
+function rotate_towards(_angle)
+{
+	var _angle_diff = angle_difference(phy_rotation, _angle);
+	phy_angular_velocity = -_angle_diff * rot_strength;
+	return _angle_diff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
