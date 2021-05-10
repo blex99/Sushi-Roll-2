@@ -134,6 +134,7 @@
     {"id":{"name":"pRotateable","path":"objects/pRotateable/pRotateable.yy",},"order":0,},
     {"id":{"name":"paIntroToGravity","path":"paths/paIntroToGravity/paIntroToGravity.yy",},"order":0,},
     {"id":{"name":"paRampinUp","path":"paths/paRampinUp/paRampinUp.yy",},"order":2,},
+    {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":8,},
     {"id":{"name":"oButtonArea01","path":"objects/oButtonArea01/oButtonArea01.yy",},"order":9,},
     {"id":{"name":"oCollectibleWasabi","path":"objects/oCollectibleWasabi/oCollectibleWasabi.yy",},"order":2,},
     {"id":{"name":"oCollectibleOrange","path":"objects/oCollectibleOrange/oCollectibleOrange.yy",},"order":0,},
