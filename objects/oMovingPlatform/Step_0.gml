@@ -22,3 +22,16 @@ if (path_action == path_action_reverse)
 	// a couple frames to move to a new path_position
 	reverse_buffer = max(0, reverse_buffer - 1);
 }
+
+// decrement timers of dots
+var _len = ds_list_size(path_dots);
+for (var i = 0; i < _len; i++)
+{
+	path_dots[|i].life_timer--;
+	if (path_dots[|i].life_timer <= 0)
+	{
+		ds_list_delete(path_dots, i);
+		 _len--;
+		 i--;
+	}
+}

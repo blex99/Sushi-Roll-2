@@ -1,5 +1,44 @@
 // helper functions
 
+//  Draws the assigned sprite of the calling instance, using its
+//  subimage, position, scaling, rotation, and blending settings,
+//  with a motion blur effect applied to it.
+//
+//      length      length of blur, real
+//      direction   direction of blur in degrees, real
+//
+// GMLscripts.com/license
+// https://www.gmlscripts.com/script/motion_blur
+function motion_blur(_length, _direction, _alpha)
+{
+	if (_length > 0)
+	{
+		var _step = 15;
+		var _dir = degtorad(_direction);
+		var _px = cos(_dir);
+		var _py = -sin(_dir);
+		var _a = _alpha / (_length / _step);
+		
+		if (_a >= 1)
+		{
+			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale,
+				image_yscale, image_angle, image_blend, image_alpha);
+			_a /= 2;
+		}
+
+		for(var i = _length; i >= 0; i-=_step)
+		{
+			draw_sprite_ext(sprite_index, image_index, x+(_px*i), y+(_py*i),
+				image_xscale, image_yscale, image_angle, image_blend, _a);
+		}
+	}
+	else
+	{
+		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale,
+		image_yscale, image_angle, image_blend, image_alpha);
+	}
+}
+
 function easeInSine(_source, _target, _num)
 {
 	var _t = 1 - cos((_num * pi) / 2)

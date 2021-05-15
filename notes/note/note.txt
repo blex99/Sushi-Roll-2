@@ -9,13 +9,11 @@ TODO:
 	gameplay:
 		volume sliders
 		set keybindings
-		moving platform path indicator
 		rice is currency to buy different sushi's
 		sticky walls
 -------------------------------------------------------------------------------
 IDEAS:
 	pinball-type levels
-	zoom out upon pause
 -------------------------------------------------------------------------------
 PROBLEMS:
 	button highlighted when not hovering over

@@ -9,8 +9,9 @@ reverse_buffer = 0;
 
 path_speed_prev = 0; // used for pause
 
-
-
 image_speed = 0;
 path_position = normalized_start;
 if (flip) path_flip(my_path);
+
+path_dots = ds_list_create();
+alarm[1] = 1;

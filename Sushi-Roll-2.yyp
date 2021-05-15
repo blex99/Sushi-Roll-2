@@ -22,6 +22,7 @@
     {"id":{"name":"paOctopus","path":"paths/paOctopus/paOctopus.yy",},"order":0,},
     {"id":{"name":"oInfoBox","path":"objects/oInfoBox/oInfoBox.yy",},"order":7,},
     {"id":{"name":"sChopstick","path":"sprites/sChopstick/sChopstick.yy",},"order":0,},
+    {"id":{"name":"PathDot","path":"scripts/PathDot/PathDot.yy",},"order":21,},
     {"id":{"name":"shWave","path":"shaders/shWave/shWave.yy",},"order":0,},
     {"id":{"name":"oTransition","path":"objects/oTransition/oTransition.yy",},"order":3,},
     {"id":{"name":"sMovingPlatforms","path":"sprites/sMovingPlatforms/sMovingPlatforms.yy",},"order":6,},
