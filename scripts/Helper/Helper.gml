@@ -11,31 +11,20 @@
 // https://www.gmlscripts.com/script/motion_blur
 function motion_blur(_length, _direction, _alpha)
 {
-	if (_length > 0)
+	if (_length > 0 && _alpha > 0)
 	{
-		var _step = 15;
+		var _step = 3;
 		var _dir = degtorad(_direction);
 		var _px = cos(_dir);
 		var _py = -sin(_dir);
-		var _a = _alpha / (_length / _step);
-		
-		if (_a >= 1)
-		{
-			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale,
-				image_yscale, image_angle, image_blend, image_alpha);
-			_a /= 2;
-		}
+		var _a = min(1, _alpha / (_length / _step));
 
-		for(var i = _length; i >= 0; i-=_step)
+		for(var i = _length; i >= 0; i -= _step)
 		{
-			draw_sprite_ext(sprite_index, image_index, x+(_px*i), y+(_py*i),
+			draw_sprite_ext(sprite_index, image_index, x + (_px * i), y + (_py * i),
 				image_xscale, image_yscale, image_angle, image_blend, _a);
+			_a *= 0.9;
 		}
-	}
-	else
-	{
-		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale,
-		image_yscale, image_angle, image_blend, image_alpha);
 	}
 }
 
