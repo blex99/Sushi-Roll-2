@@ -12,3 +12,4 @@ if (keyboard_check_pressed(ord("C")))
 	}
 }
 
+add_to_debug_map("fps: " + string(fps));

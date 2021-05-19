@@ -1,25 +1,21 @@
 // helper functions
 
-//  Draws the assigned sprite of the calling instance, using its
-//  subimage, position, scaling, rotation, and blending settings,
-//  with a motion blur effect applied to it.
+// draws many versions of the same image
+// length = length of blur, real
+// direction = direction of blur in degrees, real
 //
-//      length      length of blur, real
-//      direction   direction of blur in degrees, real
-//
-// GMLscripts.com/license
 // https://www.gmlscripts.com/script/motion_blur
 function motion_blur(_length, _direction, _alpha)
 {
 	if (_length > 0 && _alpha > 0)
 	{
-		var _step = 3;
+		var _step = 2;
 		var _dir = degtorad(_direction);
 		var _px = cos(_dir);
 		var _py = -sin(_dir);
 		var _a = min(1, _alpha / (_length / _step));
 
-		for(var i = _length; i >= 0; i -= _step)
+		for(var i = 0; i < _length; i += _step)
 		{
 			draw_sprite_ext(sprite_index, image_index, x + (_px * i), y + (_py * i),
 				image_xscale, image_yscale, image_angle, image_blend, _a);

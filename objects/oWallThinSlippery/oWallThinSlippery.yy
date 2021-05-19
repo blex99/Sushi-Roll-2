@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBambooWallThin",
-    "path": "sprites/sBambooWallThin/sBambooWallThin.yy",
+    "name": "sBambooWallThinSlippery",
+    "path": "sprites/sBambooWallThinSlippery/sBambooWallThinSlippery.yy",
   },
   "solid": false,
   "visible": true,

@@ -5,7 +5,7 @@ if (can_display_debug())
 	physics_draw_debug();
 }
 
-var _limit_speed = 50;
+var _limit_speed = 40;
 var _speed = sushi_get_speed();
 var _rot = round(-phy_rotation / 90) * 90;
 var _dir = darctan2(phy_linear_velocity_y, -phy_linear_velocity_x);
