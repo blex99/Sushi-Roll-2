@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTriangle",
-    "path": "sprites/sTriangle/sTriangle.yy",
+    "name": "sBambooTriangle",
+    "path": "sprites/sBambooTriangle/sBambooTriangle.yy",
   },
   "solid": false,
   "visible": true,

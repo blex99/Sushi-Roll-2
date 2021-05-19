@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sCurve",
-    "path": "sprites/sCurve/sCurve.yy",
+    "name": "sBambooCurve",
+    "path": "sprites/sBambooCurve/sBambooCurve.yy",
   },
   "solid": false,
   "visible": true,

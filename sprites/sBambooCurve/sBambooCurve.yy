@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"621dc747-54da-48ad-aa7e-3d79780d5329","path":"sprites/sTriangle/sTriangle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"621dc747-54da-48ad-aa7e-3d79780d5329","path":"sprites/sTriangle/sTriangle.yy",},"LayerId":{"name":"9fbd0c71-d657-448f-acf4-45dc5a9a4dc0","path":"sprites/sTriangle/sTriangle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sTriangle","path":"sprites/sTriangle/sTriangle.yy",},"resourceVersion":"1.0","name":"621dc747-54da-48ad-aa7e-3d79780d5329","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"136efcdc-8494-4d13-9fc0-ab61fc9304a3","path":"sprites/sBambooCurve/sBambooCurve.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"136efcdc-8494-4d13-9fc0-ab61fc9304a3","path":"sprites/sBambooCurve/sBambooCurve.yy",},"LayerId":{"name":"bf40ef0e-03f1-4c08-a0a7-f57b5fa3877e","path":"sprites/sBambooCurve/sBambooCurve.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBambooCurve","path":"sprites/sBambooCurve/sBambooCurve.yy",},"resourceVersion":"1.0","name":"136efcdc-8494-4d13-9fc0-ab61fc9304a3","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sTriangle","path":"sprites/sTriangle/sTriangle.yy",},
+    "spriteId": {"name":"sBambooCurve","path":"sprites/sBambooCurve/sBambooCurve.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"038b0272-ec80-492b-9cf0-82ad04b500e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"621dc747-54da-48ad-aa7e-3d79780d5329","path":"sprites/sTriangle/sTriangle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2d2c9c88-8088-4667-b086-2ed387a5eb34","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"136efcdc-8494-4d13-9fc0-ab61fc9304a3","path":"sprites/sBambooCurve/sBambooCurve.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sTriangle","path":"sprites/sTriangle/sTriangle.yy",},
+    "parent": {"name":"sBambooCurve","path":"sprites/sBambooCurve/sBambooCurve.yy",},
     "resourceVersion": "1.3",
-    "name": "sTriangle",
+    "name": "sBambooCurve",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9fbd0c71-d657-448f-acf4-45dc5a9a4dc0","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bf40ef0e-03f1-4c08-a0a7-f57b5fa3877e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Bamboo",
+    "path": "folders/Sprites/Bamboo.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sTriangle",
+  "name": "sBambooCurve",
   "tags": [],
   "resourceType": "GMSprite",
 }
