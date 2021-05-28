@@ -4,14 +4,14 @@
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 0,
+  "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mu151.wav",
-  "duration": 266.685577,
+  "soundFile": "mu151.ogg",
+  "duration": 266.683563,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
