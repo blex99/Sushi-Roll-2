@@ -14,6 +14,11 @@ else
 
 if (killed_sushi)
 {
+	if (!played_sound)
+	{
+		audio_play_sound(sfx_knife, 0, 0);
+		played_sound = true;
+	}
 	path_speed = 0;
 	with (sushi_cur())
 	{

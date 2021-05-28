@@ -8,6 +8,8 @@ target_scale = 1;
 torque = 100;
 force = 100;
 
+rot_360 = 0;
+
 jump_buffer_start = 15;
 jump_buffer = 0; // frames you cannot apply a jump impulse
 
@@ -24,8 +26,8 @@ fric			= 2;
 
 my_fix			= -1; // assigned in sushi_init_fixture()
 
-/*
 sfx_roll = sfxRoll;
-audio_play_sound(sfx_roll, 0, true);
-audio_sound_gain(sfx_roll, 0, 0);
-*/
+
+image_speed = 0;
+
+

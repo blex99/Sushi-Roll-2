@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfxRoll.ogg",
-  "duration": 0.255,
+  "duration": 0.125188,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

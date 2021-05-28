@@ -1,5 +1,10 @@
 // helper functions
 
+function round_to_nearest(_val, _round)
+{
+	return round(_val / _round) * _round;
+}
+
 // draws many versions of the same image
 // length = length of blur, real
 // direction = direction of blur in degrees, real

@@ -6,6 +6,7 @@ function input_one_pressed()
 	}
 	
 	return mouse_check_button_pressed(mb_left) ||
+		   keyboard_check_pressed(vk_enter) ||
 		   keyboard_check_pressed(ord("X"));
 }
 
@@ -16,7 +17,9 @@ function input_one()
 		return gamepad_button_check(global.device_index, gp_face1);
 	}
 	
-	return mouse_check_button(mb_left) || keyboard_check(ord("X"));
+	return mouse_check_button(mb_left) ||
+		   keyboard_check(vk_enter) ||
+		   keyboard_check(ord("X"));
 }
 
 function input_up()

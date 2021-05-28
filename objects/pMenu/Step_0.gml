@@ -1,7 +1,14 @@
 /// @description menu controls
 
-if (!menu_control && alarm[0] == -1) menu_control = true;
+// exit of you're transitioning
+if (oTransition.mode != TRANS_MODE.OFF) exit;
+
+// exit if the room has no buttons, you're not controlling the menu, or
+// you're currently initializing the menu vars
 if (!instance_exists(pButton) || !menu_control || alarm[1] != -1) exit;
+
+// idk why i need this
+//if (!menu_control && alarm[0] == -1) menu_control = true;
 
 var _len = array_length(buttons);
 
@@ -44,6 +51,7 @@ for (var i = 0; i < 4; i++)
 	{
 		dir_locked = i;
 		menu_cursor = buttons[menu_cursor.dir[i]];
+		audio_play_sound(sfx_hover, 0, 0);
 	}
 }
 	
@@ -69,9 +77,12 @@ for (var i = 0; i < _len; i++)
 	// override cursor and commited vars if needed
 	if (menu_control && !global.using_controller &&
 		MOUSE_GUI_X > b.x1 && MOUSE_GUI_X < b.x2 &&
-		MOUSE_GUI_Y > b.y1 && MOUSE_GUI_Y < b.y2)
+		MOUSE_GUI_Y > b.y1 && MOUSE_GUI_Y < b.y2 &&
+		b != menu_cursor)
 	{
 		menu_cursor = b;
+		audio_play_sound(sfx_hover, 0, 0);
+
 		if (MOUSE_LEFT && !global.using_controller)
 		{
 			menu_committed = b;

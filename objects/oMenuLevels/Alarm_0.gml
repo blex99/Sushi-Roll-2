@@ -9,6 +9,7 @@ if (menu_committed.object_index == oButtonBack)
 }
 else
 {
+	audio_play_sound(sfx_select_level, 0, 0);
 	game_goto_level(area, menu_committed.btag);
 }
 

@@ -8,5 +8,10 @@ with (menu_committed)
 	}
 }
 
+if (menu_committed.object_index != oButtonBack)
+{
+	audio_play_sound(sfx_select, 0, 0);
+}
+
 menu_committed = noone;
 menu_control = true;

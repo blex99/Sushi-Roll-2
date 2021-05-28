@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 TODO:
 	aesthetic:
-		tile effects
+		tileset
 		redo particle effects
 		theme for each difficulty (instead of difficulties)
 		music/sfx
@@ -9,17 +9,19 @@ TODO:
 	gameplay:
 		volume sliders
 		set keybindings
-		rice is currency to buy different sushi's
 		sticky walls
+		invisible walls (which hides collectibles and faster routes)
+
 -------------------------------------------------------------------------------
 IDEAS:
 	pinball-type levels
+	get different sushis for achievements and for collecting rice
+	global times for each level
+	no score. only total (game) rice count, and time, and death count
 -------------------------------------------------------------------------------
 PROBLEMS:
 	button highlighted when not hovering over
-	camera looks weird when moving very slow (shaking?) (maybe pixeltometrescale to be 1/32)
-	camera tearing at the top of the screen
-	sushi "anti-aliasing"/rotating effect looks odd 
+	screen tearing at the top of the screen
 -------------------------------------------------------------------------------
 REFERENCE:
 easy	medium	hard

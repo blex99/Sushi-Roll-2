@@ -8,8 +8,6 @@ var _sushi_dir = input_move_sushi()
 var _force_x, _force_y;
 
 #region control the sushi
-
-
 _force_x = lengthdir_x(force, _cam_deg) * _sushi_dir;
 _force_y = -1 * lengthdir_y(force, _cam_deg) * _sushi_dir;
 physics_apply_force(x, y, _force_x, _force_y);
@@ -44,25 +42,18 @@ if (image_xscale != target_scale ||
 	sushi_init_fixture();
 }
 
-/*
-if (sushi_get_speed() > 5 && level_is_state(LEVEL.PLAYING)
-	&& sushi_is_grounded())
+// play sound
+var _rot = round_to_nearest(-phy_rotation, 360)
+if (rot_360 != _rot)
 {
-	// play rolling sound
-	var _volume = clamp(sushi_get_speed() / 50, 0, 1);
-	audio_sound_gain(sfx_roll, _volume, 100);
+	rot_360 = _rot;
+	audio_play_sound(sfx_roll, 0, false);
 	
-	var _pitch = clamp(sushi_get_speed() / 50, 0, 1);
-	audio_sound_pitch(sfx_roll, _pitch + 0.5);
+	var _volume = clamp(sushi_get_speed() / 40, 0, 0.5);
+	var _pitch = clamp(sushi_get_speed() / 60, 0.4, 0.9);
+	audio_sound_gain(sfx_roll, _volume, 100);
+	audio_sound_pitch(sfx_roll, _pitch + 0.5 + random_range(-0.05, 0.05));
 }
-else
-{
-	audio_sound_gain(sfx_roll, 0, 100);
-}
-*/
-
-add_to_debug_map("phy_angular_velocity: " + string(phy_angular_velocity));
-
 
 #endregion
 
