@@ -5,7 +5,7 @@ function menu_goto_previous_room()
 		if (my_previous_room > 0)
 		{
 			transition_start(my_previous_room);
-			audio_play_sound(sfx_back, 0, 0);
+			audio_play_sound(sfx_back, 0, 0); 
 		}
 	}
 }
