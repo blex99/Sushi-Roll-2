@@ -23,6 +23,7 @@ with (oGame)
 	other.area_number = area_index + 1;
 	other.level_number = level_index + 1;
 	other.level_struct = levels[area_index][level_index];
+	jukebox_play_area_theme(area_index);
 }
 
 state = LEVEL.PANNING;

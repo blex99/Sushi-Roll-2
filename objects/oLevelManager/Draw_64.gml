@@ -2,12 +2,6 @@
 
 if (level_is_state(LEVEL.PAUSED)) exit;
 
-
-// level room names have the format: rLevel##
-//                                   12345678
-//                                         ^^
-//	  these are the numbers im looking for ||
-
 var _w = display_get_gui_width();
 var _h = display_get_gui_height();
 var _msg = "";
