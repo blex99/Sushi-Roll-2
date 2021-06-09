@@ -1,7 +1,7 @@
 /// @description init resolution, levels array
 
 #region init resolution
-display_reset(0, false);
+display_reset(0, true);
 var _display_w = display_get_width();
 var _display_h = display_get_height();
 
@@ -33,14 +33,14 @@ levels[LEVEL_AREA.BEGINNER] =
 	level_create("360", rLevel_360, 20),
 	level_create("Sushi Olympics: Bronze", rLevel_SushiOlympicsBronze, 5),
 	level_create("Slippery Sliding Sashimi", rLevel_SlipperySlidingSashimi, 20),
-	level_create("Watch Out for Knives", rLevel_WatchOutForKnives, 15),
+	level_create("Rampin' Up", rLevel_RampinUp, 20),
 ];
 
 levels[LEVEL_AREA.INTERMEDIATE] = 
 [
+	level_create("Watch Out for Knives", rLevel_WatchOutForKnives, 15),
 	level_create("Octopus", rLevel_Octopus, 10),
 	level_create("Spring Forward", rLevel_SpringForward, 20),
-	level_create("Rampin' Up", rLevel_RampinUp, 20),
 	level_create("Right or Left?", rLevel_RightOrLeft, 15),
 	level_create("Trapdoor Track Lesson", rLevel_TrapdoorTrackLesson, 12),
 ];

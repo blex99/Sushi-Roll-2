@@ -26,7 +26,15 @@ fric			= 2;
 
 my_fix			= -1; // assigned in sushi_init_fixture()
 
+limit_speed = 40; // for animations and sfx
+
+free_fall_buf_start = room_speed / 2;
+free_fall_buf = 0;
+
 sfx_roll = sfxRoll;
+sfx_air = sfxAir;
+sfx_air_inst = audio_play_sound(sfx_air, 0, true);
+audio_sound_gain(sfx_air_inst, 0, 0);
 
 image_speed = 0;
 

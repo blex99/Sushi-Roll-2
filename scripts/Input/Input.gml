@@ -30,7 +30,8 @@ function input_up()
 			   gamepad_button_check(global.device_index, gp_padu);
 	}
 
-	return keyboard_check(vk_up);
+	return keyboard_check(vk_up) ||
+		   keyboard_check(ord("W"));
 }
 
 function input_down()
@@ -39,7 +40,8 @@ function input_down()
 		return gamepad_axis_value(global.device_index, gp_axislv) > 0.8 ||
 			   gamepad_button_check(global.device_index, gp_padd);
 	
-	return keyboard_check(vk_down);
+	return keyboard_check(vk_down) ||
+		   keyboard_check(ord("S"));
 }
 
 function input_left()
@@ -48,7 +50,8 @@ function input_left()
 		return gamepad_axis_value(global.device_index, gp_axislh) < -0.8 ||
 			   gamepad_button_check(global.device_index, gp_padl);
 	
-	return keyboard_check(vk_left);
+	return keyboard_check(vk_left) ||
+		   keyboard_check(ord("A"));
 }
 
 function input_right()
@@ -57,7 +60,8 @@ function input_right()
 		return gamepad_axis_value(global.device_index, gp_axislh) > 0.8 ||
 			   gamepad_button_check(global.device_index, gp_padr);
 	
-	return keyboard_check(vk_right);
+	return keyboard_check(vk_right) ||
+		   keyboard_check(ord("D"));
 }
 
 // for going back in menu
@@ -90,10 +94,7 @@ function input_move_sushi()
 	}
 	else
 	{
-		var _left_key	= keyboard_check(ord("A"));
-		var _right_key	= keyboard_check(ord("D"));
-	
-		return _right_key - _left_key;
+		return input_right() - input_left();
 	}
 } 
 

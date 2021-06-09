@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mu161.ogg",
-  "duration": 118.158852,
+  "soundFile": "mu161.mp3",
+  "duration": 118.205,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

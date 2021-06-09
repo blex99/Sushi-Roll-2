@@ -5,6 +5,7 @@ if (level_is_state(LEVEL.PAUSED)) exit;
 
 var _cam_deg = camera_get_deg();
 var _sushi_dir = input_move_sushi()
+var _speed = sushi_get_speed();
 var _force_x, _force_y;
 
 #region control the sushi
@@ -42,6 +43,24 @@ if (image_xscale != target_scale ||
 	sushi_init_fixture();
 }
 
+// is free falling?
+if (_speed >= limit_speed && phy_linear_velocity_y > 0 &&
+	level_is_state(LEVEL.PLAYING) && !sushi_is_grounded())
+{
+	// if you've been free falling for awhile, play wind looping sound
+	free_fall_buf = max(-1, free_fall_buf - 1);
+	if (free_fall_buf <= 0)
+	{
+		var _volume = (_speed - limit_speed) / limit_speed;
+		audio_sound_gain(sfx_air_inst, _volume, 100);
+	}
+}
+else
+{
+	free_fall_buf = free_fall_buf_start;
+	audio_sound_gain(sfx_air_inst, 0, 100);
+}
+
 // play sound
 var _rot = round_to_nearest(-phy_rotation, 360)
 if (rot_360 != _rot)
@@ -49,11 +68,9 @@ if (rot_360 != _rot)
 	rot_360 = _rot;
 	audio_play_sound(sfx_roll, 0, false);
 	
-	var _volume = clamp(sushi_get_speed() / 40, 0, 0.5);
-	var _pitch = clamp(sushi_get_speed() / 60, 0.4, 0.9);
-	audio_sound_gain(sfx_roll, _volume, 100);
+	var _volume = clamp(_speed / 40, 0, 0.5);
+	var _pitch = clamp(_speed / 60, 0.4, 1);
+	audio_sound_gain(sfx_roll, _volume, 10);
 	audio_sound_pitch(sfx_roll, _pitch + 0.5 + random_range(-0.05, 0.05));
 }
-
 #endregion
-

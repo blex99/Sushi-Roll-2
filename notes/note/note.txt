@@ -1,27 +1,26 @@
 -------------------------------------------------------------------------------
 TODO:
 	aesthetic:
-		tileset
 		redo particle effects
 		theme for each difficulty (instead of difficulties)
 		music/sfx
 	
 	gameplay:
 		volume sliders
-		set keybindings
-		sticky walls
 		invisible walls (which hides collectibles and faster routes)
-
+	
+	sounds:
+		bonking on a wall
 -------------------------------------------------------------------------------
 IDEAS:
 	pinball-type levels
 	get different sushis for achievements and for collecting rice
-	global times for each level
+	global times for each level (speedrunning)
 	no score. only total (game) rice count, and time, and death count
+	create website for sushi roll
 -------------------------------------------------------------------------------
 PROBLEMS:
 	button highlighted when not hovering over
-	screen tearing at the top of the screen
 -------------------------------------------------------------------------------
 REFERENCE:
 easy	medium	hard
@@ -36,13 +35,23 @@ GOAL:
 	Deliver sushi to goal.
 -------------------------------------------------------------------------------
 HOW TO PLAY:
+IN GAME:
 	Keyboard/mouse:
-		Mouse_x -> tilt the platforms
-		A and D -> move the sushi
-		Esc -> pause
+		Mouse X - tilt the platforms
+		A and D or Left and Right Arrows - move the sushi
+		Esc - pause
 	Controller:
-		Right stick -> tilt the platforms
-		Left stick -> move the sushi
-		Start -> pause
+		Right Stick - tilt the platforms
+		Left Stick - move the sushi
+		Start - pause
+MENU:
+	Keyboard/mouse:
+		WASD or Arrow Keys - move selection
+		Enter or X - select
+		Esc - go back
+	Controller:
+		Left stick - move selection
+		A - select
+		B - go back
 -------------------------------------------------------------------------------
 
