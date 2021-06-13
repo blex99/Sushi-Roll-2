@@ -2,18 +2,49 @@
 function info_box_create(_text)
 {
 	var _gw_half = display_get_gui_width() / 2;
-	var _gh_half = display_get_gui_height() / 2;
+	var _gh_half = display_get_gui_height() / 2
 	
 	var _layer_name = "UI";
 	if (!layer_exists(_layer_name)) layer_create(-9999, _layer_name);
 	
-	// there can be only one info box...
-	if (instance_exists(oInfoBox)) instance_destroy(oInfoBox);
+	// there can only be ONE info box FOR EACH slot
+	var _num_info_box = instance_number(oInfoBox);
+	var _slot_num = 0;
+	
+	// find the next availible slot (for y-offset)
+	for (; _slot_num <= _num_info_box; _slot_num++)
+	{
+		if (_slot_num == _num_info_box)
+		{
+			// there cannot be a info box with this slot,
+			// therefore we can simply break
+			break;
+		}
+		
+		// is this slot UNIQUE?
+		var _is_unique = true;
+		for (var i = 0; i < _num_info_box; i++)
+		{
+			var _other = instance_find(oInfoBox, i);
+			if (_other.slot_num == _slot_num)
+			{
+				_is_unique = false;
+				break;
+			}
+		}
+		
+		if (_is_unique)
+		{
+			break;
+		}
+	}
 	
 	var _inst = instance_create_layer(0, 0, _layer_name, oInfoBox);
 	
 	with (_inst)
 	{
+		slot_num = _slot_num;
+		
 		info_box_font = fnDebug;
 		info_box_sprite = sNineSliceBoxBamboo;
 		text = _text;
@@ -29,13 +60,13 @@ function info_box_create(_text)
 		bh_half = bh * 0.5;
 		
 		xoffset_start = - _gw_half - bw_half;
-		yoffset_start = _gh_half - bh_half;
+		yoffset_start = _gh_half - bh_half - (slot_num * bh);
 		
 		xoffset = xoffset_start;
 		yoffset = yoffset_start;
 		
 		xtarget = - _gw_half + bw_half;
-		ytarget = _gh_half - bh_half;
+		ytarget = yoffset_start; // it doesn't move in the y-direction
 		
 		x1 = _gw_half - bw_half + xoffset;
 		y1 = _gh_half - bh_half + yoffset;
@@ -44,7 +75,6 @@ function info_box_create(_text)
 		
 		xcenter = (x1 + x2) * 0.5;
 		ycenter = (y1 + y2) * 0.5;
-		
 		
 		frames_to_approach = room_speed * 0.25;
 		alarm[0] = frames_to_approach;

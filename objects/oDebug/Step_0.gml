@@ -12,4 +12,10 @@ if (keyboard_check_pressed(ord("C")))
 	}
 }
 
+if (keyboard_check_pressed(ord("Q")))
+{
+	info_box_create("test");
+}
+
+
 add_to_debug_map("fps: " + string(fps));
