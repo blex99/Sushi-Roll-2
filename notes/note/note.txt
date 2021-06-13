@@ -8,7 +8,6 @@ TODO:
 	gameplay:
 		volume sliders
 		invisible walls (which hides collectibles and faster routes)
-		make input change between keyboard and controler on click
 	
 	sounds:
 		bonking on a wall

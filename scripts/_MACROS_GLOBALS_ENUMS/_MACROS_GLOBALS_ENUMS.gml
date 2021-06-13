@@ -19,8 +19,6 @@
 #macro DEBUG_LOAD_DATA		true//true
 #macro DEBUG_UNLOCK_ALL		true//false
 
-global.border_sprite = sNineSliceBoxBamboo;
-
 // in quadrant order
 enum DIR
 {
@@ -67,6 +65,8 @@ enum BUTTON
 }
 
 gamepad_set_axis_deadzone(0, 0.2);
+
+global.border_sprite = sNineSliceBoxBamboo;
 
 // finds the slot the device is connected to
 global.device_index = input_seek_gamepad();

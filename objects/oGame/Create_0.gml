@@ -89,11 +89,12 @@ if (DEBUG_UNLOCK_ALL)
 
 // an array of rooms for difficulty select
 menu_level_rooms = array_create(LEVEL_AREA.COUNT);
-menu_level_rooms[0] = rMenuArea01;
-menu_level_rooms[1] = rMenuArea02;
-menu_level_rooms[2] = rMenuArea03;
-menu_level_rooms[3] = rMenuArea04;
+array_push(menu_level_rooms, rMenuArea01, rMenuArea02, rMenuArea03, rMenuArea04);
 
 draw_set_font(fnUI);
+
+var _msg = (global.using_controller) ? "Using Controller" : "Using Keyboard";
+info_box_create(_msg);
+
 room_goto((debug_mode) ? DEBUG_START_ROOM : rMenuMain);
 
