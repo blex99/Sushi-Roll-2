@@ -7,10 +7,9 @@ var _arr =
 [
 	"Rice: "				+ string(rice_count) + " / " + string(rice_max), 
 	"Collectibles: "		+ string(collectible_count) + " / " + string(collectible_max),
-	"Level Score Total: "	+ string(level_score)
 ];
 var _len = array_length(_arr);
-var _color = stats_collected_everything() ? c_maroon : c_black;
+var _color = stats_got_all_collectibles() ? c_maroon : c_black;
 var _alpha = stats_under_time_requirement() ? oscillate(0.75, 0.25, 0.25) : 1;
 
 // coordinates of box

@@ -7,17 +7,13 @@
 #macro CAM view_camera[0]
 #macro AREA_UNLOCK_REQ 3 // ...levels to complete
 
-#macro VALUE_RICE				50
-#macro VALUE_COLLECTIBLE		250
-#macro VALUE_COLLECTOR_BONUS	500
-#macro VALUE_SPEEDY_BONUS		500
-
 #macro START_FULLSCREEN		false
 
 #macro DEBUG_START_ROOM		rMenuMain//rMenuMain
 #macro DEBUG_SHOW_VISUALS	true//false
 #macro DEBUG_LOAD_DATA		true//true
 #macro DEBUG_UNLOCK_ALL		true//false
+#macro DEBUG_NO_MUSIC		true//false
 
 // in quadrant order
 enum DIR

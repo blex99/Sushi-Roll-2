@@ -1,26 +1,34 @@
 -------------------------------------------------------------------------------
 TODO:
 	aesthetic:
-		redo particle effects
 		theme for each difficulty (instead of difficulties)
 		music/sfx
 	
 	gameplay:
 		volume sliders
 		invisible walls (which hides collectibles and faster routes)
+		display collectibles as pictures in level select and victory screen
 	
 	sounds:
 		bonking on a wall
 		water splash
 		victory music
 		spring sound
+		invisible wall find (zelda-puzzle-like)
 -------------------------------------------------------------------------------
 IDEAS:
 	pinball-type levels
 	get different sushis for achievements and for collecting rice
 	global times for each level (speedrunning)
-	no score. only total (game) rice count, and time, and death count
 	create website for sushi roll
+	
+	no score. only total (game) rice count, and time, and death count
+	display collectibles (you've collected and once you haven't as empty grey circles)
+	...at the level select
+	NO TIME REQUREMENT?
+-------------------------------------------------------------------------------
+ACHIEVEMENTS:
+	find all collectibles
 -------------------------------------------------------------------------------
 PROBLEMS:
 	button highlighted when not hovering over

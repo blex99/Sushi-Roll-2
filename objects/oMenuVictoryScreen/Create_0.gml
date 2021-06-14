@@ -12,29 +12,33 @@ y = 0;
 frames_to_approach = room_speed;
 alarm[11] = frames_to_approach;
 
+// takes the old and new best times
+var _old_time = level_get_best_time();
+var _new_time;
+level_update_best_time();
+_new_time = level_get_best_time();
+
 #region victory text set up
 xoffset_start = display_get_gui_width() / 2;
 yoffset_start = 0;
 xoffset = xoffset_start;
 yoffset = yoffset_start;
 
-var _stats = stats_get_array();
 arr = [];
 array_push(arr, 
 	"Level Complete!\n",
 	"----------------",
-	"Points\n",
-	"Rice: "				+ _stats[0], 
-	"Collectibles: "		+ _stats[1] );
+	"Rice Collected: "		+ string(stats_get_num_rice()), 
+	"Collectibles: "		+ "", // TODO display collectibles as pictures
+	"Death Count: "			+ string(level_get_death_count()),
+	"Best Time: "			+ string(mus2sec(_new_time))
+);
 
-if (stats_collected_everything())
-	array_push(arr, "Collector Bonus: " + string(VALUE_COLLECTOR_BONUS));
 if (stats_under_time_requirement())
-	array_push(arr, "Speedy Bonus: " + string(VALUE_SPEEDY_BONUS));
-	
-array_push(arr,
-	"Level Score Total: "	+ _stats[2],
-	"-----------------\n");
+	array_push(arr, "You're Fast!");
+
+if (_old_time != _new_time)
+	array_push(arr, "New Record!");
 
 len = array_length(arr);
 #endregion

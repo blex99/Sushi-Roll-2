@@ -14,52 +14,6 @@ function sushi_cur()
 		return noone;
 }
 
-// if _grow is true, grow
-// else, shrink in size
-// recreate fixture
-function sushi_change_size(_grow)
-{
-	with (sushi_cur())
-	{
-		if (_grow)
-		{
-			target_scale += size_increment;
-			target_scale += size_increment;
-			
-			mass += mass_increment;
-		}
-		else
-		{
-			// shink to original size
-			target_scale -= size_increment;
-			target_scale -= size_increment;
-			
-			mass = mass_start;
-		}
-		
-		// don't scale outside of max or original size
-		target_scale = clamp(target_scale, 1, scale_max);
-		target_scale = clamp(target_scale, 1, scale_max);
-		
-		sushi_init_fixture();
-	}
-}
-
-// returns size of normalized (0...1) of sushi
-function sushi_get_size_normalized()
-{
-	var _max_rice_consume = 1;
-	var _cur_rice_consume = 1;
-	
-	with (sushi_cur())
-	{
-		_max_rice_consume = (scale_max - 1) /  size_increment;
-		_cur_rice_consume = (target_scale - 1) /  size_increment;
-	}
-	
-	return _cur_rice_consume / _max_rice_consume;
-}
-
 function sushi_init_fixture()
 {
 	with (sushi_cur())
@@ -128,10 +82,6 @@ function sushi_jump(_newtons, _angle)
 	var _sushi = sushi_cur();
 	if (_sushi.jump_buffer > 0) return; // can only jump when jump buffer == 0
 	
-	var _sushi_shrunk = _sushi.target_scale != 1;
-	
-	sushi_change_size(false); // shrink
-	
 	with (_sushi)
 	{
 		jump_buffer = jump_buffer_start;
@@ -155,20 +105,6 @@ function sushi_jump(_newtons, _angle)
 		var _imp_y = lengthdir_y(_newtons, _impluse_deg);
 		
 		physics_apply_impulse(phy_position_x, phy_position_y, _imp_x, _imp_y);
-		
-		if (_sushi_shrunk)
-		{
-			// do particle effect
-			draw_set_alpha(0.1);
-			var _num = 1 + irandom(3);
-			for (var _i = 0; _i < _num; _i++)
-			{
-				var _offset = (1 - irandom(2)) * 8;
-				effect_create_below(ef_firework, x + _offset,
-					y + _offset + sprite_height / 2, 0, choose(c_white, c_grey));
-			}
-			reset_alpha();
-		}
 	}	
 }
 
@@ -182,3 +118,51 @@ function sushi_get_speed()
 		return round(sqrt(_asqrd + _bsqrd) / 10);
 	}
 }
+
+/*
+// if _grow is true, grow
+// else, shrink in size
+// recreate fixture
+function sushi_change_size(_grow)
+{
+	with (sushi_cur())
+	{
+		if (_grow)
+		{
+			target_scale += size_increment;
+			target_scale += size_increment;
+			
+			mass += mass_increment;
+		}
+		else
+		{
+			// shink to original size
+			target_scale -= size_increment;
+			target_scale -= size_increment;
+			
+			mass = mass_start;
+		}
+		
+		// don't scale outside of max or original size
+		target_scale = clamp(target_scale, 1, scale_max);
+		target_scale = clamp(target_scale, 1, scale_max);
+		
+		sushi_init_fixture();
+	}
+}
+
+// returns size of normalized (0...1) of sushi
+function sushi_get_size_normalized()
+{
+	var _max_rice_consume = 1;
+	var _cur_rice_consume = 1;
+	
+	with (sushi_cur())
+	{
+		_max_rice_consume = (scale_max - 1) /  size_increment;
+		_cur_rice_consume = (target_scale - 1) /  size_increment;
+	}
+	
+	return _cur_rice_consume / _max_rice_consume;
+}
+*/

@@ -2,7 +2,7 @@ var _w_half = display_get_gui_width() / 2;
 var _h_half = display_get_gui_height() / 2;
 var _max_width_pix = 0;
 var _box_height_half, _box_width_half;
-var _color = stats_collected_everything() ? c_maroon : c_black;
+var _color = stats_got_all_collectibles() ? c_maroon : c_black;
 var _alpha = stats_under_time_requirement() ? oscillate(0.75, 0.25, 0.25) : 1;
 var _x1, _y1, _x2, _y2, _xcenter, _ycenter;
 

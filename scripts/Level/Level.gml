@@ -1,12 +1,11 @@
 // create a level struct
 function level_create(_level_name, _room_name, _time_sec_req, _best_time_mus,
-	_best_score, _has_beaten, _death_counter)
+	_has_beaten, _death_counter)
 {
 	if (0) return argument[0];
 	if (_has_beaten == undefined)		_has_beaten = false;
 	if (_death_counter == undefined)	_death_counter = 0;
 	if (_best_time_mus == undefined)	_best_time_mus = sec2mus(90);
-	if (_best_score == undefined)		_best_score = 0;
 	
 	var _level = 
 	{
@@ -14,7 +13,6 @@ function level_create(_level_name, _room_name, _time_sec_req, _best_time_mus,
 		room_name : _room_name,
 		time_sec_req : _time_sec_req, // time second requirement
 		best_time_mus : _best_time_mus,
-		best_score : _best_score,
 		has_beaten : _has_beaten,
 		death_counter : _death_counter, // total number of times player died
 	};
@@ -27,7 +25,6 @@ function level_completed(){
 		state = LEVEL.COMPLETE;
 		physics_pause_enable(true);
 		timer_freeze();
-		stats_calc_final_score();
 		game_update_cur_level_struct();
 		instance_create_depth(0, 0, -9999, oMenuVictoryScreen);
 		if (!global.using_controller) window_set_cursor(cr_default);
@@ -121,4 +118,34 @@ function level_is_state(_level_state)
 {
 	with (oLevelManager)
 		return state == _level_state;
+}
+
+function level_get_death_count()
+{
+	with (oLevelManager)
+	{
+		return level_struct.death_counter;
+	}
+}
+
+// takes the current time and checks if it's less than the cur best time
+function level_update_best_time()
+{
+	var _cur_time = timer_get_time();
+	with (oLevelManager)
+	{
+		if (level_struct.best_time_mus > _cur_time)
+		{
+			level_struct.best_time_mus = _cur_time;
+		}
+	}
+}
+
+// returns best time
+function level_get_best_time()
+{
+	with (oLevelManager)
+	{
+		return level_struct.best_time_mus;
+	}
 }

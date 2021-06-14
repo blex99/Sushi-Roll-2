@@ -30,3 +30,7 @@ if (_is_in_menu && !audio_is_playing(menu_theme))
 	song_playing = menu_theme;
 }
 
+if (DEBUG_NO_MUSIC && debug_mode)
+{
+	audio_stop_all();
+}
