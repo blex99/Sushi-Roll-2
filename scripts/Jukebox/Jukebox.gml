@@ -2,23 +2,7 @@ function jukebox_play_area_theme(_area_index)
 {
 	with (oJukebox)
 	{
-		var _song;
-		switch (_area_index)
-		{
-			case 0: 
-				_song = song_147;
-				break;
-			case 1: 
-				_song = song_151;
-				break;
-			case 2: 
-				_song = song_160;
-				break;
-			case 3: 
-				_song = song_161;
-				break;
-		}
-		
+		var _song = level_themes[_area_index];
 		if (!audio_is_playing(_song))
 		{
 			song_playing = _song;

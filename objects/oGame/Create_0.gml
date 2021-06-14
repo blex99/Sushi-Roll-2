@@ -88,7 +88,7 @@ if (DEBUG_UNLOCK_ALL)
 }
 
 // an array of rooms for difficulty select
-menu_level_rooms = array_create(LEVEL_AREA.COUNT);
+menu_level_rooms = array_create(0);
 array_push(menu_level_rooms, rMenuArea01, rMenuArea02, rMenuArea03, rMenuArea04);
 
 draw_set_font(fnUI);

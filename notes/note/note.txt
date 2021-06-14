@@ -11,6 +11,9 @@ TODO:
 	
 	sounds:
 		bonking on a wall
+		water splash
+		victory music
+		spring sound
 -------------------------------------------------------------------------------
 IDEAS:
 	pinball-type levels

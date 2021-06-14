@@ -5,11 +5,6 @@ var _can_skip = (debug_mode || !oGame.level_first_try);
 var _input_one = input_one_pressed();
 var _input_pause = input_pause_pressed();
 
-if (_input_one && level_is_state(LEVEL.COMPLETE))
-{
-	game_goto_menu_level();
-}
-
 if (_input_one && level_is_state(LEVEL.COUNTING_DOWN) && _can_skip)
 {
 	// skip the timer to play the level

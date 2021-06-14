@@ -29,7 +29,7 @@ function level_completed(){
 		timer_freeze();
 		stats_calc_final_score();
 		game_update_cur_level_struct();
-		instance_create_depth(0, 0, -9999, oVictoryScreen);
+		instance_create_depth(0, 0, -9999, oMenuVictoryScreen);
 		if (!global.using_controller) window_set_cursor(cr_default);
 	}
 }

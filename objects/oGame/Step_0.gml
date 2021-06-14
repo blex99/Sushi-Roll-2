@@ -43,3 +43,5 @@ if (instance_exists(oLevelManager) && keyboard_check_pressed(ord("R")))
 // manual full screen switching
 if (keyboard_check(vk_alt) && keyboard_check_pressed(vk_enter))
 	toggle_fullscreen();
+	
+add_to_debug_map("area_index: " + string(area_index));
