@@ -1,4 +1,10 @@
-
+// saves and closes the game
+function game_close()
+{
+	with (oGame) alarm[1] = room_speed / 2;
+	my_game_save();
+	transition_start(rEnd);
+}
 
 // show/hide cursor based of if using_controller
 function update_cursor()
@@ -72,6 +78,34 @@ function game_goto_level(_difficulty, _level)
 		level_first_try = true;
 	}
 }
+
+// goto specifed level
+function game_goto_next_level()
+{
+	// shouldn't be able to skip levels by mashing A
+	if (oTransition.mode != TRANS_MODE.OFF) return;
+	
+	with (oGame)
+	{
+		level_index = (level_index + 1) % array_length(levels[area_index]);
+		
+		// if you've wrapped around, meaning there is no next level...
+		if (level_index == 0)
+		{
+			area_index = (area_index + 1) % array_length(levels);
+			
+			// if you've wrapped around AGAIN, you've completed the last level
+			if (area_index == 0)
+			{
+				transition_start(rMenuAreaSelect);
+				return;
+			}
+		}
+		
+		game_goto_level(area_index, level_index);
+	}
+}
+
 
 function game_resize_window()
 {
@@ -178,7 +212,6 @@ function my_game_save()
 	buffer_write(_buffer, buffer_string, _string);
 	buffer_save(_buffer, "save.sav");
 	buffer_delete(_buffer);
-
 }
 
 // load the game data

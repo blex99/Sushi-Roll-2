@@ -18,4 +18,6 @@ for (var i = 0; i < _areas; i++)
 }
 
 // if you've made it here, you should NOT in a level room
+area_index = -1;
+level_index = -1;
 update_cursor();
