@@ -1,5 +1,21 @@
 // helper functions
 
+// find's the position of the i'th element AWAY from the center of a list
+// _offset = find_position_from_center(i, len, buffer)
+function find_position_from_center(_index, _arr_len, _buffer, _center_pos)
+{
+	if (0) return argument[0];
+	if (_center_pos == undefined) _center_pos = 0;
+	
+	var _center, _standardized;
+	_center = floor(_arr_len / 2);
+	_standardized = _index - _center;
+	if (_arr_len % 2 == 0) _standardized += 0.5; // even offset
+	
+	print(string(_standardized) + " + " + string(_arr_len));
+	return _standardized * _buffer + _center_pos;
+}
+
 function round_to_nearest(_val, _round)
 {
 	return round(_val / _round) * _round;

@@ -28,7 +28,6 @@ function info_box_create(_text)
 		
 		if (_is_unique) break;
 	}
-
 	
 	var _layer_name = "UI";
 	if (!layer_exists(_layer_name)) layer_create(-9999, _layer_name);

@@ -1,9 +1,6 @@
 /// @description lerp position
 
-var _norm = abs(1 - alarm[11] / frames_to_approach);
-_norm = clamp(_norm, 0, 1);
-
-xoffset = lerp(xoffset_start, 0, easeOutElastic(_norm));
-yoffset = lerp(yoffset_start, 0, easeOutElastic(_norm));
+cur.x = lerp(start.x, target.x, 0.1);
+cur.y = lerp(start.y, target.y, 0.1);
 
 event_inherited();
