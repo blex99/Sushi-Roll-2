@@ -1,14 +1,5 @@
 event_inherited();
 
-var _w = display_get_gui_width();
-var _h = display_get_gui_height();
-
-font = fnUI;
-vertical_buffer = font_get_size(font);
-
-x = 0;
-y = 0;
-
 frames_to_approach = room_speed;
 alarm[11] = frames_to_approach;
 
@@ -18,7 +9,15 @@ var _new_time;
 level_update_best_time();
 _new_time = level_get_best_time();
 
+// remove the timer, as we will display the time ourself
+instance_destroy(oTimer);
+
 #region victory text set up
+var _w = display_get_gui_width();
+var _h = display_get_gui_height();
+font = fnUI;
+vertical_buffer = font_get_size(font);
+
 xoffset_start = display_get_gui_width() / 2;
 yoffset_start = 0;
 xoffset = xoffset_start;
@@ -43,6 +42,7 @@ if (_old_time != _new_time)
 len = array_length(arr);
 #endregion
 
+#region buttons
 var _button;
 var _xoffset = 16 + (256 / 2); // buffer + button_sprite_width / 2
 
@@ -59,3 +59,4 @@ _button.dir = [0, -1, 0, -1];
 _button.my_script = game_goto_next_level;
 _button.text = "Go to Next Level";
 array_push(buttons, _button);
+#endregion

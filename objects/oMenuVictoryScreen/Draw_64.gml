@@ -26,6 +26,8 @@ ui_nine_slice_box(global.border_sprite, _x1, _y1, _x2, _y2);
 set_draw(_color, _alpha, font, fa_center, fa_center);
 for (var i = 0; i < len; i++)
 {
-	var _offset = vertical_buffer * (i - len / 2);
-	draw_text_with_outline(_xcenter, _ycenter + _offset, arr[i]);
+	var _even_offset = (len % 2 != 0) ? 0.5 : 0;
+	var _percent = (i + _even_offset - len / 2);
+	var _offset = vertical_buffer * _percent;
+	draw_text_with_outline(_xcenter, _ycenter + _offset, string(_offset) + " " + string(_percent));//arr[i]);
 }

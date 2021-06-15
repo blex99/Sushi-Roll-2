@@ -8,6 +8,12 @@ function info_box_create(_text)
 	var _num_info_box = instance_number(oInfoBox);
 	var _slot_num = 0;
 	
+	// if there are more than FIVE infoboxes, remove the 1st one
+	if (_num_info_box >= 5)
+	{
+		instance_destroy(instance_find(oInfoBox, 0));
+	}
+
 	// find the next availible slot (for y-offset)
 	for (; _slot_num < _num_info_box; _slot_num++)
 	{
@@ -16,12 +22,13 @@ function info_box_create(_text)
 		for (var i = 0; i < _num_info_box; i++)
 		{
 			var _other = instance_find(oInfoBox, i);
-			if (_other.slot_num == _slot_num)
+			if (_other != noone && _other.slot_num == _slot_num)
 				_is_unique = false;
 		}
 		
 		if (_is_unique) break;
 	}
+
 	
 	var _layer_name = "UI";
 	if (!layer_exists(_layer_name)) layer_create(-9999, _layer_name);
@@ -35,6 +42,7 @@ function info_box_create(_text)
 		info_box_font = fnDebug;
 		info_box_sprite = sNineSliceBoxBamboo;
 		text = _text;
+		alpha = 1;
 		
 		draw_set_font(info_box_font);
 		var _dynamic_width_pix = string_width(text) + 32;
