@@ -82,10 +82,10 @@ function diff2str(_diff)
 {
 	switch(_diff)
 	{
-		case LEVEL_AREA.BEGINNER:		return "Beginner";
-		case LEVEL_AREA.INTERMEDIATE:	return "Intermediate";
-		case LEVEL_AREA.EXPERT:			return "Expert";
-		case LEVEL_AREA.MASTER:			return "Master";
+		case LEVEL_AREA.KITCHEN:		return "KITCHEN";
+		case LEVEL_AREA.BAMBOO:			return "BAMBOO";
+		case LEVEL_AREA.SKY_TEMPLE:		return "SKY TEMPLE";
+		case LEVEL_AREA.NEON:			return "NEON";
 	}
 }
 

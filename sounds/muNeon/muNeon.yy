@@ -7,17 +7,17 @@
   "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "agMusic",
+    "path": "audiogroups/agMusic",
   },
-  "soundFile": "mu147.mp3",
+  "soundFile": "muNeon.mp3",
   "duration": 153.629,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "mu147",
+  "name": "muNeon",
   "tags": [],
   "resourceType": "GMSound",
 }

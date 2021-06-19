@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "InGame",
-    "path": "folders/Sprites/InGame.yy",
+    "name": "1 Kitchen Area",
+    "path": "folders/Sprites/1 Kitchen Area.yy",
   },
   "resourceVersion": "1.0",
   "name": "sChopstick",

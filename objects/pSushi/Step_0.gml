@@ -66,9 +66,11 @@ var _rot = round_to_nearest(-phy_rotation, 360)
 if (rot_360 != _rot)
 {
 	rot_360 = _rot;
+	
+	// TODO use jukebox
 	audio_play_sound(sfx_roll, 0, false);
 	
-	var _volume = clamp(_speed / 40, 0, 0.5);
+	var _volume = clamp(_speed / 40, 0, jukebox_get_sfx_volume());
 	var _pitch = clamp(_speed / 60, 0.4, 1);
 	audio_sound_gain(sfx_roll, _volume, 10);
 	audio_sound_pitch(sfx_roll, _pitch + 0.5 + random_range(-0.05, 0.05));

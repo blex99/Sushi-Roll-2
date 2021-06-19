@@ -7,8 +7,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "agSfx",
+    "path": "audiogroups/agSfx",
   },
   "soundFile": "sfxSelectLevel.wav",
   "duration": 1.891438,

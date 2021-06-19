@@ -3,6 +3,8 @@ TODO:
 	aesthetic:
 		theme for each difficulty (instead of difficulties)
 		music/sfx
+		background (functionality of, parallax)
+		art re-do
 	
 	gameplay:
 		volume sliders
@@ -23,6 +25,7 @@ IDEAS:
 	global times for each level (speedrunning)
 	create website for sushi roll
 	camera zoom out areas (hitboxes)
+	remove 4th area (only 1, 2, 3)
 	
 	no score. only total (game) rice count, and time, and death count
 	display collectibles (you've collected and once you haven't as empty grey circles)
@@ -45,6 +48,8 @@ save location: C:\Users\alex\AppData\Local\Sushi_Roll_2
 
 Thin Chopsticks: sushi can jump ~320 pix
 Regular Chopsticks: sushi can jump ~256 pix
+
+For optional args: if (0) return argument[0];
 -------------------------------------------------------------------------------
 GOAL:
 	Deliver sushi to goal.

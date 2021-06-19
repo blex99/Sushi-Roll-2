@@ -10,7 +10,7 @@ with (menu_committed)
 
 if (menu_committed.object_index != oButtonBack)
 {
-	audio_play_sound(sfx_select, 0, 0);
+	jukebox_play_sfx(sfx_select);
 }
 
 menu_committed = noone;

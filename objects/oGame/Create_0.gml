@@ -27,7 +27,7 @@ area_index = -1; // which difficulty are we currently on
 level_index = -1; // which level in that difficulty are we currently on
 level_first_try = true; // player hasn't died yet?
 levels = [];
-levels[LEVEL_AREA.BEGINNER] = 
+levels[LEVEL_AREA.KITCHEN] = 
 [
 	level_create("Starting Out", rLevel_StartingOut, 10),
 	level_create("360", rLevel_360, 20),
@@ -36,7 +36,7 @@ levels[LEVEL_AREA.BEGINNER] =
 	level_create("Rampin' Up", rLevel_RampinUp, 20),
 ];
 
-levels[LEVEL_AREA.INTERMEDIATE] = 
+levels[LEVEL_AREA.BAMBOO] = 
 [
 	level_create("Watch Out for Knives", rLevel_WatchOutForKnives, 15),
 	level_create("Octopus", rLevel_Octopus, 10),
@@ -45,7 +45,7 @@ levels[LEVEL_AREA.INTERMEDIATE] =
 	level_create("Trapdoor Track Lesson", rLevel_TrapdoorTrackLesson, 12),
 ];
 
-levels[LEVEL_AREA.EXPERT] = 
+levels[LEVEL_AREA.SKY_TEMPLE] = 
 [
 	level_create("Up and Away", rLevel_UpAndAway, 35),
 	level_create("Down You Go", rLevel_DownYouGo, 5),
@@ -54,7 +54,7 @@ levels[LEVEL_AREA.EXPERT] =
 	level_create("Sushi Olympics: Silver", rLevel_SushiOlympicsSilver, 12),
 ];
 
-levels[LEVEL_AREA.MASTER] = 
+levels[LEVEL_AREA.NEON] = 
 [
 	level_create("Intro to Gravity", rLevel_IntroToGravity, 35),
 	level_create("Orientation", rLevel_Orientation, 25),
@@ -68,7 +68,7 @@ area_unlocked = array_create(LEVEL_AREA.COUNT);
 // by default, only beginner is availible
 for (var i = 1; i < LEVEL_AREA.COUNT; i++)
 	area_unlocked[i] = false;
-area_unlocked[LEVEL_AREA.BEGINNER] = true;
+area_unlocked[LEVEL_AREA.KITCHEN] = true;
 
 // by default, no level types have been completed
 for (var i = 1; i < LEVEL_AREA.COUNT; i++)

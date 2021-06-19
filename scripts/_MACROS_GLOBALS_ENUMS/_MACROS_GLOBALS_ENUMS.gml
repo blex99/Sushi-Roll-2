@@ -13,7 +13,7 @@
 #macro DEBUG_SHOW_VISUALS	true//false
 #macro DEBUG_LOAD_DATA		true//true
 #macro DEBUG_UNLOCK_ALL		true//false
-#macro DEBUG_NO_MUSIC		true//false
+#macro DEBUG_PLAY_MUSIC		true//true
 
 // in quadrant order
 enum DIR
@@ -27,10 +27,10 @@ enum DIR
 
 enum LEVEL_AREA
 {
-	BEGINNER,
-	INTERMEDIATE,
-	EXPERT,
-	MASTER,
+	KITCHEN,
+	BAMBOO,
+	SKY_TEMPLE,
+	NEON,
 	COUNT // = 4, the size of the enum
 }
 

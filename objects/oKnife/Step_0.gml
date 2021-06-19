@@ -16,7 +16,7 @@ if (killed_sushi)
 {
 	if (!played_sound)
 	{
-		audio_play_sound(sfx_knife, 0, 0);
+		jukebox_play_sfx(sfx_knife);
 		played_sound = true;
 	}
 	path_speed = 0;

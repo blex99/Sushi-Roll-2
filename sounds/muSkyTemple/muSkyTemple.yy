@@ -7,17 +7,17 @@
   "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "agMusic",
+    "path": "audiogroups/agMusic",
   },
-  "soundFile": "mu160.mp3",
-  "duration": 91.469,
+  "soundFile": "muSkyTemple.mp3",
+  "duration": 266.717,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "mu160",
+  "name": "muSkyTemple",
   "tags": [],
   "resourceType": "GMSound",
 }

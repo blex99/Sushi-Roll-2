@@ -51,7 +51,7 @@ for (var i = 0; i < 4; i++)
 	{
 		dir_locked = i;
 		menu_cursor = buttons[menu_cursor.dir[i]];
-		audio_play_sound(sfx_hover, 0, 0);
+		jukebox_play_sfx(sfx_hover);
 	}
 }
 	
@@ -81,7 +81,7 @@ for (var i = 0; i < _len; i++)
 		b != menu_cursor)
 	{
 		menu_cursor = b;
-		audio_play_sound(sfx_hover, 0, 0);
+		jukebox_play_sfx(sfx_hover);
 
 		if (MOUSE_LEFT && !global.using_controller)
 		{

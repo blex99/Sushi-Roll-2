@@ -1,7 +1,18 @@
 /// @description store songs
 
-menu_theme = mu138;
-level_themes = [mu160, mu147, mu161, mu151];
+audio_group_load(agSfx);
+audio_group_load(agMusic);
 
-song_playing = -1;
-song_stopping = -1;
+music_playing = noone;
+music_stopping = noone;
+music = [muMenu, muKitchen, muBamboo, muNeon, muSkyTemple];
+sfx = [sfxAir, sfxBack, sfxHover, sfxKnife, sfxRoll, sfxSelect,
+	sfxSelectLevel];
+	
+music_volume = 0.7; // TODO save/load volume settings
+sfx_volume = 0.7;
+
+control = false; /*	true = allowed to change volume
+					false = NOT allowed, bc transitioning btw songs */
+sfx_loaded = false;
+music_loaded = false;

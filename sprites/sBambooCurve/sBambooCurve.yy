@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Bamboo",
-    "path": "folders/Sprites/Bamboo.yy",
+    "name": "2 Bamboo Area",
+    "path": "folders/Sprites/2 Bamboo Area.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBambooCurve",

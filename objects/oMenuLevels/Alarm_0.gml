@@ -9,7 +9,7 @@ if (menu_committed.object_index == oButtonBack)
 }
 else
 {
-	audio_play_sound(sfx_select_level, 0, 0);
+	jukebox_play_sfx(sfx_select_level);
 	game_goto_level(area, menu_committed.btag);
 }
 
