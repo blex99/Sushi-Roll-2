@@ -1,5 +1,8 @@
 function jukebox_play_song(_song_id)
 {
+	// don't play the music if im debugging and i say so ):<
+	if (!DEBUG_PLAY_MUSIC && debug_mode) return;
+
 	with (oJukebox)
 	{
 		// if music isn't loaded yet OR
@@ -76,7 +79,7 @@ function jukebox_set_sfx_volume(_value)
 {
 	with (oJukebox)
 	{
-		audio_group_set_gain(agSfx, _value, 10);
+		audio_group_set_gain(agSfx, _value, 100);
 		sfx_volume = _value;
 	}
 }
@@ -86,7 +89,7 @@ function jukebox_set_music_volume(_value)
 {
 	with (oJukebox)
 	{
-		audio_group_set_gain(agMusic, _value, 10);
+		audio_group_set_gain(agMusic, _value, 100);
 		music_volume = _value;
 	}
 }

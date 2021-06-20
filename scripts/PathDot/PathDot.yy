@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "InGameObject",
+    "path": "folders/Scripts/InGameObject.yy",
   },
   "resourceVersion": "1.0",
   "name": "PathDot",

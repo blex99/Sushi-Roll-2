@@ -8,9 +8,3 @@ if (_is_in_menu)
 {
 	jukebox_play_song(muMenu);
 }
-
-// stop the music if im debugging and i say so ):<
-if (!DEBUG_PLAY_MUSIC && debug_mode)
-{
-	audio_stop_all();
-}

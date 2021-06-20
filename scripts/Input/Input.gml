@@ -72,7 +72,8 @@ function input_back_pressed()
 		return gamepad_button_check_pressed(global.device_index, gp_face2);
 	}
 	
-	return keyboard_check_pressed(vk_escape);
+	return keyboard_check_pressed(vk_escape) ||
+		mouse_check_button_pressed(mb_right);
 }
 
 // for pausing

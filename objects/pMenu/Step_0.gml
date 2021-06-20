@@ -7,9 +7,6 @@ if (oTransition.mode != TRANS_MODE.OFF) exit;
 // you're currently initializing the menu vars
 if (!instance_exists(pButton) || !menu_control || alarm[1] != -1) exit;
 
-// idk why i need this
-//if (!menu_control && alarm[0] == -1) menu_control = true;
-
 var _len = array_length(buttons);
 
 // keyboard/controller
@@ -20,6 +17,14 @@ var _up = _vertical < 0;
 var _down = _vertical > 0;
 var _left = _horizontal < 0;
 var _right = _horizontal > 0;
+
+// move the mouse if you're going to use the keyboard
+var _mouse_moved = false; // mouse moved this frame?
+if (_horizontal != 0 || _vertical != 0)
+{
+	window_mouse_set(0, 0);
+	_mouse_moved = true;
+}
 
 // reset dir_locked immediately
 if ((!_up		&& dir_locked == DIR.U) ||
@@ -56,7 +61,8 @@ for (var i = 0; i < 4; i++)
 }
 	
 // select currently hovered button
-if (input_one_pressed())
+// mouse controls are later...
+if (input_one_pressed() && !MOUSE_LEFT)
 {
 	menu_committed = menu_cursor;
 	menu_control = false;
@@ -78,12 +84,15 @@ for (var i = 0; i < _len; i++)
 	if (menu_control && !global.using_controller &&
 		MOUSE_GUI_X > b.x1 && MOUSE_GUI_X < b.x2 &&
 		MOUSE_GUI_Y > b.y1 && MOUSE_GUI_Y < b.y2 &&
-		b != menu_cursor)
+		!_mouse_moved)
 	{
+		// play a sound if you've hovered over something new
+		if (b != menu_cursor)
+			jukebox_play_sfx(sfx_hover);
+		
 		menu_cursor = b;
-		jukebox_play_sfx(sfx_hover);
 
-		if (MOUSE_LEFT && !global.using_controller)
+		if (MOUSE_LEFT)
 		{
 			menu_committed = b;
 			menu_control = false;
@@ -104,3 +113,7 @@ for (var i = 0; i < _len; i++)
 		b.button_state = BUTTON.IDLE;
 	}
 }
+
+add_to_debug_map("_mouse_moved: " + string(_mouse_moved));
+add_to_debug_map("menu_control: " + string(menu_control));
+add_to_debug_map("global.using_controller: " + string(global.using_controller));

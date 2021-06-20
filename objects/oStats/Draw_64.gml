@@ -5,8 +5,8 @@ if (!instance_exists(oLevelManager) ||
 
 var _arr =
 [
-	"Rice: "				+ string(rice_count) + " / " + string(rice_max), 
-	"Collectibles: "		+ string(collectible_count) + " / " + string(collectible_max),
+	"Rice: "			+ string(rice_count) + " / " + string(rice_max), 
+	"Collectibles: "	+ string(collectible_count) + " / " + string(collectible_max),
 ];
 var _len = array_length(_arr);
 var _color = stats_got_all_collectibles() ? c_maroon : c_black;
@@ -26,10 +26,10 @@ ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2);
 	
 // score text
 set_draw(_color, _alpha, font, fa_center, fa_center);
-for (var _count = 0; _count < _len; _count++)
+for (var i = 0; i < _len; i++)
 {
-	var _offset = font_height * (_count - 1) + 2;
-	draw_text_with_outline(_xcenter, _ycenter + _offset, _arr[_count]);
+	var _ypos = find_position_from_center(i, _len, font_height, _ycenter);
+	draw_text_with_outline(_xcenter, _ypos, _arr[i]);
 }
 
 reset_alpha();

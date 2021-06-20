@@ -9,8 +9,7 @@ draw_sprite(sUISliderButton, 0, x + sprite_width * value, y);
 
 // draw name of slider
 set_draw(c_black, 1, fnUI, fa_top, fa_center);
-draw_text(x + sprite_width / 2, y + sprite_height / 2 + 8, name);
-
-draw_circle(MOUSE_GUI_X, MOUSE_GUI_Y, 3, false);
+draw_text_with_outline(x + sprite_width / 2,
+	y + sprite_height / 2 + 8, name);
 
 reset_alpha();

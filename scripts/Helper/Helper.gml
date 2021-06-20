@@ -12,7 +12,7 @@ function find_position_from_center(_index, _arr_len, _buffer, _center_pos)
 	_standardized = _index - _center;
 	if (_arr_len % 2 == 0) _standardized += 0.5; // even offset
 	
-	print(string(_standardized) + " + " + string(_arr_len));
+	//print(string(_standardized) + " + " + string(_arr_len));
 	return _standardized * _buffer + _center_pos;
 }
 

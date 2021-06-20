@@ -201,6 +201,12 @@ function my_game_save()
 		array_push(_saveData, levels, area_unlocked, area_completed);
 	}
 	
+	with (oJukebox)
+	{
+		// volume levels
+		array_push(_saveData, music_volume, sfx_volume);
+	}
+	
 	var _string = json_stringify(_saveData);
 	var _buffer = buffer_create(string_byte_length(_string) + 1, buffer_fixed, 1);
 	buffer_write(_buffer, buffer_string, _string);
@@ -219,9 +225,15 @@ function my_game_load()
 		
 		var _loadData = json_parse(_string);
 		
-		levels = _loadData[0];
-		area_unlocked = _loadData[1];
-		area_completed = _loadData[2];
+		with (oGame)
+		{
+			levels = _loadData[0];
+			area_unlocked = _loadData[1];
+			area_completed = _loadData[2];
+		}
+
+		jukebox_set_music_volume(_loadData[3]);
+		jukebox_set_sfx_volume(_loadData[4]);
 	}
 }
 

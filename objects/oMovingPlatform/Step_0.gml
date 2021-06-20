@@ -6,6 +6,7 @@ if (level_is_state(LEVEL.PAUSED))
 var _cardinal_dir = deg2card(direction);
 image_index = _cardinal_dir;
 
+
 if (path_action == path_action_reverse)
 {
 	// if you've reached the end of the path for the first time
@@ -35,3 +36,5 @@ for (var i = 0; i < _len; i++)
 		 i--;
 	}
 }
+
+add_to_debug_map("path_position: " + string(abs(path_position - round_to_nearest(path_position, 0.1))));

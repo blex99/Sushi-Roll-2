@@ -11,7 +11,7 @@ if ( alarm[1] != -1 ||
 var _str = "";
 with (oGame)
 {
-	// the level you're hovering over
+	// the level struct you're hovering over
 	var _level = levels[other.area][other.menu_cursor.btag];
 	
 	// show if you've beaten the level before

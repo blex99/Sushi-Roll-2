@@ -9,6 +9,7 @@ if (!control && music_stopping != noone &&
 	control = true;
 }
 
+/*
 // DEBUG
 var _len = array_length(music);
 for (var i = 0; i < _len; i++)
@@ -23,3 +24,4 @@ for (var i = 0; i < _len; i++)
 	var _gain = audio_sound_get_gain(sfx[i]);
 	add_to_debug_map(audio_get_name(sfx[i]) + ": " + string(_gain));
 }
+*/

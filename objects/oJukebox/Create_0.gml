@@ -1,7 +1,7 @@
 /// @description store songs
 
-audio_group_load(agSfx);
 audio_group_load(agMusic);
+audio_group_load(agSfx);
 
 music_playing = noone;
 music_stopping = noone;
