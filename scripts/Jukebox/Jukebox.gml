@@ -1,7 +1,7 @@
 function jukebox_play_song(_song_id)
 {
 	// don't play the music if im debugging and i say so ):<
-	if (!DEBUG_PLAY_MUSIC && debug_mode) return;
+	if (!global.debug.play_music) return;
 
 	with (oJukebox)
 	{
@@ -83,6 +83,17 @@ function jukebox_set_sfx_volume(_value)
 		sfx_volume = _value;
 	}
 }
+function jukebox_increment_sfx_volume()
+{
+	with (oJukebox)
+	{
+		sfx_volume += 0.2;
+		if (sfx_volume > 1) sfx_volume = 0;
+		audio_group_set_gain(agSfx, sfx_volume, 100);
+		info_box_create("SFX Volume " + string(round(sfx_volume * 100)) + "%",
+			"SFX Volume");
+	}
+}
 
 function jukebox_get_music_volume() { with (oJukebox) return music_volume; }
 function jukebox_set_music_volume(_value)
@@ -91,5 +102,16 @@ function jukebox_set_music_volume(_value)
 	{
 		audio_group_set_gain(agMusic, _value, 100);
 		music_volume = _value;
+	}
+}
+function jukebox_increment_music_volume()
+{
+	with (oJukebox)
+	{
+		music_volume += 0.2;
+		if (music_volume > 1) music_volume = 0;
+		audio_group_set_gain(agMusic, music_volume, 100);
+		info_box_create("Music Volume " + string(round(music_volume * 100)) + "%",
+			"Music Volume");
 	}
 }

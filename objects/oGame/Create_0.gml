@@ -17,7 +17,7 @@ while (_display_w >= BASE_W * window_scale_max &&
 }
 window_scale_max--;
 
-if (START_FULLSCREEN) toggle_fullscreen();
+if (global.start_fullscreen) toggle_fullscreen();
 game_resize_window();
 display_set_gui_size(BASE_W , BASE_H);
 #endregion
@@ -75,10 +75,10 @@ for (var i = 1; i < LEVEL_AREA.COUNT; i++)
 	area_completed[i] = false;
 
 // in the case that the player has save data, load it
-if (!debug_mode || DEBUG_LOAD_DATA) my_game_load();
+if (global.debug.load_data) my_game_load();
 
 // unlock all levels, if desired
-if (DEBUG_UNLOCK_ALL)
+if (global.debug.unlock_all)
 {
 	for (var i = 0; i < LEVEL_AREA.COUNT; i++)
 	{
@@ -94,7 +94,7 @@ array_push(menu_level_rooms, rMenuArea01, rMenuArea02, rMenuArea03, rMenuArea04)
 draw_set_font(fnUI);
 
 var _msg = (global.using_controller) ? "Using Controller" : "Using Keyboard";
-info_box_create(_msg);
+info_box_create(_msg, "Input");
 
-room_goto((debug_mode) ? DEBUG_START_ROOM : rMenuMain);
+room_goto(global.debug.starting_room);
 

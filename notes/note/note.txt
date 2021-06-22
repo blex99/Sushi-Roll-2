@@ -7,7 +7,6 @@ TODO:
 		art re-do
 	
 	gameplay:
-		volume sliders
 		invisible walls (which hides collectibles and faster routes)
 		display collectibles as pictures in level select and victory screen
 	
@@ -30,11 +29,15 @@ IDEAS:
 	display collectibles (you've collected and once you haven't as empty grey circles)
 	...at the level select
 	NO TIME REQUREMENT?
+	
+	time requirement = time goal -> if you beat under time goal in all levels you 
+	unlock the 
 -------------------------------------------------------------------------------
 ACHIEVEMENTS:
 	find all collectibles
 	have a total of 100 rice
 	buy all playable sushi's
+	complete all levels under time goal
 -------------------------------------------------------------------------------
 PROBLEMS:
 	button highlighted when not hovering over
@@ -73,4 +76,8 @@ MENU:
 		A - select
 		B - go back
 -------------------------------------------------------------------------------
+TIPS:
+	1. restarting after you beat the level doesn't count as a death, but restarting
+		in the pase menu does
+	2. remember you can push the sushi forward even while in the air
 

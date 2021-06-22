@@ -23,5 +23,6 @@ if (!mouse_check_button(mb_left))
 if (selected)
 {
 	value = clamp((MOUSE_GUI_X - x) / sprite_width, 0, max_value);
+	value = round_to_nearest(value, 0.1);
 	event_user(0);
 }

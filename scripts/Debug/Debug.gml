@@ -6,16 +6,6 @@ function print(_msg)
 	show_debug_message(_msg);
 }
 
-function can_display_debug()
-{
-	with (oDebug)
-	{
-		return debug_mode && show_debug;	
-	}
-	
-	return false;
-}
-
 // put in string in this format: "key: + string(value)"
 function add_to_debug_map(_str)
 {

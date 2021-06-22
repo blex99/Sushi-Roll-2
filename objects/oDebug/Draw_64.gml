@@ -1,7 +1,7 @@
 /// @desc debug messages
 
 
-if (can_display_debug())
+if (global.debug.show_visuals)
 {
 	var _w = display_get_gui_width();
 	var _h = display_get_gui_height();

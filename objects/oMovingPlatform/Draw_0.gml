@@ -1,4 +1,4 @@
-if (can_display_debug()) draw_path(path, xstart, ystart, false);
+if (global.debug.show_visuals) draw_path(path, xstart, ystart, false);
 
 // draw dotted path
 var _len = ds_list_size(path_dots);

@@ -2,7 +2,7 @@
 
 if (keyboard_check_pressed(ord("V")))
 {
-	show_debug = !show_debug;
+	global.debug.show_visuals = !global.debug.show_visuals;
 }
 
 // move the sushi to precisely to the goal hitbox
@@ -27,6 +27,5 @@ if (keyboard_check_pressed(ord("Q")))
 {
 	info_box_create("test");
 }
-
 
 add_to_debug_map("fps: " + string(fps));

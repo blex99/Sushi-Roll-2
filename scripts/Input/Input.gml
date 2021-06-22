@@ -7,6 +7,7 @@ function input_one_pressed()
 	
 	return mouse_check_button_pressed(mb_left) ||
 		   keyboard_check_pressed(vk_enter) ||
+		   keyboard_check_pressed(vk_space) ||
 		   keyboard_check_pressed(ord("X"));
 }
 
@@ -19,6 +20,7 @@ function input_one()
 	
 	return mouse_check_button(mb_left) ||
 		   keyboard_check(vk_enter) ||
+		   keyboard_check(vk_space) ||
 		   keyboard_check(ord("X"));
 }
 

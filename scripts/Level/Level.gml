@@ -1,17 +1,17 @@
 // create a level struct
-function level_create(_level_name, _room_name, _time_sec_req, _best_time_mus,
+function level_create(_level_name, _room_name, _time_sec_goal, _best_time_mus,
 	_has_beaten, _death_counter)
 {
 	if (0) return argument[0];
 	if (_has_beaten == undefined)		_has_beaten = false;
 	if (_death_counter == undefined)	_death_counter = 0;
-	if (_best_time_mus == undefined)	_best_time_mus = sec2mus(90);
+	if (_best_time_mus == undefined)	_best_time_mus = sec2mus(999);
 	
 	var _level = 
 	{
 		level_name : _level_name,
 		room_name : _room_name,
-		time_sec_req : _time_sec_req, // time second requirement
+		time_sec_goal : _time_sec_goal, // time second requirement
 		best_time_mus : _best_time_mus,
 		has_beaten : _has_beaten,
 		death_counter : _death_counter, // total number of times player died
@@ -25,7 +25,9 @@ function level_completed(){
 		state = LEVEL.COMPLETE;
 		physics_pause_enable(true);
 		timer_freeze();
-		game_update_cur_level_struct();
+		game_cur_level_beaten();
+		
+		// times updated in victory screen
 		instance_create_depth(0, 0, -9999, oMenuVictoryScreen);
 		if (!global.using_controller) window_set_cursor(cr_default);
 	}

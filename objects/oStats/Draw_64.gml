@@ -10,7 +10,7 @@ var _arr =
 ];
 var _len = array_length(_arr);
 var _color = stats_got_all_collectibles() ? c_maroon : c_black;
-var _alpha = stats_under_time_requirement() ? oscillate(0.75, 0.25, 0.25) : 1;
+var _alpha = stats_time_goal_met() ? oscillate(0.75, 0.25, 0.25) : 1;
 
 // coordinates of box
 var _x1, _y1, _x2, _y2, _xcenter, _ycenter;

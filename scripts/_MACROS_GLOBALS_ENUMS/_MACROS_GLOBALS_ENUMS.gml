@@ -7,13 +7,7 @@
 #macro CAM view_camera[0]
 #macro AREA_UNLOCK_REQ 3 // ...levels to complete
 
-#macro START_FULLSCREEN		false
 
-#macro DEBUG_START_ROOM		rMenuMain//rMenuMain
-#macro DEBUG_SHOW_VISUALS	true//false
-#macro DEBUG_LOAD_DATA		true//true
-#macro DEBUG_UNLOCK_ALL		true//false
-#macro DEBUG_PLAY_MUSIC		true//true
 
 // in quadrant order
 enum DIR
@@ -60,11 +54,29 @@ enum BUTTON
 	PRESSED
 }
 
-gamepad_set_axis_deadzone(0, 0.2);
+global.debug = 
+{
+	starting_room:	rMenuMain,
+	show_visuals:	true,
+	load_data:		true,
+	unlock_all:		true,
+	play_music:		true,
+	set_default_values : function()
+	{
+		starting_room	= rMenuMain;
+		show_visuals	= false;
+		load_data		= true;
+		unlock_all		= false;
+		play_music		= true;
+	},
+};
+if (!debug_mode) global.debug.set_default_values();
+
+global.start_fullscreen = false;
 
 global.border_sprite = sNineSliceBoxBamboo;
 
 // finds the slot the device is connected to
 global.device_index = input_seek_gamepad();
-
 global.using_controller = gamepad_is_connected(global.device_index);
+gamepad_set_axis_deadzone(0, 0.2);

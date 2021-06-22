@@ -17,7 +17,7 @@ with (oGame)
 	// show if you've beaten the level before
 	if (_level.has_beaten) _str += "*";
 	_str += string(_level.level_name) + "\n";
-	_str += "Time Requirement: " + string(_level.time_sec_req) + " seconds\n";
+	_str += "Time Goal: " + string(_level.time_sec_goal) + " seconds\n";
 	_str += "Best Time: " + string(mus2sec(_level.best_time_mus)) + " seconds\n";
 	_str += "Deaths: " + string(_level.death_counter) + "\n";
 }

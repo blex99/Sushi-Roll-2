@@ -144,34 +144,26 @@ function toggle_fullscreen()
 	input_update_window_stats();
 }
 
-// either increase or decrease the window's scale
-function game_set_window_scale(_increment)
+// increase and wrap the window's scale
+function game_increment_window_scale()
 {
 	if (window_get_fullscreen()) return;
 	
 	with (oGame)
 	{
-		if (_increment) window_scale += 1;
-		else			window_scale -= 1;
-		
-		window_scale = clamp(window_scale, 1, window_scale_max);
+		window_scale += 1;
+		if (window_scale > window_scale_max) window_scale = 1;
+
 		gui_scale = clamp(gui_scale, 1, window_scale);
 	}
 	
 	game_resize_window();
 }
 
-function game_update_cur_level_struct()
+function game_cur_level_beaten()
 {
 	with (oGame)
 	{
-		var _time = timer_get_time();
-		var _best_time = levels[area_index][level_index].best_time_mus;
-			
-		// if you've beaten your best time
-		if (_best_time > _time)
-			levels[area_index][level_index].best_time_mus = _time;
-		
 		// indicate you've beaten it
 		levels[area_index][level_index].has_beaten = true;
 	}
@@ -180,11 +172,6 @@ function game_update_cur_level_struct()
 // assuming you're in a level, reset the room
 function game_level_room_reset()
 {
-	with (oGame)
-	{
-		levels[area_index][level_index].death_counter++;
-	}
-	
 	my_game_save();
 	transition_start();
 }

@@ -27,13 +27,13 @@ function stats_got_all_collectibles()
 }
 
 // returns true if you have a chance to get the speedy bonus
-function stats_under_time_requirement()
+function stats_time_goal_met()
 {
-	// get the time requirement from level manager....
-	var _req;
+	// get the time goal from level manager....
+	var _goal;
 	with (oLevelManager)
-		_req = level_struct.time_sec_req;
+		_goal = level_struct.time_sec_goal;
 	
 	with (oStats)
-		return sec2mus(_req) > timer_get_time();
+		return sec2mus(_goal) > timer_get_time();
 }

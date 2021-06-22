@@ -1,11 +1,15 @@
 /// @description display timer and red shade
 
+// do not display while not playing
+if (!instance_exists(oLevelManager) ||
+	!level_is_state(LEVEL.PLAYING)) exit;
+
 var _time_string = string_format(mus2sec(timer), 2, 2);
 //_time_string = string_right_pad_zeros(_time_string, 4);
 var _w_half = display_get_gui_width() / 2;
 var _x1, _y1, _x2, _y2, _xcenter, _ycenter;
 var _color = stats_got_all_collectibles() ? c_maroon : c_black;
-var _alpha = stats_under_time_requirement() ? oscillate(0.75, 0.25, 0.25) : 1;
+var _alpha = stats_time_goal_met() ? oscillate(0.75, 0.25, 0.25) : 1;
 
 _x1 = _w_half - buffer;
 _y1 = offset;

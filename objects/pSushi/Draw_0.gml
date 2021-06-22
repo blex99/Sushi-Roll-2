@@ -1,6 +1,6 @@
 /// @description draw 
 
-if (can_display_debug()) 
+if (global.debug.show_visuals) 
 {
 	physics_draw_debug();
 }

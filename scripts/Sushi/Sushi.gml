@@ -119,6 +119,22 @@ function sushi_get_speed()
 	}
 }
 
+// spawns a knife at sushi's position
+function sushi_die()
+{
+	if (level_is_state(LEVEL.PAUSED)) level_toggle_pause();
+	
+	var _knife;
+	with (sushi_cur())
+	{
+		_knife = instance_create_layer(x, y, "Instances", oKnife);
+		phy_linear_velocity_x = 0;
+		phy_linear_velocity_y = 0;
+	}
+	
+	_knife.y -= _knife.sprite_height / 2;
+}
+
 /*
 // if _grow is true, grow
 // else, shrink in size

@@ -1,5 +1,7 @@
 /// @description menu controls
 
+if (!menu_control && alarm[0] == -1) menu_control = true;
+
 // exit of you're transitioning
 if (oTransition.mode != TRANS_MODE.OFF) exit;
 

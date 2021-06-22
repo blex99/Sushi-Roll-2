@@ -1,6 +1,15 @@
 // create an info box to the bottom left of the screen
-function info_box_create(_text)
+// _info_id is a unique string, like "Music Volume".
+// if there is a new info box with the same id, the old
+// one will be removed. this prevents the same message appearing
+// multiple times.
+function info_box_create(_text, _info_id)
 {
+	if (0) return argument[0];
+	
+	// if no id is set, make it whatever the text is
+	if (_info_id == undefined) _info_id = _text;
+	
 	var _gw_half = display_get_gui_width() / 2;
 	var _gh_half = display_get_gui_height() / 2
 	
@@ -13,9 +22,17 @@ function info_box_create(_text)
 	{
 		instance_destroy(instance_find(oInfoBox, 0));
 	}
+	
+	// remove info boxes with the same info id
+	for (var i = 0; i < _num_info_box; i++)
+	{
+		var _other = instance_find(oInfoBox, i);
+		if (_other.info_id == _info_id)
+			instance_destroy(_other);
+	}
 
 	// find the next availible slot (for y-offset)
-	for (; _slot_num < _num_info_box; _slot_num++)
+	for (_slot_num = 0; _slot_num < _num_info_box; _slot_num++)
 	{
 		// is this slot UNIQUE?
 		var _is_unique = true;
@@ -37,6 +54,7 @@ function info_box_create(_text)
 	with (_inst)
 	{
 		slot_num = _slot_num;
+		info_id = _info_id;
 		
 		info_box_font = fnDebug;
 		info_box_sprite = sNineSliceBoxBamboo;
