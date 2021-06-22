@@ -4,6 +4,6 @@ y = oscillate(ystart, 2, 1);
 
 if (place_meeting(x, y, sushi_cur()))
 {
-	stats_increment_collectible_counter();
+	script_execute(collect_event);
 	instance_destroy();
 }

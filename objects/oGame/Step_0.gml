@@ -34,12 +34,6 @@ else if (!global.using_controller && _controller_used)
 
 #endregion
 
-// restart room
-if (instance_exists(oLevelManager) && keyboard_check_pressed(ord("R")))
-{
-	game_level_room_reset();
-}
-	
 
-	
+
 add_to_debug_map("area_index: " + string(area_index));

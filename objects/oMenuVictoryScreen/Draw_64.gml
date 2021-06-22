@@ -1,6 +1,5 @@
 var _max_width_pix = 0;
 var _box_height_half, _box_width_half;
-var _color = stats_got_all_collectibles() ? c_maroon : c_black;
 var _alpha = stats_time_goal_met() ? oscillate(0.75, 0.25, 0.25) : 1;
 var _x1, _y1, _x2, _y2, _xcenter, _ycenter;
 
@@ -21,12 +20,18 @@ _ycenter = average([_y1, _y2]);
 
 ui_nine_slice_box(global.border_sprite, _x1, _y1, _x2, _y2);
 
-set_draw(_color, _alpha, font, fa_center, fa_center);
+set_draw(c_black, _alpha, font, fa_center, fa_center);
 for (var i = 0; i < len; i++)
 {
 	var _ypos = find_position_from_center(i, len, vertical_buffer, _ycenter);
+
+	// adjust color
+	draw_set_color(c_black);
+	if (all_collectibles && i == 3)
+		draw_set_color(c_maroon);
 	if (arr[i] == "New Record!" || arr[i] == "Time Goal met!")
 		draw_set_color(c_maroon);
+
 	draw_text_with_outline(_xcenter, _ypos, arr[i]);
 }
 

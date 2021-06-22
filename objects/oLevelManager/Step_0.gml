@@ -5,6 +5,12 @@ var _can_skip = (debug_mode || !oGame.level_first_try);
 var _input_one = input_one_pressed();
 var _input_pause = input_pause_pressed();
 
+// restart room
+if (level_is_state(LEVEL.PLAYING) && keyboard_check_pressed(ord("R")))
+{
+	sushi_die();
+}
+
 if (_input_one && level_is_state(LEVEL.COUNTING_DOWN) && _can_skip)
 {
 	// skip the timer to play the level
@@ -15,7 +21,7 @@ if (_input_one && level_is_state(LEVEL.COUNTING_DOWN) && _can_skip)
 // pause only if you're either playing or paused
 if (_input_pause)
 {
-	if (level_is_state(LEVEL.PLAYING) ||level_is_state(LEVEL.PAUSED))
+	if (level_is_state(LEVEL.PLAYING) || level_is_state(LEVEL.PAUSED))
 	{
 		level_toggle_pause();
 	}

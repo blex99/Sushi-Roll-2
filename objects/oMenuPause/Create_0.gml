@@ -1,10 +1,4 @@
 /// @description create buttons through code
-
-if (instance_number(oMenuPause) > 1)
-{
-	print("o no");
-}
-
 event_inherited();
 
 // override my_previous_room to prevent possibly doing to main menu after 

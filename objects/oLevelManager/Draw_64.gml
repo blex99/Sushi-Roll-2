@@ -28,8 +28,11 @@ else if (level_is_state(LEVEL.PLAYING))
 draw_text_with_outline(_w / 2, _h / 4, _msg);
 
 // draw speed of sushi
-var _speed = sushi_get_speed();
-set_draw(c_black, 1, fnUIBig, fa_bottom, fa_right);
-draw_text_with_outline(_w, _h, "Speed: " + string(_speed) + " mph");
+if (level_is_state(LEVEL.PLAYING))
+{
+	var _speed = sushi_get_speed();
+	set_draw(c_black, 1, fnUIBig, fa_bottom, fa_right);
+	draw_text_with_outline(_w, _h, "Speed: " + string(_speed) + " mph");
+}
 
 reset_alpha();

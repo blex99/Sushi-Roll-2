@@ -8,8 +8,12 @@ TODO:
 	
 	gameplay:
 		invisible walls (which hides collectibles and faster routes)
-		display collectibles as pictures in level select and victory screen
-		tips
+		add tips menu, achievements menu
+		two more levels
+		
+	programming:
+		change ingame sprites based on area (change sub-image of theme'd
+			objects according to their theme)
 	
 	sounds:
 		bonking on a wall
@@ -24,11 +28,6 @@ IDEAS:
 	get different sushis for achievements and for collecting rice
 	global times for each level (speedrunning)
 	create website for sushi roll
-	camera zoom out areas (hitboxes)
-	
-	no score. only total (game) rice count, and time, and death count
-	display collectibles (you've collected and once you haven't as empty grey circles)
-	...at the level select
 -------------------------------------------------------------------------------
 ACHIEVEMENTS:
 	find all collectibles
@@ -37,7 +36,7 @@ ACHIEVEMENTS:
 	complete all levels under time goal
 -------------------------------------------------------------------------------
 PROBLEMS:
-	button highlighted when not hovering over
+	
 -------------------------------------------------------------------------------
 REFERENCE:
 easy	medium	hard
@@ -77,4 +76,5 @@ TIPS:
 	1. restarting after you beat the level doesn't count as a death, but restarting
 		in the pase menu does
 	2. remember you can push the sushi forward even while in the air
+	3. pressing 'R' reset the level
 

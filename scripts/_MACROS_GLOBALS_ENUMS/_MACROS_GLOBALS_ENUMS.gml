@@ -57,7 +57,7 @@ enum BUTTON
 global.debug = 
 {
 	starting_room:	rMenuMain,
-	show_visuals:	true,
+	show_visuals:	false,
 	load_data:		true,
 	unlock_all:		true,
 	play_music:		true,

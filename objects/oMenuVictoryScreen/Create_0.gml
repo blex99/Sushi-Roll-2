@@ -5,6 +5,12 @@ var _cur_time = timer_get_time();
 var _old_best = level_get_best_time();
 level_update_best_time();
 var _new_best = level_get_best_time();
+var _time_goal_met = stats_time_goal_met();
+
+var _num_collected = 0;
+if (level_is_orange_collected()) _num_collected++;
+if (level_is_wasabi_collected()) _num_collected++;
+all_collectibles = level_got_all_collectibles();
 
 // remove the timer, as we will display the time ourself
 instance_destroy(oTimer);
@@ -25,7 +31,7 @@ array_push(arr,
 	"Level Complete!\n",
 	"----------------",
 	"Rice Collected: "		+ string(stats_get_num_rice()), 
-	"Collectibles: "		+ "", // TODO display collectibles as pictures
+	"Collectibles: "		+ string(_num_collected) + " / 2",
 	"Death Count: "			+ string(level_get_death_count()),
 	"Your Time: "			+ string(mus2sec(_cur_time)),
 	"Best Time: "			+ string(mus2sec(_new_best)),
@@ -34,7 +40,7 @@ array_push(arr,
 // let player know how good they did
 if (_old_best > _new_best)
 	array_push(arr, "New Record!");
-if (stats_time_goal_met())
+if (_time_goal_met)
 	array_push(arr, "Time Goal met!");
 
 len = array_length(arr);
@@ -58,8 +64,8 @@ with (instance_create_depth(_w * 0.25, _y, -9999, oButton))
 {
 	btag = 1;
 	dir = [-1, 0, -1, 2];
-	my_script = game_goto_menu_level;
-	text = "Return to Level Select";
+	my_script = game_goto_next_level;
+	text = "Go to Next Level";
 	array_push(other.buttons, self);
 }
 
@@ -68,8 +74,8 @@ with (instance_create_depth(_w * 0.25, _y, -9999, oButton))
 {
 	btag = 2;
 	dir = [-1, 1, -1, 0];
-	my_script = game_goto_next_level;
-	text = "Go to Next Level";
+	my_script = game_goto_menu_level;
+	text = "Return to Level Select";
 	array_push(other.buttons, self);
 }
 #endregion

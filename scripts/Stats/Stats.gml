@@ -7,23 +7,9 @@ function stats_increment_rice_counter()
 	}
 }
 
-function stats_increment_collectible_counter()
-{
-	with (oStats)
-	{
-		collectible_count++;
-		collectible_count = clamp(collectible_count, 0, collectible_max);
-	}
-}
-
 function stats_get_num_rice()
 {
 	with (oStats) return rice_count;
-}
-
-function stats_got_all_collectibles()
-{
-	with (oStats) return collectible_count == collectible_max;
 }
 
 // returns true if you have a chance to get the speedy bonus
