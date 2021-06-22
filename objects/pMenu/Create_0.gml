@@ -1,5 +1,9 @@
 /// @desc init vars
 
+// variable definitions:
+// go_to_previous_room_allowed - allowed to press escape to go to previous
+//	room. you cannot do this while paused in game or in victory screen
+
 // buttons are ordered by their ptag
 var _len = instance_number(pButton);
 buttons = array_create(_len);

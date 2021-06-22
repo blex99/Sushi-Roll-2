@@ -75,6 +75,15 @@ function game_goto_level(_difficulty, _level)
 		area_index = _difficulty;
 		level_index = _level % array_length(levels[area_index]);
 		transition_start(levels[area_index][level_index].room_name);
+		
+		// center mouse to prevent clicking outside game accidentally
+		if (!global.using_controller)
+		{
+			window_mouse_set(display_get_gui_width() / 2,
+				display_get_gui_height() / 2);
+			window_set_cursor(cr_none);
+		}
+
 		level_first_try = true;
 	}
 }

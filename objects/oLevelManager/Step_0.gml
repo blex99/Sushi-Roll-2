@@ -12,9 +12,17 @@ if (_input_one && level_is_state(LEVEL.COUNTING_DOWN) && _can_skip)
 	timer_set_zero();
 }
 
-if (_input_pause && !level_is_state(LEVEL.COMPLETE))
+// pause only if you're either playing or paused
+if (_input_pause)
 {
-	level_toggle_pause();
+	if (level_is_state(LEVEL.PLAYING) ||level_is_state(LEVEL.PAUSED))
+	{
+		level_toggle_pause();
+	}
+	else
+	{
+		info_box_create("Cannot pause right now");
+	}
 }
 
 if (level_is_state(LEVEL.PLAYING) && !global.using_controller)

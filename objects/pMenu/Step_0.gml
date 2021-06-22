@@ -71,7 +71,7 @@ if (input_one_pressed() && !MOUSE_LEFT)
 }
 
 // exit room, go to the previous room
-if (input_back_pressed())
+if (input_back_pressed() && go_to_previous_room_allowed)
 {
 	menu_goto_previous_room();
 	exit;

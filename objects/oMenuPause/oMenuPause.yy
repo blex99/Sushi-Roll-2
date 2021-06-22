@@ -26,7 +26,9 @@
     {"isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"go_to_previous_room_allowed","path":"objects/pMenu/pMenu.yy",},"objectId":{"name":"pMenu","path":"objects/pMenu/pMenu.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Menus",
     "path": "folders/Objects/Menus.yy",
