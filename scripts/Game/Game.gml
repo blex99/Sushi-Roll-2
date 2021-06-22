@@ -208,6 +208,8 @@ function my_game_save()
 	buffer_write(_buffer, buffer_string, _string);
 	buffer_save(_buffer, "save.sav");
 	buffer_delete(_buffer);
+	
+	info_box_create("Saved Data");
 }
 
 // load the game data
@@ -230,6 +232,7 @@ function my_game_load()
 
 		jukebox_set_music_volume(_loadData[3]);
 		jukebox_set_sfx_volume(_loadData[4]);
+		info_box_create("Data Loaded");
 	}
 }
 
