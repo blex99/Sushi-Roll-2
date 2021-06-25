@@ -44,6 +44,7 @@ if (image_xscale != target_scale ||
 }
 
 // is free falling?
+// TODO plays after you die sometimes
 if (_speed >= limit_speed && phy_linear_velocity_y > 0 &&
 	level_is_state(LEVEL.PLAYING) && !sushi_is_grounded())
 {

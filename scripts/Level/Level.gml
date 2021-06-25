@@ -33,7 +33,7 @@ function level_completed(){
 		
 		// times updated in victory screen
 		instance_create_depth(0, 0, -9999, oMenuVictoryScreen);
-		if (!global.using_controller) window_set_cursor(cr_default);
+		if (!input_using_controller()) window_set_cursor(cr_default);
 	}
 }
 
@@ -59,7 +59,7 @@ function level_toggle_pause()
 			}
 			
 			// display mouse, if using keyboard/mouse
-			if (!global.using_controller)
+			if (!input_using_controller())
 				window_set_cursor(cr_default);
 			
 			// show mouse and revert its position to last known pos
@@ -122,6 +122,8 @@ function level_begin()
 
 function level_is_state(_level_state)
 {
+	if (!instance_exists(oLevelManager)) return false;
+
 	with (oLevelManager)
 		return state == _level_state;
 }

@@ -6,17 +6,6 @@ function game_close()
 	transition_start(rEnd);
 }
 
-// show/hide cursor based of if using_controller
-function update_cursor()
-{
-	var _cursor = cr_default;
-	if (global.using_controller) _cursor = cr_none;
-	if (instance_exists(oLevelManager) && !level_is_state(LEVEL.COMPLETE))
-		_cursor = cr_none;
-	
-	window_set_cursor(_cursor);
-}
-
 // (upon beating a level,) move back to the main
 // menu. also save the game
 function game_goto_menu_level()
@@ -77,10 +66,9 @@ function game_goto_level(_difficulty, _level)
 		transition_start(levels[area_index][level_index].room_name);
 		
 		// center mouse to prevent clicking outside game accidentally
-		if (!global.using_controller)
+		if (!input_using_controller())
 		{
-			window_mouse_set(display_get_gui_width() / 2,
-				display_get_gui_height() / 2);
+			window_mouse_set(GUI_W / 2, GUI_H / 2);
 			window_set_cursor(cr_none);
 		}
 
@@ -127,6 +115,7 @@ function game_resize_window()
 		}
 		
 		input_update_window_stats();
+		
 		surface_resize(application_surface, BASE_W, BASE_H);
 	}
 }

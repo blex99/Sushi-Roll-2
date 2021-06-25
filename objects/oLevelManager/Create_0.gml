@@ -1,7 +1,6 @@
 /// @desc inits all needed obj's for a level
 
 instance_create_layer(0, 0, "Instances", oPhysicsWorld);
-instance_create_layer(0, 0, "Instances", oInput);
 window_set_cursor(cr_none);
 
 // set default value for mouse position

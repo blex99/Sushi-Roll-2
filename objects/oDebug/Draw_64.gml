@@ -1,13 +1,9 @@
 /// @desc debug messages
 
-
-if (global.debug.show_visuals)
+if (global.debug.show_debug)
 {
-	var _w = display_get_gui_width();
-	var _h = display_get_gui_height();
-	
 	set_draw(c_black, 1, fnDebug, fa_top, fa_right);
-	draw_text_with_outline(_w, 0, "~~ DEBUG ~~");
+	draw_text_with_outline(GUI_W, 0, "~~ DEBUG ~~");
 
 	var _array = ds_map_values_to_array(debug_messages);
 
@@ -15,12 +11,8 @@ if (global.debug.show_visuals)
 	{
 		var _message = _array[_i];
 		set_draw(c_black, 1);
-		draw_text_with_outline(_w, (_i + 1) * 16, _message);
+		draw_text_with_outline(GUI_W, (_i + 1) * 16, _message);
 	}
-	
-	//show fps
-	//set_draw(c_lime, 1, fnDebug, fa_bottom, fa_right);
-	//draw_text_with_outline(_w, _h, "fps: " + string(fps));
 
 	reset_alpha();
 }

@@ -5,15 +5,12 @@ event_inherited();
 // pressing escape
 my_previous_room = -1;
 
-var _w = display_get_gui_width();
-var _h = display_get_gui_height();
+var _w_half = GUI_W / 2;
 var _num_buttons = 6; // I must update this manually, unfortunately
 var _buff = 64;
-var _ypos;
-var i = 0;
+var _y = find_positions_from_center(_num_buttons, _buff, GUI_H / 2);
 
-_ypos = find_position_from_center(i++, _num_buttons, _buff, _h / 2);
-with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
+with (instance_create_depth(_w_half, _y[0], -9999, oButton))
 {
 	btag = 0;
 	dir = [-1, 5, -1, 1];
@@ -22,8 +19,7 @@ with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
 	array_push(other.buttons, self);
 }
 
-_ypos = find_position_from_center(i++, _num_buttons, _buff, _h / 2);
-with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
+with (instance_create_depth(_w_half, _y[1], -9999, oButton))
 {
 	btag = 1;
 	dir = [-1, 0, -1, 2];
@@ -32,8 +28,7 @@ with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
 	array_push(other.buttons, self);
 }
 
-_ypos = find_position_from_center(i++, _num_buttons, _buff, _h / 2);
-with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
+with (instance_create_depth(_w_half, _y[2], -9999, oButton))
 {
 	btag = 2;
 	dir = [-1, 1, -1, 3];
@@ -42,8 +37,7 @@ with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
 	array_push(other.buttons, self);
 }
 
-_ypos = find_position_from_center(i++, _num_buttons, _buff, _h / 2);
-with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
+with (instance_create_depth(_w_half, _y[3], -9999, oButton))
 {
 	btag = 3;
 	dir = [-1, 2, -1, 4];
@@ -52,8 +46,7 @@ with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
 	array_push(other.buttons, self);
 }
 
-_ypos = find_position_from_center(i++, _num_buttons, _buff, _h / 2);
-with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
+with (instance_create_depth(_w_half, _y[4], -9999, oButton))
 {
 	btag = 4;
 	dir = [-1, 3, -1, 5];
@@ -62,8 +55,7 @@ with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
 	array_push(other.buttons, self);
 }
 
-_ypos = find_position_from_center(i++, _num_buttons, _buff, _h / 2);
-with (instance_create_depth(_w / 2, _ypos, -9999, oButton))
+with (instance_create_depth(_w_half, _y[5], -9999, oButton))
 {
 	btag = 5;
 	dir = [-1, 4, -1, 0];

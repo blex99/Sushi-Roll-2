@@ -31,11 +31,6 @@ if (_input_pause)
 	}
 }
 
-if (level_is_state(LEVEL.PLAYING) && !global.using_controller)
-{
-	input_clamp_mouse();
-}
-
 /*
 var _state;
 switch (state)

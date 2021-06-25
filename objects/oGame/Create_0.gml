@@ -93,8 +93,5 @@ array_push(menu_level_rooms, rMenuArea01, rMenuArea02, rMenuArea03, rMenuArea04)
 
 draw_set_font(fnUI);
 
-var _msg = (global.using_controller) ? "Using Controller" : "Using Keyboard";
-info_box_create(_msg, "Input");
-
 room_goto(global.debug.starting_room);
 

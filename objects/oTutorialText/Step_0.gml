@@ -4,7 +4,7 @@
 x = sushi_ref.x;
 y = sushi_ref.y;
 
-if (global.using_controller)
+if (input_using_controller())
 {
 	text =
 	[

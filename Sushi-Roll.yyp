@@ -171,7 +171,7 @@
     {"id":{"name":"TrapDoor","path":"scripts/TrapDoor/TrapDoor.yy",},"order":5,},
     {"id":{"name":"sBambooWallBig","path":"sprites/sBambooWallBig/sBambooWallBig.yy",},"order":2,},
     {"id":{"name":"paRightOrLeft","path":"paths/paRightOrLeft/paRightOrLeft.yy",},"order":3,},
-    {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},"order":7,},
+    {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},"order":6,},
     {"id":{"name":"pKiller","path":"objects/pKiller/pKiller.yy",},"order":2,},
     {"id":{"name":"oGoal","path":"objects/oGoal/oGoal.yy",},"order":0,},
     {"id":{"name":"muKitchen","path":"sounds/muKitchen/muKitchen.yy",},"order":4,},

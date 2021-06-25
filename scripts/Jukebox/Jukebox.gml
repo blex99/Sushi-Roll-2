@@ -10,9 +10,13 @@ function jukebox_play_song(_song_id)
 		if (!music_loaded || music_playing == _song_id) return;
 		
 		control = false;
-		audio_play_sound(_song_id, 0, true);
+		var _song_inst = audio_play_sound(_song_id, 0, true);
 		audio_sound_gain(_song_id, 0, 0);
 		audio_sound_gain(_song_id, music_volume, 1000);
+		
+		// play the song at one second before the end
+		var _len = audio_sound_length(_song_id);
+		audio_sound_set_track_position(_song_inst, _len - 0.5);
 		
 		// if you're playing a song, stop it
 		if (music_playing != noone)

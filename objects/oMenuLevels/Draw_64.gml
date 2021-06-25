@@ -1,8 +1,5 @@
 /// @description draw selected level info
 
-var _w = display_get_gui_width();
-var _h = display_get_gui_height();
-
 // print currently selected level's info
 if ( alarm[1] != -1 || 
 	(menu_cursor != noone && menu_cursor.object_index == oButtonBack) )
@@ -28,4 +25,4 @@ with (oGame)
 }
 
 set_draw(c_black, 1, fnUI, fa_center, fa_center);
-draw_text_with_outline(_w * 0.75, _h / 2, _str);
+draw_text_with_outline(GUI_W * 0.75, GUI_H / 2, _str);

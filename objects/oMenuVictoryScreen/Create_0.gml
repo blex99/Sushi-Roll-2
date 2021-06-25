@@ -16,14 +16,12 @@ all_collectibles = level_got_all_collectibles();
 instance_destroy(oTimer);
 
 #region victory text set up
-var _w = display_get_gui_width();
-var _h = display_get_gui_height();
 font = fnUI;
 vertical_buffer = font_get_size(font) + 8;
 
 // center positions of menu
-start = Vector2(_w * 1.5, _h / 2);
-target = Vector2(_w * 0.75, _h / 2);
+start = Vector2(GUI_W * 1.5, GUI_H / 2);
+target = Vector2(GUI_W * 0.75, GUI_H / 2);
 cur = start;
 
 arr = [];
@@ -47,10 +45,12 @@ len = array_length(arr);
 #endregion
 
 #region buttons
-var _y;
 var _num_buttons = 3; // update manually
-_y = find_position_from_center(0, _num_buttons, sprite_get_height(oButton), _h * 0.5);
-with (instance_create_depth(_w * 0.25, _y, -9999, oButton))
+var _y = find_positions_from_center(_num_buttons, sprite_get_height(oButton),
+	GUI_H * 0.5);
+var _w_quarter = GUI_W / 4;
+
+with (instance_create_depth(_w_quarter, _y[0], -9999, oButton))
 {
 	btag = 0;
 	dir = [-1, 2, -1, 1];
@@ -59,8 +59,7 @@ with (instance_create_depth(_w * 0.25, _y, -9999, oButton))
 	array_push(other.buttons, self);
 }
 
-_y = find_position_from_center(1, _num_buttons, sprite_get_height(oButton), _h * 0.5);
-with (instance_create_depth(_w * 0.25, _y, -9999, oButton))
+with (instance_create_depth(_w_quarter, _y[1], -9999, oButton))
 {
 	btag = 1;
 	dir = [-1, 0, -1, 2];
@@ -69,8 +68,7 @@ with (instance_create_depth(_w * 0.25, _y, -9999, oButton))
 	array_push(other.buttons, self);
 }
 
-_y = find_position_from_center(2, _num_buttons, sprite_get_height(oButton), _h * 0.5);
-with (instance_create_depth(_w * 0.25, _y, -9999, oButton))
+with (instance_create_depth(_w_quarter, _y[2], -9999, oButton))
 {
 	btag = 2;
 	dir = [-1, 1, -1, 0];

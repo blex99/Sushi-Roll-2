@@ -1,8 +1,11 @@
 function input_one_pressed()
 {
-	if (global.using_controller)
+	with (oInput)
 	{
-		return gamepad_button_check_pressed(global.device_index, gp_face1);
+		if (using_controller)
+		{
+			return gamepad_button_check_pressed(device_index, gp_face1);
+		}
 	}
 	
 	return mouse_check_button_pressed(mb_left) ||
@@ -13,9 +16,12 @@ function input_one_pressed()
 
 function input_one()
 {
-	if (global.using_controller)
+	with (oInput)
 	{
-		return gamepad_button_check(global.device_index, gp_face1);
+		if (using_controller)
+		{
+			return gamepad_button_check(device_index, gp_face1);
+		}
 	}
 	
 	return mouse_check_button(mb_left) ||
@@ -26,10 +32,13 @@ function input_one()
 
 function input_up()
 {
-	if (global.using_controller)
+	with (oInput)
 	{
-		return gamepad_axis_value(global.device_index, gp_axislv) < -0.8 ||
-			   gamepad_button_check(global.device_index, gp_padu);
+		if (using_controller)
+		{
+			return gamepad_axis_value(device_index, gp_axislv) < -0.8 ||
+				   gamepad_button_check(device_index, gp_padu);
+		}
 	}
 
 	return keyboard_check(vk_up) ||
@@ -38,9 +47,12 @@ function input_up()
 
 function input_down()
 {
-	if (global.using_controller)
-		return gamepad_axis_value(global.device_index, gp_axislv) > 0.8 ||
-			   gamepad_button_check(global.device_index, gp_padd);
+	with (oInput)
+	{
+		if (using_controller)
+			return gamepad_axis_value(device_index, gp_axislv) > 0.8 ||
+				   gamepad_button_check(device_index, gp_padd);
+	}
 	
 	return keyboard_check(vk_down) ||
 		   keyboard_check(ord("S"));
@@ -48,9 +60,14 @@ function input_down()
 
 function input_left()
 {
-	if (global.using_controller)
-		return gamepad_axis_value(global.device_index, gp_axislh) < -0.8 ||
-			   gamepad_button_check(global.device_index, gp_padl);
+	with (oInput)
+	{
+		if (using_controller)
+		{
+			return gamepad_axis_value(device_index, gp_axislh) < -0.8 ||
+				   gamepad_button_check(device_index, gp_padl);
+		}
+	}
 	
 	return keyboard_check(vk_left) ||
 		   keyboard_check(ord("A"));
@@ -58,9 +75,14 @@ function input_left()
 
 function input_right()
 {
-	if (global.using_controller)
-		return gamepad_axis_value(global.device_index, gp_axislh) > 0.8 ||
-			   gamepad_button_check(global.device_index, gp_padr);
+	with (oInput)
+	{
+		if (using_controller)
+		{
+			return gamepad_axis_value(device_index, gp_axislh) > 0.8 ||
+				   gamepad_button_check(device_index, gp_padr);
+		}
+	}
 	
 	return keyboard_check(vk_right) ||
 		   keyboard_check(ord("D"));
@@ -69,9 +91,12 @@ function input_right()
 // for going back in menu
 function input_back_pressed()
 {
-	if (global.using_controller)
+	with (oInput)
 	{
-		return gamepad_button_check_pressed(global.device_index, gp_face2);
+		if (using_controller)
+		{
+			return gamepad_button_check_pressed(device_index, gp_face2);
+		}
 	}
 	
 	return keyboard_check_pressed(vk_escape) ||
@@ -81,9 +106,12 @@ function input_back_pressed()
 // for pausing
 function input_pause_pressed()
 {
-	if (global.using_controller)
+	with (oInput)
 	{
-		return gamepad_button_check_pressed(global.device_index, gp_start);
+		if (using_controller)
+		{
+			return gamepad_button_check_pressed(device_index, gp_start);
+		}
 	}
 	
 	return keyboard_check_pressed(vk_escape);
@@ -91,25 +119,27 @@ function input_pause_pressed()
 
 function input_move_sushi()
 {
-	if (global.using_controller)
+	with (oInput)
 	{
-		return gamepad_axis_value(global.device_index, gp_axislh);
+		if (using_controller)
+		{
+			return gamepad_axis_value(device_index, gp_axislh);
+		}
 	}
-	else
-	{
-		return input_right() - input_left();
-	}
+	
+	return input_right() - input_left();
 } 
 
 // return "normalized" x axis between -1 and 1
-function input_rotate(){
-	if (global.using_controller)
+function input_rotate()
+{
+	with (oInput)
 	{
-		return gamepad_axis_value(global.device_index, gp_axisrh);
-	}
-	else
-	{
-		with (oInput)
+		if (using_controller)
+		{
+			return gamepad_axis_value(device_index, gp_axisrh);
+		}
+		else
 		{
 			var _normalized_input = 0;
 			var _ranged_input = 0;
@@ -138,11 +168,10 @@ function input_clamp_mouse()
 
 function input_update_window_stats()
 {
-	if (!instance_exists(oInput)) return;
-	
 	with (oInput)
 	{
 		// stats for the WINDOW
+		width_range_ratio = 0.2;
 		w_half = window_get_width() * 0.5;
 		h_half = window_get_height() * 0.5;
 		max_range = w_half * width_range_ratio;
@@ -160,4 +189,26 @@ function input_seek_gamepad()
 	}
 	
 	return -1;
+}
+
+// show/hide cursor based of if using_controller
+function input_update_cursor()
+{
+	with (oInput)
+	{
+		var _cursor = cr_default;
+		if (using_controller) _cursor = cr_none;
+		if (instance_exists(oLevelManager) && !level_is_state(LEVEL.COMPLETE))
+			_cursor = cr_none;
+	
+		window_set_cursor(_cursor);
+	}
+}
+
+function input_using_controller()
+{
+	with (oInput)
+	{
+		return using_controller;
+	}
 }

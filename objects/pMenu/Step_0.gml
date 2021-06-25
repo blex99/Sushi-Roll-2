@@ -21,7 +21,7 @@ var _left = _horizontal < 0;
 var _right = _horizontal > 0;
 
 // move the mouse if you're going to use the keyboard
-var _mouse_moved = false; // mouse moved this frame?
+var _mouse_moved = false; // have *I* manually set the mouse this frame?
 if (_horizontal != 0 || _vertical != 0)
 {
 	window_mouse_set(0, 0);
@@ -83,7 +83,7 @@ for (var i = 0; i < _len; i++)
 	var b = buttons[i];
 	
 	// override cursor and commited vars if needed
-	if (menu_control && !global.using_controller &&
+	if (menu_control && !input_using_controller() &&
 		MOUSE_GUI_X > b.x1 && MOUSE_GUI_X < b.x2 &&
 		MOUSE_GUI_Y > b.y1 && MOUSE_GUI_Y < b.y2 &&
 		!_mouse_moved)
@@ -115,7 +115,3 @@ for (var i = 0; i < _len; i++)
 		b.button_state = BUTTON.IDLE;
 	}
 }
-
-add_to_debug_map("_mouse_moved: " + string(_mouse_moved));
-add_to_debug_map("menu_control: " + string(menu_control));
-add_to_debug_map("global.using_controller: " + string(global.using_controller));

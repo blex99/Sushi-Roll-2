@@ -16,6 +16,22 @@ function find_position_from_center(_index, _arr_len, _buffer, _center_pos)
 	return _standardized * _buffer + _center_pos;
 }
 
+// creates an array of all 1-d positions for each element in the list
+function find_positions_from_center(_arr_len, _buffer, _center_pos)
+{
+	if (0) return argument[0];
+	if (_center_pos == undefined) _center_pos = 0;
+	
+	var _positions = array_create(_arr_len);
+	for (var i = 0; i < _arr_len; i++)
+	{
+		var _pos = find_position_from_center(i, _arr_len, _buffer, _center_pos);
+		_positions[i] = _pos;
+	}
+	
+	return _positions;
+}
+
 function round_to_nearest(_val, _round)
 {
 	return round(_val / _round) * _round;

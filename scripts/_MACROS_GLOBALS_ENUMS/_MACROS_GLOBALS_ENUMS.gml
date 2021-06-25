@@ -3,11 +3,32 @@
 #macro WATERDIVISION 16 // smaller division -> more lag
 #macro MOUSE_GUI_X device_mouse_x_to_gui(0)
 #macro MOUSE_GUI_Y device_mouse_y_to_gui(0)
+#macro GUI_W display_get_gui_width()
+#macro GUI_H display_get_gui_height()
 #macro MOUSE_LEFT mouse_check_button_pressed(mb_left)
 #macro CAM view_camera[0]
 #macro AREA_UNLOCK_REQ 3 // ...levels to complete
 
+global.debug = 
+{
+	starting_room:	rMenuMain,
+	show_debug:		true,
+	load_data:		true,
+	unlock_all:		true,
+	play_music:		false,
+	set_default_values : function()
+	{
+		starting_room	= rMenuMain;
+		show_debug		= false;
+		load_data		= true;
+		unlock_all		= false;
+		play_music		= true;
+	},
+};
+if (!debug_mode) global.debug.set_default_values();
 
+global.start_fullscreen = false;
+global.border_sprite = sNineSliceBoxBamboo;
 
 // in quadrant order
 enum DIR
@@ -53,30 +74,3 @@ enum BUTTON
 	HOVERING,
 	PRESSED
 }
-
-global.debug = 
-{
-	starting_room:	rMenuMain,
-	show_visuals:	false,
-	load_data:		true,
-	unlock_all:		true,
-	play_music:		true,
-	set_default_values : function()
-	{
-		starting_room	= rMenuMain;
-		show_visuals	= false;
-		load_data		= true;
-		unlock_all		= false;
-		play_music		= true;
-	},
-};
-if (!debug_mode) global.debug.set_default_values();
-
-global.start_fullscreen = false;
-
-global.border_sprite = sNineSliceBoxBamboo;
-
-// finds the slot the device is connected to
-global.device_index = input_seek_gamepad();
-global.using_controller = gamepad_is_connected(global.device_index);
-gamepad_set_axis_deadzone(0, 0.2);

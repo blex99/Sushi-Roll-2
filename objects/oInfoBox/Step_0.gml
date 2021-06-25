@@ -3,8 +3,8 @@
 // fade the infobox out slowly
 if (alarm[1] != -1) alpha = (alarm[1] / room_speed * 2) + 0.2;
 
-var _gw_half = display_get_gui_width() / 2;
-var _gh_half = display_get_gui_height() / 2;
+var _gw_half = GUI_W / 2;
+var _gh_half = GUI_H / 2;
 
 // easing
 var _norm = abs(1 - alarm[0] / frames_to_approach);

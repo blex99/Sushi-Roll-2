@@ -6,7 +6,7 @@ if (!instance_exists(oLevelManager) ||
 
 var _time_string = string_format(mus2sec(timer), 2, 2);
 //_time_string = string_right_pad_zeros(_time_string, 4);
-var _w_half = display_get_gui_width() / 2;
+var _w_half = GUI_W / 2;
 var _x1, _y1, _x2, _y2, _xcenter, _ycenter;
 var _color = c_black;
 var _alpha = stats_time_goal_met() ? oscillate(0.5, 0.5, 0.25) : 1;

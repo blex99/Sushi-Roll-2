@@ -10,8 +10,8 @@ function info_box_create(_text, _info_id)
 	// if no id is set, make it whatever the text is
 	if (_info_id == undefined) _info_id = _text;
 	
-	var _gw_half = display_get_gui_width() / 2;
-	var _gh_half = display_get_gui_height() / 2
+	var _gw_half = GUI_W / 2;
+	var _gh_half = GUI_H / 2
 	
 	// there can only be ONE info box FOR EACH slot
 	var _num_info_box = instance_number(oInfoBox);
