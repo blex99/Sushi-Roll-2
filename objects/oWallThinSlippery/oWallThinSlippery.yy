@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sBambooWallThinSlippery",
-    "path": "sprites/sBambooWallThinSlippery/sBambooWallThinSlippery.yy",
+    "name": "sWallThinSlippery",
+    "path": "sprites/sWallThinSlippery/sWallThinSlippery.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oWallThin",
-    "path": "objects/oWallThin/oWallThin.yy",
+    "name": "pWall",
+    "path": "objects/pWall/pWall.yy",
   },
   "physicsObject": true,
   "physicsSensor": false,
@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Placeable",
-    "path": "folders/Objects/Placeable.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Placeable/Walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWallThinSlippery",

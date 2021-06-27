@@ -167,6 +167,14 @@ function game_cur_level_beaten()
 	}
 }
 
+function game_get_area_index()
+{
+	with (oGame)
+	{
+		return area_index;
+	}
+}
+
 // assuming you're in a level, reset the room
 function game_level_room_reset()
 {

@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Placeable",
-    "path": "folders/Objects/Placeable.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Placeable/Walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWallBigWood",

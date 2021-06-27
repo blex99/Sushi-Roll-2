@@ -18,7 +18,7 @@ _y2 = offset  + buffer;
 _xcenter = average([_x1, _x2]);
 _ycenter = average([_y1, _y2]);
 
-ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2);
+ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2, area_index);
 set_draw(_color, _alpha, font, fa_center, fa_center);
 draw_text_with_outline(_xcenter, _ycenter, _time_string);
 

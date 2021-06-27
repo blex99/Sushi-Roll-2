@@ -1,7 +1,9 @@
 /// @description vars
 
+border_sprite = sNineSliceBox;
+area_index = game_get_area_index();
+
 timer_frozen = false;
-border_sprite = global.border_sprite;
 offset = 16;
 font = fnUIBig;
 buffer = font_get_size(font) * 2.5

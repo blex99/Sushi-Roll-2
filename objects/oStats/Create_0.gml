@@ -1,6 +1,7 @@
 /// @description sprite and point values
 
-border_sprite = global.border_sprite;
+border_sprite = sNineSliceBox;
+area_index = game_get_area_index();
 buffer = 16; // pixels away from the screen's corner
 collectible_size = sprite_get_height(sCollectibleOrange) * 0.75;
 

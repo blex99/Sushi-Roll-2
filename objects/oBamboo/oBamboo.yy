@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBambooRotateable",
-    "path": "sprites/sBambooRotateable/sBambooRotateable.yy",
+    "name": "sChopstick",
+    "path": "sprites/sChopstick/sChopstick.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,8 +25,8 @@
   "physicsShapePoints": [
     {"x":0.0,"y":0.0,},
     {"x":256.0,"y":0.0,},
-    {"x":256.0,"y":8.0,},
-    {"x":0.0,"y":8.0,},
+    {"x":256.0,"y":16.0,},
+    {"x":0.0,"y":16.0,},
   ],
   "eventList": [],
   "properties": [],

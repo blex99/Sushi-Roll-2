@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sBambooCurve",
-    "path": "sprites/sBambooCurve/sBambooCurve.yy",
+    "name": "sCurve",
+    "path": "sprites/sCurve/sCurve.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "pStatic",
-    "path": "objects/pStatic/pStatic.yy",
+    "name": "pWall",
+    "path": "objects/pWall/pWall.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Placeable",
-    "path": "folders/Objects/Placeable.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Placeable/Walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCurve",

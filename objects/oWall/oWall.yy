@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "pStatic",
-    "path": "objects/pStatic/pStatic.yy",
+    "name": "pWall",
+    "path": "objects/pWall/pWall.yy",
   },
   "physicsObject": true,
   "physicsSensor": false,
@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Placeable",
-    "path": "folders/Objects/Placeable.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Placeable/Walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWall",

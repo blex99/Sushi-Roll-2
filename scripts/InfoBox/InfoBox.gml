@@ -57,7 +57,7 @@ function info_box_create(_text, _info_id)
 		info_id = _info_id;
 		
 		info_box_font = fnDebug;
-		info_box_sprite = sNineSliceBoxBamboo;
+		info_box_sprite = sNineSliceBox;
 		text = _text;
 		alpha = 1;
 		

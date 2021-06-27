@@ -15,4 +15,4 @@ if (button_state == BUTTON.HOVERING && text != "")
 		_final_text = "- " + text + " -";
 	}
 }
-draw_text(xcenter, ycenter, _final_text);
+draw_text_with_outline(xcenter, ycenter, _final_text);

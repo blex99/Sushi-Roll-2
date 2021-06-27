@@ -1,5 +1,7 @@
 /// @description setup phys shape
 
+event_inherited();
+
 radius = sprite_width;
 height = sprite_height;
 

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "1 Kitchen Area",
-    "path": "folders/Sprites/1 Kitchen Area.yy",
+    "name": "Rotateable",
+    "path": "folders/Sprites/InGame/Rotateable.yy",
   },
   "resourceVersion": "1.0",
   "name": "sChopstickSmall",

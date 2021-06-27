@@ -28,7 +28,6 @@ global.debug =
 if (!debug_mode) global.debug.set_default_values();
 
 global.start_fullscreen = false;
-global.border_sprite = sNineSliceBoxBamboo;
 
 // in quadrant order
 enum DIR
