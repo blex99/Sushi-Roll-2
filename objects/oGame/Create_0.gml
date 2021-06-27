@@ -1,7 +1,6 @@
 /// @description init resolution, levels array
 
 #region init resolution
-display_reset(0, true);
 var _display_w = display_get_width();
 var _display_h = display_get_height();
 
@@ -23,8 +22,8 @@ display_set_gui_size(BASE_W , BASE_H);
 #endregion
 
 #region level array
-area_index = -1; // which difficulty are we currently on
-level_index = -1; // which level in that difficulty are we currently on
+area_index = -1; // which area/world are we currently on
+level_index = -1; // which level in that area are we currently on
 level_first_try = true; // player hasn't died yet?
 levels = [];
 levels[LEVEL_AREA.KITCHEN] = 

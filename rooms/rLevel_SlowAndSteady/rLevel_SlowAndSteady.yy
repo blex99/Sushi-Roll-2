@@ -180,9 +180,6 @@
         {"properties":[
             {"propertyId":{"name":"spin_rate_per_frame","path":"objects/oSpinningKnife/oSpinningKnife.yy",},"objectId":{"name":"oSpinningKnife","path":"objects/oSpinningKnife/oSpinningKnife.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oSpinningKnife","path":"objects/oSpinningKnife/oSpinningKnife.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1952.0,"y":2720.0,"resourceVersion":"1.0","name":"inst_88A717C","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
-            {"propertyId":{"name":"spin_rate_per_frame","path":"objects/oSpinningKnife/oSpinningKnife.yy",},"objectId":{"name":"oSpinningKnife","path":"objects/oSpinningKnife/oSpinningKnife.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oSpinningKnife","path":"objects/oSpinningKnife/oSpinningKnife.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1952.0,"y":2336.0,"resourceVersion":"1.0","name":"inst_64C52AAF","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oChopstickSmall","path":"objects/oChopstickSmall/oChopstickSmall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2720.0,"y":1712.0,"resourceVersion":"1.0","name":"inst_CD1470F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oWallBig","path":"objects/oWallBig/oWallBig.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.400000036,"scaleY":0.100000009,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2112.0,"y":2368.0,"resourceVersion":"1.0","name":"inst_680A5847","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oRice","path":"objects/oRice/oRice.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2208.0,"y":1200.0,"resourceVersion":"1.0","name":"inst_7B414F52","tags":[],"resourceType":"GMRInstance",},
@@ -342,7 +339,6 @@
     {"name":"inst_88A717C","path":"rooms/rLevel_SlowAndSteady/rLevel_SlowAndSteady.yy",},
     {"name":"inst_4EEF0A95","path":"rooms/rLevel_SlowAndSteady/rLevel_SlowAndSteady.yy",},
     {"name":"inst_70A5ABA6","path":"rooms/rLevel_SlowAndSteady/rLevel_SlowAndSteady.yy",},
-    {"name":"inst_64C52AAF","path":"rooms/rLevel_SlowAndSteady/rLevel_SlowAndSteady.yy",},
     {"name":"inst_CD1470F","path":"rooms/rLevel_SlowAndSteady/rLevel_SlowAndSteady.yy",},
     {"name":"inst_5DB9340","path":"rooms/rLevel_SlowAndSteady/rLevel_SlowAndSteady.yy",},
     {"name":"inst_3FC04A6","path":"rooms/rLevel_SlowAndSteady/rLevel_SlowAndSteady.yy",},

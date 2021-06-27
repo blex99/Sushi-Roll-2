@@ -14,7 +14,6 @@ for (var i = 0; i < _areas; i++)
 			exit;
 		}
 	}
-
 }
 
 // if you've made it here, you should NOT in a level room

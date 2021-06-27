@@ -28,11 +28,11 @@ arr = [];
 array_push(arr, 
 	"Level Complete!\n",
 	"----------------",
-	"Rice Collected: "		+ string(stats_get_num_rice()), 
-	"Collectibles: "		+ string(_num_collected) + " / 2",
-	"Death Count: "			+ string(level_get_death_count()),
-	"Your Time: "			+ string(mus2sec(_cur_time)),
-	"Best Time: "			+ string(mus2sec(_new_best)),
+	"Rice Collected: "	+ string(stats_get_num_rice()), 
+	"Collectibles: "	+ string(_num_collected) + " / 2",
+	"Death Count: "		+ string(level_get_death_count()),
+	"Your Time: "		+ string(mus2sec(_cur_time)),
+	"Best Time: "		+ string(mus2sec(_new_best)),
 );
 
 // let player know how good they did
@@ -46,16 +46,16 @@ len = array_length(arr);
 
 #region buttons
 var _num_buttons = 3; // update manually
-var _y = find_positions_from_center(_num_buttons, sprite_get_height(oButton),
-	GUI_H * 0.5);
+var _y = find_positions_from_center(_num_buttons,
+	sprite_get_height(sUIButton) + 16, GUI_H * 0.5);
 var _w_quarter = GUI_W / 4;
 
 with (instance_create_depth(_w_quarter, _y[0], -9999, oButton))
 {
 	btag = 0;
 	dir = [-1, 2, -1, 1];
-	my_script = game_level_room_reset;
-	text = "Restart";
+	my_script = game_goto_next_level;
+	text = "Go to Next Level";
 	array_push(other.buttons, self);
 }
 
@@ -63,8 +63,8 @@ with (instance_create_depth(_w_quarter, _y[1], -9999, oButton))
 {
 	btag = 1;
 	dir = [-1, 0, -1, 2];
-	my_script = game_goto_next_level;
-	text = "Go to Next Level";
+	my_script = game_level_room_reset;
+	text = "Restart";
 	array_push(other.buttons, self);
 }
 

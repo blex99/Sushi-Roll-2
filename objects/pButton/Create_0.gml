@@ -13,5 +13,6 @@ y2 = y + _h_half; // bottom
 xcenter = (bbox_right + bbox_left) / 2;
 ycenter = (bbox_bottom + bbox_top) / 2;
 
+hovering_target_scale = 1.1;
 button_state = BUTTON.IDLE;
 image_speed = 0;

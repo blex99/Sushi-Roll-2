@@ -3,7 +3,6 @@ TODO:
 	aesthetic:
 		theme for each difficulty (instead of difficulties)
 		music/sfx
-		background (functionality of, parallax)
 		art re-do
 	
 	gameplay:
@@ -18,9 +17,8 @@ TODO:
 	sounds:
 		bonking on a wall
 		water splash
-		victory music
+		water/bubbling
 		spring sound
-		invisible wall find (zelda-puzzle-like)
 		collecting rice/collectibles
 -------------------------------------------------------------------------------
 IDEAS:
@@ -77,4 +75,5 @@ TIPS:
 		in the pase menu does
 	2. remember you can push the sushi forward even while in the air
 	3. pressing 'R' reset the level
+	4. it's possible to speed up the panning by holding [input one]
 

@@ -64,6 +64,7 @@
     {"id":{"name":"Stats","path":"scripts/Stats/Stats.yy",},"order":5,},
     {"id":{"name":"Helper","path":"scripts/Helper/Helper.yy",},"order":1,},
     {"id":{"name":"sUISliderBar","path":"sprites/sUISliderBar/sUISliderBar.yy",},"order":12,},
+    {"id":{"name":"sWoodWallBigNoNine","path":"sprites/sWoodWallBigNoNine/sWoodWallBigNoNine.yy",},"order":5,},
     {"id":{"name":"oChopstickSmall","path":"objects/oChopstickSmall/oChopstickSmall.yy",},"order":3,},
     {"id":{"name":"oSushiTriangle","path":"objects/oSushiTriangle/oSushiTriangle.yy",},"order":2,},
     {"id":{"name":"Menu","path":"scripts/Menu/Menu.yy",},"order":15,},

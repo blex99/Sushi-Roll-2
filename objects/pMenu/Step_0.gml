@@ -22,7 +22,8 @@ var _right = _horizontal > 0;
 
 // move the mouse if you're going to use the keyboard
 var _mouse_moved = false; // have *I* manually set the mouse this frame?
-if (_horizontal != 0 || _vertical != 0)
+if ( _horizontal != 0 || _vertical != 0 ||
+	(input_one_pressed() && !mouse_check_button_pressed(mb_left)) )
 {
 	window_mouse_set(0, 0);
 	_mouse_moved = true;
