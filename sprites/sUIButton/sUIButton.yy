@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "UI",
-    "path": "folders/Sprites/UI.yy",
+    "name": "UI_Element",
+    "path": "folders/Sprites/UI_Element.yy",
   },
   "resourceVersion": "1.0",
   "name": "sUIButton",

@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Collectible",
-    "path": "folders/Objects/Placeable/Collectible.yy",
+    "name": "Parents",
+    "path": "folders/Objects/Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "pCollectible",

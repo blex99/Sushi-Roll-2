@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Killer",
-    "path": "folders/Objects/Placeable/Killer.yy",
+    "name": "Misc",
+    "path": "folders/Objects/Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDeathPlane",

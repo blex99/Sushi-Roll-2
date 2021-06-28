@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Sushi",
-    "path": "folders/Objects/Placeable/Sushi.yy",
+    "name": "Parents",
+    "path": "folders/Objects/Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "pSushi",

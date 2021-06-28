@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Walls",
-    "path": "folders/Objects/Placeable/Walls.yy",
+    "path": "folders/Objects/InGame/Walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "oTriangle",

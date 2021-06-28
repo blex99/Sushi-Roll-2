@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Placeable",
-    "path": "folders/Objects/Placeable.yy",
+    "name": "Misc",
+    "path": "folders/Objects/Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWaterBody",

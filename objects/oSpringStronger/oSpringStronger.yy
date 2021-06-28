@@ -36,8 +36,8 @@
     {"propertyId":{"name":"jump_force","path":"objects/oSpring/oSpring.yy",},"objectId":{"name":"oSpring","path":"objects/oSpring/oSpring.yy",},"value":"290","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Placeable",
-    "path": "folders/Objects/Placeable.yy",
+    "name": "InGame",
+    "path": "folders/Objects/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSpringStronger",

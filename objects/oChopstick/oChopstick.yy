@@ -33,7 +33,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Rotateable",
-    "path": "folders/Objects/Placeable/Rotateable.yy",
+    "path": "folders/Objects/InGame/Rotateable.yy",
   },
   "resourceVersion": "1.0",
   "name": "oChopstick",

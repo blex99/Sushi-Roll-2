@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Collectible",
-    "path": "folders/Objects/Placeable/Collectible.yy",
+    "name": "InGame",
+    "path": "folders/Objects/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCollectibleWasabi",

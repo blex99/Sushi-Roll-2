@@ -40,8 +40,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Placeable",
-    "path": "folders/Objects/Placeable.yy",
+    "name": "InGame",
+    "path": "folders/Objects/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSpring",

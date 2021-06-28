@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "InGame",
-    "path": "folders/Sprites/InGame.yy",
+    "name": "Sushi",
+    "path": "folders/Sprites/Sushi.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSushiSquare",

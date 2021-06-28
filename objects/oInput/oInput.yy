@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Managers",
-    "path": "folders/Objects/Game Managers.yy",
+    "name": "_Game Managers",
+    "path": "folders/Objects/_Game Managers.yy",
   },
   "resourceVersion": "1.0",
   "name": "oInput",

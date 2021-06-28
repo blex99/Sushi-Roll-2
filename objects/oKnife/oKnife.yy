@@ -34,8 +34,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Killer",
-    "path": "folders/Objects/Placeable/Killer.yy",
+    "name": "InGame",
+    "path": "folders/Objects/InGame.yy",
   },
   "resourceVersion": "1.0",
   "name": "oKnife",

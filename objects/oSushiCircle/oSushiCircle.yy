@@ -33,7 +33,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Sushi",
-    "path": "folders/Objects/Placeable/Sushi.yy",
+    "path": "folders/Objects/Sushi.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSushiCircle",
