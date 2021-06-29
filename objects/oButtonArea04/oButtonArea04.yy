@@ -30,6 +30,7 @@
     {"propertyId":{"name":"my_script_args","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"[rMenuArea04]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"text","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"\"04\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"btag","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"area","path":"objects/oButtonLevelSelect/oButtonLevelSelect.yy",},"objectId":{"name":"oButtonLevelSelect","path":"objects/oButtonLevelSelect/oButtonLevelSelect.yy",},"value":"LEVEL_AREA.PAINT","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "UI_Element",

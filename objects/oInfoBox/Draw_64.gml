@@ -1,6 +1,6 @@
 /// @description draw info box
 
-ui_nine_slice_box(info_box_sprite, x1, y1, x2, y2, 0, alpha);
+ui_nine_slice_box(info_box_sprite, x1, y1, x2, y2, global.ui_sub_image, alpha);
 
 draw_set_font(info_box_font);
 draw_set_color(c_black);

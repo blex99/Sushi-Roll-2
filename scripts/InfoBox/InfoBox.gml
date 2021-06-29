@@ -7,6 +7,8 @@ function info_box_create(_text, _info_id)
 {
 	if (0) return argument[0];
 	
+	if (_text == "") return;
+	
 	// if no id is set, make it whatever the text is
 	if (_info_id == undefined) _info_id = _text;
 	
@@ -27,7 +29,7 @@ function info_box_create(_text, _info_id)
 	for (var i = 0; i < _num_info_box; i++)
 	{
 		var _other = instance_find(oInfoBox, i);
-		if (_other.info_id == _info_id)
+		if (_other != noone && _other.info_id == _info_id)
 			instance_destroy(_other);
 	}
 

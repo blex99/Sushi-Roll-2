@@ -1,3 +1,6 @@
+image_index = game_get_area_index();
+image_speed = 0;
+
 phy_rotation = 0;
 
 mass	= 2.0;

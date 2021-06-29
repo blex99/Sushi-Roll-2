@@ -45,8 +45,8 @@ function jukebox_play_song_by_area(_area_index)
 			case LEVEL_AREA.SKY_TEMPLE:
 				jukebox_play_song(muSkyTemple);
 				break;
-			case LEVEL_AREA.NEON:
-				jukebox_play_song(muNeon);
+			case LEVEL_AREA.PAINT:
+				jukebox_play_song(muPaint);
 				break;
 			default:
 				break;

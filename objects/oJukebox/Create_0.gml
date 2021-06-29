@@ -5,7 +5,7 @@ audio_group_load(agSfx);
 
 music_playing = noone;
 music_stopping = noone;
-music = [muMenu, muKitchen, muBamboo, muNeon, muSkyTemple];
+music = [muMenu, muKitchen, muBamboo, muPaint, muSkyTemple];
 sfx = [sfxAir, sfxBack, sfxHover, sfxKnife, sfxRoll, sfxSelect,
 	sfxSelectLevel];
 

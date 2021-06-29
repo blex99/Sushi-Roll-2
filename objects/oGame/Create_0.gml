@@ -53,7 +53,7 @@ levels[LEVEL_AREA.SKY_TEMPLE] =
 	level_create("Sushi Olympics: Silver", rLevel_SushiOlympicsSilver, 12),
 ];
 
-levels[LEVEL_AREA.NEON] = 
+levels[LEVEL_AREA.PAINT] = 
 [
 	level_create("Intro to Gravity", rLevel_IntroToGravity, 35),
 	level_create("Orientation", rLevel_Orientation, 25),

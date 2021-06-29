@@ -1,7 +1,6 @@
 /// @description vars
 
 border_sprite = sNineSliceBox;
-area_index = game_get_area_index();
 
 timer_frozen = false;
 offset = 16;

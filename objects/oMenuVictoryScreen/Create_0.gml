@@ -1,7 +1,5 @@
 event_inherited();
 
-area_index = game_get_area_index();
-
 // get old best, new best, and current time completed
 var _cur_time = timer_get_time();
 var _old_best = level_get_best_time();

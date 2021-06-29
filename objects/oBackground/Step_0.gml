@@ -1,12 +1,3 @@
-/// @description move slightly
+/// @description parallax
 
-/*
-x += 1;
-y += 1;
-
-if (x == 320 && y == 320)
-{
-	x = 0;
-	y = 0;
-}
-*/
+x = camera_get_view_x(CAM) * 0.25;
