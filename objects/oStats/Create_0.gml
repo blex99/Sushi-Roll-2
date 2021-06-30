@@ -1,6 +1,6 @@
 /// @description sprite and point values
 
-border_sprite = sNineSliceBox;
+border_sprite = sNineSliceBoxText;
 buffer = 16; // pixels away from the screen's corner
 collectible_size = sprite_get_height(sCollectibleOrange) * 0.75;
 

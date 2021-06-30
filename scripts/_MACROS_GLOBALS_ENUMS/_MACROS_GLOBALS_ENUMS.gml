@@ -11,7 +11,7 @@
 #macro CAM view_camera[0]
 #macro AREA_UNLOCK_REQ 5 // ...levels to complete
 
-global.ui_sub_image = 0;
+
 global.debug = 
 {
 	starting_room:	rMenuMain,
@@ -46,8 +46,8 @@ enum LEVEL_AREA
 {
 	KITCHEN,
 	BAMBOO,
-	SKY_TEMPLE,
 	PAINT,
+	SKY_TEMPLE,
 	COUNT // = 4, the size of the enum
 }
 

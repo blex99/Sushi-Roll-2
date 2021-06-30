@@ -34,7 +34,6 @@ levels[LEVEL_AREA.KITCHEN] =
 	level_create("Slippery Sliding Sashimi", rLevel_SlipperySlidingSashimi, 20),
 	level_create("Rampin' Up", rLevel_RampinUp, 20),
 ];
-
 levels[LEVEL_AREA.BAMBOO] = 
 [
 	level_create("Watch Out for Knives", rLevel_WatchOutForKnives, 15),
@@ -43,8 +42,7 @@ levels[LEVEL_AREA.BAMBOO] =
 	level_create("Right or Left?", rLevel_RightOrLeft, 15),
 	level_create("Trapdoor Track Lesson", rLevel_TrapdoorTrackLesson, 12),
 ];
-
-levels[LEVEL_AREA.SKY_TEMPLE] = 
+levels[LEVEL_AREA.PAINT] = 
 [
 	level_create("Up and Away", rLevel_UpAndAway, 35),
 	level_create("Down You Go", rLevel_DownYouGo, 5),
@@ -52,8 +50,7 @@ levels[LEVEL_AREA.SKY_TEMPLE] =
 	level_create("Knife Dance", rLevel_KnifeDance, 20),
 	level_create("Sushi Olympics: Silver", rLevel_SushiOlympicsSilver, 12),
 ];
-
-levels[LEVEL_AREA.PAINT] = 
+levels[LEVEL_AREA.SKY_TEMPLE] = 
 [
 	level_create("Intro to Gravity", rLevel_IntroToGravity, 35),
 	level_create("Orientation", rLevel_Orientation, 25),

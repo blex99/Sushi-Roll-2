@@ -28,7 +28,7 @@
   "overriddenProperties": [
     {"propertyId":{"name":"my_script","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"transition_start","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"my_script_args","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"[rMenuArea01]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"text","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"\"01\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"text","path":"objects/pButton/pButton.yy",},"objectId":{"name":"pButton","path":"objects/pButton/pButton.yy",},"value":"\"Wood Kitchen\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "UI_Element",

@@ -17,7 +17,7 @@ _xcenter = average([_x1, _x2]);
 _ycenter = average([_y1, _y2]);
 
 // draw the box for stats
-ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2, global.ui_sub_image);
+ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2, 0);
 
 // score text
 set_draw(c_black, 1, item_font, fa_center, fa_left);
@@ -49,7 +49,7 @@ _xcenter = average([_x1, _x2]);
 _ycenter = average([_y1, _y2]);
 
 // background box
-ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2, global.ui_sub_image);
+ui_nine_slice_box(border_sprite, _x1, _y1, _x2, _y2, 0);
 
 // draw speed of sushi
 set_draw(c_black, 1, fnUIBig, fa_center, fa_center);

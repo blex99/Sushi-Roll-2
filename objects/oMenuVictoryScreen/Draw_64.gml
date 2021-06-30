@@ -18,7 +18,7 @@ _y2 = cur.y + _box_height_half;
 _xcenter = average([_x1, _x2]);
 _ycenter = average([_y1, _y2]);
 
-ui_nine_slice_box(sNineSliceBox, _x1, _y1, _x2, _y2, global.ui_sub_image);
+ui_nine_slice_box(sNineSliceBoxText, _x1, _y1, _x2, _y2, 0);
 
 set_draw(c_black, _alpha, font, fa_center, fa_center);
 for (var i = 0; i < len; i++)

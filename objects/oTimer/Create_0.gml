@@ -1,6 +1,6 @@
 /// @description vars
 
-border_sprite = sNineSliceBox;
+border_sprite = sNineSliceBoxText;
 
 timer_frozen = false;
 offset = 16;

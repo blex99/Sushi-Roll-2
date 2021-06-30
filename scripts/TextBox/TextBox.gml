@@ -20,7 +20,7 @@ function text_box_create(_text, _start_pos, _target_pos, _font)
 	with (instance_create_layer(0, 0, _layer_name, oTextBox))
 	{
 		text_box_font = _font;
-		text_box_sprite = sNineSliceBox;
+		text_box_sprite = sNineSliceBoxText;
 		text_box_sub_image = _area_index;
 		text = _text;
 		

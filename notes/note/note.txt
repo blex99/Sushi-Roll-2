@@ -6,19 +6,21 @@ TODO:
 		art re-do
 		change onigiri to rice
 		switch paint area with sky temple
+		make buttons nine-slice
+		each sushi plays a certain song
 	
 	gameplay:
 		invisible walls (which hides collectibles and faster routes)
 		*add menu/achievements/ menu
 			rice becomes stored as currency
 			you can see currency in menus
-			idk
 		add tips box accross levels (kinda like question block but tip)
 		two more levels
+		rice required to unlock final area!
+		figure out number of sushi rolls will be in game
 		
 	programming:
-		change ingame sprites based on area (change sub-image of theme'd
-			objects according to their theme)
+		fix lag from background
 	
 	sounds:
 		bonking on a wall
@@ -32,12 +34,19 @@ IDEAS:
 	get different sushis for achievements and for collecting rice
 	global times for each level (speedrunning)
 	create website for sushi roll
+	look into layer_shader()
 -------------------------------------------------------------------------------
 ACHIEVEMENTS:
-	find all collectibles
-	have a total of 100 rice
-	buy all playable sushi's
-	complete all levels under time goal
+	California Roll: 
+	Kitchen Roll: complete the all kitchen levels
+	Bamboo Roll: complete the all bamboo levels
+	Paint Roll: complete the all paint levels
+	Sky Roll: complete the all sky temple levels
+	 Roll: find all collectibles in each level
+	 Roll: have a total of 100 rice
+	 Roll: buy all playable sushi's
+	 Roll: complete all levels under time goal
+	(hidden) Satellite Roll: find the secret spring
 -------------------------------------------------------------------------------
 PROBLEMS:
 	
