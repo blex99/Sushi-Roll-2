@@ -9,10 +9,14 @@ function jukebox_play_song(_song_id)
 		// you're already playing the song, return
 		if (!music_loaded || music_playing == _song_id) return;
 		
+		// if you're stopping a song you're about to play,
+		// stop it immediately
+		if (music_stopping == _song_id) jukebox_stop_song();
+		
 		control = false;
 		var _song_inst = audio_play_sound(_song_id, 0, true);
-		audio_sound_gain(_song_id, 0, 0);
-		audio_sound_gain(_song_id, music_volume, 1000);
+		audio_sound_gain(_song_inst, 0, 0);
+		audio_sound_gain(_song_inst, music_volume, 1000);
 		
 		// play the song at one second before the end
 		var _len = audio_sound_length(_song_id);
@@ -24,9 +28,22 @@ function jukebox_play_song(_song_id)
 			audio_sound_gain(music_playing, 0, 1000);
 			music_stopping = music_playing;
 		}
-		else music_stopping = noone;
+		//else music_stopping = noone;
 		
 		music_playing = _song_id;
+	}
+}
+
+// stop the sound "music_stopping" is set to
+// reset other vars
+function jukebox_stop_song()
+{
+	with (oJukebox)
+	{
+		audio_stop_sound(music_stopping);
+		audio_group_set_gain(agMusic, music_volume, 0);
+		control = true;
+		music_stopping = noone;
 	}
 }
 

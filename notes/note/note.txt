@@ -4,10 +4,16 @@ TODO:
 		theme for each difficulty (instead of difficulties)
 		music/sfx
 		art re-do
+		change onigiri to rice
+		switch paint area with sky temple
 	
 	gameplay:
 		invisible walls (which hides collectibles and faster routes)
-		add tips menu, achievements menu
+		*add menu/achievements/ menu
+			rice becomes stored as currency
+			you can see currency in menus
+			idk
+		add tips box accross levels (kinda like question block but tip)
 		two more levels
 		
 	programming:

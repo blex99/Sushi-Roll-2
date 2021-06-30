@@ -4,9 +4,7 @@
 if (!control && music_stopping != noone && 
 	audio_sound_get_gain(music_stopping) == 0) 
 {
-	audio_stop_sound(music_stopping);
-	audio_group_set_gain(agMusic, music_volume, 0);
-	control = true;
+	jukebox_stop_song();
 }
 
 if (control && instance_exists(oLevelManager) &&
