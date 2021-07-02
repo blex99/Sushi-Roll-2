@@ -6,8 +6,6 @@ target_scale = 1;
 torque = 100;
 force = 100;
 
-
-
 jump_buffer_start = 15;
 jump_buffer = 0; // frames you cannot apply a jump impulse
 

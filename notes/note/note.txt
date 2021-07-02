@@ -1,11 +1,9 @@
 -------------------------------------------------------------------------------
 TODO:
 	aesthetic:
-		theme for each difficulty (instead of difficulties)
 		music/sfx
 		art re-do
 		change onigiri to rice
-		switch paint area with sky temple
 		make buttons nine-slice
 		each sushi plays a certain song
 	
@@ -20,7 +18,6 @@ TODO:
 		figure out number of sushi rolls will be in game
 		
 	programming:
-		fix lag from background
 	
 	sounds:
 		bonking on a wall
