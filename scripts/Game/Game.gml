@@ -2,7 +2,7 @@
 function game_close()
 {
 	with (oGame) alarm[1] = room_speed / 2;
-	my_game_save();
+	data_game_save();
 	transition_start(rEnd);
 }
 
@@ -18,7 +18,7 @@ function game_goto_menu_level()
 		level_first_try = true;
 		
 		// check if you've unlocked a new difficulty
-		if (num_beaten_levels_in(area_index) >= AREA_UNLOCK_REQ &&
+		if (data_get_num_levels_beaten(area_index) >= AREA_UNLOCK_REQ &&
 			area_completed[area_index] == false)
 		{
 			area_completed[area_index] = true;
@@ -34,37 +34,22 @@ function game_goto_menu_level()
 		
 		transition_start(menu_level_rooms[area_index]);
 		
-		my_game_save();
-	}
-}
-
-// number of beaten levels in a specific area
-function num_beaten_levels_in(_area)
-{
-	with (oGame)
-	{
-		var _len = array_length(levels[_area]);
-		var _num = 0;
-		for (var i = 0; i < _len; i++)
-		{
-			if (levels[_area][i].has_beaten) _num++;
-		}
-		return _num;
+		data_game_save();
 	}
 }
 
 // goto specifed level
-function game_goto_level(_difficulty, _level)
+function game_goto_level(_area_index, _level_index)
 {
 	// shouldn't be able to skip levels by mashing A
 	if (oTransition.mode != TRANS_MODE.OFF) return;
 	
 	with (oGame)
 	{
-		area_index = _difficulty;
-		level_index = _level % array_length(levels[area_index]);
+		area_index = _area_index;
+		level_index = _level_index % array_length(levels[area_index]);
 		transition_start(levels[area_index][level_index].room_name);
-		
+
 		// center mouse to prevent clicking outside game accidentally
 		if (!input_using_controller())
 		{
@@ -102,7 +87,6 @@ function game_goto_next_level()
 		game_goto_level(area_index, level_index);
 	}
 }
-
 
 function game_resize_window()
 {
@@ -158,13 +142,11 @@ function game_increment_window_scale()
 	game_resize_window();
 }
 
-function game_cur_level_beaten()
+// assuming you're in a level, reset the room
+function game_level_room_reset()
 {
-	with (oGame)
-	{
-		// indicate you've beaten it
-		levels[area_index][level_index].has_beaten = true;
-	}
+	data_game_save();
+	transition_start();
 }
 
 function game_get_area_index()
@@ -175,80 +157,12 @@ function game_get_area_index()
 	}
 }
 
-// assuming you're in a level, reset the room
-function game_level_room_reset()
+// get level struct (NOT the save data)
+// this struct contains the name, room id, and time goal
+function game_get_level(_area, _index)
 {
-	my_game_save();
-	transition_start();
+	with (oGame) return levels[_area][_index];
 }
-
-// save the game data
-// NOTE: cannot call it game_save();
-function my_game_save()
-{
-	var _saveData = [];
-	
-	with (oGame)
-	{
-		// level data, which difficulties you've unlocked and completed
-		array_push(_saveData, levels, area_unlocked, area_completed);
-	}
-	
-	with (oJukebox)
-	{
-		// volume levels
-		array_push(_saveData, music_volume, sfx_volume);
-	}
-	
-	var _string = json_stringify(_saveData);
-	var _buffer = buffer_create(string_byte_length(_string) + 1, buffer_fixed, 1);
-	buffer_write(_buffer, buffer_string, _string);
-	buffer_save(_buffer, "save.sav");
-	buffer_delete(_buffer);
-	
-	info_box_create("Saved Data");
-}
-
-// load the game data
-function my_game_load()
-{
-	if (file_exists("save.sav"))
-	{
-		var _buffer = buffer_load("save.sav");
-		var _string = buffer_read(_buffer, buffer_string);
-		buffer_delete(_buffer);
-		
-		var _loadData = json_parse(_string);
-		
-		with (oGame)
-		{
-			levels = _loadData[0];
-			area_unlocked = _loadData[1];
-			area_completed = _loadData[2];
-		}
-
-		jukebox_set_music_volume(_loadData[3]);
-		jukebox_set_sfx_volume(_loadData[4]);
-		info_box_create("Data Loaded");
-	}
-}
-
-// delete save file and call oGame's create event
-function game_clear_save()
-{
-	if (show_question("Are you sure?"))
-	{
-		if (file_exists("save.sav")) file_delete("save.sav");
-		
-		with (oGame) event_perform(ev_create, 0);
-		
-		info_box_create("Cleared ALL save data.");
-	}
-}
-
-
-
-
 
 
 

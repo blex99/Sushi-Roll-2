@@ -7,9 +7,9 @@ set_draw(c_black, 1, fnUIBig, fa_center, fa_center);
 
 if (level_is_state(LEVEL.PANNING))
 {
-	_msg = "~ Area " + string(area_number) + " ~\n";
-	_msg += "~ Level " + string(level_number) + ": ";
-	_msg += level_struct.level_name + " ~";
+	_msg = "~ Area " + string(area_index) + " ~\n";
+	_msg += "~ Level " + string(level_index) + ": ";
+	_msg += level.level_name + " ~";
 
 	draw_set_alpha(ui_alpha);
 }

@@ -1,30 +1,14 @@
-/// @description init resolution, levels array
+/// @description init resolution, transition
 
-#region init resolution
-var _display_w = display_get_width();
-var _display_h = display_get_height();
-
-window_scale = 1;
-gui_scale = 1;
-
-// find the largest scale possible that will fit on the monitor dimensions
-window_scale_max = 1;
-while (_display_w >= BASE_W * window_scale_max &&
-	   _display_h >= BASE_H * window_scale_max)
-{
-	window_scale_max++;
-}
-window_scale_max--;
-
-if (global.start_fullscreen) toggle_fullscreen();
-game_resize_window();
-display_set_gui_size(BASE_W , BASE_H);
-#endregion
-
-#region level array
 area_index = -1; // which area/world are we currently on
 level_index = -1; // which level in that area are we currently on
 level_first_try = true; // player hasn't died yet?
+
+// an array of rooms for difficulty select
+menu_level_rooms = array_create(0);
+array_push(menu_level_rooms, rMenuArea01, rMenuArea02, rMenuArea03, rMenuArea04);
+
+#region init level array
 levels = [];
 levels[LEVEL_AREA.KITCHEN] = 
 [
@@ -58,36 +42,26 @@ levels[LEVEL_AREA.SKY_TEMPLE] =
 ];
 #endregion
 
-area_completed = array_create(LEVEL_AREA.COUNT);
-area_unlocked = array_create(LEVEL_AREA.COUNT);
+#region init resolution
+var _display_w = display_get_width();
+var _display_h = display_get_height();
 
-// by default, only beginner is availible
-for (var i = 1; i < LEVEL_AREA.COUNT; i++)
-	area_unlocked[i] = false;
-area_unlocked[LEVEL_AREA.KITCHEN] = true;
+window_scale = 1;
+gui_scale = 1;
 
-// by default, no level types have been completed
-for (var i = 1; i < LEVEL_AREA.COUNT; i++)
-	area_completed[i] = false;
-
-// in the case that the player has save data, load it
-if (global.debug.load_data) my_game_load();
-
-// unlock all levels, if desired
-if (global.debug.unlock_all)
+// find the largest scale possible that will fit on the monitor dimensions
+window_scale_max = 1;
+while (_display_w >= BASE_W * window_scale_max &&
+	   _display_h >= BASE_H * window_scale_max)
 {
-	for (var i = 0; i < LEVEL_AREA.COUNT; i++)
-	{
-		area_unlocked[i] = true;
-		area_completed[i] = true;
-	}
+	window_scale_max++;
 }
+window_scale_max--;
 
-// an array of rooms for difficulty select
-menu_level_rooms = array_create(0);
-array_push(menu_level_rooms, rMenuArea01, rMenuArea02, rMenuArea03, rMenuArea04);
+alarm[2] = 5; // set fullscreen
+game_resize_window();
+display_set_gui_size(GUI_W , GUI_H);
+#endregion
 
 draw_set_font(fnUI);
-
 room_goto(global.debug.starting_room);
-

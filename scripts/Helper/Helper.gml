@@ -100,8 +100,8 @@ function diff2str(_diff)
 	{
 		case LEVEL_AREA.KITCHEN:		return "KITCHEN";
 		case LEVEL_AREA.BAMBOO:			return "BAMBOO";
-		case LEVEL_AREA.SKY_TEMPLE:		return "SKY TEMPLE";
 		case LEVEL_AREA.PAINT:			return "PAINT";
+		case LEVEL_AREA.SKY_TEMPLE:		return "SKY TEMPLE";
 	}
 }
 

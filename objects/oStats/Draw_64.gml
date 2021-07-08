@@ -1,7 +1,6 @@
 /// @desc display score, time, counters, victory screen
 
-if (!instance_exists(oLevelManager) ||!level_is_state(LEVEL.PLAYING))
-	exit;
+if (!level_is_state(LEVEL.PLAYING)) exit;
 
 #region items
 var _msg = "Rice x" + string_right_pad_zeros(string(rice_count), 2);

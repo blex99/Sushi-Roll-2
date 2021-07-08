@@ -9,16 +9,20 @@ TODO:
 	
 	gameplay:
 		invisible walls (which hides collectibles and faster routes)
+		get different sushis for achievements and for collecting rice
 		*add menu/achievements/ menu
 			rice becomes stored as currency
 			you can see currency in menus
 		add tips box accross levels (kinda like question block but tip)
-		two more levels
+		two more levels for sky temple
 		rice required to unlock final area!
 		figure out number of sushi rolls will be in game
+		lose rice from dying
+		option to skip panning if youve beaten the level as well as having dyied once
 		
 	programming:
-	
+		
+		
 	sounds:
 		bonking on a wall
 		water splash
@@ -28,10 +32,11 @@ TODO:
 -------------------------------------------------------------------------------
 IDEAS:
 	pinball-type levels
-	get different sushis for achievements and for collecting rice
+
 	global times for each level (speedrunning)
 	create website for sushi roll
-	look into layer_shader()
+	minimap
+	use gitbash instead of gitkracken and make the repo private
 -------------------------------------------------------------------------------
 ACHIEVEMENTS:
 	California Roll: 
@@ -46,18 +51,22 @@ ACHIEVEMENTS:
 	(hidden) Satellite Roll: find the secret spring
 -------------------------------------------------------------------------------
 PROBLEMS:
-	
+	music vol doesn't save load properly
+	fullscreen i don't think saves yet
 -------------------------------------------------------------------------------
 REFERENCE:
 easy	medium	hard
 $ACD8D3	$FFFFCC	$E5ABA0
 
-save location: C:\Users\alex\AppData\Local\Sushi_Roll_2
+save location: C:\Users\alex\AppData\Local\Sushi_Roll
 
 Thin Chopsticks: sushi can jump ~320 pix
 Regular Chopsticks: sushi can jump ~256 pix
 
 For optional args: if (0) return argument[0];
+
+Max Rice: 9999
+Max Speed: 999 (three digits, although i doubt it will reach more than 100)
 -------------------------------------------------------------------------------
 GOAL:
 	Deliver sushi to goal.

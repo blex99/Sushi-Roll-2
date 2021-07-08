@@ -9,8 +9,8 @@ music = [muMenu, muKitchen, muBamboo, muPaint, muSkyTemple];
 sfx = [sfxAir, sfxBack, sfxHover, sfxKnife, sfxRoll, sfxSelect,
 	sfxSelectLevel];
 
-music_volume = 0.6; // TODO save/load volume settings
-sfx_volume = 0.6;
+music_volume = data_get_start_music_volume();
+sfx_volume = data_get_start_sfx_volume();
 
 control = false; /*	true = allowed to change volume
 					false = NOT allowed, bc transitioning btw songs */

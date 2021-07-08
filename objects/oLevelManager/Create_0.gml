@@ -8,9 +8,11 @@ window_set_cursor(cr_none);
 prev_mouse = Vector2(window_get_width() * 0.5, window_get_height() * 0.25);
 
 // update the current level struct
-level_struct = -1;
-area_number = -1;
-level_number = -1;
+level = -1;
+level_sd = -1;
+area_index = -1;
+level_index = -1;
+
 with (oGame)
 {
 	if (area_index == -1 || level_index == -1)
@@ -20,15 +22,20 @@ with (oGame)
 		level_index = 0;
 	}
 	
-	other.area_number = area_index + 1;
-	other.level_number = level_index + 1;
-	other.level_struct = levels[area_index][level_index];
+	other.area_index = area_index;
+	other.level_index = level_index;
+	other.level_sd = data_get_level_save_data(area_index, level_index);
 	jukebox_play_song_by_area(area_index);
 }
+
+level = game_get_level(area_index, level_index);
 
 state = LEVEL.PANNING;
 ui_alpha_start = 5;
 ui_alpha = ui_alpha_start; // also text fade duration in seconds
+
+add_to_debug_map("area_index: " + string(area_index));
+add_to_debug_map("level_index: " + string(level_index));
 
 #region create box around sushi
 var _inst, _sushi = sushi_cur(), _w_half, _h_half;
