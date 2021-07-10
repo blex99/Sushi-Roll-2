@@ -3,9 +3,7 @@ TODO:
 	aesthetic:
 		music/sfx
 		art re-do
-		change onigiri to rice
 		make buttons nine-slice
-		each sushi plays a certain song
 	
 	gameplay:
 		invisible walls (which hides collectibles and faster routes)
@@ -19,13 +17,11 @@ TODO:
 		figure out number of sushi rolls will be in game
 		lose rice from dying
 		option to skip panning if youve beaten the level as well as having dyied once
+		screenshake
 		
 	programming:
 		
-		
 	sounds:
-		bonking on a wall
-		water splash
 		water/bubbling
 		spring sound
 		collecting rice/collectibles
@@ -37,6 +33,9 @@ IDEAS:
 	create website for sushi roll
 	minimap
 	use gitbash instead of gitkracken and make the repo private
+	"are you sure?" level for data reset
+	read more about shaders, gm_manual search: Guide To Using Shaders
+	each sushi plays a certain song
 -------------------------------------------------------------------------------
 ACHIEVEMENTS:
 	California Roll: 
@@ -53,6 +52,8 @@ ACHIEVEMENTS:
 PROBLEMS:
 	music vol doesn't save load properly
 	fullscreen i don't think saves yet
+	shader input error
+	looping sfx
 -------------------------------------------------------------------------------
 REFERENCE:
 easy	medium	hard

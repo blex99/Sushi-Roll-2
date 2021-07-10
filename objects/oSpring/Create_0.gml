@@ -1,5 +1,6 @@
 /// @desc create fixture and set scale targets
 
+sfx_spring = sfxSpring;
 xscale_target = 1;
 
 var _fix = physics_fixture_create();

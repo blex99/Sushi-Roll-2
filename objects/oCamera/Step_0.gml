@@ -13,6 +13,24 @@ if (level_is_state(LEVEL.PANNING) && alarm[0] == -1)
 	path_speed = (input_one()) ? my_path_speed * 4 : my_path_speed;
 }
 
+var _shake_offset = Vector2(0, 0);
+#region screenshake
+	if (shake) 
+	{ 
+		_shake_offset.x = choose(-shake_magnitude, shake_magnitude); 
+		_shake_offset.y = choose(-shake_magnitude, shake_magnitude); 
+
+		shake_time -= 1;
+		if (shake_time <= 0) 
+		{ 
+			shake_magnitude -= shake_fade; 
+
+			if (shake_magnitude <= 0)
+				shake = false; 
+		} 
+	}
+#endregion
+
 // change size of the camera zoom
 zoom = lerp(zoom, zoom_target, 0.1);
 view_w = BASE_W * zoom;
@@ -40,4 +58,4 @@ if (!level_is_state(LEVEL.PANNING))
 
 x = clamp(x, view_w_half, room_width - view_w_half);
 y = clamp(y, view_h_half, room_height - view_h_half);
-camera_set_view_pos(CAM, x - view_w_half, y - view_h_half);
+camera_set_view_pos(CAM, x - view_w_half + _shake_offset.x, y - view_h_half + _shake_offset.y);

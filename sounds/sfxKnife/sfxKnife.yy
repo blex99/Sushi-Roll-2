@@ -10,8 +10,8 @@
     "name": "agSfx",
     "path": "audiogroups/agSfx",
   },
-  "soundFile": "sfxKnife.ogg",
-  "duration": 1.851146,
+  "soundFile": "sfxKnife.mp3",
+  "duration": 0.965,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

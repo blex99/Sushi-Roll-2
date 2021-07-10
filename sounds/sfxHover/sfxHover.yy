@@ -10,8 +10,8 @@
     "name": "agSfx",
     "path": "audiogroups/agSfx",
   },
-  "soundFile": "sfxHover.wav",
-  "duration": 1.498896,
+  "soundFile": "sfxHover.mp3",
+  "duration": 3.677,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

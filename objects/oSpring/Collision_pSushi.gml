@@ -2,6 +2,7 @@
 
 if (alarm[0] == -1)
 {
+	jukebox_play_sfx(sfx_spring, false, 1, 1);
 	sushi_jump(jump_force, image_angle + 90);
 	alarm[0] = room_speed / 2;
 	image_xscale = 1.1;

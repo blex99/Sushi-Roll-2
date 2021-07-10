@@ -3,15 +3,15 @@
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
-  "sampleRate": 48000,
+  "sampleRate": 44100,
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "agSfx",
     "path": "audiogroups/agSfx",
   },
-  "soundFile": "sfxRoll.ogg",
-  "duration": 0.125188,
+  "soundFile": "sfxRoll.mp3",
+  "duration": 0.269,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

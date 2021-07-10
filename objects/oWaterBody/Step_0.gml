@@ -1,4 +1,25 @@
-/// @description wobble during sushi impact
+/// @description sfx, wobble during sushi impact
+
+#region sfx
+
+// if you're nearby
+var _col = collision_rectangle(bbox_left - b, bbox_top - b, bbox_right + b,
+	bbox_bottom + b, sushi_cur(), 0, 1);
+if (_col)
+{
+	sushi_set_bubbling(0.7);
+}
+
+// if you're closer, play louder
+var _b_half = b / 2;
+var _col = collision_rectangle(bbox_left - _b_half, bbox_top - _b_half,
+	bbox_right + _b_half, bbox_bottom + _b_half, sushi_cur(), 0, 1);
+if (_col)
+{
+	sushi_set_bubbling(1);
+}
+
+#endregion
 
 // calc spring, only if there has been a collision recently...
 if (alarm[1] != -1)

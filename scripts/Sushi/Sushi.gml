@@ -135,6 +135,41 @@ function sushi_die()
 	_knife.y -= _knife.sprite_height / 2;
 }
 
+function sushi_detect_bonk()
+{
+	with (sushi_cur())
+	{
+		var _max_diff = 0;
+		for (var i = 0; i < sushi_speeds_len; i++)
+		{
+			// find largest speed difference (based on previous frames)
+			var _speed_diff = sushi_cur_speed - sushi_speeds[|i];
+			_max_diff = min(_speed_diff, _max_diff);
+		}
+		
+		if (_max_diff < -5)
+		{
+			// play sound,and clear list
+			var _vol = max(0.5, abs(_max_diff) / limit_speed);
+			jukebox_play_sfx(sfx_bonk, false, _vol, choose(0.9, 1, 1.1));
+			
+			ds_list_clear(sushi_speeds);
+		}
+
+		// screen shake, if stopped harshly
+		if (_max_diff < -20) camera_shake(5, _vol, 1);
+	}
+}
+
+function sushi_set_bubbling(_volume_mult)
+{
+	with (sushi_cur())
+	{
+		jukebox_set_sfx_volume_mult(sfx_bubbling_inst, _volume_mult, 100);
+		alarm[1] = 1; // stop if not set
+	}
+}
+
 /*
 // if _grow is true, grow
 // else, shrink in size

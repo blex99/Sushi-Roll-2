@@ -5,9 +5,6 @@ audio_group_load(agSfx);
 
 music_playing = noone;
 music_stopping = noone;
-music = [muMenu, muKitchen, muBamboo, muPaint, muSkyTemple];
-sfx = [sfxAir, sfxBack, sfxHover, sfxKnife, sfxRoll, sfxSelect,
-	sfxSelectLevel];
 
 music_volume = data_get_start_music_volume();
 sfx_volume = data_get_start_sfx_volume();

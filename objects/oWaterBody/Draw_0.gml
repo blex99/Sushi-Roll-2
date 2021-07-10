@@ -1,4 +1,18 @@
 /// @description Insert description here
+
+// debug
+/*
+set_draw(c_yellow, 0.3);
+draw_rectangle(bbox_left - b, bbox_top - b, bbox_right + b,
+	bbox_bottom + b, false);
+	
+
+var _b_half = b / 2;
+set_draw(c_red, 0.5);
+draw_rectangle(bbox_left - _b_half, bbox_top - _b_half,
+	bbox_right + _b_half, bbox_bottom + _b_half, false);
+*/
+
 var _left = bbox_left;
 var _top = bbox_top - transBufferHeight;
 var _shader = shWave;

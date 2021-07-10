@@ -2,7 +2,7 @@
 
 event_inherited();
 
-if (!oSaveData.area_unlocked[area])
+if (!data_get_area_unlocked(area))
 {
 	my_script = noone;
 	my_script_args = [];

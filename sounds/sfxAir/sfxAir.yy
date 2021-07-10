@@ -10,8 +10,8 @@
     "name": "agSfx",
     "path": "audiogroups/agSfx",
   },
-  "soundFile": "sfxAir.ogg",
-  "duration": 1.708188,
+  "soundFile": "sfxAir.mp3",
+  "duration": 3.725,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

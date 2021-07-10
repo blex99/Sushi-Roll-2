@@ -8,7 +8,7 @@ if (!control && music_stopping != noone &&
 }
 
 if (control && instance_exists(oLevelManager) &&
-	level_is_state(LEVEL.PAUSED))
+	!level_is_state(LEVEL.PLAYING))
 {
 	audio_group_set_gain(agMusic, music_volume / 2, 100);
 	alarm[0] = 1; // reset music volume to normal

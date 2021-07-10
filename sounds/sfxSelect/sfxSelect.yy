@@ -10,8 +10,8 @@
     "name": "agSfx",
     "path": "audiogroups/agSfx",
   },
-  "soundFile": "sfxSelect.wav",
-  "duration": 1.498896,
+  "soundFile": "sfxSelect.mp3",
+  "duration": 3.341,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

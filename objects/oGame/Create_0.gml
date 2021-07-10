@@ -60,7 +60,6 @@ window_scale_max--;
 
 alarm[2] = 5; // set fullscreen
 game_resize_window();
-display_set_gui_size(GUI_W , GUI_H);
 #endregion
 
 draw_set_font(fnUI);

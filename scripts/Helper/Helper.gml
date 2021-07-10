@@ -94,7 +94,7 @@ function card2deg(_card)
 }
 
 // converts the difficulty enum to string
-function diff2str(_diff)
+function area2str(_diff)
 {
 	switch(_diff)
 	{

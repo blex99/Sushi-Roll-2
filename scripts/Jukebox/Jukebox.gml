@@ -71,27 +71,34 @@ function jukebox_play_song_by_area(_area_index)
 	}
 }
 
-function jukebox_play_sfx(_sfx_id, _loop)
+// _volume_mult = volume multiplier
+function jukebox_play_sfx(_sfx_id, _loop, _volume_mult, _pitch)
 {
 	if (0) return argument[0];
 	if (_loop == undefined) _loop = false;
+	if (_volume_mult == undefined) _volume_mult = 1;
+	if (_pitch == undefined) _pitch = 1;
+	
+	var _inst = noone;
 	
 	with (oJukebox)
 	{
 		if (sfx_loaded)
 		{
-			audio_play_sound(_sfx_id, 0, _loop);
-			audio_sound_gain(_sfx_id, sfx_volume, 100);
+			_inst = audio_play_sound(_sfx_id, 0, _loop);
+			audio_sound_gain(_sfx_id, clamp(sfx_volume * _volume_mult, 0, 1), 100);
+			audio_sound_pitch(_sfx_id, _pitch);
 		}
 	}
+	
+	return _inst;
 }
 
-function jukebox_play_random_sfx()
+function jukebox_set_sfx_volume_mult(_sfx_id, _volume_mult, _time)
 {
 	with (oJukebox)
 	{
-		var _len = array_length(sfx);
-		jukebox_play_sfx(sfx[irandom(_len - 1)]);
+		audio_sound_gain(_sfx_id, clamp(sfx_volume * _volume_mult, 0, 1), _time);
 	}
 }
 

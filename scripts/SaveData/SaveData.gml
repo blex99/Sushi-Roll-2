@@ -15,15 +15,15 @@ function data_init()
 	}
 
 	// by default, no level types have been completed
-	area_completed = array_create(LEVEL_AREA.COUNT);
+	areas_completed = array_create(LEVEL_AREA.COUNT);
 	for (var i = 0; i < LEVEL_AREA.COUNT; i++)
-		area_completed[i] = false;
+		areas_completed[i] = false;
 
 	// by default, only kitchen is availible
-	area_unlocked = array_create(LEVEL_AREA.COUNT);
-	area_unlocked[LEVEL_AREA.KITCHEN] = true;
+	areas_unlocked = array_create(LEVEL_AREA.COUNT);
+	areas_unlocked[LEVEL_AREA.KITCHEN] = true;
 	for (var i = 1; i < LEVEL_AREA.COUNT; i++)
-		area_unlocked[i] = false;
+		areas_unlocked[i] = false;
 
 	// in the case that the player has save data, load it
 	if (global.debug.load_data) data_game_load();
@@ -33,8 +33,8 @@ function data_init()
 	{
 		for (var i = 0; i < LEVEL_AREA.COUNT; i++)
 		{
-			area_unlocked[i] = true;
-			area_completed[i] = true;
+			areas_unlocked[i] = true;
+			areas_completed[i] = true;
 		}
 	}
 }
@@ -50,8 +50,8 @@ function data_game_save()
 		// level data, which difficulties you've unlocked and completed
 		array_push(_saveData,
 			levels_sd,
-			area_unlocked,
-			area_completed,
+			areas_unlocked,
+			areas_completed,
 			start_fullscreen,
 			music_volume,
 			sfx_volume,
@@ -81,8 +81,8 @@ function data_game_load()
 	with (oSaveData)
 	{
 		levels_sd			= _loadData[0];
-		area_unlocked		= _loadData[1];
-		area_completed		= _loadData[2];
+		areas_unlocked		= _loadData[1];
+		areas_completed		= _loadData[2];
 		start_fullscreen	= _loadData[3];
 		music_volume		= _loadData[4];
 		sfx_volume			= _loadData[5];
@@ -110,52 +110,82 @@ function data_clear_save()
 	}
 }
 
-function data_get_rice_total_count()
-{
-	with (oSaveData) return total_rice;
-}
-
-function data_get_start_fullscreen()
-{
-	with (oSaveData) return start_fullscreen;
-}
-
-function data_get_start_music_volume()
-{
-	with (oSaveData) return music_volume;
-}
-
-function data_get_start_sfx_volume()
-{
-	with (oSaveData) return sfx_volume;
-}
-
-function data_get_level_save_data(_area_index, _level_index)
-{
-	with (oSaveData) return levels_sd[_area_index][_level_index];
-}
-
-// number of beaten levels in a specific area
-function data_get_num_levels_beaten(_area_index)
-{
-	with (oSaveData)
+#region getters
+	function data_get_rice_total_count()
 	{
-		var _len = array_length(levels_sd[_area_index]);
-		var _num = 0;
-		for (var i = 0; i < _len; i++)
+		with (oSaveData) return total_rice;
+	}
+
+	function data_get_start_fullscreen()
+	{
+		with (oSaveData) return start_fullscreen;
+	}
+
+	function data_get_start_music_volume()
+	{
+		with (oSaveData) return music_volume;
+	}
+
+	function data_get_start_sfx_volume()
+	{
+		with (oSaveData) return sfx_volume;
+	}
+	
+	function data_get_area_completed(_area_index)
+	{
+		with (oSaveData) return areas_completed[_area_index];
+	}
+	
+	function data_get_area_unlocked(_area_index)
+	{
+		with (oSaveData) return areas_unlocked[_area_index];
+	}
+#endregion
+
+#region setters
+	function data_get_level_save_data(_area_index, _level_index)
+	{
+		with (oSaveData) return levels_sd[_area_index][_level_index];
+	}
+
+	// number of beaten levels in a specific area
+	function data_get_num_levels_beaten(_area_index)
+	{
+		with (oSaveData)
 		{
-			if (levels_sd[_area_index][i].has_beaten) _num++;
+			var _len = array_length(levels_sd[_area_index]);
+			var _num = 0;
+			for (var i = 0; i < _len; i++)
+			{
+				if (levels_sd[_area_index][i].has_beaten) _num++;
+			}
+			return _num;
 		}
-		return _num;
 	}
-}
 
-function data_set_level_beaten(_area_index, _level_index)
-{
-	with (oSaveData)
+	function data_set_level_beaten(_area_index, _level_index)
 	{
-		// indicate you've beaten it
-		levels_sd[_area_index][_level_index].has_beaten = true;
+		with (oSaveData)
+		{
+			// indicate you've beaten it
+			levels_sd[_area_index][_level_index].has_beaten = true;
+		}
 	}
-}
+	
+	function data_set_area_completed(_area_index, _value)
+	{
+		with (oSaveData)
+		{
+			areas_completed[_area_index] = _value;
+		}
+	}
+	
+	function data_set_area_unlocked(_area_index, _value)
+	{
+		with (oSaveData)
+		{
+			areas_unlocked[_area_index] = _value;
+		}
+	}
+#endregion
 

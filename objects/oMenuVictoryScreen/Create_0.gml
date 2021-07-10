@@ -63,7 +63,7 @@ with (instance_create_depth(_w_quarter, _y[1], -9999, oButton))
 {
 	btag = 1;
 	dir = [-1, 0, -1, 2];
-	my_script = game_level_room_reset;
+	my_script = game_goto_room_reset;
 	text = "Restart";
 	array_push(other.buttons, self);
 }

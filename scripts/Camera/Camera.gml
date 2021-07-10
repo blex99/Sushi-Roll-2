@@ -29,6 +29,12 @@ function camera_init()
 		yfollow = 0;
 
 		target_angle = 0;
+		
+		// shake vars
+		shake = false;
+		shake_time = 0;
+		shake_magnitude = 0;
+		shake_fade = 0;
 
 		zoom_target = 1.5;
 		zoom = zoom_target;
@@ -56,7 +62,20 @@ function camera_init()
 	}
 }
 
-
+// _time       The length of time - in steps - to shake the screen
+// _magnitude  The amount of screenshake to apply
+// _fade       How quickly the screenshake effect will fade out
+// source: https://www.yoyogames.com/en/blog/coffee-break-tutorials-juicy-screenshake-gml
+function camera_shake(_time, _magnitude, _fade)
+{
+	with (oCamera)
+	{
+		shake = true;
+		shake_time = _time;
+		shake_magnitude = _magnitude;
+		shake_fade = _fade;
+	}
+}
 
 
 

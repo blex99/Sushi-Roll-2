@@ -1,5 +1,7 @@
 /// @description Insert description here
 
+b = 250; // buffer for bubbling sound detection
+
 // WARNING the right side gets fucked, so hide it
 
 image_alpha = 0.5;
@@ -17,3 +19,4 @@ spread	= 0.25;		// 0.25
 
 waterSurface	= -1;
 springSurface	= -1;
+

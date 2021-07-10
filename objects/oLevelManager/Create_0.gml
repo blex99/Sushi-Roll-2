@@ -34,9 +34,6 @@ state = LEVEL.PANNING;
 ui_alpha_start = 5;
 ui_alpha = ui_alpha_start; // also text fade duration in seconds
 
-add_to_debug_map("area_index: " + string(area_index));
-add_to_debug_map("level_index: " + string(level_index));
-
 #region create box around sushi
 var _inst, _sushi = sushi_cur(), _w_half, _h_half;
 _w_half = _sushi.sprite_width / 2;
