@@ -2,13 +2,13 @@ function stats_increment_rice_counter()
 {
 	with (oStats)
 	{
-		rice_count++;
+		rice_increased_this_round++;
 	}
 }
 
 function stats_get_num_rice()
 {
-	with (oStats) return rice_count;
+	with (oStats) return rice_increased_this_round;
 }
 
 // returns true if you have a chance to get the speedy bonus

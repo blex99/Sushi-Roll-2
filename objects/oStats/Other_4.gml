@@ -2,4 +2,5 @@
 
 border_sprite = sNineSliceBoxText;
 area_index = game_get_area_index();
-rice_count = 0; // TODO total rice
+rice_total = data_get_rice_total_count();
+rice_increased_this_round = 0;

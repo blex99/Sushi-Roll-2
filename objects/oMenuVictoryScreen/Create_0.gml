@@ -24,11 +24,17 @@ start = Vector2(GUI_W * 1.5, GUI_H / 2);
 target = Vector2(GUI_W * 0.75, GUI_H / 2);
 cur = start;
 
+// rice
+var _rice_increased_by = stats_get_num_rice();
+var _rice_total = data_get_rice_total_count();
+var _rice_new_total = _rice_increased_by + _rice_total;
+data_set_rice_total_count(_rice_new_total);
+
 arr = [];
 array_push(arr, 
 	"Level Complete!\n",
 	"----------------",
-	"Rice Collected: "	+ string(stats_get_num_rice()), 
+	"Rice: "			+ string(_rice_total) + " + " + string(_rice_increased_by) + " = " + string(_rice_new_total), 
 	"Collectibles: "	+ string(_num_collected) + " / 2",
 	"Death Count: "		+ string(level_get_death_count()),
 	"Your Time: "		+ string(mus2sec(_cur_time)),
@@ -63,7 +69,7 @@ with (instance_create_depth(_w_quarter, _y[1], -9999, oButton))
 {
 	btag = 1;
 	dir = [-1, 0, -1, 2];
-	my_script = game_goto_room_reset;
+	my_script = transition_start; // doesn't count as death
 	text = "Restart";
 	array_push(other.buttons, self);
 }

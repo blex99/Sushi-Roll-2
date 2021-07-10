@@ -3,7 +3,8 @@
 if (!level_is_state(LEVEL.PLAYING)) exit;
 
 #region items
-var _msg = "Rice x" + string_right_pad_zeros(string(rice_count), 2);
+var _msg = "Rice x" + string_right_pad_zeros(string(rice_total), 4) + " (+" +
+	string_right_pad_zeros(string(rice_increased_this_round), 2) + ")";
 var _x1, _y1, _x2, _y2, _xcenter, _ycenter;
 var _x_cur_offset = buffer * 2;
 

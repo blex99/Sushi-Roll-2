@@ -35,8 +35,6 @@ function game_close()
 			}
 		
 			transition_start(menu_level_rooms[area_index]);
-		
-			data_game_save();
 		}
 	}
 
@@ -88,13 +86,6 @@ function game_close()
 		
 			game_goto_level(area_index, level_index);
 		}
-	}
-
-	// assuming you're in a level, reset the room
-	function game_goto_room_reset()
-	{
-		data_game_save();
-		transition_start();
 	}
 #endregion
 

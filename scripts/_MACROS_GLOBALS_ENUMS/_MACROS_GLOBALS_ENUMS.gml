@@ -16,7 +16,7 @@ global.debug =
 	show_debug:		true,
 	load_data:		true,
 	unlock_all:		true,
-	play_music:		false,
+	play_music:		true,
 	set_default_values : function()
 	{
 		starting_room	= rMenuMain;

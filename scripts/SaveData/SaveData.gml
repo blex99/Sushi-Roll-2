@@ -25,7 +25,7 @@ function data_init()
 	for (var i = 1; i < LEVEL_AREA.COUNT; i++)
 		areas_unlocked[i] = false;
 
-	// in the case that the player has save data, load it
+	// load data
 	if (global.debug.load_data) data_game_load();
 
 	// unlock all levels, if desired
@@ -47,14 +47,14 @@ function data_game_save()
 	
 	with (oSaveData)
 	{
-		// level data, which difficulties you've unlocked and completed
 		array_push(_saveData,
 			levels_sd,
 			areas_unlocked,
 			areas_completed,
-			start_fullscreen,
+			window_get_fullscreen(),
 			music_volume,
 			sfx_volume,
+			total_rice,
 		);
 	}
 
@@ -86,6 +86,7 @@ function data_game_load()
 		start_fullscreen	= _loadData[3];
 		music_volume		= _loadData[4];
 		sfx_volume			= _loadData[5];
+		total_rice			= _loadData[6];
 		
 		jukebox_set_music_volume(music_volume);
 		jukebox_set_sfx_volume(sfx_volume);
@@ -140,9 +141,7 @@ function data_clear_save()
 	{
 		with (oSaveData) return areas_unlocked[_area_index];
 	}
-#endregion
-
-#region setters
+	
 	function data_get_level_save_data(_area_index, _level_index)
 	{
 		with (oSaveData) return levels_sd[_area_index][_level_index];
@@ -162,7 +161,14 @@ function data_clear_save()
 			return _num;
 		}
 	}
+#endregion
 
+#region setters
+	function data_set_rice_total_count(_value)
+	{
+		with (oSaveData) total_rice = _value;
+	}
+	
 	function data_set_level_beaten(_area_index, _level_index)
 	{
 		with (oSaveData)
@@ -185,6 +191,15 @@ function data_clear_save()
 		with (oSaveData)
 		{
 			areas_unlocked[_area_index] = _value;
+		}
+	}
+	
+	function data_set_volumes(_music_vol, _sfx_vol)
+	{
+		with (oSaveData)
+		{
+			music_volume = _music_vol;
+			sfx_volume = _sfx_vol;
 		}
 	}
 #endregion

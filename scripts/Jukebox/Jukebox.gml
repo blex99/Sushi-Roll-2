@@ -109,6 +109,7 @@ function jukebox_set_sfx_volume(_value)
 	{
 		audio_group_set_gain(agSfx, _value, 100);
 		sfx_volume = _value;
+		data_set_volumes(music_volume, sfx_volume);
 	}
 }
 function jukebox_increment_sfx_volume()
@@ -120,6 +121,7 @@ function jukebox_increment_sfx_volume()
 		audio_group_set_gain(agSfx, sfx_volume, 100);
 		info_box_create("SFX Volume " + string(round(sfx_volume * 100)) + "%",
 			"SFX Volume");
+		data_set_volumes(music_volume, sfx_volume);
 	}
 }
 
@@ -130,6 +132,7 @@ function jukebox_set_music_volume(_value)
 	{
 		audio_group_set_gain(agMusic, _value, 100);
 		music_volume = _value;
+		data_set_volumes(music_volume, sfx_volume);
 	}
 }
 function jukebox_increment_music_volume()
@@ -141,5 +144,6 @@ function jukebox_increment_music_volume()
 		audio_group_set_gain(agMusic, music_volume, 100);
 		info_box_create("Music Volume " + string(round(music_volume * 100)) + "%",
 			"Music Volume");
+		data_set_volumes(music_volume, sfx_volume);
 	}
 }

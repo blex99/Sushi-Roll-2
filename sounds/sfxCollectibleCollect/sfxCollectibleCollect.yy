@@ -11,7 +11,7 @@
     "path": "audiogroups/agSfx",
   },
   "soundFile": "sfxCollectibleCollect.mp3",
-  "duration": 1.901,
+  "duration": 1.205,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

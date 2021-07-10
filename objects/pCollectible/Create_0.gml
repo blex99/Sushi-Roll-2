@@ -6,4 +6,4 @@ image_index = 0;
 collect_event = noone;
 
 sfx_collectible = sfxCollectibleCollect;
-sfx_vol_mult = 0.25;
+sfx_vol_mult = 1;
