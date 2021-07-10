@@ -31,6 +31,7 @@ free_fall_buf_start = room_speed / 2;
 free_fall_buf = 0;
 
 played_splash = false;
+touching_gravity_mod = false;
 
 sfx_roll = sfxRoll;
 sfx_bonk = sfxBonk;

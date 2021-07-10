@@ -1,6 +1,6 @@
 /// @description Insert description here
 
-b = 250; // buffer for bubbling sound detection
+b = 200; // buffer for bubbling sound detection
 
 // WARNING the right side gets fucked, so hide it
 

@@ -8,6 +8,7 @@ var _sushi_dir = input_move_sushi();
 
 sushi_cur_speed = sushi_get_speed();
 ds_list_add(sushi_speeds, sushi_cur_speed);
+
 sushi_speeds_len = ds_list_size(sushi_speeds);
 
 if (sushi_speeds_len > 5)
@@ -58,15 +59,16 @@ if (image_xscale != target_scale ||
 }
 
 // is free falling?
-if (sushi_cur_speed >= limit_speed && phy_linear_velocity_y > 0 &&
+if (sushi_cur_speed >= limit_speed / 2 && phy_linear_velocity_y > 0 &&
 	level_is_state(LEVEL.PLAYING) && !sushi_is_grounded())
 {
 	// if you've been free falling for awhile, play wind looping sound
 	free_fall_buf = max(-1, free_fall_buf - 1);
 	if (free_fall_buf <= 0)
 	{
-		var _volume_mult = sushi_cur_speed / limit_speed;
-		jukebox_set_sfx_volume_mult(sfx_air_inst, _volume_mult, 100);
+		var _volume_mult = sushi_cur_speed / limit_speed * 0.75;
+		jukebox_set_sfx_volume_mult(sfx_air_inst, _volume_mult, 1000);
+		add_to_debug_map("_volume_mult: " + string(_volume_mult));
 	}
 }
 else

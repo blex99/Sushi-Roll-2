@@ -11,7 +11,7 @@
     "path": "audiogroups/agSfx",
   },
   "soundFile": "sfxBubblingLoop.mp3",
-  "duration": 3.749,
+  "duration": 3.725,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

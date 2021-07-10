@@ -7,7 +7,7 @@ var _col = collision_rectangle(bbox_left - b, bbox_top - b, bbox_right + b,
 	bbox_bottom + b, sushi_cur(), 0, 1);
 if (_col)
 {
-	sushi_set_bubbling(0.7);
+	sushi_set_bubbling(0.25, 1000);
 }
 
 // if you're closer, play louder
@@ -16,7 +16,7 @@ var _col = collision_rectangle(bbox_left - _b_half, bbox_top - _b_half,
 	bbox_right + _b_half, bbox_bottom + _b_half, sushi_cur(), 0, 1);
 if (_col)
 {
-	sushi_set_bubbling(1);
+	sushi_set_bubbling(1, 1000);
 }
 
 #endregion

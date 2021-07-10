@@ -139,6 +139,9 @@ function sushi_detect_bonk()
 {
 	with (sushi_cur())
 	{
+		// bonk should not occur due to gravity mod
+		if (place_meeting(x, y, oGravityModifier)) return;
+		
 		var _max_diff = 0;
 		for (var i = 0; i < sushi_speeds_len; i++)
 		{
@@ -147,25 +150,26 @@ function sushi_detect_bonk()
 			_max_diff = min(_speed_diff, _max_diff);
 		}
 		
-		if (_max_diff < -5)
+		if (_max_diff < -20)
 		{
-			// play sound,and clear list
+			// play sound, stop wind (if playing) and clear list
 			var _vol = max(0.5, abs(_max_diff) / limit_speed);
 			jukebox_play_sfx(sfx_bonk, false, _vol, choose(0.9, 1, 1.1));
+			jukebox_set_sfx_volume_mult(sfx_air_inst, 0, 10);
 			
 			ds_list_clear(sushi_speeds);
 		}
 
 		// screen shake, if stopped harshly
-		if (_max_diff < -20) camera_shake(5, _vol, 1);
+		if (_max_diff < -25) camera_shake(5, _vol, 1);
 	}
 }
 
-function sushi_set_bubbling(_volume_mult)
+function sushi_set_bubbling(_volume_mult, _time)
 {
 	with (sushi_cur())
 	{
-		jukebox_set_sfx_volume_mult(sfx_bubbling_inst, _volume_mult, 100);
+		jukebox_set_sfx_volume_mult(sfx_bubbling_inst, _volume_mult, _time);
 		alarm[1] = 1; // stop if not set
 	}
 }
